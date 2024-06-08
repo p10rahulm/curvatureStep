@@ -35,10 +35,10 @@ class Adadelta(Optimizer):
                 if weight_decay != 0:
                     grad = grad.add(weight_decay, p.data)
 
-                square_avg.mul_(rho).addcmul_(1 - rho, grad, grad)
+                square_avg.mul_(rho).addcmul_(grad, grad, value=1 - rho)
                 std = square_avg.add(eps).sqrt_()
                 delta = acc_delta.add(eps).sqrt_().div_(std).mul_(grad)
-                p.data.add_(-step_size, delta)
-                acc_delta.mul_(rho).addcmul_(1 - rho, delta, delta)
+                p.data.add_(delta, alpha=-step_size)
+                acc_delta.mul_(rho).addcmul_(delta, delta, value=1 - rho)
 
         return loss

@@ -30,7 +30,6 @@ class NAG(Optimizer):
                 # Nesterov accelerated gradient update
                 prev_buf = buf.clone()
                 buf.mul_(momentum).add_(grad)
-                p.data.add_(-step_size, grad.add(momentum, prev_buf))
                 p.data.add_(grad, alpha=-step_size).add_(prev_buf, alpha=-step_size * momentum)
 
 

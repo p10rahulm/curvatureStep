@@ -1,10 +1,10 @@
 import torch
 from torch.optim import Optimizer
 
-class Adam(Optimizer):
-    def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8, weight_decay=0):
+class AdamW(Optimizer):
+    def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8, weight_decay=0.01):
         defaults = dict(lr=lr, betas=betas, eps=eps, weight_decay=weight_decay)
-        super(Adam, self).__init__(params, defaults)
+        super(AdamW, self).__init__(params, defaults)
 
     def step(self, closure=None):
         loss = None
@@ -18,7 +18,7 @@ class Adam(Optimizer):
 
                 grad = p.grad.data
                 if grad.is_sparse:
-                    raise RuntimeError('Adam does not support sparse gradients')
+                    raise RuntimeError('AdamW does not support sparse gradients')
 
                 state = self.state[p]
 
@@ -33,10 +33,6 @@ class Adam(Optimizer):
 
                 state['step'] += 1
 
-                if group['weight_decay'] != 0:
-                    grad = grad.add(group['weight_decay'], p.data)
-
-                # Decay the first and second moment running average coefficient
                 exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
                 exp_avg_sq.mul_(beta2).addcmul_(grad, grad, value=1 - beta2)
 
@@ -47,5 +43,9 @@ class Adam(Optimizer):
                 step_size = group['lr'] * (bias_correction2 ** 0.5) / bias_correction1
 
                 p.data.addcdiv_(exp_avg, denom, value=-step_size)
+
+                # Apply weight decay
+                if group['weight_decay'] != 0:
+                    p.data.add_(p.data, alpha=-group['weight_decay'] * group['lr'])
 
         return loss
