@@ -18,7 +18,8 @@ from optimizers.adamw import AdamW
 from optimizers.nadamw import NAdamW
 from optimizers.nadam import NAdam
 from optimizers.amsgrad import AMSGrad
-from optimizers.shampoo import Shampoo
+# from optimizers.shampoo import Shampoo
+from optimizers.shampoo2 import Shampoo
 
 # Set random seeds for reproducibility
 set_seed(42)
