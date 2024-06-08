@@ -5,6 +5,7 @@ from train import train
 from test import test
 from utilities import set_seed
 from optimizers.simplesgd_curvature import SimpleSGDCurvature
+from optimizers.adam_curvature import AdamCurvature
 from optimizers.adam import Adam
 from optimizers.simplesgd import SimpleSGD
 from optimizers.heavyball import HeavyBall
@@ -12,14 +13,20 @@ from optimizers.heavyball_curvature import HeavyBallCurvature
 from optimizers.nag import NAG
 from optimizers.adagrad import Adagrad
 from optimizers.adadelta import Adadelta
+from optimizers.adadelta_curvature import AdadeltaCurvature
+from optimizers.adagrad_curvature import AdagradCurvature
+
 from optimizers.rmsprop_with_momentum import RMSPropMomentum
 from optimizers.rmsprop import RMSProp
 from optimizers.adamw import AdamW
 from optimizers.nadamw import NAdamW
 from optimizers.nadam import NAdam
+from optimizers.adamw_curvature import AdamWCurvature
+from optimizers.nadam_curvature import NAdamCurvature
+from optimizers.nadamw_curvature import NAdamWCurvature
+
 from optimizers.amsgrad import AMSGrad
-# from optimizers.shampoo import Shampoo
-from optimizers.shampoo2 import Shampoo
+from optimizers.shampoo import Shampoo
 
 # Set random seeds for reproducibility
 set_seed(42)
@@ -49,6 +56,12 @@ criterion = torch.nn.CrossEntropyLoss()
 # train(model_sgd, train_loader, criterion, optimizer_sgd, device, num_epochs=2)
 # test(model_sgd, test_loader, criterion, device)
 #
+# print("\nTraining with Adam Curvature Optimizer")
+# model_adam_curvature = SimpleNN().to(device)
+# optimizer_adam_curvature = AdamCurvature(model_adam_curvature.parameters(), lr=1e-3, epsilon=0.01)
+# train(model_adam_curvature, train_loader, criterion, optimizer_adam_curvature, device, num_epochs=2)
+# test(model_adam_curvature, test_loader, criterion, device)
+#
 # print("\nTraining with Adam Optimizer")
 # model_adam = SimpleNN().to(device)
 # optimizer_adam = Adam(model_adam.parameters(), lr=1e-3)
@@ -73,17 +86,30 @@ criterion = torch.nn.CrossEntropyLoss()
 # train(model_nag, train_loader, criterion, optimizer_nag, device, num_epochs=2)
 # test(model_nag, test_loader, criterion, device)
 #
+# print("\nTraining with Adagrad with Curvature Optimizer")
+# model_adagrad_curvature = SimpleNN().to(device)
+# optimizer_adagrad_curvature = AdagradCurvature(model_adagrad_curvature.parameters(), lr=1e-2, eps=1e-10, epsilon=0.01)
+# train(model_adagrad_curvature, train_loader, criterion, optimizer_adagrad_curvature, device, num_epochs=2)
+# test(model_adagrad_curvature, test_loader, criterion, device)
+#
 # print("\nTraining with Adagrad Optimizer")
 # model_adagrad = SimpleNN().to(device)
 # optimizer_adagrad = Adagrad(model_adagrad.parameters(), lr=1e-2, eps=1e-10)
 # train(model_adagrad, train_loader, criterion, optimizer_adagrad, device, num_epochs=2)
 # test(model_adagrad, test_loader, criterion, device)
 #
-# print("\nTraining with Adadelta Optimizer")
-# model_adadelta = SimpleNN().to(device)
-# optimizer_adadelta = Adadelta(model_adadelta.parameters(), lr=1.0, rho=0.9, eps=1e-6)
-# train(model_adadelta, train_loader, criterion, optimizer_adadelta, device, num_epochs=2)
-# test(model_adadelta, test_loader, criterion, device)
+print("\nTraining with Adadelta Optimizer")
+model_adadelta = SimpleNN().to(device)
+optimizer_adadelta = Adadelta(model_adadelta.parameters(), lr=1.0, rho=0.9, eps=1e-6)
+train(model_adadelta, train_loader, criterion, optimizer_adadelta, device, num_epochs=2)
+test(model_adadelta, test_loader, criterion, device)
+
+print("\nTraining with Adadelta with Curvature Optimizer")
+model_adadelta_curvature = SimpleNN().to(device)
+optimizer_adadelta_curvature = AdadeltaCurvature(model_adadelta_curvature.parameters(), lr=1.0, rho=0.6, eps=1e-6, epsilon=0.01)
+train(model_adadelta_curvature, train_loader, criterion, optimizer_adadelta_curvature, device, num_epochs=2)
+test(model_adadelta_curvature, test_loader, criterion, device)
+
 #
 # print("\nTraining with RMSProp Optimizer")
 # model_rmsprop = SimpleNN().to(device)
@@ -96,24 +122,46 @@ criterion = torch.nn.CrossEntropyLoss()
 # optimizer_rmsprop_momentum = RMSPropMomentum(model_rmsprop_momentum.parameters(), lr=1e-2, alpha=0.99, eps=1e-8, weight_decay=0, momentum=0.1)
 # train(model_rmsprop_momentum, train_loader, criterion, optimizer_rmsprop_momentum, device, num_epochs=2)
 # test(model_rmsprop_momentum, test_loader, criterion, device)
-
+#
+# print("\nTraining with AdamW Curvature Optimizer")
+# model_adamw_curvature = SimpleNN().to(device)
+# optimizer_adamw_curvature = AdamWCurvature(model_adamw_curvature.parameters(), lr=1e-3, epsilon=0.01)
+# train(model_adamw_curvature, train_loader, criterion, optimizer_adamw_curvature, device, num_epochs=2)
+# test(model_adamw_curvature, test_loader, criterion, device)
+#
 # print("\nTraining with AdamW Optimizer")
 # model_adamw = SimpleNN().to(device)
 # optimizer_adamw = AdamW(model_adamw.parameters(), lr=1e-3, weight_decay=0.01)
 # train(model_adamw, train_loader, criterion, optimizer_adamw, device, num_epochs=2)
 # test(model_adamw, test_loader, criterion, device)
-
+#
+#
+#
+# print("\nTraining with NAdam Curvature Optimizer")
+# model_nadam_curvature = SimpleNN().to(device)
+# optimizer_nadam_curvature = NAdamCurvature(model_nadam_curvature.parameters(), lr=1e-3, epsilon=0.01)
+# train(model_nadam_curvature, train_loader, criterion, optimizer_nadam_curvature, device, num_epochs=2)
+# test(model_nadam_curvature, test_loader, criterion, device)
+#
+# print("\nTraining with NAdam Optimizer")
+# model_nadam = SimpleNN().to(device)
+# optimizer_nadam = NAdam(model_nadam.parameters(), lr=1e-3)
+# train(model_nadam, train_loader, criterion, optimizer_nadam, device, num_epochs=2)
+# test(model_nadam, test_loader, criterion, device)
+#
+# print("\nTraining with NAdamW Curvature Optimizer")
+# model_nadamw_curvature = SimpleNN().to(device)
+# optimizer_nadamw_curvature = NAdamWCurvature(model_nadamw_curvature.parameters(), lr=1e-3, epsilon=0.01)
+# train(model_nadamw_curvature, train_loader, criterion, optimizer_nadamw_curvature, device, num_epochs=2)
+# test(model_nadamw_curvature, test_loader, criterion, device)
+#
 # print("\nTraining with NAdamW Optimizer")
 # model_nadamw = SimpleNN().to(device)
 # optimizer_nadamw = NAdamW(model_nadamw.parameters(), lr=1e-3, weight_decay=0.01)
 # train(model_nadamw, train_loader, criterion, optimizer_nadamw, device, num_epochs=2)
 # test(model_nadamw, test_loader, criterion, device)
 
-# print("\nTraining with NAdam Optimizer")
-# model_nadam = SimpleNN().to(device)
-# optimizer_nadam = NAdam(model_nadam.parameters(), lr=1e-3)
-# train(model_nadam, train_loader, criterion, optimizer_nadam, device, num_epochs=2)
-# test(model_nadam, test_loader, criterion, device)
+
 #
 # print("\nTraining with AMSGrad Optimizer")
 # model_amsgrad = SimpleNN().to(device)
@@ -121,8 +169,9 @@ criterion = torch.nn.CrossEntropyLoss()
 # train(model_amsgrad, train_loader, criterion, optimizer_amsgrad, device, num_epochs=2)
 # test(model_amsgrad, test_loader, criterion, device)
 
-print("\nTraining with Shampoo Optimizer")
-model_shampoo = SimpleNN().to(device)
-optimizer_shampoo = Shampoo(model_shampoo.parameters(), lr=1e-3)
-train(model_shampoo, train_loader, criterion, optimizer_shampoo, device, num_epochs=2)
-test(model_shampoo, test_loader, criterion, device)
+# print("\nTraining with Shampoo Optimizer")
+# model_shampoo = SimpleNN().to(device)
+# optimizer_shampoo = Shampoo(model_shampoo.parameters(), lr=1e-3)
+# train(model_shampoo, train_loader, criterion, optimizer_shampoo, device, num_epochs=2)
+# test(model_shampoo, test_loader, criterion, device)
+
