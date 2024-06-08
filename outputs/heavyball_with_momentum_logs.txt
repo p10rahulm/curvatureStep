@@ -1,0 +1,107 @@
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.0
+Epoch 1/2 completed, Average Loss: 1.8971
+Epoch 2/2 completed, Average Loss: 1.1979
+Test set: Average loss: 0.0149, Accuracy: 8109/10000 (81.09%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.05
+Epoch 1/2 completed, Average Loss: 1.8227
+Epoch 2/2 completed, Average Loss: 1.1097
+Test set: Average loss: 0.0138, Accuracy: 8229/10000 (82.29%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.1
+Epoch 1/2 completed, Average Loss: 1.8531
+Epoch 2/2 completed, Average Loss: 1.1049
+Test set: Average loss: 0.0136, Accuracy: 8252/10000 (82.52%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.15
+Epoch 1/2 completed, Average Loss: 1.7990
+Epoch 2/2 completed, Average Loss: 1.0467
+Test set: Average loss: 0.0128, Accuracy: 8331/10000 (83.31%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.2
+Epoch 1/2 completed, Average Loss: 1.8158
+Epoch 2/2 completed, Average Loss: 1.0368
+Test set: Average loss: 0.0126, Accuracy: 8338/10000 (83.38%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.25
+Epoch 1/2 completed, Average Loss: 1.7539
+Epoch 2/2 completed, Average Loss: 0.9779
+Test set: Average loss: 0.0120, Accuracy: 8356/10000 (83.56%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.3
+Epoch 1/2 completed, Average Loss: 1.7257
+Epoch 2/2 completed, Average Loss: 0.9328
+Test set: Average loss: 0.0114, Accuracy: 8490/10000 (84.90%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.35
+Epoch 1/2 completed, Average Loss: 1.6910
+Epoch 2/2 completed, Average Loss: 0.8738
+Test set: Average loss: 0.0106, Accuracy: 8541/10000 (85.41%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.4
+Epoch 1/2 completed, Average Loss: 1.7045
+Epoch 2/2 completed, Average Loss: 0.8695
+Test set: Average loss: 0.0105, Accuracy: 8496/10000 (84.96%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.45
+Epoch 1/2 completed, Average Loss: 1.6175
+Epoch 2/2 completed, Average Loss: 0.7923
+Test set: Average loss: 0.0097, Accuracy: 8585/10000 (85.85%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.5
+Epoch 1/2 completed, Average Loss: 1.5261
+Epoch 2/2 completed, Average Loss: 0.7292
+Test set: Average loss: 0.0090, Accuracy: 8654/10000 (86.54%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.55
+Epoch 1/2 completed, Average Loss: 1.5258
+Epoch 2/2 completed, Average Loss: 0.7120
+Test set: Average loss: 0.0088, Accuracy: 8681/10000 (86.81%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.6
+Epoch 1/2 completed, Average Loss: 1.4545
+Epoch 2/2 completed, Average Loss: 0.6515
+Test set: Average loss: 0.0081, Accuracy: 8718/10000 (87.18%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.65
+Epoch 1/2 completed, Average Loss: 1.3237
+Epoch 2/2 completed, Average Loss: 0.5849
+Test set: Average loss: 0.0075, Accuracy: 8806/10000 (88.06%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.7
+Epoch 1/2 completed, Average Loss: 1.2254
+Epoch 2/2 completed, Average Loss: 0.5401
+Test set: Average loss: 0.0070, Accuracy: 8846/10000 (88.46%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.75
+Epoch 1/2 completed, Average Loss: 1.1359
+Epoch 2/2 completed, Average Loss: 0.4965
+Test set: Average loss: 0.0065, Accuracy: 8885/10000 (88.85%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.8
+Epoch 1/2 completed, Average Loss: 1.0430
+Epoch 2/2 completed, Average Loss: 0.4567
+Test set: Average loss: 0.0060, Accuracy: 8945/10000 (89.45%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.85
+Epoch 1/2 completed, Average Loss: 0.9252
+Epoch 2/2 completed, Average Loss: 0.4158
+Test set: Average loss: 0.0056, Accuracy: 8992/10000 (89.92%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.9
+Epoch 1/2 completed, Average Loss: 0.8011
+Epoch 2/2 completed, Average Loss: 0.3706
+Test set: Average loss: 0.0051, Accuracy: 9040/10000 (90.40%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=0.95
+Epoch 1/2 completed, Average Loss: 0.6104
+Epoch 2/2 completed, Average Loss: 0.3137
+Test set: Average loss: 0.0043, Accuracy: 9211/10000 (92.11%)
+
+Training with Heavy Ball Curvature Optimizer with momentum=1.0
+Epoch 1/2 completed, Average Loss: 1.0154
+Epoch 2/2 completed, Average Loss: 0.8904
+Test set: Average loss: 0.0159, Accuracy: 7730/10000 (77.30%)
+
+Finished varying momentum values

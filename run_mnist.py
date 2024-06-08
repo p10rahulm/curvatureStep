@@ -1,122 +1,79 @@
 import torch
-import torch.nn as nn
-import torchvision
-import torchvision.transforms as transforms
-from torch.utils.data import DataLoader
-from optimizer import CustomOptimizer
-from optim_adam import CustomAdam
-from optim_simplesgd import SimpleSGD
-from optim_heavyball import SGDWithMomentum
-from tqdm import tqdm
-import numpy as np
-import random
-
+from data_loaders.mnist import load_mnist
+from models.simpleNN import SimpleNN
+from train import train
+from test import test
+from utilities import set_seed
+from optimizers.simplesgd_curvature import SimpleSGDCurvature
+from optimizers.adam import Adam
+from optimizers.simplesgd import SimpleSGD
+from optimizers.heavyball import HeavyBall
+from optimizers.heavyball_curvature import HeavyBallCurvature
+from optimizers.nag import NAG
+from optimizers.adagrad import Adagrad
+from optimizers.adadelta import Adadelta
 
 # Set random seeds for reproducibility
-def set_seed(seed):
-    torch.manual_seed(seed)
-    torch.cuda.manual_seed(seed)
-    torch.cuda.manual_seed_all(seed)
-    np.random.seed(seed)
-    random.seed(seed)
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False
-
-set_seed(42)  # Set your desired seed here
+set_seed(42)
+# set_seed(8)
 
 # Set device
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-
-# Define the neural network model
-class SimpleNN(nn.Module):
-    def __init__(self):
-        super(SimpleNN, self).__init__()
-        self.fc1 = nn.Linear(28 * 28, 128)
-        self.fc2 = nn.Linear(128, 10)
-
-    def forward(self, x):
-        x = x.view(-1, 28 * 28)
-        x = torch.relu(self.fc1(x))
-        x = self.fc2(x)
-        return x
-
-# Load the MNIST dataset
-transform = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Normalize((0.5,), (0.5,))
-])
-
-train_dataset = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transform)
-train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
-# train_loader = DataLoader(train_dataset, batch_size=1000, shuffle=True) # loss moved from 81.92 to 40.97
-
-test_dataset = torchvision.datasets.MNIST(root='./data', train=False, download=True, transform=transform)
-test_loader = DataLoader(test_dataset, batch_size=1000, shuffle=False)
+# Load data
+train_loader, test_loader = load_mnist()
 
 # Initialize the models, loss function, and optimizers
-model_custom = SimpleNN().to(device)
-model_adam = SimpleNN().to(device)
-model_sgd = SimpleNN().to(device)
-model_momentum = SimpleNN().to(device)
+criterion = torch.nn.CrossEntropyLoss()
 
-criterion = nn.CrossEntropyLoss()
-optimizer_custom = CustomOptimizer(model_custom.parameters(), lr=1e-3, momentum_mult=0.9, epsilon=0.01)
-optimizer_adam = CustomAdam(model_adam.parameters(), lr=1e-3)
-optimizer_sgd = SimpleSGD(model_sgd.parameters(), lr=1e-3)
-optimizer_momentum = SGDWithMomentum(model_momentum.parameters(), lr=1e-3, momentum=0.9)
-
-# Training loop
-def train(model, train_loader, criterion, optimizer, num_epochs=10):
-    model.train()
-    for epoch in tqdm(range(num_epochs), desc="Epochs"):
-        running_loss = 0.0
-        for inputs, targets in tqdm(train_loader, desc=f"Training Epoch {epoch+1}"):
-            inputs, targets = inputs.to(device), targets.to(device)
-
-            def closure():
-                optimizer.zero_grad()
-                outputs = model(inputs)
-                loss = criterion(outputs, targets)
-                loss.backward()
-                return loss
-
-            loss = optimizer.step(closure)
-            running_loss += loss.item()
-
-        print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {running_loss/len(train_loader):.4f}")
-
-# Testing loop
-def test(model, test_loader, criterion):
-    model.eval()
-    test_loss = 0
-    correct = 0
-    with torch.no_grad():
-        for inputs, targets in test_loader:
-            inputs, targets = inputs.to(device), targets.to(device)
-            outputs = model(inputs)
-            test_loss += criterion(outputs, targets).item()
-            pred = outputs.argmax(dim=1, keepdim=True)
-            correct += pred.eq(targets.view_as(pred)).sum().item()
-
-    test_loss /= len(test_loader.dataset)
-    accuracy = 100. * correct / len(test_loader.dataset)
-    print(f"Test set: Average loss: {test_loss:.4f}, Accuracy: {correct}/{len(test_loader.dataset)} ({accuracy:.2f}%)")
 
 
 # Train and test the models
-print("Training with Custom Optimizer")
-train(model_custom, train_loader, criterion, optimizer_custom, num_epochs=2)
-test(model_custom, test_loader, criterion)
+# print("Training with Simple SGD with Curvature Optimizer")
+# model_sgd_curvature = SimpleNN().to(device)
+# optimizer_sgd_curvature = SimpleSGDCurvature(model_sgd_curvature.parameters(), lr=1e-3, momentum_mult=0.9, epsilon=0.01)
+# train(model_sgd_curvature, train_loader, criterion, optimizer_sgd_curvature, device, num_epochs=2)
+# test(model_sgd_curvature, test_loader, criterion, device)
+#
+# print("\nTraining with Simple SGD Optimizer")
+# model_sgd = SimpleNN().to(device)
+# optimizer_sgd = SimpleSGD(model_sgd.parameters(), lr=1e-3)
+# train(model_sgd, train_loader, criterion, optimizer_sgd, device, num_epochs=2)
+# test(model_sgd, test_loader, criterion, device)
+#
+print("\nTraining with Adam Optimizer")
+model_adam = SimpleNN().to(device)
+optimizer_adam = Adam(model_adam.parameters(), lr=1e-3)
+train(model_adam, train_loader, criterion, optimizer_adam, device, num_epochs=2)
+test(model_adam, test_loader, criterion, device)
 
-print("\nTraining with Custom Adam Optimizer")
-train(model_adam, train_loader, criterion, optimizer_adam, num_epochs=2)
-test(model_adam, test_loader, criterion)
+# print("\nTraining with SGD with Heavy Ball Momentum and Curvature Optimizer")
+# model_heavyball_curvature = SimpleNN().to(device)
+# optimizer_heavyball_curvature = HeavyBallCurvature(model_heavyball_curvature.parameters(), lr=1e-3, momentum=0.1, epsilon=0.01)
+# train(model_heavyball_curvature, train_loader, criterion, optimizer_heavyball_curvature, device, num_epochs=2)
+# test(model_heavyball_curvature, test_loader, criterion, device)
+#
+#
+# print("\nTraining with SGD with Heavy Ball Momentum Optimizer")
+# model_heavyball = SimpleNN().to(device)
+# optimizer_heavyball = HeavyBall(model_heavyball.parameters(), lr=1e-3, momentum=0.9)
+# train(model_heavyball, train_loader, criterion, optimizer_heavyball, device, num_epochs=2)
+# test(model_heavyball, test_loader, criterion, device)
 
-print("\nTraining with Simple SGD Optimizer")
-train(model_sgd, train_loader, criterion, optimizer_sgd, num_epochs=2)
-test(model_sgd, test_loader, criterion)
-
-print("\nTraining with SGD with Heavy Ball Momentum Optimizer")
-train(model_momentum, train_loader, criterion, optimizer_momentum, num_epochs=2)
-test(model_momentum, test_loader, criterion)
+# print("Training with Nesterov Accelerated Gradient (NAG) Optimizer")
+# model_nag = SimpleNN().to(device)
+# optimizer_nag = NAG(model_nag.parameters(), lr=1e-3, momentum=0.9)
+# train(model_nag, train_loader, criterion, optimizer_nag, device, num_epochs=2)
+# test(model_nag, test_loader, criterion, device)
+#
+# print("\nTraining with Adagrad Optimizer")
+# model_adagrad = SimpleNN().to(device)
+# optimizer_adagrad = Adagrad(model_adagrad.parameters(), lr=1e-2, eps=1e-10)
+# train(model_adagrad, train_loader, criterion, optimizer_adagrad, device, num_epochs=2)
+# test(model_adagrad, test_loader, criterion, device)
+#
+# print("\nTraining with Adadelta Optimizer")
+# model_adadelta = SimpleNN().to(device)
+# optimizer_adadelta = Adadelta(model_adadelta.parameters(), lr=1.0, rho=0.9, eps=1e-6)
+# train(model_adadelta, train_loader, criterion, optimizer_adadelta, device, num_epochs=2)
+# test(model_adadelta, test_loader, criterion, device)
