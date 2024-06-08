@@ -1,0 +1,210 @@
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.0
+Epoch 1/2 completed, Average Loss: 0.3994
+Epoch 2/2 completed, Average Loss: 0.1754
+Test set: Average loss: 0.0026, Accuracy: 9482/10000 (94.82%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.05
+Epoch 1/2 completed, Average Loss: 0.3898
+Epoch 2/2 completed, Average Loss: 0.1752
+Test set: Average loss: 0.0048, Accuracy: 8933/10000 (89.33%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.1
+Epoch 1/2 completed, Average Loss: 0.3739
+Epoch 2/2 completed, Average Loss: 0.1704
+Test set: Average loss: 0.0025, Accuracy: 9521/10000 (95.21%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.15
+Epoch 1/2 completed, Average Loss: 0.3747
+Epoch 2/2 completed, Average Loss: 0.1666
+Test set: Average loss: 0.0025, Accuracy: 9505/10000 (95.05%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.2
+Epoch 1/2 completed, Average Loss: 0.3751
+Epoch 2/2 completed, Average Loss: 0.1667
+Test set: Average loss: 0.0027, Accuracy: 9441/10000 (94.41%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.25
+Epoch 1/2 completed, Average Loss: 0.3563
+Epoch 2/2 completed, Average Loss: 0.1616
+Test set: Average loss: 0.0020, Accuracy: 9608/10000 (96.08%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.3
+Epoch 1/2 completed, Average Loss: 0.3523
+Epoch 2/2 completed, Average Loss: 0.1610
+Test set: Average loss: 0.0029, Accuracy: 9417/10000 (94.17%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.35
+Epoch 1/2 completed, Average Loss: 0.3436
+Epoch 2/2 completed, Average Loss: 0.1566
+Test set: Average loss: 0.0024, Accuracy: 9532/10000 (95.32%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.4
+Epoch 1/2 completed, Average Loss: 0.3494
+Epoch 2/2 completed, Average Loss: 0.1600
+Test set: Average loss: 0.0021, Accuracy: 9591/10000 (95.91%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.45
+Epoch 1/2 completed, Average Loss: 0.3434
+Epoch 2/2 completed, Average Loss: 0.1577
+Test set: Average loss: 0.0039, Accuracy: 9244/10000 (92.44%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.5
+Epoch 1/2 completed, Average Loss: 0.3311
+Epoch 2/2 completed, Average Loss: 0.1505
+Test set: Average loss: 0.0022, Accuracy: 9550/10000 (95.50%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.55
+Epoch 1/2 completed, Average Loss: 0.3374
+Epoch 2/2 completed, Average Loss: 0.1624
+Test set: Average loss: 0.0022, Accuracy: 9557/10000 (95.57%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.6
+Epoch 1/2 completed, Average Loss: 0.3629
+Epoch 2/2 completed, Average Loss: 0.1776
+Test set: Average loss: 0.0027, Accuracy: 9447/10000 (94.47%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.65
+Epoch 1/2 completed, Average Loss: 0.3211
+Epoch 2/2 completed, Average Loss: 0.1554
+Test set: Average loss: 0.0021, Accuracy: 9569/10000 (95.69%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.7
+Epoch 1/2 completed, Average Loss: 0.3722
+Epoch 2/2 completed, Average Loss: 0.1936
+Test set: Average loss: 0.0022, Accuracy: 9579/10000 (95.79%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.75
+Epoch 1/2 completed, Average Loss: 0.4384
+Epoch 2/2 completed, Average Loss: 0.2602
+Test set: Average loss: 0.0041, Accuracy: 9230/10000 (92.30%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.8
+Epoch 1/2 completed, Average Loss: 0.3949
+Epoch 2/2 completed, Average Loss: 0.2361
+Test set: Average loss: 0.0029, Accuracy: 9461/10000 (94.61%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.85
+Epoch 1/2 completed, Average Loss: 0.5226
+Epoch 2/2 completed, Average Loss: 0.3707
+Test set: Average loss: 0.0054, Accuracy: 9068/10000 (90.68%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.9
+Epoch 1/2 completed, Average Loss: 0.8992
+Epoch 2/2 completed, Average Loss: 1.0099
+Test set: Average loss: 0.0181, Accuracy: 5602/10000 (56.02%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=0.95
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+
+Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer with momentum=1.0
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.0
+Epoch 1/2 completed, Average Loss: 1.8941
+Epoch 2/2 completed, Average Loss: 1.1946
+Test set: Average loss: 0.0147, Accuracy: 8162/10000 (81.62%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.05
+Epoch 1/2 completed, Average Loss: 1.9115
+Epoch 2/2 completed, Average Loss: 1.1972
+Test set: Average loss: 0.0147, Accuracy: 8186/10000 (81.86%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.1
+Epoch 1/2 completed, Average Loss: 1.8421
+Epoch 2/2 completed, Average Loss: 1.1133
+Test set: Average loss: 0.0136, Accuracy: 8298/10000 (82.98%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.15
+Epoch 1/2 completed, Average Loss: 1.8410
+Epoch 2/2 completed, Average Loss: 1.0822
+Test set: Average loss: 0.0132, Accuracy: 8325/10000 (83.25%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.2
+Epoch 1/2 completed, Average Loss: 1.8113
+Epoch 2/2 completed, Average Loss: 1.0315
+Test set: Average loss: 0.0125, Accuracy: 8348/10000 (83.48%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.25
+Epoch 1/2 completed, Average Loss: 1.7679
+Epoch 2/2 completed, Average Loss: 0.9918
+Test set: Average loss: 0.0120, Accuracy: 8366/10000 (83.66%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.3
+Epoch 1/2 completed, Average Loss: 1.7738
+Epoch 2/2 completed, Average Loss: 0.9608
+Test set: Average loss: 0.0115, Accuracy: 8409/10000 (84.09%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.35
+Epoch 1/2 completed, Average Loss: 1.6949
+Epoch 2/2 completed, Average Loss: 0.8860
+Test set: Average loss: 0.0108, Accuracy: 8514/10000 (85.14%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.4
+Epoch 1/2 completed, Average Loss: 1.6158
+Epoch 2/2 completed, Average Loss: 0.8222
+Test set: Average loss: 0.0100, Accuracy: 8555/10000 (85.55%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.45
+Epoch 1/2 completed, Average Loss: 1.6158
+Epoch 2/2 completed, Average Loss: 0.8140
+Test set: Average loss: 0.0100, Accuracy: 8487/10000 (84.87%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.5
+Epoch 1/2 completed, Average Loss: 1.5446
+Epoch 2/2 completed, Average Loss: 0.7386
+Test set: Average loss: 0.0091, Accuracy: 8621/10000 (86.21%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.55
+Epoch 1/2 completed, Average Loss: 1.5557
+Epoch 2/2 completed, Average Loss: 0.7212
+Test set: Average loss: 0.0089, Accuracy: 8664/10000 (86.64%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.6
+Epoch 1/2 completed, Average Loss: 1.4191
+Epoch 2/2 completed, Average Loss: 0.6507
+Test set: Average loss: 0.0082, Accuracy: 8725/10000 (87.25%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.65
+Epoch 1/2 completed, Average Loss: 1.3370
+Epoch 2/2 completed, Average Loss: 0.5933
+Test set: Average loss: 0.0075, Accuracy: 8774/10000 (87.74%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.7
+Epoch 1/2 completed, Average Loss: 1.2661
+Epoch 2/2 completed, Average Loss: 0.5493
+Test set: Average loss: 0.0071, Accuracy: 8814/10000 (88.14%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.75
+Epoch 1/2 completed, Average Loss: 1.1372
+Epoch 2/2 completed, Average Loss: 0.4956
+Test set: Average loss: 0.0065, Accuracy: 8912/10000 (89.12%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.8
+Epoch 1/2 completed, Average Loss: 1.0552
+Epoch 2/2 completed, Average Loss: 0.4564
+Test set: Average loss: 0.0060, Accuracy: 8934/10000 (89.34%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.85
+Epoch 1/2 completed, Average Loss: 0.9313
+Epoch 2/2 completed, Average Loss: 0.4142
+Test set: Average loss: 0.0056, Accuracy: 9002/10000 (90.02%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.9
+Epoch 1/2 completed, Average Loss: 0.7892
+Epoch 2/2 completed, Average Loss: 0.3695
+Test set: Average loss: 0.0050, Accuracy: 9072/10000 (90.72%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=0.95
+Epoch 1/2 completed, Average Loss: 0.6165
+Epoch 2/2 completed, Average Loss: 0.3103
+Test set: Average loss: 0.0042, Accuracy: 9231/10000 (92.31%)
+
+Training with Nesterov Accelerated Gradient (NAG) with momentum=1.0
+Epoch 1/2 completed, Average Loss: 0.9074
+Epoch 2/2 completed, Average Loss: 0.8794
+Test set: Average loss: 0.0143, Accuracy: 7767/10000 (77.67%)

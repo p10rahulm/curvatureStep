@@ -1,0 +1,105 @@
+
+Training with Adadelta Curvature Optimizer with rho=0.0
+Epoch 1/2 completed, Average Loss: 0.6483
+Epoch 2/2 completed, Average Loss: 0.3137
+Test set: Average loss: 0.0043, Accuracy: 9301/10000 (93.01%)
+
+Training with Adadelta Curvature Optimizer with rho=0.05
+Epoch 1/2 completed, Average Loss: 0.4496
+Epoch 2/2 completed, Average Loss: 0.2343
+Test set: Average loss: 0.0059, Accuracy: 8882/10000 (88.82%)
+
+Training with Adadelta Curvature Optimizer with rho=0.1
+Epoch 1/2 completed, Average Loss: 0.4128
+Epoch 2/2 completed, Average Loss: 0.2160
+Test set: Average loss: 0.0036, Accuracy: 9385/10000 (93.85%)
+
+Training with Adadelta Curvature Optimizer with rho=0.15
+Epoch 1/2 completed, Average Loss: 0.4138
+Epoch 2/2 completed, Average Loss: 0.2021
+Test set: Average loss: 0.0026, Accuracy: 9529/10000 (95.29%)
+
+Training with Adadelta Curvature Optimizer with rho=0.2
+Epoch 1/2 completed, Average Loss: 0.4029
+Epoch 2/2 completed, Average Loss: 0.1947
+Test set: Average loss: 0.0025, Accuracy: 9517/10000 (95.17%)
+
+Training with Adadelta Curvature Optimizer with rho=0.25
+Epoch 1/2 completed, Average Loss: 0.3997
+Epoch 2/2 completed, Average Loss: 0.1945
+Test set: Average loss: 0.0029, Accuracy: 9484/10000 (94.84%)
+
+Training with Adadelta Curvature Optimizer with rho=0.3
+Epoch 1/2 completed, Average Loss: 0.3971
+Epoch 2/2 completed, Average Loss: 0.1885
+Test set: Average loss: 0.0031, Accuracy: 9449/10000 (94.49%)
+
+Training with Adadelta Curvature Optimizer with rho=0.35
+Epoch 1/2 completed, Average Loss: 0.3909
+Epoch 2/2 completed, Average Loss: 0.1895
+Test set: Average loss: 0.0031, Accuracy: 9420/10000 (94.20%)
+
+Training with Adadelta Curvature Optimizer with rho=0.4
+Epoch 1/2 completed, Average Loss: 0.3933
+Epoch 2/2 completed, Average Loss: 0.1891
+Test set: Average loss: 0.0023, Accuracy: 9559/10000 (95.59%)
+
+Training with Adadelta Curvature Optimizer with rho=0.45
+Epoch 1/2 completed, Average Loss: 0.3826
+Epoch 2/2 completed, Average Loss: 0.1810
+Test set: Average loss: 0.0030, Accuracy: 9449/10000 (94.49%)
+
+Training with Adadelta Curvature Optimizer with rho=0.5
+Epoch 1/2 completed, Average Loss: 0.3831
+Epoch 2/2 completed, Average Loss: 0.1785
+Test set: Average loss: 0.0025, Accuracy: 9516/10000 (95.16%)
+
+Training with Adadelta Curvature Optimizer with rho=0.55
+Epoch 1/2 completed, Average Loss: 0.3832
+Epoch 2/2 completed, Average Loss: 0.1835
+Test set: Average loss: 0.0023, Accuracy: 9552/10000 (95.52%)
+
+Training with Adadelta Curvature Optimizer with rho=0.6
+Epoch 1/2 completed, Average Loss: 0.3761
+Epoch 2/2 completed, Average Loss: 0.1741
+Test set: Average loss: 0.0021, Accuracy: 9616/10000 (96.16%)
+
+Training with Adadelta Curvature Optimizer with rho=0.65
+Epoch 1/2 completed, Average Loss: 0.3751
+Epoch 2/2 completed, Average Loss: 0.1715
+Test set: Average loss: 0.0025, Accuracy: 9499/10000 (94.99%)
+
+Training with Adadelta Curvature Optimizer with rho=0.7
+Epoch 1/2 completed, Average Loss: 0.3830
+Epoch 2/2 completed, Average Loss: 0.1703
+Test set: Average loss: 0.0024, Accuracy: 9557/10000 (95.57%)
+
+Training with Adadelta Curvature Optimizer with rho=0.75
+Epoch 1/2 completed, Average Loss: 0.3714
+Epoch 2/2 completed, Average Loss: 0.1681
+Test set: Average loss: 0.0023, Accuracy: 9581/10000 (95.81%)
+
+Training with Adadelta Curvature Optimizer with rho=0.8
+Epoch 1/2 completed, Average Loss: 0.3743
+Epoch 2/2 completed, Average Loss: 0.1721
+Test set: Average loss: 0.0023, Accuracy: 9556/10000 (95.56%)
+
+Training with Adadelta Curvature Optimizer with rho=0.85
+Epoch 1/2 completed, Average Loss: 0.3771
+Epoch 2/2 completed, Average Loss: 0.1713
+Test set: Average loss: 0.0021, Accuracy: 9583/10000 (95.83%)
+
+Training with Adadelta Curvature Optimizer with rho=0.9
+Epoch 1/2 completed, Average Loss: 0.3782
+Epoch 2/2 completed, Average Loss: 0.1766
+Test set: Average loss: 0.0028, Accuracy: 9473/10000 (94.73%)
+
+Training with Adadelta Curvature Optimizer with rho=0.95
+Epoch 1/2 completed, Average Loss: 0.3825
+Epoch 2/2 completed, Average Loss: 0.1804
+Test set: Average loss: 0.0026, Accuracy: 9477/10000 (94.77%)
+
+Training with Adadelta Curvature Optimizer with rho=1.0
+Epoch 1/2 completed, Average Loss: 2.5388
+Epoch 2/2 completed, Average Loss: 2.3052
+Test set: Average loss: 0.0362, Accuracy: 1028/10000 (10.28%)

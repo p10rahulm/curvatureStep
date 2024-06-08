@@ -43,6 +43,8 @@ from optimizers.amsgrad import AMSGrad
 from optimizers.amsgrad_curvature import AMSGradCurvature
 
 from optimizers.shampoo import Shampoo
+from optimizers.shampoo_curvature import ShampooCurvature
+
 
 # Set random seeds for reproducibility
 set_seed(42)
@@ -96,18 +98,17 @@ criterion = torch.nn.CrossEntropyLoss()
 # train(model_heavyball, train_loader, criterion, optimizer_heavyball, device, num_epochs=2)
 # test(model_heavyball, test_loader, criterion, device)
 #
-print("Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer")
-model_nag_curvature = SimpleNN().to(device)
-optimizer_nag_curvature = NAGCurvature(model_nag_curvature.parameters(), lr=1e-3, momentum=0.9, epsilon=0.01)
-train(model_nag_curvature, train_loader, criterion, optimizer_nag_curvature, device, num_epochs=2)
-test(model_nag_curvature, test_loader, criterion, device)
-
-print("Training with Nesterov Accelerated Gradient (NAG) Optimizer")
-model_nag = SimpleNN().to(device)
-optimizer_nag = NAG(model_nag.parameters(), lr=1e-3, momentum=0.9)
-train(model_nag, train_loader, criterion, optimizer_nag, device, num_epochs=2)
-test(model_nag, test_loader, criterion, device)
-
+# print("Training with Nesterov Accelerated Gradient (NAG) with Curvature Optimizer")
+# model_nag_curvature = SimpleNN().to(device)
+# optimizer_nag_curvature = NAGCurvature(model_nag_curvature.parameters(), lr=1e-3, momentum=0.9, epsilon=0.01)
+# train(model_nag_curvature, train_loader, criterion, optimizer_nag_curvature, device, num_epochs=2)
+# test(model_nag_curvature, test_loader, criterion, device)
+#
+# print("Training with Nesterov Accelerated Gradient (NAG) Optimizer")
+# model_nag = SimpleNN().to(device)
+# optimizer_nag = NAG(model_nag.parameters(), lr=1e-3, momentum=0.25)
+# train(model_nag, train_loader, criterion, optimizer_nag, device, num_epochs=2)
+# test(model_nag, test_loader, criterion, device)
 #
 # print("\nTraining with Adagrad with Curvature Optimizer")
 # model_adagrad_curvature = SimpleNN().to(device)
@@ -134,29 +135,29 @@ test(model_nag, test_loader, criterion, device)
 # test(model_adadelta_curvature, test_loader, criterion, device)
 #
 #
-print("\nTraining with RMSProp with Curvature Optimizer")
-model_rmsprop_curvature = SimpleNN().to(device)
-optimizer_rmsprop_curvature = RMSPropCurvature(model_rmsprop_curvature.parameters(), lr=1e-2, alpha=0.99, eps=1e-8, weight_decay=0, epsilon=0.01)
-train(model_rmsprop_curvature, train_loader, criterion, optimizer_rmsprop_curvature, device, num_epochs=2)
-test(model_rmsprop_curvature, test_loader, criterion, device)
-
-print("\nTraining with RMSProp Optimizer")
-model_rmsprop = SimpleNN().to(device)
-optimizer_rmsprop = RMSProp(model_rmsprop.parameters(), lr=1e-2, alpha=0.99, eps=1e-8, weight_decay=0)
-train(model_rmsprop, train_loader, criterion, optimizer_rmsprop, device, num_epochs=2)
-test(model_rmsprop, test_loader, criterion, device)
-
-print("\nTraining with RMSProp with Momentum and Curvature Optimizer")
-model_rmsprop_momentum_curvature = SimpleNN().to(device)
-optimizer_rmsprop_momentum_curvature = RMSPropMomentumCurvature(model_rmsprop_momentum_curvature.parameters(), lr=1e-2, alpha=0.99, eps=1e-8, weight_decay=0, momentum=0.1, epsilon=0.01)
-train(model_rmsprop_momentum_curvature, train_loader, criterion, optimizer_rmsprop_momentum_curvature, device, num_epochs=2)
-test(model_rmsprop_momentum_curvature, test_loader, criterion, device)
-
-print("\nTraining with RMSProp Optimizer With Momentum")
-model_rmsprop_momentum = SimpleNN().to(device)
-optimizer_rmsprop_momentum = RMSPropMomentum(model_rmsprop_momentum.parameters(), lr=1e-2, alpha=0.99, eps=1e-8, weight_decay=0, momentum=0.1)
-train(model_rmsprop_momentum, train_loader, criterion, optimizer_rmsprop_momentum, device, num_epochs=2)
-test(model_rmsprop_momentum, test_loader, criterion, device)
+# print("\nTraining with RMSProp with Curvature Optimizer")
+# model_rmsprop_curvature = SimpleNN().to(device)
+# optimizer_rmsprop_curvature = RMSPropCurvature(model_rmsprop_curvature.parameters(), lr=1e-2, alpha=0.99, eps=1e-8, weight_decay=0, epsilon=0.01)
+# train(model_rmsprop_curvature, train_loader, criterion, optimizer_rmsprop_curvature, device, num_epochs=2)
+# test(model_rmsprop_curvature, test_loader, criterion, device)
+#
+# print("\nTraining with RMSProp Optimizer")
+# model_rmsprop = SimpleNN().to(device)
+# optimizer_rmsprop = RMSProp(model_rmsprop.parameters(), lr=1e-2, alpha=0.99, eps=1e-8, weight_decay=0)
+# train(model_rmsprop, train_loader, criterion, optimizer_rmsprop, device, num_epochs=2)
+# test(model_rmsprop, test_loader, criterion, device)
+#
+# print("\nTraining with RMSProp with Momentum and Curvature Optimizer")
+# model_rmsprop_momentum_curvature = SimpleNN().to(device)
+# optimizer_rmsprop_momentum_curvature = RMSPropMomentumCurvature(model_rmsprop_momentum_curvature.parameters(), lr=1e-2, alpha=0.99, eps=1e-8, weight_decay=0, momentum=0.1, epsilon=0.01)
+# train(model_rmsprop_momentum_curvature, train_loader, criterion, optimizer_rmsprop_momentum_curvature, device, num_epochs=2)
+# test(model_rmsprop_momentum_curvature, test_loader, criterion, device)
+#
+# print("\nTraining with RMSProp Optimizer With Momentum")
+# model_rmsprop_momentum = SimpleNN().to(device)
+# optimizer_rmsprop_momentum = RMSPropMomentum(model_rmsprop_momentum.parameters(), lr=1e-2, alpha=0.99, eps=1e-8, weight_decay=0, momentum=0.1)
+# train(model_rmsprop_momentum, train_loader, criterion, optimizer_rmsprop_momentum, device, num_epochs=2)
+# test(model_rmsprop_momentum, test_loader, criterion, device)
 #
 # print("\nTraining with AdamW Curvature Optimizer")
 # model_adamw_curvature = SimpleNN().to(device)
@@ -196,21 +197,27 @@ test(model_rmsprop_momentum, test_loader, criterion, device)
 # train(model_nadamw, train_loader, criterion, optimizer_nadamw, device, num_epochs=2)
 # test(model_nadamw, test_loader, criterion, device)
 #
-print("\nTraining with AMSGrad Curvature Optimizer")
-model_amsgrad_curvature = SimpleNN().to(device)
-optimizer_amsgrad_curvature = AMSGradCurvature(model_amsgrad_curvature.parameters(), lr=1e-3, epsilon=0.01)
-train(model_amsgrad_curvature, train_loader, criterion, optimizer_amsgrad_curvature, device, num_epochs=2)
-test(model_amsgrad_curvature, test_loader, criterion, device)
+# print("\nTraining with AMSGrad Curvature Optimizer")
+# model_amsgrad_curvature = SimpleNN().to(device)
+# optimizer_amsgrad_curvature = AMSGradCurvature(model_amsgrad_curvature.parameters(), lr=1e-3, epsilon=0.01)
+# train(model_amsgrad_curvature, train_loader, criterion, optimizer_amsgrad_curvature, device, num_epochs=2)
+# test(model_amsgrad_curvature, test_loader, criterion, device)
+#
+# print("\nTraining with AMSGrad Optimizer")
+# model_amsgrad = SimpleNN().to(device)
+# optimizer_amsgrad = AMSGrad(model_amsgrad.parameters(), lr=1e-3)
+# train(model_amsgrad, train_loader, criterion, optimizer_amsgrad, device, num_epochs=2)
+# test(model_amsgrad, test_loader, criterion, device)
 
-print("\nTraining with AMSGrad Optimizer")
-model_amsgrad = SimpleNN().to(device)
-optimizer_amsgrad = AMSGrad(model_amsgrad.parameters(), lr=1e-3)
-train(model_amsgrad, train_loader, criterion, optimizer_amsgrad, device, num_epochs=2)
-test(model_amsgrad, test_loader, criterion, device)
+print("\nTraining with Shampoo with Curvature Optimizer")
+model_shampoo_curvature = SimpleNN().to(device)
+optimizer_shampoo_curvature = ShampooCurvature(model_shampoo_curvature.parameters(), lr=1e-3, epsilon=0.01)
+train(model_shampoo_curvature, train_loader, criterion, optimizer_shampoo_curvature, device, num_epochs=2)
+test(model_shampoo_curvature, test_loader, criterion, device)
 
-# print("\nTraining with Shampoo Optimizer")
-# model_shampoo = SimpleNN().to(device)
-# optimizer_shampoo = Shampoo(model_shampoo.parameters(), lr=1e-3)
-# train(model_shampoo, train_loader, criterion, optimizer_shampoo, device, num_epochs=2)
-# test(model_shampoo, test_loader, criterion, device)
+print("\nTraining with Shampoo Optimizer")
+model_shampoo = SimpleNN().to(device)
+optimizer_shampoo = Shampoo(model_shampoo.parameters(), lr=1e-3)
+train(model_shampoo, train_loader, criterion, optimizer_shampoo, device, num_epochs=2)
+test(model_shampoo, test_loader, criterion, device)
 
