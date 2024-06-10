@@ -8,6 +8,7 @@ from utilities import set_seed
 
 def run_experiment(optimizer_class, optimizer_params, num_runs=10, num_epochs=2, debug_logs=False):
     set_seed(42)
+    print("params=",optimizer_params)
     train_loader, test_loader = load_mnist()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     criterion = torch.nn.CrossEntropyLoss()

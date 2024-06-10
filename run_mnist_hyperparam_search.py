@@ -17,8 +17,6 @@ for optimizer_class, default_params in optimizers:
         params = default_params.copy()
         if 'momentum' in params:
             params['momentum'] = momentum
-        elif 'momentum_mult' in params:
-            params['momentum_mult'] = momentum
         elif 'betas' in params:
             params['betas'] = (momentum, params['betas'][1])
         elif 'rho' in params:

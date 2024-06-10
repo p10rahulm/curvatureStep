@@ -64,7 +64,7 @@ criterion = torch.nn.CrossEntropyLoss()
 # Train and test the models
 print("Training with Simple SGD with Curvature Optimizer")
 model_sgd_curvature = SimpleNN().to(device)
-optimizer_sgd_curvature = SimpleSGDCurvature(model_sgd_curvature.parameters(), lr=1e-3, momentum_mult=0.9, epsilon=0.01)
+optimizer_sgd_curvature = SimpleSGDCurvature(model_sgd_curvature.parameters(), lr=1e-3, epsilon=0.01)
 train(model_sgd_curvature, train_loader, criterion, optimizer_sgd_curvature, device, num_epochs=2)
 test(model_sgd_curvature, test_loader, criterion, device)
 

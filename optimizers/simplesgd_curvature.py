@@ -3,8 +3,8 @@ from torch.optim import Optimizer
 
 
 class SimpleSGDCurvature(Optimizer):
-    def __init__(self, params, lr=1e-3, momentum_mult=0.9, epsilon=0.01):
-        defaults = dict(lr=lr, momentum_mult=momentum_mult, epsilon=epsilon)
+    def __init__(self, params, lr=1e-3, epsilon=0.01):
+        defaults = dict(lr=lr, epsilon=epsilon)
         super(SimpleSGDCurvature, self).__init__(params, defaults)
 
     def step(self, closure=None):
