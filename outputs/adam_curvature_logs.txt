@@ -1,0 +1,102 @@
+
+Training with Adam with Curvature Optimizer with beta1=0.0
+Epoch 1/2 completed, Average Loss: 0.3871
+Epoch 2/2 completed, Average Loss: 0.1813
+Test set: Average loss: 0.0026, Accuracy: 9474/10000 (94.74%)
+
+Training with Adam with Curvature Optimizer with beta1=0.05
+Epoch 1/2 completed, Average Loss: 0.3922
+Epoch 2/2 completed, Average Loss: 0.1847
+Test set: Average loss: 0.0053, Accuracy: 8800/10000 (88.00%)
+
+Training with Adam with Curvature Optimizer with beta1=0.1
+Epoch 1/2 completed, Average Loss: 0.3827
+Epoch 2/2 completed, Average Loss: 0.1850
+Test set: Average loss: 0.0023, Accuracy: 9550/10000 (95.50%)
+
+Training with Adam with Curvature Optimizer with beta1=0.15
+Epoch 1/2 completed, Average Loss: 0.3852
+Epoch 2/2 completed, Average Loss: 0.1816
+Test set: Average loss: 0.0025, Accuracy: 9496/10000 (94.96%)
+
+Training with Adam with Curvature Optimizer with beta1=0.2
+Epoch 1/2 completed, Average Loss: 0.3711
+Epoch 2/2 completed, Average Loss: 0.1771
+Test set: Average loss: 0.0023, Accuracy: 9530/10000 (95.30%)
+
+Training with Adam with Curvature Optimizer with beta1=0.25
+Epoch 1/2 completed, Average Loss: 0.3821
+Epoch 2/2 completed, Average Loss: 0.1874
+Test set: Average loss: 0.0023, Accuracy: 9553/10000 (95.53%)
+
+Training with Adam with Curvature Optimizer with beta1=0.3
+Epoch 1/2 completed, Average Loss: 0.3790
+Epoch 2/2 completed, Average Loss: 0.1818
+Test set: Average loss: 0.0030, Accuracy: 9385/10000 (93.85%)
+
+Training with Adam with Curvature Optimizer with beta1=0.35
+Epoch 1/2 completed, Average Loss: 0.3799
+Epoch 2/2 completed, Average Loss: 0.1837
+Test set: Average loss: 0.0029, Accuracy: 9436/10000 (94.36%)
+
+Training with Adam with Curvature Optimizer with beta1=0.4
+Epoch 1/2 completed, Average Loss: 0.3811
+Epoch 2/2 completed, Average Loss: 0.1900
+Test set: Average loss: 0.0022, Accuracy: 9577/10000 (95.77%)
+
+Training with Adam with Curvature Optimizer with beta1=0.45
+Epoch 1/2 completed, Average Loss: 0.3737
+Epoch 2/2 completed, Average Loss: 0.1822
+Test set: Average loss: 0.0031, Accuracy: 9371/10000 (93.71%)
+
+Training with Adam with Curvature Optimizer with beta1=0.5
+Epoch 1/2 completed, Average Loss: 0.3675
+Epoch 2/2 completed, Average Loss: 0.1818
+Test set: Average loss: 0.0023, Accuracy: 9540/10000 (95.40%)
+
+Training with Adam with Curvature Optimizer with beta1=0.55
+Epoch 1/2 completed, Average Loss: 0.3822
+Epoch 2/2 completed, Average Loss: 0.1895
+Test set: Average loss: 0.0024, Accuracy: 9546/10000 (95.46%)
+
+Training with Adam with Curvature Optimizer with beta1=0.6
+Epoch 1/2 completed, Average Loss: 0.3773
+Epoch 2/2 completed, Average Loss: 0.1892
+Test set: Average loss: 0.0023, Accuracy: 9529/10000 (95.29%)
+
+Training with Adam with Curvature Optimizer with beta1=0.65
+Epoch 1/2 completed, Average Loss: 0.3794
+Epoch 2/2 completed, Average Loss: 0.1913
+Test set: Average loss: 0.0026, Accuracy: 9520/10000 (95.20%)
+
+Training with Adam with Curvature Optimizer with beta1=0.7
+Epoch 1/2 completed, Average Loss: 0.3811
+Epoch 2/2 completed, Average Loss: 0.1918
+Test set: Average loss: 0.0024, Accuracy: 9541/10000 (95.41%)
+
+Training with Adam with Curvature Optimizer with beta1=0.75
+Epoch 1/2 completed, Average Loss: 0.3730
+Epoch 2/2 completed, Average Loss: 0.1886
+Test set: Average loss: 0.0023, Accuracy: 9571/10000 (95.71%)
+
+Training with Adam with Curvature Optimizer with beta1=0.8
+Epoch 1/2 completed, Average Loss: 0.3739
+Epoch 2/2 completed, Average Loss: 0.1920
+Test set: Average loss: 0.0023, Accuracy: 9549/10000 (95.49%)
+
+Training with Adam with Curvature Optimizer with beta1=0.85
+Epoch 1/2 completed, Average Loss: 0.3762
+Epoch 2/2 completed, Average Loss: 0.1870
+Test set: Average loss: 0.0023, Accuracy: 9583/10000 (95.83%)
+
+Training with Adam with Curvature Optimizer with beta1=0.9
+Epoch 1/2 completed, Average Loss: 0.3885
+Epoch 2/2 completed, Average Loss: 0.2030
+Test set: Average loss: 0.0025, Accuracy: 9537/10000 (95.37%)
+
+Training with Adam with Curvature Optimizer with beta1=0.95
+Epoch 1/2 completed, Average Loss: 0.3836
+Epoch 2/2 completed, Average Loss: 0.2009
+Test set: Average loss: 0.0027, Accuracy: 9488/10000 (94.88%)
+
+Training with Adam with Curvature Optimizer with beta1=1.0

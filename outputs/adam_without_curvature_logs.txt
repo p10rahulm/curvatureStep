@@ -1,0 +1,100 @@
+
+Training with Adam with beta1=0.0
+Epoch 1/2 completed, Average Loss: 0.3870
+Epoch 2/2 completed, Average Loss: 0.1813
+Test set: Average loss: 0.0025, Accuracy: 9483/10000 (94.83%)
+
+Training with Adam with beta1=0.05
+Epoch 1/2 completed, Average Loss: 0.3870
+Epoch 2/2 completed, Average Loss: 0.1838
+Test set: Average loss: 0.0044, Accuracy: 9068/10000 (90.68%)
+
+Training with Adam with beta1=0.1
+Epoch 1/2 completed, Average Loss: 0.3815
+Epoch 2/2 completed, Average Loss: 0.1843
+Test set: Average loss: 0.0023, Accuracy: 9554/10000 (95.54%)
+
+Training with Adam with beta1=0.15
+Epoch 1/2 completed, Average Loss: 0.3822
+Epoch 2/2 completed, Average Loss: 0.1791
+Test set: Average loss: 0.0023, Accuracy: 9518/10000 (95.18%)
+
+Training with Adam with beta1=0.2
+Epoch 1/2 completed, Average Loss: 0.3774
+Epoch 2/2 completed, Average Loss: 0.1782
+Test set: Average loss: 0.0024, Accuracy: 9507/10000 (95.07%)
+
+Training with Adam with beta1=0.25
+Epoch 1/2 completed, Average Loss: 0.3812
+Epoch 2/2 completed, Average Loss: 0.1847
+Test set: Average loss: 0.0024, Accuracy: 9514/10000 (95.14%)
+
+Training with Adam with beta1=0.3
+Epoch 1/2 completed, Average Loss: 0.3813
+Epoch 2/2 completed, Average Loss: 0.1852
+Test set: Average loss: 0.0028, Accuracy: 9419/10000 (94.19%)
+
+Training with Adam with beta1=0.35
+Epoch 1/2 completed, Average Loss: 0.3827
+Epoch 2/2 completed, Average Loss: 0.1877
+Test set: Average loss: 0.0026, Accuracy: 9505/10000 (95.05%)
+
+Training with Adam with beta1=0.4
+Epoch 1/2 completed, Average Loss: 0.3806
+Epoch 2/2 completed, Average Loss: 0.1905
+Test set: Average loss: 0.0022, Accuracy: 9574/10000 (95.74%)
+
+Training with Adam with beta1=0.45
+Epoch 1/2 completed, Average Loss: 0.3752
+Epoch 2/2 completed, Average Loss: 0.1859
+Test set: Average loss: 0.0031, Accuracy: 9380/10000 (93.80%)
+
+Training with Adam with beta1=0.5
+Epoch 1/2 completed, Average Loss: 0.3671
+Epoch 2/2 completed, Average Loss: 0.1811
+Test set: Average loss: 0.0023, Accuracy: 9543/10000 (95.43%)
+
+Training with Adam with beta1=0.55
+Epoch 1/2 completed, Average Loss: 0.3881
+Epoch 2/2 completed, Average Loss: 0.1959
+Test set: Average loss: 0.0024, Accuracy: 9531/10000 (95.31%)
+
+Training with Adam with beta1=0.6
+Epoch 1/2 completed, Average Loss: 0.3772
+Epoch 2/2 completed, Average Loss: 0.1892
+Test set: Average loss: 0.0023, Accuracy: 9530/10000 (95.30%)
+
+Training with Adam with beta1=0.65
+Epoch 1/2 completed, Average Loss: 0.3820
+Epoch 2/2 completed, Average Loss: 0.1930
+Test set: Average loss: 0.0027, Accuracy: 9510/10000 (95.10%)
+
+Training with Adam with beta1=0.7
+Epoch 1/2 completed, Average Loss: 0.3808
+Epoch 2/2 completed, Average Loss: 0.1912
+Test set: Average loss: 0.0023, Accuracy: 9544/10000 (95.44%)
+
+Training with Adam with beta1=0.75
+Epoch 1/2 completed, Average Loss: 0.3738
+Epoch 2/2 completed, Average Loss: 0.1892
+Test set: Average loss: 0.0023, Accuracy: 9573/10000 (95.73%)
+
+Training with Adam with beta1=0.8
+Epoch 1/2 completed, Average Loss: 0.3737
+Epoch 2/2 completed, Average Loss: 0.1916
+Test set: Average loss: 0.0023, Accuracy: 9556/10000 (95.56%)
+
+Training with Adam with beta1=0.85
+Epoch 1/2 completed, Average Loss: 0.3756
+Epoch 2/2 completed, Average Loss: 0.1855
+Test set: Average loss: 0.0023, Accuracy: 9564/10000 (95.64%)
+
+Training with Adam with beta1=0.9
+Epoch 1/2 completed, Average Loss: 0.3901
+Epoch 2/2 completed, Average Loss: 0.2036
+Test set: Average loss: 0.0025, Accuracy: 9532/10000 (95.32%)
+
+Training with Adam with beta1=0.95
+Epoch 1/2 completed, Average Loss: 0.3836
+Epoch 2/2 completed, Average Loss: 0.2013
+Test set: Average loss: 0.0026, Accuracy: 9507/10000 (95.07%)
