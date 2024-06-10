@@ -1,0 +1,25 @@
+# ----------------------------------------------------------------------------------------------------
+# Hyperparameter Search
+# ----------------------------------------------------------------------------------------------------
+
+Running Hyperparameter grid search with Optimizer = SimpleSGD and momentum=0.0.
+Running Loop: 1/1
+Epoch 1/2 completed, Average Loss: 1.8941
+Epoch 2/2 completed, Average Loss: 1.1946
+Test set: Average loss: 0.0147, Accuracy: 8162/10000 (81.62%)
+
+Running Hyperparameter grid search with Optimizer = SimpleSGDCurvature and momentum=0.0.
+Running Loop: 1/1
+Epoch 1/2 completed, Average Loss: 0.3994
+Epoch 2/2 completed, Average Loss: 0.1754
+Test set: Average loss: 0.0026, Accuracy: 9470/10000 (94.70%)
+
+Running Hyperparameter grid search with Optimizer = SimpleSGDCurvature and momentum=0.05.
+Running Loop: 1/1
+Epoch 1/2 completed, Average Loss: 0.3994
+Epoch 2/2 completed, Average Loss: 0.1754
+Test set: Average loss: 0.0026, Accuracy: 9470/10000 (94.70%)
+
+Running Hyperparameter grid search with Optimizer = SimpleSGDCurvature and momentum=0.1.
+Running Loop: 1/1
+Epoch 1/2 completed, Average Loss: 0.3994
