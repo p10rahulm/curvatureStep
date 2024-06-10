@@ -8,12 +8,23 @@ results = []
 momentum_values = [round(x * 0.05, 2) for x in range(20)]
 
 for optimizer_class, default_params in optimizers:
+    has_momentum_param = True
     for momentum in momentum_values:
         params = default_params.copy()
         if 'momentum' in params:
             params['momentum'] = momentum
+        elif 'momentum_mult' in params:
+            params['momentum_mult'] = momentum
         elif 'betas' in params:
             params['betas'] = (momentum, params['betas'][1])
+        elif 'rho' in params:
+            params['rho'] = momentum
+        elif 'alpha' in params:
+            params['alpha'] = momentum
+        elif 'weight_decay' in params:
+            params['weight_decay'] = momentum
+        else:
+            has_momentum_param = False
 
         mean_accuracy, std_accuracy = run_experiment(optimizer_class, params)
         results.append({
@@ -22,5 +33,8 @@ for optimizer_class, default_params in optimizers:
             'mean_accuracy': mean_accuracy,
             'std_accuracy': std_accuracy
         })
+
+        if not has_momentum_param:
+            break
 
 write_to_file('outputs/optimizer_results.csv', results)

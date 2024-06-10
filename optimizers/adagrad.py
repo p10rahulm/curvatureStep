@@ -29,7 +29,7 @@ class Adagrad(Optimizer):
                 weight_decay = group['weight_decay']
 
                 if weight_decay != 0:
-                    grad = grad.add(weight_decay, p.data)
+                    grad.add_(p.data, alpha=weight_decay)
 
                 sum_.addcmul_(grad, grad)
                 std = sum_.sqrt().add_(eps)

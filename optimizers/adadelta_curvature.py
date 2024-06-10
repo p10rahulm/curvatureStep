@@ -52,7 +52,7 @@ class AdadeltaCurvature(Optimizer):
                 current_grad = grad
 
                 if weight_decay != 0:
-                    current_grad = current_grad.add(weight_decay, p.data)
+                    current_grad.add_(p.data, alpha=weight_decay)
 
                 radius = torch.norm(last_grad) / torch.maximum(torch.tensor(epsilon, device=grad.device),
                                                                torch.norm(current_grad - last_grad))
