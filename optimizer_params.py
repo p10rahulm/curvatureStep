@@ -48,8 +48,8 @@ optimizers = [
     (NAdamCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
     (NAdamW, {'lr': 1e-3, 'betas': (0.9, 0.999), 'weight_decay': 0.01}),
     (NAdamWCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
-    (AMSGrad, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
+    (AMSGrad, {'lr': 1e-3, 'betas': (0.9, 0.999)}),
     (AMSGradCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
-    (Shampoo, {'lr': 1e-3}),
-    (ShampooCurvature, {'lr': 1e-3, 'epsilon': 0.01}),
+    (Shampoo, {'lr': 1e-3, 'momentum': 0.9}),
+    (ShampooCurvature, {'lr': 1e-3, 'momentum': 0.9, 'epsilon': 0.01}),
 ]
