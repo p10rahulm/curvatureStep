@@ -521,3 +521,11 @@ Test set: Average loss: 0.0271, Accuracy: 4976/10000 (49.76%)
 Running Hyperparameter grid search with Optimizer = Adadelta and momentum=0.6.
 params= {'lr': 1.0, 'weight_decay': 0.6, 'eps': 1e-06}
 Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.9435
+Epoch 2/2 completed, Average Loss: 1.8315
+Test set: Average loss: 0.0286, Accuracy: 4601/10000 (46.01%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.9563
+Epoch 2/2 completed, Average Loss: 1.8295
+Test set: Average loss: 0.0290, Accuracy: 4273/10000 (42.73%)
+Running Loop: 3/10
