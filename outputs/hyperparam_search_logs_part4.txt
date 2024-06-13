@@ -1,0 +1,547 @@
+# ----------------------------------------------------------------------------------------------------
+# Hyperparameter Search
+# ----------------------------------------------------------------------------------------------------
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.0.
+params= {'lr': 0.001, 'momentum': 0.0, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.6465
+Epoch 2/2 completed, Average Loss: 0.7311
+Test set: Average loss: 0.0058, Accuracy: 9110/10000 (91.10%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.5427
+Epoch 2/2 completed, Average Loss: 0.5349
+Test set: Average loss: 0.0057, Accuracy: 9103/10000 (91.03%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.4726
+Epoch 2/2 completed, Average Loss: 0.5192
+Test set: Average loss: 0.0055, Accuracy: 9146/10000 (91.46%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.5003
+Epoch 2/2 completed, Average Loss: 0.5326
+Test set: Average loss: 0.0057, Accuracy: 9107/10000 (91.07%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4883
+Epoch 2/2 completed, Average Loss: 0.5212
+Test set: Average loss: 0.0056, Accuracy: 9132/10000 (91.32%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.4740
+Epoch 2/2 completed, Average Loss: 0.5233
+Test set: Average loss: 0.0057, Accuracy: 9113/10000 (91.13%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.4838
+Epoch 2/2 completed, Average Loss: 0.9233
+Test set: Average loss: 0.0167, Accuracy: 6494/10000 (64.94%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.4700
+Epoch 2/2 completed, Average Loss: 0.5127
+Test set: Average loss: 0.0055, Accuracy: 9142/10000 (91.42%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.4519
+Epoch 2/2 completed, Average Loss: 0.5174
+Test set: Average loss: 0.0056, Accuracy: 9108/10000 (91.08%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.4822
+Epoch 2/2 completed, Average Loss: 0.5204
+Test set: Average loss: 0.0055, Accuracy: 9143/10000 (91.43%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.05.
+params= {'lr': 0.001, 'momentum': 0.05, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.4729
+Epoch 2/2 completed, Average Loss: 0.5092
+Test set: Average loss: 0.0054, Accuracy: 9165/10000 (91.65%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.5072
+Epoch 2/2 completed, Average Loss: 0.5262
+Test set: Average loss: 0.0056, Accuracy: 9119/10000 (91.19%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.4717
+Epoch 2/2 completed, Average Loss: 0.5158
+Test set: Average loss: 0.0055, Accuracy: 9158/10000 (91.58%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.4973
+Epoch 2/2 completed, Average Loss: 0.5276
+Test set: Average loss: 0.0056, Accuracy: 9115/10000 (91.15%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4862
+Epoch 2/2 completed, Average Loss: 0.5185
+Test set: Average loss: 0.0055, Accuracy: 9139/10000 (91.39%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.4724
+Epoch 2/2 completed, Average Loss: 0.5196
+Test set: Average loss: 0.0056, Accuracy: 9107/10000 (91.07%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.4812
+Epoch 2/2 completed, Average Loss: 0.5103
+Test set: Average loss: 0.0055, Accuracy: 9152/10000 (91.52%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.4684
+Epoch 2/2 completed, Average Loss: 0.5110
+Test set: Average loss: 0.0055, Accuracy: 9135/10000 (91.35%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.4515
+Epoch 2/2 completed, Average Loss: 0.5146
+Test set: Average loss: 0.0056, Accuracy: 9115/10000 (91.15%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.4793
+Epoch 2/2 completed, Average Loss: 0.5158
+Test set: Average loss: 0.0055, Accuracy: 9142/10000 (91.42%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.1.
+params= {'lr': 0.001, 'momentum': 0.1, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.4683
+Epoch 2/2 completed, Average Loss: 0.5046
+Test set: Average loss: 0.0054, Accuracy: 9171/10000 (91.71%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.5004
+Epoch 2/2 completed, Average Loss: 0.5209
+Test set: Average loss: 0.0055, Accuracy: 9132/10000 (91.32%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.4619
+Epoch 2/2 completed, Average Loss: 0.5104
+Test set: Average loss: 0.0054, Accuracy: 9158/10000 (91.58%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.5034
+Epoch 2/2 completed, Average Loss: 0.5230
+Test set: Average loss: 0.0056, Accuracy: 9125/10000 (91.25%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4823
+Epoch 2/2 completed, Average Loss: 0.5139
+Test set: Average loss: 0.0055, Accuracy: 9147/10000 (91.47%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.4683
+Epoch 2/2 completed, Average Loss: 0.5139
+Test set: Average loss: 0.0056, Accuracy: 9120/10000 (91.20%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.4773
+Epoch 2/2 completed, Average Loss: 0.5060
+Test set: Average loss: 0.0054, Accuracy: 9155/10000 (91.55%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.4637
+Epoch 2/2 completed, Average Loss: 0.5048
+Test set: Average loss: 0.0054, Accuracy: 9149/10000 (91.49%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.4470
+Epoch 2/2 completed, Average Loss: 0.5096
+Test set: Average loss: 0.0055, Accuracy: 9121/10000 (91.21%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.4777
+Epoch 2/2 completed, Average Loss: 0.5124
+Test set: Average loss: 0.0055, Accuracy: 9149/10000 (91.49%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.15.
+params= {'lr': 0.001, 'momentum': 0.15, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.4648
+Epoch 2/2 completed, Average Loss: 0.4989
+Test set: Average loss: 0.0053, Accuracy: 9181/10000 (91.81%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.4987
+Epoch 2/2 completed, Average Loss: 0.5165
+Test set: Average loss: 0.0055, Accuracy: 9142/10000 (91.42%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.4553
+Epoch 2/2 completed, Average Loss: 0.5046
+Test set: Average loss: 0.0054, Accuracy: 9167/10000 (91.67%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.4867
+Epoch 2/2 completed, Average Loss: 0.5160
+Test set: Average loss: 0.0055, Accuracy: 9129/10000 (91.29%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4781
+Epoch 2/2 completed, Average Loss: 0.5093
+Test set: Average loss: 0.0054, Accuracy: 9147/10000 (91.47%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.4596
+Epoch 2/2 completed, Average Loss: 0.5073
+Test set: Average loss: 0.0055, Accuracy: 9138/10000 (91.38%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.4715
+Epoch 2/2 completed, Average Loss: 0.5003
+Test set: Average loss: 0.0053, Accuracy: 9164/10000 (91.64%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.4582
+Epoch 2/2 completed, Average Loss: 0.4992
+Test set: Average loss: 0.0053, Accuracy: 9160/10000 (91.60%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.4431
+Epoch 2/2 completed, Average Loss: 0.5049
+Test set: Average loss: 0.0055, Accuracy: 9125/10000 (91.25%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.4767
+Epoch 2/2 completed, Average Loss: 0.5071
+Test set: Average loss: 0.0054, Accuracy: 9163/10000 (91.63%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.2.
+params= {'lr': 0.001, 'momentum': 0.2, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.4598
+Epoch 2/2 completed, Average Loss: 0.4937
+Test set: Average loss: 0.0053, Accuracy: 9189/10000 (91.89%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.4904
+Epoch 2/2 completed, Average Loss: 0.5100
+Test set: Average loss: 0.0054, Accuracy: 9150/10000 (91.50%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.4505
+Epoch 2/2 completed, Average Loss: 0.4973
+Test set: Average loss: 0.0053, Accuracy: 9172/10000 (91.72%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.4794
+Epoch 2/2 completed, Average Loss: 0.5086
+Test set: Average loss: 0.0054, Accuracy: 9144/10000 (91.44%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4726
+Epoch 2/2 completed, Average Loss: 0.5028
+Test set: Average loss: 0.0054, Accuracy: 9155/10000 (91.55%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.4520
+Epoch 2/2 completed, Average Loss: 0.5011
+Test set: Average loss: 0.0054, Accuracy: 9139/10000 (91.39%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.4654
+Epoch 2/2 completed, Average Loss: 0.4942
+Test set: Average loss: 0.0053, Accuracy: 9170/10000 (91.70%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.4533
+Epoch 2/2 completed, Average Loss: 0.4931
+Test set: Average loss: 0.0053, Accuracy: 9166/10000 (91.66%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.4372
+Epoch 2/2 completed, Average Loss: 0.4983
+Test set: Average loss: 0.0054, Accuracy: 9139/10000 (91.39%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.4646
+Epoch 2/2 completed, Average Loss: 0.5006
+Test set: Average loss: 0.0053, Accuracy: 9164/10000 (91.64%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.25.
+params= {'lr': 0.001, 'momentum': 0.25, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.4497
+Epoch 2/2 completed, Average Loss: 0.4865
+Test set: Average loss: 0.0052, Accuracy: 9199/10000 (91.99%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.4823
+Epoch 2/2 completed, Average Loss: 0.5028
+Test set: Average loss: 0.0053, Accuracy: 9167/10000 (91.67%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.4408
+Epoch 2/2 completed, Average Loss: 0.4897
+Test set: Average loss: 0.0052, Accuracy: 9185/10000 (91.85%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.4713
+Epoch 2/2 completed, Average Loss: 0.4999
+Test set: Average loss: 0.0053, Accuracy: 9162/10000 (91.62%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4649
+Epoch 2/2 completed, Average Loss: 0.4951
+Test set: Average loss: 0.0053, Accuracy: 9165/10000 (91.65%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.4434
+Epoch 2/2 completed, Average Loss: 0.4938
+Test set: Average loss: 0.0054, Accuracy: 9140/10000 (91.40%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.4607
+Epoch 2/2 completed, Average Loss: 0.4870
+Test set: Average loss: 0.0052, Accuracy: 9173/10000 (91.73%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.4428
+Epoch 2/2 completed, Average Loss: 0.4850
+Test set: Average loss: 0.0052, Accuracy: 9182/10000 (91.82%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.4294
+Epoch 2/2 completed, Average Loss: 0.4910
+Test set: Average loss: 0.0053, Accuracy: 9161/10000 (91.61%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.4569
+Epoch 2/2 completed, Average Loss: 0.4931
+Test set: Average loss: 0.0052, Accuracy: 9175/10000 (91.75%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.3.
+params= {'lr': 0.001, 'momentum': 0.3, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.4400
+Epoch 2/2 completed, Average Loss: 0.4786
+Test set: Average loss: 0.0051, Accuracy: 9206/10000 (92.06%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.4745
+Epoch 2/2 completed, Average Loss: 0.4955
+Test set: Average loss: 0.0052, Accuracy: 9173/10000 (91.73%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.4313
+Epoch 2/2 completed, Average Loss: 0.4812
+Test set: Average loss: 0.0051, Accuracy: 9192/10000 (91.92%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.4617
+Epoch 2/2 completed, Average Loss: 0.4921
+Test set: Average loss: 0.0052, Accuracy: 9166/10000 (91.66%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4555
+Epoch 2/2 completed, Average Loss: 0.4873
+Test set: Average loss: 0.0052, Accuracy: 9178/10000 (91.78%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.4344
+Epoch 2/2 completed, Average Loss: 0.4849
+Test set: Average loss: 0.0053, Accuracy: 9160/10000 (91.60%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.4491
+Epoch 2/2 completed, Average Loss: 0.4791
+Test set: Average loss: 0.0051, Accuracy: 9195/10000 (91.95%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.4338
+Epoch 2/2 completed, Average Loss: 0.4766
+Test set: Average loss: 0.0051, Accuracy: 9182/10000 (91.82%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.4208
+Epoch 2/2 completed, Average Loss: 0.4835
+Test set: Average loss: 0.0052, Accuracy: 9179/10000 (91.79%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.4478
+Epoch 2/2 completed, Average Loss: 0.4846
+Test set: Average loss: 0.0052, Accuracy: 9177/10000 (91.77%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.35.
+params= {'lr': 0.001, 'momentum': 0.35, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.4296
+Epoch 2/2 completed, Average Loss: 0.4698
+Test set: Average loss: 0.0050, Accuracy: 9211/10000 (92.11%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.4686
+Epoch 2/2 completed, Average Loss: 0.4875
+Test set: Average loss: 0.0052, Accuracy: 9187/10000 (91.87%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.4201
+Epoch 2/2 completed, Average Loss: 0.4718
+Test set: Average loss: 0.0050, Accuracy: 9195/10000 (91.95%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.4519
+Epoch 2/2 completed, Average Loss: 0.4838
+Test set: Average loss: 0.0052, Accuracy: 9178/10000 (91.78%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4456
+Epoch 2/2 completed, Average Loss: 0.4780
+Test set: Average loss: 0.0051, Accuracy: 9193/10000 (91.93%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.4238
+Epoch 2/2 completed, Average Loss: 0.4758
+Test set: Average loss: 0.0052, Accuracy: 9179/10000 (91.79%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.4378
+Epoch 2/2 completed, Average Loss: 0.4708
+Test set: Average loss: 0.0050, Accuracy: 9197/10000 (91.97%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.4236
+Epoch 2/2 completed, Average Loss: 0.4675
+Test set: Average loss: 0.0050, Accuracy: 9204/10000 (92.04%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.4128
+Epoch 2/2 completed, Average Loss: 0.4753
+Test set: Average loss: 0.0051, Accuracy: 9185/10000 (91.85%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.4385
+Epoch 2/2 completed, Average Loss: 0.4765
+Test set: Average loss: 0.0051, Accuracy: 9195/10000 (91.95%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.4.
+params= {'lr': 0.001, 'momentum': 0.4, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.4178
+Epoch 2/2 completed, Average Loss: 0.4607
+Test set: Average loss: 0.0049, Accuracy: 9222/10000 (92.22%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.4530
+Epoch 2/2 completed, Average Loss: 0.4771
+Test set: Average loss: 0.0051, Accuracy: 9203/10000 (92.03%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.4084
+Epoch 2/2 completed, Average Loss: 0.4621
+Test set: Average loss: 0.0049, Accuracy: 9210/10000 (92.10%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.4384
+Epoch 2/2 completed, Average Loss: 0.4738
+Test set: Average loss: 0.0051, Accuracy: 9194/10000 (91.94%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4522
+Epoch 2/2 completed, Average Loss: 0.4695
+Test set: Average loss: 0.0050, Accuracy: 9197/10000 (91.97%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.4117
+Epoch 2/2 completed, Average Loss: 0.4672
+Test set: Average loss: 0.0051, Accuracy: 9189/10000 (91.89%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.4272
+Epoch 2/2 completed, Average Loss: 0.4616
+Test set: Average loss: 0.0049, Accuracy: 9218/10000 (92.18%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.4106
+Epoch 2/2 completed, Average Loss: 0.4577
+Test set: Average loss: 0.0049, Accuracy: 9223/10000 (92.23%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.4359
+Epoch 2/2 completed, Average Loss: 0.4668
+Test set: Average loss: 0.0050, Accuracy: 9200/10000 (92.00%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.8003
+Epoch 2/2 completed, Average Loss: 0.4880
+Test set: Average loss: 0.0051, Accuracy: 9192/10000 (91.92%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.45.
+params= {'lr': 0.001, 'momentum': 0.45, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.4047
+Epoch 2/2 completed, Average Loss: 0.4511
+Test set: Average loss: 0.0048, Accuracy: 9227/10000 (92.27%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.4397
+Epoch 2/2 completed, Average Loss: 0.4671
+Test set: Average loss: 0.0050, Accuracy: 9207/10000 (92.07%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.3938
+Epoch 2/2 completed, Average Loss: 0.4518
+Test set: Average loss: 0.0048, Accuracy: 9219/10000 (92.19%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.4260
+Epoch 2/2 completed, Average Loss: 0.4642
+Test set: Average loss: 0.0050, Accuracy: 9196/10000 (91.96%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4263
+Epoch 2/2 completed, Average Loss: 0.4588
+Test set: Average loss: 0.0049, Accuracy: 9209/10000 (92.09%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.4066
+Epoch 2/2 completed, Average Loss: 0.4580
+Test set: Average loss: 0.0050, Accuracy: 9202/10000 (92.02%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.4132
+Epoch 2/2 completed, Average Loss: 0.4517
+Test set: Average loss: 0.0048, Accuracy: 9228/10000 (92.28%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.3997
+Epoch 2/2 completed, Average Loss: 0.4478
+Test set: Average loss: 0.0048, Accuracy: 9229/10000 (92.29%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.3868
+Epoch 2/2 completed, Average Loss: 0.4560
+Test set: Average loss: 0.0050, Accuracy: 9213/10000 (92.13%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.4141
+Epoch 2/2 completed, Average Loss: 0.4571
+Test set: Average loss: 0.0049, Accuracy: 9214/10000 (92.14%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.5.
+params= {'lr': 0.001, 'momentum': 0.5, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.3905
+Epoch 2/2 completed, Average Loss: 0.4404
+Test set: Average loss: 0.0048, Accuracy: 9245/10000 (92.45%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.4268
+Epoch 2/2 completed, Average Loss: 0.4564
+Test set: Average loss: 0.0049, Accuracy: 9221/10000 (92.21%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.3793
+Epoch 2/2 completed, Average Loss: 0.4408
+Test set: Average loss: 0.0047, Accuracy: 9225/10000 (92.25%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.4098
+Epoch 2/2 completed, Average Loss: 0.4532
+Test set: Average loss: 0.0049, Accuracy: 9206/10000 (92.06%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4059
+Epoch 2/2 completed, Average Loss: 0.4475
+Test set: Average loss: 0.0048, Accuracy: 9221/10000 (92.21%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.3827
+Epoch 2/2 completed, Average Loss: 0.4467
+Test set: Average loss: 0.0049, Accuracy: 9205/10000 (92.05%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.3980
+Epoch 2/2 completed, Average Loss: 0.4412
+Test set: Average loss: 0.0048, Accuracy: 9230/10000 (92.30%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.3819
+Epoch 2/2 completed, Average Loss: 0.4365
+Test set: Average loss: 0.0047, Accuracy: 9257/10000 (92.57%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.3767
+Epoch 2/2 completed, Average Loss: 0.4458
+Test set: Average loss: 0.0049, Accuracy: 9219/10000 (92.19%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.4009
+Epoch 2/2 completed, Average Loss: 0.4456
+Test set: Average loss: 0.0048, Accuracy: 9225/10000 (92.25%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.55.
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.3735
+Epoch 2/2 completed, Average Loss: 0.4293
+Test set: Average loss: 0.0047, Accuracy: 9251/10000 (92.51%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.4071
+Epoch 2/2 completed, Average Loss: 0.4445
+Test set: Average loss: 0.0048, Accuracy: 9227/10000 (92.27%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.3645
+Epoch 2/2 completed, Average Loss: 0.4292
+Test set: Average loss: 0.0046, Accuracy: 9238/10000 (92.38%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.3925
+Epoch 2/2 completed, Average Loss: 0.4414
+Test set: Average loss: 0.0048, Accuracy: 9221/10000 (92.21%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.5332
+Epoch 2/2 completed, Average Loss: 0.4389
+Test set: Average loss: 0.0047, Accuracy: 9226/10000 (92.26%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.3657
+Epoch 2/2 completed, Average Loss: 0.4359
+Test set: Average loss: 0.0048, Accuracy: 9215/10000 (92.15%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.3802
+Epoch 2/2 completed, Average Loss: 0.4296
+Test set: Average loss: 0.0046, Accuracy: 9250/10000 (92.50%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.3621
+Epoch 2/2 completed, Average Loss: 0.4244
+Test set: Average loss: 0.0046, Accuracy: 9264/10000 (92.64%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.3537
+Epoch 2/2 completed, Average Loss: 0.4342
+Test set: Average loss: 0.0048, Accuracy: 9229/10000 (92.29%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.3807
+Epoch 2/2 completed, Average Loss: 0.4341
+Test set: Average loss: 0.0047, Accuracy: 9236/10000 (92.36%)
+
+Running Hyperparameter grid search with Optimizer = ShampooCurvature and momentum=0.6.
+params= {'lr': 0.001, 'momentum': 0.6, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.3538
+Epoch 2/2 completed, Average Loss: 0.4176
+Test set: Average loss: 0.0046, Accuracy: 9254/10000 (92.54%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.3873
+Epoch 2/2 completed, Average Loss: 0.4315
+Test set: Average loss: 0.0046, Accuracy: 9255/10000 (92.55%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.3432
+Epoch 2/2 completed, Average Loss: 0.4186
+Test set: Average loss: 0.0045, Accuracy: 9255/10000 (92.55%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.3712
+Epoch 2/2 completed, Average Loss: 0.4293
+Test set: Average loss: 0.0047, Accuracy: 9219/10000 (92.19%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.3670
+Epoch 2/2 completed, Average Loss: 0.4232
+Test set: Average loss: 0.0046, Accuracy: 9230/10000 (92.30%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.3439
+Epoch 2/2 completed, Average Loss: 0.4235
+Test set: Average loss: 0.0047, Accuracy: 9226/10000 (92.26%)
+Running Loop: 7/10

@@ -1,0 +1,863 @@
+# ----------------------------------------------------------------------------------------------------
+# Hyperparameter Search
+# ----------------------------------------------------------------------------------------------------
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.0.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.0, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.2615
+Epoch 2/2 completed, Average Loss: 0.3291
+Test set: Average loss: 0.0061, Accuracy: 8815/10000 (88.15%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.4925
+Epoch 2/2 completed, Average Loss: 0.3185
+Test set: Average loss: 0.0059, Accuracy: 8936/10000 (89.36%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.2735
+Epoch 2/2 completed, Average Loss: 0.3539
+Test set: Average loss: 0.0052, Accuracy: 9125/10000 (91.25%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.0409
+Epoch 2/2 completed, Average Loss: 0.3472
+Test set: Average loss: 0.0091, Accuracy: 8692/10000 (86.92%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.0412
+Epoch 2/2 completed, Average Loss: 0.3474
+Test set: Average loss: 0.0045, Accuracy: 9136/10000 (91.36%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.0439
+Epoch 2/2 completed, Average Loss: 0.3272
+Test set: Average loss: 0.0069, Accuracy: 8781/10000 (87.81%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.3413
+Epoch 2/2 completed, Average Loss: 0.3961
+Test set: Average loss: 0.0049, Accuracy: 9071/10000 (90.71%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.4536
+Epoch 2/2 completed, Average Loss: 0.3373
+Test set: Average loss: 0.0067, Accuracy: 8835/10000 (88.35%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.0705
+Epoch 2/2 completed, Average Loss: 0.3465
+Test set: Average loss: 0.0059, Accuracy: 8962/10000 (89.62%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.1776
+Epoch 2/2 completed, Average Loss: 0.3346
+Test set: Average loss: 0.0055, Accuracy: 9079/10000 (90.79%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.05.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.05, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.3824
+Epoch 2/2 completed, Average Loss: 0.3361
+Test set: Average loss: 0.0053, Accuracy: 8985/10000 (89.85%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.5709
+Epoch 2/2 completed, Average Loss: 0.3466
+Test set: Average loss: 0.0069, Accuracy: 8643/10000 (86.43%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.3238
+Epoch 2/2 completed, Average Loss: 0.3581
+Test set: Average loss: 0.0053, Accuracy: 9022/10000 (90.22%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.0998
+Epoch 2/2 completed, Average Loss: 0.3386
+Test set: Average loss: 0.0074, Accuracy: 8634/10000 (86.34%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.0229
+Epoch 2/2 completed, Average Loss: 0.3642
+Test set: Average loss: 0.0058, Accuracy: 8915/10000 (89.15%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.0482
+Epoch 2/2 completed, Average Loss: 0.3437
+Test set: Average loss: 0.0064, Accuracy: 8820/10000 (88.20%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.3660
+Epoch 2/2 completed, Average Loss: 0.3336
+Test set: Average loss: 0.0097, Accuracy: 8347/10000 (83.47%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.5747
+Epoch 2/2 completed, Average Loss: 0.3451
+Test set: Average loss: 0.0059, Accuracy: 8903/10000 (89.03%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.1206
+Epoch 2/2 completed, Average Loss: 0.3409
+Test set: Average loss: 0.0050, Accuracy: 9088/10000 (90.88%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.2790
+Epoch 2/2 completed, Average Loss: 0.3633
+Test set: Average loss: 0.0049, Accuracy: 9134/10000 (91.34%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.1.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.1, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.4700
+Epoch 2/2 completed, Average Loss: 0.3448
+Test set: Average loss: 0.0062, Accuracy: 8908/10000 (89.08%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.5983
+Epoch 2/2 completed, Average Loss: 0.3427
+Test set: Average loss: 0.0049, Accuracy: 9074/10000 (90.74%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.3791
+Epoch 2/2 completed, Average Loss: 0.3587
+Test set: Average loss: 0.0085, Accuracy: 8522/10000 (85.22%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.1562
+Epoch 2/2 completed, Average Loss: 0.3425
+Test set: Average loss: 0.0059, Accuracy: 8885/10000 (88.85%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.1378
+Epoch 2/2 completed, Average Loss: 0.3612
+Test set: Average loss: 0.0053, Accuracy: 8982/10000 (89.82%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.0504
+Epoch 2/2 completed, Average Loss: 0.3408
+Test set: Average loss: 0.0044, Accuracy: 9223/10000 (92.23%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.4400
+Epoch 2/2 completed, Average Loss: 0.3529
+Test set: Average loss: 0.0073, Accuracy: 8718/10000 (87.18%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.7723
+Epoch 2/2 completed, Average Loss: 0.3886
+Test set: Average loss: 0.0064, Accuracy: 8866/10000 (88.66%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.1962
+Epoch 2/2 completed, Average Loss: 0.3756
+Test set: Average loss: 0.0043, Accuracy: 9220/10000 (92.20%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.3458
+Epoch 2/2 completed, Average Loss: 0.3465
+Test set: Average loss: 0.0077, Accuracy: 8924/10000 (89.24%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.15.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.15, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.5890
+Epoch 2/2 completed, Average Loss: 0.3553
+Test set: Average loss: 0.0055, Accuracy: 8971/10000 (89.71%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.7073
+Epoch 2/2 completed, Average Loss: 0.3464
+Test set: Average loss: 0.0078, Accuracy: 8494/10000 (84.94%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.4346
+Epoch 2/2 completed, Average Loss: 0.3466
+Test set: Average loss: 0.0060, Accuracy: 8948/10000 (89.48%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.2309
+Epoch 2/2 completed, Average Loss: 0.3498
+Test set: Average loss: 0.0056, Accuracy: 9007/10000 (90.07%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.2309
+Epoch 2/2 completed, Average Loss: 0.3782
+Test set: Average loss: 0.0050, Accuracy: 9043/10000 (90.43%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.0184
+Epoch 2/2 completed, Average Loss: 0.3574
+Test set: Average loss: 0.0046, Accuracy: 9171/10000 (91.71%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.5551
+Epoch 2/2 completed, Average Loss: 0.3610
+Test set: Average loss: 0.0065, Accuracy: 8808/10000 (88.08%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.8650
+Epoch 2/2 completed, Average Loss: 0.3588
+Test set: Average loss: 0.0055, Accuracy: 8992/10000 (89.92%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.2355
+Epoch 2/2 completed, Average Loss: 0.3696
+Test set: Average loss: 0.0050, Accuracy: 9085/10000 (90.85%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.4199
+Epoch 2/2 completed, Average Loss: 0.3579
+Test set: Average loss: 0.0075, Accuracy: 8773/10000 (87.73%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.2.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.2, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.6970
+Epoch 2/2 completed, Average Loss: 0.3714
+Test set: Average loss: 0.0069, Accuracy: 8862/10000 (88.62%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 1.9229
+Epoch 2/2 completed, Average Loss: 0.3549
+Test set: Average loss: 0.0069, Accuracy: 8604/10000 (86.04%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.5470
+Epoch 2/2 completed, Average Loss: 0.3675
+Test set: Average loss: 0.0075, Accuracy: 8665/10000 (86.65%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.3199
+Epoch 2/2 completed, Average Loss: 0.3850
+Test set: Average loss: 0.0057, Accuracy: 8935/10000 (89.35%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.3227
+Epoch 2/2 completed, Average Loss: 0.4066
+Test set: Average loss: 0.0058, Accuracy: 8889/10000 (88.89%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.0206
+Epoch 2/2 completed, Average Loss: 0.3605
+Test set: Average loss: 0.0053, Accuracy: 9076/10000 (90.76%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.6997
+Epoch 2/2 completed, Average Loss: 0.3739
+Test set: Average loss: 0.0076, Accuracy: 8671/10000 (86.71%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 1.9057
+Epoch 2/2 completed, Average Loss: 0.3621
+Test set: Average loss: 0.0048, Accuracy: 9142/10000 (91.42%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.3061
+Epoch 2/2 completed, Average Loss: 0.3760
+Test set: Average loss: 0.0056, Accuracy: 8879/10000 (88.79%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.5643
+Epoch 2/2 completed, Average Loss: 0.3769
+Test set: Average loss: 0.0052, Accuracy: 9104/10000 (91.04%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.25.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.25, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 1.9033
+Epoch 2/2 completed, Average Loss: 0.4360
+Test set: Average loss: 0.0081, Accuracy: 8518/10000 (85.18%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 2.0993
+Epoch 2/2 completed, Average Loss: 0.3727
+Test set: Average loss: 0.0075, Accuracy: 8484/10000 (84.84%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.6534
+Epoch 2/2 completed, Average Loss: 0.3630
+Test set: Average loss: 0.0051, Accuracy: 9092/10000 (90.92%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.3857
+Epoch 2/2 completed, Average Loss: 0.3632
+Test set: Average loss: 0.0055, Accuracy: 9044/10000 (90.44%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.4326
+Epoch 2/2 completed, Average Loss: 0.4002
+Test set: Average loss: 0.0071, Accuracy: 8699/10000 (86.99%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.1161
+Epoch 2/2 completed, Average Loss: 0.3790
+Test set: Average loss: 0.0053, Accuracy: 9043/10000 (90.43%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.8273
+Epoch 2/2 completed, Average Loss: 0.3848
+Test set: Average loss: 0.0096, Accuracy: 8357/10000 (83.57%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 2.0956
+Epoch 2/2 completed, Average Loss: 0.3839
+Test set: Average loss: 0.0057, Accuracy: 9033/10000 (90.33%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.4003
+Epoch 2/2 completed, Average Loss: 0.4158
+Test set: Average loss: 0.0063, Accuracy: 8858/10000 (88.58%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.6753
+Epoch 2/2 completed, Average Loss: 0.3964
+Test set: Average loss: 0.0073, Accuracy: 8808/10000 (88.08%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.3.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.3, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 2.0625
+Epoch 2/2 completed, Average Loss: 0.4371
+Test set: Average loss: 0.0110, Accuracy: 8200/10000 (82.00%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 2.2779
+Epoch 2/2 completed, Average Loss: 0.3971
+Test set: Average loss: 0.0101, Accuracy: 8176/10000 (81.76%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 1.8304
+Epoch 2/2 completed, Average Loss: 0.3998
+Test set: Average loss: 0.0050, Accuracy: 9120/10000 (91.20%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.5219
+Epoch 2/2 completed, Average Loss: 0.4088
+Test set: Average loss: 0.0073, Accuracy: 8697/10000 (86.97%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.5318
+Epoch 2/2 completed, Average Loss: 0.4052
+Test set: Average loss: 0.0058, Accuracy: 8918/10000 (89.18%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.1928
+Epoch 2/2 completed, Average Loss: 0.3912
+Test set: Average loss: 0.0052, Accuracy: 9067/10000 (90.67%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 1.9938
+Epoch 2/2 completed, Average Loss: 0.4091
+Test set: Average loss: 0.0061, Accuracy: 8893/10000 (88.93%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 2.2579
+Epoch 2/2 completed, Average Loss: 0.3903
+Test set: Average loss: 0.0087, Accuracy: 8625/10000 (86.25%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.5610
+Epoch 2/2 completed, Average Loss: 0.4094
+Test set: Average loss: 0.0071, Accuracy: 8574/10000 (85.74%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 1.8368
+Epoch 2/2 completed, Average Loss: 0.4075
+Test set: Average loss: 0.0052, Accuracy: 9078/10000 (90.78%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.35.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.35, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 2.4306
+Epoch 2/2 completed, Average Loss: 0.4752
+Test set: Average loss: 0.0093, Accuracy: 8292/10000 (82.92%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 2.5389
+Epoch 2/2 completed, Average Loss: 0.4222
+Test set: Average loss: 0.0089, Accuracy: 8239/10000 (82.39%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 2.0578
+Epoch 2/2 completed, Average Loss: 0.4283
+Test set: Average loss: 0.0079, Accuracy: 8684/10000 (86.84%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.6672
+Epoch 2/2 completed, Average Loss: 0.4247
+Test set: Average loss: 0.0066, Accuracy: 8832/10000 (88.32%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.6412
+Epoch 2/2 completed, Average Loss: 0.3965
+Test set: Average loss: 0.0056, Accuracy: 9021/10000 (90.21%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.2868
+Epoch 2/2 completed, Average Loss: 0.4175
+Test set: Average loss: 0.0061, Accuracy: 8909/10000 (89.09%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 2.2181
+Epoch 2/2 completed, Average Loss: 0.4003
+Test set: Average loss: 0.0063, Accuracy: 8905/10000 (89.05%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 2.6283
+Epoch 2/2 completed, Average Loss: 0.4067
+Test set: Average loss: 0.0089, Accuracy: 8382/10000 (83.82%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.7799
+Epoch 2/2 completed, Average Loss: 0.4562
+Test set: Average loss: 0.0068, Accuracy: 8706/10000 (87.06%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 2.0238
+Epoch 2/2 completed, Average Loss: 0.4550
+Test set: Average loss: 0.0065, Accuracy: 8789/10000 (87.89%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.4.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.4, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 2.6750
+Epoch 2/2 completed, Average Loss: 0.4795
+Test set: Average loss: 0.0088, Accuracy: 8517/10000 (85.17%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 2.8146
+Epoch 2/2 completed, Average Loss: 0.4147
+Test set: Average loss: 0.0077, Accuracy: 8670/10000 (86.70%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 2.2106
+Epoch 2/2 completed, Average Loss: 0.4208
+Test set: Average loss: 0.0061, Accuracy: 8879/10000 (88.79%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 1.8256
+Epoch 2/2 completed, Average Loss: 0.4091
+Test set: Average loss: 0.0062, Accuracy: 8969/10000 (89.69%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 1.9265
+Epoch 2/2 completed, Average Loss: 0.4330
+Test set: Average loss: 0.0066, Accuracy: 8679/10000 (86.79%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.4342
+Epoch 2/2 completed, Average Loss: 0.4000
+Test set: Average loss: 0.0052, Accuracy: 9069/10000 (90.69%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 2.4591
+Epoch 2/2 completed, Average Loss: 0.4335
+Test set: Average loss: 0.0076, Accuracy: 8544/10000 (85.44%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 3.0008
+Epoch 2/2 completed, Average Loss: 0.4246
+Test set: Average loss: 0.0067, Accuracy: 8882/10000 (88.82%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 1.8819
+Epoch 2/2 completed, Average Loss: 0.4234
+Test set: Average loss: 0.0068, Accuracy: 8842/10000 (88.42%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 2.2314
+Epoch 2/2 completed, Average Loss: 0.4497
+Test set: Average loss: 0.0075, Accuracy: 8671/10000 (86.71%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.45.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.45, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 3.0066
+Epoch 2/2 completed, Average Loss: 0.4994
+Test set: Average loss: 0.0091, Accuracy: 8427/10000 (84.27%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 3.1887
+Epoch 2/2 completed, Average Loss: 0.4369
+Test set: Average loss: 0.0075, Accuracy: 8586/10000 (85.86%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 2.5082
+Epoch 2/2 completed, Average Loss: 0.4504
+Test set: Average loss: 0.0097, Accuracy: 8396/10000 (83.96%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 2.0849
+Epoch 2/2 completed, Average Loss: 0.4219
+Test set: Average loss: 0.0064, Accuracy: 8998/10000 (89.98%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 2.2420
+Epoch 2/2 completed, Average Loss: 0.4964
+Test set: Average loss: 0.0080, Accuracy: 8487/10000 (84.87%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.5913
+Epoch 2/2 completed, Average Loss: 0.4197
+Test set: Average loss: 0.0064, Accuracy: 8753/10000 (87.53%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 2.7587
+Epoch 2/2 completed, Average Loss: 0.4369
+Test set: Average loss: 0.0068, Accuracy: 8689/10000 (86.89%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 3.5006
+Epoch 2/2 completed, Average Loss: 0.4540
+Test set: Average loss: 0.0058, Accuracy: 9017/10000 (90.17%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 2.1254
+Epoch 2/2 completed, Average Loss: 0.4686
+Test set: Average loss: 0.0072, Accuracy: 8651/10000 (86.51%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 2.5100
+Epoch 2/2 completed, Average Loss: 0.4487
+Test set: Average loss: 0.0051, Accuracy: 9148/10000 (91.48%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.5.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.5, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 3.2707
+Epoch 2/2 completed, Average Loss: 0.5425
+Test set: Average loss: 0.0134, Accuracy: 7749/10000 (77.49%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 3.5815
+Epoch 2/2 completed, Average Loss: 0.4793
+Test set: Average loss: 0.0083, Accuracy: 8544/10000 (85.44%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 2.9344
+Epoch 2/2 completed, Average Loss: 0.4936
+Test set: Average loss: 0.0099, Accuracy: 8200/10000 (82.00%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 2.4149
+Epoch 2/2 completed, Average Loss: 0.4760
+Test set: Average loss: 0.0077, Accuracy: 8729/10000 (87.29%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 2.4295
+Epoch 2/2 completed, Average Loss: 0.4989
+Test set: Average loss: 0.0101, Accuracy: 8241/10000 (82.41%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 1.8073
+Epoch 2/2 completed, Average Loss: 0.5020
+Test set: Average loss: 0.0070, Accuracy: 8731/10000 (87.31%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 2.9663
+Epoch 2/2 completed, Average Loss: 0.4941
+Test set: Average loss: 0.0098, Accuracy: 8262/10000 (82.62%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 4.2850
+Epoch 2/2 completed, Average Loss: 0.4756
+Test set: Average loss: 0.0222, Accuracy: 8231/10000 (82.31%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 2.3537
+Epoch 2/2 completed, Average Loss: 0.4862
+Test set: Average loss: 0.0082, Accuracy: 8446/10000 (84.46%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 2.8554
+Epoch 2/2 completed, Average Loss: 0.4894
+Test set: Average loss: 0.0063, Accuracy: 8989/10000 (89.89%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.55.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.55, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 3.8708
+Epoch 2/2 completed, Average Loss: 0.5964
+Test set: Average loss: 0.0148, Accuracy: 7543/10000 (75.43%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 4.0971
+Epoch 2/2 completed, Average Loss: 0.5224
+Test set: Average loss: 0.0100, Accuracy: 8381/10000 (83.81%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 3.5218
+Epoch 2/2 completed, Average Loss: 0.5493
+Test set: Average loss: 0.0105, Accuracy: 8135/10000 (81.35%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 2.7969
+Epoch 2/2 completed, Average Loss: 0.5559
+Test set: Average loss: 0.0075, Accuracy: 8625/10000 (86.25%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 2.8248
+Epoch 2/2 completed, Average Loss: 0.5029
+Test set: Average loss: 0.0085, Accuracy: 8467/10000 (84.67%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 2.1095
+Epoch 2/2 completed, Average Loss: 0.5212
+Test set: Average loss: 0.0068, Accuracy: 8850/10000 (88.50%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 3.5589
+Epoch 2/2 completed, Average Loss: 0.5737
+Test set: Average loss: 0.0113, Accuracy: 8179/10000 (81.79%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 5.1073
+Epoch 2/2 completed, Average Loss: 0.5306
+Test set: Average loss: 0.0086, Accuracy: 8680/10000 (86.80%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 2.7079
+Epoch 2/2 completed, Average Loss: 0.5009
+Test set: Average loss: 0.0079, Accuracy: 8628/10000 (86.28%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 3.4263
+Epoch 2/2 completed, Average Loss: 0.5293
+Test set: Average loss: 0.0064, Accuracy: 8959/10000 (89.59%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.6.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.6, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 4.5448
+Epoch 2/2 completed, Average Loss: 0.6471
+Test set: Average loss: 0.0129, Accuracy: 8156/10000 (81.56%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 4.7562
+Epoch 2/2 completed, Average Loss: 0.5889
+Test set: Average loss: 0.0114, Accuracy: 8082/10000 (80.82%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 4.2755
+Epoch 2/2 completed, Average Loss: 0.6432
+Test set: Average loss: 0.0104, Accuracy: 8268/10000 (82.68%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 3.1982
+Epoch 2/2 completed, Average Loss: 0.5711
+Test set: Average loss: 0.0085, Accuracy: 8512/10000 (85.12%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 3.6994
+Epoch 2/2 completed, Average Loss: 0.5801
+Test set: Average loss: 0.0090, Accuracy: 8521/10000 (85.21%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 2.2599
+Epoch 2/2 completed, Average Loss: 0.5526
+Test set: Average loss: 0.0065, Accuracy: 8926/10000 (89.26%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 4.3236
+Epoch 2/2 completed, Average Loss: 0.5674
+Test set: Average loss: 0.0082, Accuracy: 8585/10000 (85.85%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 5.9731
+Epoch 2/2 completed, Average Loss: 0.5272
+Test set: Average loss: 0.0072, Accuracy: 8901/10000 (89.01%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 3.0968
+Epoch 2/2 completed, Average Loss: 0.5403
+Test set: Average loss: 0.0077, Accuracy: 8674/10000 (86.74%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 4.1167
+Epoch 2/2 completed, Average Loss: 0.5593
+Test set: Average loss: 0.0109, Accuracy: 8049/10000 (80.49%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.65.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.65, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 4.9844
+Epoch 2/2 completed, Average Loss: 0.7452
+Test set: Average loss: 0.0224, Accuracy: 7362/10000 (73.62%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 5.5366
+Epoch 2/2 completed, Average Loss: 0.6190
+Test set: Average loss: 0.0098, Accuracy: 8326/10000 (83.26%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 5.1773
+Epoch 2/2 completed, Average Loss: 0.7794
+Test set: Average loss: 0.0138, Accuracy: 6769/10000 (67.69%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 3.8466
+Epoch 2/2 completed, Average Loss: 0.6209
+Test set: Average loss: 0.0104, Accuracy: 8232/10000 (82.32%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 4.2558
+Epoch 2/2 completed, Average Loss: 0.7872
+Test set: Average loss: 0.0139, Accuracy: 7246/10000 (72.46%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 3.1316
+Epoch 2/2 completed, Average Loss: 0.7103
+Test set: Average loss: 0.0113, Accuracy: 8163/10000 (81.63%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 5.1679
+Epoch 2/2 completed, Average Loss: 0.7596
+Test set: Average loss: 0.0108, Accuracy: 8116/10000 (81.16%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 7.0853
+Epoch 2/2 completed, Average Loss: 0.5972
+Test set: Average loss: 0.0075, Accuracy: 8914/10000 (89.14%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 3.6702
+Epoch 2/2 completed, Average Loss: 0.5854
+Test set: Average loss: 0.0098, Accuracy: 8536/10000 (85.36%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 4.9165
+Epoch 2/2 completed, Average Loss: 0.6173
+Test set: Average loss: 0.0107, Accuracy: 8257/10000 (82.57%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.7.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.7, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 5.3172
+Epoch 2/2 completed, Average Loss: 0.7652
+Test set: Average loss: 0.0133, Accuracy: 7492/10000 (74.92%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 6.6889
+Epoch 2/2 completed, Average Loss: 0.8734
+Test set: Average loss: 0.0157, Accuracy: 7412/10000 (74.12%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 6.2716
+Epoch 2/2 completed, Average Loss: 1.0113
+Test set: Average loss: 0.0160, Accuracy: 6794/10000 (67.94%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 5.0322
+Epoch 2/2 completed, Average Loss: 1.1086
+Test set: Average loss: 0.0167, Accuracy: 6095/10000 (60.95%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 3.5292
+Epoch 2/2 completed, Average Loss: 0.7911
+Test set: Average loss: 0.0134, Accuracy: 7394/10000 (73.94%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 5.9806
+Epoch 2/2 completed, Average Loss: 0.9986
+Test set: Average loss: 0.0179, Accuracy: 6562/10000 (65.62%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 8.7577
+Epoch 2/2 completed, Average Loss: 0.6841
+Test set: Average loss: 0.0111, Accuracy: 8099/10000 (80.99%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 4.4990
+Epoch 2/2 completed, Average Loss: 0.7431
+Test set: Average loss: 0.0099, Accuracy: 8363/10000 (83.63%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 5.7635
+Epoch 2/2 completed, Average Loss: 0.7286
+Test set: Average loss: 0.0085, Accuracy: 8631/10000 (86.31%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.75.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.75, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 5.6939
+Epoch 2/2 completed, Average Loss: 0.9350
+Test set: Average loss: 0.0135, Accuracy: 7436/10000 (74.36%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 8.4601
+Epoch 2/2 completed, Average Loss: 1.0967
+Test set: Average loss: 0.0191, Accuracy: 5504/10000 (55.04%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 6.3717
+Epoch 2/2 completed, Average Loss: 1.1333
+Test set: Average loss: 0.0168, Accuracy: 6107/10000 (61.07%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 6.4260
+Epoch 2/2 completed, Average Loss: 1.1798
+Test set: Average loss: 0.0192, Accuracy: 5402/10000 (54.02%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 4.7552
+Epoch 2/2 completed, Average Loss: 1.3169
+Test set: Average loss: 0.0185, Accuracy: 5438/10000 (54.38%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 11.2362
+Epoch 2/2 completed, Average Loss: 1.0105
+Test set: Average loss: 0.0154, Accuracy: 7352/10000 (73.52%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 5.1428
+Epoch 2/2 completed, Average Loss: 0.8834
+Test set: Average loss: 0.0116, Accuracy: 7588/10000 (75.88%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 6.9121
+Epoch 2/2 completed, Average Loss: 0.9690
+Test set: Average loss: 0.0143, Accuracy: 7024/10000 (70.24%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.8.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.8, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 5.9276
+Epoch 2/2 completed, Average Loss: 1.4529
+Test set: Average loss: 0.0223, Accuracy: 4698/10000 (46.98%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 11.5496
+Epoch 2/2 completed, Average Loss: 1.6585
+Test set: Average loss: 0.0245, Accuracy: 4016/10000 (40.16%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 6.3828
+Epoch 2/2 completed, Average Loss: 1.2133
+Test set: Average loss: 0.0189, Accuracy: 5847/10000 (58.47%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 14.7496
+Epoch 2/2 completed, Average Loss: 1.1389
+Test set: Average loss: 0.0171, Accuracy: 6555/10000 (65.55%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 6.3886
+Epoch 2/2 completed, Average Loss: 1.3911
+Test set: Average loss: 0.0206, Accuracy: 5204/10000 (52.04%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.85.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.85, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 21.7636
+Epoch 2/2 completed, Average Loss: 1.8821
+Test set: Average loss: 0.0306, Accuracy: 2779/10000 (27.79%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.9.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.9, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+
+Running Hyperparameter grid search with Optimizer = RMSPropMomentumCurvature and momentum=0.95.
+params= {'lr': 0.01, 'alpha': 0.99, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.95, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: nan
+Epoch 2/2 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 980/10000 (9.80%)
