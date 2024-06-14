@@ -48,6 +48,7 @@ class AdamCurvature(Optimizer):
                 step_size = group['lr']
                 beta1, beta2 = group['betas']
                 epsilon = group['epsilon']
+                lr = group['lr']
 
                 last_grad = state['last_grad']
                 current_grad = grad
@@ -71,6 +72,7 @@ class AdamCurvature(Optimizer):
                 bias_correction1 = 1 - beta1 ** state['step']
                 bias_correction2 = 1 - beta2 ** state['step']
                 step_size = group['lr'] * (bias_correction2 ** 0.5) / bias_correction1
+                # step_size = lr
 
                 p.data.addcdiv_(exp_avg, denom, value=-step_size)
 

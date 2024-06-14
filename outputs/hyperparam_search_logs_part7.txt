@@ -1,0 +1,75 @@
+# ----------------------------------------------------------------------------------------------------
+# Hyperparameter Search
+# ----------------------------------------------------------------------------------------------------
+
+Running Hyperparameter grid search with Optimizer = AdamCurvature and momentum=0.0.
+params= {'lr': 0.001, 'betas': (0.0, 0.999), 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.4271
+Epoch 2/2 completed, Average Loss: 0.1900
+Test set: Average loss: 0.0029, Accuracy: 9418/10000 (94.18%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 0.4593
+Epoch 2/2 completed, Average Loss: 0.1895
+Test set: Average loss: 0.0034, Accuracy: 9302/10000 (93.02%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 0.4319
+Epoch 2/2 completed, Average Loss: 0.1907
+Test set: Average loss: 0.0027, Accuracy: 9491/10000 (94.91%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 0.4256
+Epoch 2/2 completed, Average Loss: 0.1809
+Test set: Average loss: 0.0024, Accuracy: 9526/10000 (95.26%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.4299
+Epoch 2/2 completed, Average Loss: 0.2092
+Test set: Average loss: 0.0032, Accuracy: 9360/10000 (93.60%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.4174
+Epoch 2/2 completed, Average Loss: 0.1906
+Test set: Average loss: 0.0026, Accuracy: 9483/10000 (94.83%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.4651
+Epoch 2/2 completed, Average Loss: 0.2096
+Test set: Average loss: 0.0030, Accuracy: 9434/10000 (94.34%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 0.4330
+Epoch 2/2 completed, Average Loss: 0.1898
+Test set: Average loss: 0.0028, Accuracy: 9478/10000 (94.78%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 0.4344
+Epoch 2/2 completed, Average Loss: 0.2036
+Test set: Average loss: 0.0027, Accuracy: 9474/10000 (94.74%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 0.4369
+Epoch 2/2 completed, Average Loss: 0.2067
+Test set: Average loss: 0.0035, Accuracy: 9311/10000 (93.11%)
+
+Running Hyperparameter grid search with Optimizer = AdamCurvature and momentum=0.05.
+params= {'lr': 0.001, 'betas': (0.05, 0.999), 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.4497
+Epoch 2/2 completed, Average Loss: 0.1995
+Test set: Average loss: 0.0029, Accuracy: 9404/10000 (94.04%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 0.4400
+Epoch 2/2 completed, Average Loss: 0.1950
+Test set: Average loss: 0.0031, Accuracy: 9402/10000 (94.02%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 0.4247
+Epoch 2/2 completed, Average Loss: 0.1940
+Test set: Average loss: 0.0027, Accuracy: 9505/10000 (95.05%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 0.4427
+Epoch 2/2 completed, Average Loss: 0.1967
+Test set: Average loss: 0.0027, Accuracy: 9463/10000 (94.63%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.4248
+Epoch 2/2 completed, Average Loss: 0.2095
+Test set: Average loss: 0.0031, Accuracy: 9400/10000 (94.00%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.4142
+Epoch 2/2 completed, Average Loss: 0.1981
+Test set: Average loss: 0.0028, Accuracy: 9450/10000 (94.50%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.4399
