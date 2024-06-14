@@ -2,7 +2,7 @@ import torch
 from torch.optim import Optimizer
 
 class NAGCurvature(Optimizer):
-    def __init__(self, params, lr=1e-3, momentum=0.9, epsilon=0.01):
+    def __init__(self, params, lr=1e-3, momentum=0.55, epsilon=0.01):
         defaults = dict(lr=lr, momentum=momentum, epsilon=epsilon)
         super(NAGCurvature, self).__init__(params, defaults)
 

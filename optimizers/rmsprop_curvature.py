@@ -2,7 +2,7 @@ import torch
 from torch.optim import Optimizer
 
 class RMSPropCurvature(Optimizer):
-    def __init__(self, params, lr=1e-2, alpha=0.99, eps=1e-8, weight_decay=0, epsilon=0.01):
+    def __init__(self, params, lr=1e-2, alpha=0.9, eps=1e-8, weight_decay=0, epsilon=0.01):
         defaults = dict(lr=lr, alpha=alpha, eps=eps, weight_decay=weight_decay, epsilon=epsilon)
         super(RMSPropCurvature, self).__init__(params, defaults)
 

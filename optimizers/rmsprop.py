@@ -3,7 +3,7 @@ from torch.optim import Optimizer
 
 
 class RMSProp(Optimizer):
-    def __init__(self, params, lr=1e-2, alpha=0.99, eps=1e-8, weight_decay=0):
+    def __init__(self, params, lr=1e-2, alpha=0.9, eps=1e-8, weight_decay=0):
         defaults = dict(lr=lr, alpha=alpha, eps=eps, weight_decay=weight_decay)
         super(RMSProp, self).__init__(params, defaults)
 

@@ -14,7 +14,7 @@ class Shampoo(Optimizer):
     It has been proposed in https://arxiv.org/pdf/2002.09018
     Inspired by https://github.com/jettify/pytorch-optimizer/blob/master/torch_optimizer/shampoo.py
     """
-    def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8, weight_decay=0, momentum=0.9, rho=0.9, update_freq=1):
+    def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8, weight_decay=0, momentum=0.1, rho=0.9, update_freq=1):
         defaults = dict(lr=lr, betas=betas, eps=eps, weight_decay=weight_decay, momentum=momentum, rho=rho, update_freq=update_freq)
         super(Shampoo, self).__init__(params, defaults)
 

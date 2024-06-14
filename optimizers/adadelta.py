@@ -2,7 +2,7 @@ import torch
 from torch.optim import Optimizer
 
 class Adadelta(Optimizer):
-    def __init__(self, params, lr=1.0, rho=0.9, eps=1e-6, weight_decay=0):
+    def __init__(self, params, lr=1.0, rho=0.95, eps=1e-6, weight_decay=0):
         defaults = dict(lr=lr, rho=rho, eps=eps, weight_decay=weight_decay)
         super(Adadelta, self).__init__(params, defaults)
 
