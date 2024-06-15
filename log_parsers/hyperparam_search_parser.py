@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 # Log file path
-log_file_path = 'outputs/hyperparam_search_logs.txt'
+log_file_path = '../outputs/hyperparam_search_logs.txt'
 
 # Regular expressions to extract information
 optimizer_re = re.compile(r'Running Hyperparameter grid search with Optimizer = (\w+) and momentum=([\d.]+).')

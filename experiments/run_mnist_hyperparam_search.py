@@ -39,4 +39,4 @@ for optimizer_class, default_params in optimizers:
         if not has_momentum_param:
             break
 
-write_to_file('outputs/optimizer_results.csv', results)
+write_to_file('../outputs/optimizer_results.csv', results)
