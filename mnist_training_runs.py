@@ -10,6 +10,7 @@ print("# Running 10 epochs of training - 10 runs")
 print("#","-"*100)
 
 for optimizer_class, default_params in optimizers:
+    print(f"\nRunning Hyperparameter grid search with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
     mean_accuracy, std_accuracy = run_experiment(optimizer_class, params, num_runs=10, num_epochs=10, debug_logs=True)
     results.append({
