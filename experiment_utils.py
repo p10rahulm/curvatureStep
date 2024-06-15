@@ -45,8 +45,7 @@ def run_experiment(optimizer_class, optimizer_params, dataset_loader=None, model
     set_seed(42)
     print("params=", optimizer_params)
     train_loader, test_loader = dataset_loader()
-    print("len(train_loader)",len(train_loader))
-    print(len(test_loader))
+
     criterion = torch.nn.CrossEntropyLoss()
     accuracies = []
     for run_number in range(num_runs):
