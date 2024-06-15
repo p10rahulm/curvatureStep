@@ -4,11 +4,7 @@ from models.simpleNN import SimpleNN
 from train import train
 from test import test
 from utilities import set_seed
-from optimizers.simplesgd_curvature import SimpleSGDCurvature
-from optimizers.adam import Adam
-from optimizers.simplesgd import SimpleSGD
 from optimizers.heavyball import HeavyBall
-from optimizers.heavyball_curvature import HeavyBallCurvature  # Assuming this is your custom optimizer
 
 # Set random seeds for reproducibility
 set_seed(42)

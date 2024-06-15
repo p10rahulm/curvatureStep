@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 # Log file path
-log_file_path = '../outputs/mnist_training_run_logs.txt'
+log_file_path = 'outputs/mnist_training_run_logs.txt'
 
 # Regular expressions to extract information
 optimizer_re = re.compile(r'Running MNIST training with Optimizer = (\w+)')

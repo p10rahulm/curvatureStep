@@ -1,3 +1,10 @@
+# Define the relative path to the project root from the current script
+import os
+import sys
+# Add the project root to the system path
+project_root =os.getcwd()
+sys.path.insert(0, project_root)
+
 import torch
 from data_loaders.mnist import load_mnist
 from models.simpleNN import SimpleNN
