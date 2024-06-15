@@ -36,8 +36,11 @@ from utilities import set_seed
 from models.simpleNN import SimpleNN
 from data_loaders.mnist import load_mnist
 
-def run_experiment(optimizer_class, optimizer_params, dataset_loader=None, model_class=None, num_runs=10, num_epochs=2, debug_logs=False):
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+def run_experiment(optimizer_class, optimizer_params, dataset_loader=None, 
+                   model_class=None, num_runs=10, num_epochs=2, debug_logs=False,
+                   device=None):
+    if device is None:
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     if dataset_loader is None:
         dataset_loader = load_mnist
     if model_class is None:

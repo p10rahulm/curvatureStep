@@ -1,0 +1,11 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 10 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running FashionMNIST Training with Optimizer = SimpleSGD
+params= {'lr': 0.001}
+Running Loop: 1/10
+Epoch 1/10 completed, Average Loss: 2.1444
+Epoch 2/10 completed, Average Loss: 1.2686
+Epoch 3/10 completed, Average Loss: 0.7815
+Epoch 4/10 completed, Average Loss: 0.6796
