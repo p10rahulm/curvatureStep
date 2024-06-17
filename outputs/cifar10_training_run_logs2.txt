@@ -1,0 +1,9 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 10 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running Cifar10 Training with Optimizer = Shampoo
+params= {'lr': 0.001, 'momentum': 0.1}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/10

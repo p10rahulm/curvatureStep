@@ -3,7 +3,6 @@ import torch.nn as nn
 class SimpleRNN(nn.Module):
     def __init__(self, vocab_size, embed_dim, hidden_dim, output_dim, pad_idx):
         super(SimpleRNN, self).__init__()
-        self.two_class=two_class
         self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=pad_idx)
         self.rnn = nn.RNN(embed_dim, hidden_dim, batch_first=True)
         self.fc = nn.Linear(hidden_dim, output_dim)

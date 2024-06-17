@@ -1,0 +1,4 @@
+optimizer,momentum,mean_accuracy,std_accuracy
+SimpleSGD,,0.9835119999999999,0.007517484685717676
+SimpleSGDCurvature,,1.0,0.0
+Adam,,0.9999119999999999,9.086253353279066e-05

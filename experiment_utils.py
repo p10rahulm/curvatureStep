@@ -73,7 +73,9 @@ def run_experiment(optimizer_class, optimizer_params, dataset_loader=None,
         optimizer = optimizer_class(model.parameters(), **optimizer_params)
         trainer_fn(model, train_loader, criterion, optimizer, device, num_epochs=num_epochs)
         accuracy = tester_fn(model, test_loader, criterion, device)
+        print("accuracy=",accuracy)
         accuracies.append(accuracy)
+        print("accuracies=",accuracies)
     mean_accuracy = np.mean(accuracies)
     std_accuracy = np.std(accuracies)
 

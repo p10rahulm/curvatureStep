@@ -43,5 +43,6 @@ def test_lm(model, test_loader, criterion, device):
     epoch_loss /= len(test_loader.dataset)
     accuracy =  100. * correct_preds / total_preds
     print(f"Test set: Average loss: {epoch_loss:.4f}, Accuracy: {correct_preds}/{total_preds} ({accuracy:.2f}%)")
+    return 1.0 * correct_preds / total_preds
 
 

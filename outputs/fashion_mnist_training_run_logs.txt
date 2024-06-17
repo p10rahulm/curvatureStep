@@ -2,7 +2,7 @@
 # Running 10 epochs of training - 10 runs
 # ----------------------------------------------------------------------------------------------------
 
-Running FashionMNIST Training with Optimizer = SimpleSGD
+Running FashionMNIST training with Optimizer = SimpleSGD
 params= {'lr': 0.001}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 2.1444
@@ -125,7 +125,7 @@ Epoch 9/10 completed, Average Loss: 0.5304
 Epoch 10/10 completed, Average Loss: 0.5131
 Test set: Average loss: 0.0083, Accuracy: 8113/10000 (81.13%)
 
-Running FashionMNIST Training with Optimizer = SimpleSGDCurvature
+Running FashionMNIST training with Optimizer = SimpleSGDCurvature
 params= {'lr': 0.001, 'epsilon': 0.01}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.5428
@@ -248,7 +248,7 @@ Epoch 9/10 completed, Average Loss: 0.1394
 Epoch 10/10 completed, Average Loss: 0.1228
 Test set: Average loss: 0.0039, Accuracy: 9159/10000 (91.59%)
 
-Running FashionMNIST Training with Optimizer = Adam
+Running FashionMNIST training with Optimizer = Adam
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.4115
@@ -371,7 +371,7 @@ Epoch 9/10 completed, Average Loss: 0.0562
 Epoch 10/10 completed, Average Loss: 0.0448
 Test set: Average loss: 0.0055, Accuracy: 9195/10000 (91.95%)
 
-Running FashionMNIST Training with Optimizer = HeavyBall
+Running FashionMNIST training with Optimizer = HeavyBall
 params= {'lr': 0.001, 'momentum': 0.9}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.9108
@@ -494,7 +494,7 @@ Epoch 9/10 completed, Average Loss: 0.3010
 Epoch 10/10 completed, Average Loss: 0.2900
 Test set: Average loss: 0.0051, Accuracy: 8824/10000 (88.24%)
 
-Running FashionMNIST Training with Optimizer = HeavyBallCurvature
+Running FashionMNIST training with Optimizer = HeavyBallCurvature
 params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.4649
@@ -617,7 +617,7 @@ Epoch 9/10 completed, Average Loss: 0.0854
 Epoch 10/10 completed, Average Loss: 0.0695
 Test set: Average loss: 0.0045, Accuracy: 9149/10000 (91.49%)
 
-Running FashionMNIST Training with Optimizer = NAG
+Running FashionMNIST training with Optimizer = NAG
 params= {'lr': 0.001, 'momentum': 0.9}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.9108
@@ -740,7 +740,7 @@ Epoch 9/10 completed, Average Loss: 0.3008
 Epoch 10/10 completed, Average Loss: 0.2900
 Test set: Average loss: 0.0051, Accuracy: 8822/10000 (88.22%)
 
-Running FashionMNIST Training with Optimizer = NAGCurvature
+Running FashionMNIST training with Optimizer = NAGCurvature
 params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.4654
@@ -863,7 +863,7 @@ Epoch 9/10 completed, Average Loss: 0.0876
 Epoch 10/10 completed, Average Loss: 0.0690
 Test set: Average loss: 0.0047, Accuracy: 9180/10000 (91.80%)
 
-Running FashionMNIST Training with Optimizer = Adagrad
+Running FashionMNIST training with Optimizer = Adagrad
 params= {'lr': 0.01, 'eps': 1e-10}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.4566
@@ -986,7 +986,7 @@ Epoch 9/10 completed, Average Loss: 0.1888
 Epoch 10/10 completed, Average Loss: 0.1821
 Test set: Average loss: 0.0038, Accuracy: 9111/10000 (91.11%)
 
-Running FashionMNIST Training with Optimizer = Adadelta
+Running FashionMNIST training with Optimizer = Adadelta
 params= {'lr': 1.0, 'rho': 0.95, 'eps': 1e-06}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.4352
@@ -1109,7 +1109,7 @@ Epoch 9/10 completed, Average Loss: 0.0546
 Epoch 10/10 completed, Average Loss: 0.0411
 Test set: Average loss: 0.0058, Accuracy: 9196/10000 (91.96%)
 
-Running FashionMNIST Training with Optimizer = RMSProp
+Running FashionMNIST training with Optimizer = RMSProp
 params= {'lr': 0.01, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.8042
@@ -1232,7 +1232,7 @@ Epoch 9/10 completed, Average Loss: 0.4128
 Epoch 10/10 completed, Average Loss: 0.4187
 Test set: Average loss: 0.0087, Accuracy: 8165/10000 (81.65%)
 
-Running FashionMNIST Training with Optimizer = RMSPropMomentum
+Running FashionMNIST training with Optimizer = RMSPropMomentum
 params= {'lr': 0.01, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.05}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.7945
@@ -1355,7 +1355,7 @@ Epoch 9/10 completed, Average Loss: 0.4009
 Epoch 10/10 completed, Average Loss: 0.3982
 Test set: Average loss: 0.0070, Accuracy: 8565/10000 (85.65%)
 
-Running FashionMNIST Training with Optimizer = AdamW
+Running FashionMNIST training with Optimizer = AdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.4115
@@ -1478,7 +1478,7 @@ Epoch 9/10 completed, Average Loss: 0.0575
 Epoch 10/10 completed, Average Loss: 0.0481
 Test set: Average loss: 0.0052, Accuracy: 9177/10000 (91.77%)
 
-Running FashionMNIST Training with Optimizer = NAdam
+Running FashionMNIST training with Optimizer = NAdam
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.3922
@@ -1601,7 +1601,7 @@ Epoch 9/10 completed, Average Loss: 0.1190
 Epoch 10/10 completed, Average Loss: 0.1231
 Test set: Average loss: 0.0060, Accuracy: 9047/10000 (90.47%)
 
-Running FashionMNIST Training with Optimizer = NAdamW
+Running FashionMNIST training with Optimizer = NAdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.3930
@@ -1724,7 +1724,7 @@ Epoch 9/10 completed, Average Loss: 0.1261
 Epoch 10/10 completed, Average Loss: 0.1239
 Test set: Average loss: 0.0059, Accuracy: 9055/10000 (90.55%)
 
-Running FashionMNIST Training with Optimizer = AMSGrad
+Running FashionMNIST training with Optimizer = AMSGrad
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 0.4114
@@ -1847,7 +1847,7 @@ Epoch 9/10 completed, Average Loss: 0.0595
 Epoch 10/10 completed, Average Loss: 0.0480
 Test set: Average loss: 0.0048, Accuracy: 9210/10000 (92.10%)
 
-Running FashionMNIST Training with Optimizer = Shampoo
+Running FashionMNIST training with Optimizer = Shampoo
 params= {'lr': 0.001, 'momentum': 0.1}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 1.5076
@@ -1906,3 +1906,8 @@ Epoch 5/10 completed, Average Loss: 0.4167
 Epoch 6/10 completed, Average Loss: 0.3879
 Epoch 7/10 completed, Average Loss: 0.3660
 Epoch 8/10 completed, Average Loss: 0.3489
+Epoch 9/10 completed, Average Loss: 0.3339
+Epoch 10/10 completed, Average Loss: 0.3209
+Test set: Average loss: 0.0054, Accuracy: 8754/10000 (87.54%)
+Running Loop: 6/10
+Epoch 1/10 completed, Average Loss: 1.4247

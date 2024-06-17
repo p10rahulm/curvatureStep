@@ -29,7 +29,7 @@ for optimizer_class, default_params in optimizers:
     print(f"\nRunning IMDB Reviews Training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
 
-    # Set device to GPU 0
+    # Set device to GPU 2
     device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
 
     dataset_loader = load_imdb_reviews
@@ -66,4 +66,4 @@ for optimizer_class, default_params in optimizers:
         'std_accuracy': std_accuracy
     })
 
-write_to_file('outputs/imdb_training_logs.csv', results)
+    write_to_file('outputs/imdb_training_logs.csv', results)

@@ -2,7 +2,7 @@
 # Running 10 epochs of training - 10 runs
 # ----------------------------------------------------------------------------------------------------
 
-Running Cifar10 Training with Optimizer = SimpleSGD
+Running Cifar10 training with Optimizer = SimpleSGD
 params= {'lr': 0.001}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -127,7 +127,7 @@ Epoch 9/10 completed, Average Loss: 1.7910
 Epoch 10/10 completed, Average Loss: 1.7511
 Test set: Average loss: 0.0271, Accuracy: 3937/10000 (39.37%)
 
-Running Cifar10 Training with Optimizer = SimpleSGDCurvature
+Running Cifar10 training with Optimizer = SimpleSGDCurvature
 params= {'lr': 0.001, 'epsilon': 0.01}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -252,7 +252,7 @@ Epoch 9/10 completed, Average Loss: 0.1056
 Epoch 10/10 completed, Average Loss: 0.0557
 Test set: Average loss: 0.0210, Accuracy: 7302/10000 (73.02%)
 
-Running Cifar10 Training with Optimizer = Adam
+Running Cifar10 training with Optimizer = Adam
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -377,7 +377,7 @@ Epoch 9/10 completed, Average Loss: 0.0760
 Epoch 10/10 completed, Average Loss: 0.0696
 Test set: Average loss: 0.0225, Accuracy: 7353/10000 (73.53%)
 
-Running Cifar10 Training with Optimizer = HeavyBall
+Running Cifar10 training with Optimizer = HeavyBall
 params= {'lr': 0.001, 'momentum': 0.9}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -502,7 +502,7 @@ Epoch 9/10 completed, Average Loss: 0.9999
 Epoch 10/10 completed, Average Loss: 0.9562
 Test set: Average loss: 0.0160, Accuracy: 6394/10000 (63.94%)
 
-Running Cifar10 Training with Optimizer = HeavyBallCurvature
+Running Cifar10 training with Optimizer = HeavyBallCurvature
 params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -627,7 +627,7 @@ Epoch 9/10 completed, Average Loss: 0.0843
 Epoch 10/10 completed, Average Loss: 0.0775
 Test set: Average loss: 0.0267, Accuracy: 7072/10000 (70.72%)
 
-Running Cifar10 Training with Optimizer = NAG
+Running Cifar10 training with Optimizer = NAG
 params= {'lr': 0.001, 'momentum': 0.9}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -752,7 +752,7 @@ Epoch 9/10 completed, Average Loss: 0.9997
 Epoch 10/10 completed, Average Loss: 0.9558
 Test set: Average loss: 0.0159, Accuracy: 6404/10000 (64.04%)
 
-Running Cifar10 Training with Optimizer = NAGCurvature
+Running Cifar10 training with Optimizer = NAGCurvature
 params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -877,7 +877,7 @@ Epoch 9/10 completed, Average Loss: 0.0879
 Epoch 10/10 completed, Average Loss: 0.0784
 Test set: Average loss: 0.0258, Accuracy: 7160/10000 (71.60%)
 
-Running Cifar10 Training with Optimizer = Adagrad
+Running Cifar10 training with Optimizer = Adagrad
 params= {'lr': 0.01, 'eps': 1e-10}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -1002,7 +1002,7 @@ Epoch 9/10 completed, Average Loss: 0.5981
 Epoch 10/10 completed, Average Loss: 0.5630
 Test set: Average loss: 0.0134, Accuracy: 7082/10000 (70.82%)
 
-Running Cifar10 Training with Optimizer = Adadelta
+Running Cifar10 training with Optimizer = Adadelta
 params= {'lr': 1.0, 'rho': 0.95, 'eps': 1e-06}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -1127,7 +1127,7 @@ Epoch 9/10 completed, Average Loss: 0.0322
 Epoch 10/10 completed, Average Loss: 0.0236
 Test set: Average loss: 0.0318, Accuracy: 7356/10000 (73.56%)
 
-Running Cifar10 Training with Optimizer = RMSProp
+Running Cifar10 training with Optimizer = RMSProp
 params= {'lr': 0.01, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -1252,7 +1252,7 @@ Epoch 9/10 completed, Average Loss: 1.3761
 Epoch 10/10 completed, Average Loss: 1.3785
 Test set: Average loss: 0.0242, Accuracy: 4551/10000 (45.51%)
 
-Running Cifar10 Training with Optimizer = RMSPropMomentum
+Running Cifar10 training with Optimizer = RMSPropMomentum
 params= {'lr': 0.01, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.05}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -1377,7 +1377,7 @@ Epoch 9/10 completed, Average Loss: 1.3894
 Epoch 10/10 completed, Average Loss: 1.3489
 Test set: Average loss: 0.0238, Accuracy: 4975/10000 (49.75%)
 
-Running Cifar10 Training with Optimizer = AdamW
+Running Cifar10 training with Optimizer = AdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -1502,7 +1502,7 @@ Epoch 9/10 completed, Average Loss: 0.0824
 Epoch 10/10 completed, Average Loss: 0.0650
 Test set: Average loss: 0.0228, Accuracy: 7310/10000 (73.10%)
 
-Running Cifar10 Training with Optimizer = NAdam
+Running Cifar10 training with Optimizer = NAdam
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -1627,7 +1627,7 @@ Epoch 9/10 completed, Average Loss: 0.2594
 Epoch 10/10 completed, Average Loss: 0.2722
 Test set: Average loss: 0.0321, Accuracy: 6669/10000 (66.69%)
 
-Running Cifar10 Training with Optimizer = NAdamW
+Running Cifar10 training with Optimizer = NAdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -1752,7 +1752,7 @@ Epoch 9/10 completed, Average Loss: 0.2500
 Epoch 10/10 completed, Average Loss: 0.2678
 Test set: Average loss: 0.0278, Accuracy: 6732/10000 (67.32%)
 
-Running Cifar10 Training with Optimizer = AMSGrad
+Running Cifar10 training with Optimizer = AMSGrad
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -1877,7 +1877,7 @@ Epoch 9/10 completed, Average Loss: 0.0421
 Epoch 10/10 completed, Average Loss: 0.0281
 Test set: Average loss: 0.0237, Accuracy: 7424/10000 (74.24%)
 
-Running Cifar10 Training with Optimizer = Shampoo
+Running Cifar10 training with Optimizer = Shampoo
 params= {'lr': 0.001, 'momentum': 0.1}
 Files already downloaded and verified
 Files already downloaded and verified
@@ -1918,3 +1918,5 @@ Epoch 9/10 completed, Average Loss: 1.3161
 Epoch 10/10 completed, Average Loss: 1.2716
 Test set: Average loss: 0.0201, Accuracy: 5528/10000 (55.28%)
 Running Loop: 4/10
+Epoch 1/10 completed, Average Loss: 2.1560
+Epoch 2/10 completed, Average Loss: 1.8406

@@ -1,0 +1,17 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 10 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running AG News Training with Optimizer = SimpleSGD
+params= {'lr': 0.001}
+Running Loop: 1/10
+Epoch 1, Loss: 1.3836
+Epoch 2, Loss: 1.3813
+Epoch 3, Loss: 1.3795
+Epoch 4, Loss: 1.3778
+Epoch 5, Loss: 1.3761
+Epoch 6, Loss: 1.3745
+Epoch 7, Loss: 1.3728
+Epoch 8, Loss: 1.3711
+Epoch 9, Loss: 1.3693
+Epoch 10, Loss: 1.3675
