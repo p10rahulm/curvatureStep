@@ -190,3 +190,14 @@ Epoch 2/2 completed, Average Loss: 0.0002
 Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
 Running Loop: 4/10
 Epoch 1/2 completed, Average Loss: 0.0102
+Epoch 2/2 completed, Average Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.0098
+Epoch 2/2 completed, Average Loss: 0.0004
+Test set: Average loss: 0.0001, Accuracy: 24979/25000 (99.92%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.0093
+Epoch 2/2 completed, Average Loss: 0.0007
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 7/10
