@@ -11,13 +11,13 @@ sys.path.insert(0, project_root)
 from experiment_utils import run_experiment
 from utilities import write_to_file
 from optimizer_params import optimizers
-# from data_loaders.imdb_reviews import load_imdb_reviews
 from models.simpleRNN import SimpleRNN
 from data_loaders.imdb import vocab
+import torch
 import torch.nn as nn
 from data_loaders.imdb import load_imdb_reviews
-
-import torch
+from train import train_lm
+from test import test_lm
 
 results = []
 
@@ -28,6 +28,9 @@ print("#", "-" * 100)
 for optimizer_class, default_params in optimizers:
     print(f"\nRunning IMDB Reviews Training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
+
+    # Set device to GPU 0
+    device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
 
     dataset_loader = load_imdb_reviews
 
@@ -40,7 +43,8 @@ for optimizer_class, default_params in optimizers:
         'pad_idx': vocab["<pad>"]
     }
     model = SimpleRNN
-
+    trainer_function = train_lm
+    test_function = test_lm
     loss_criterion = nn.BCELoss
     mean_accuracy, std_accuracy = run_experiment(
         optimizer_class,
@@ -48,10 +52,13 @@ for optimizer_class, default_params in optimizers:
         dataset_loader=dataset_loader,
         model_class=model,
         num_runs=10,
-        num_epochs=10,
+        num_epochs=2,
         debug_logs=True,
         model_hyperparams=model_hyperparams,
         loss_criterion=loss_criterion,
+        device=device,
+        trainer_fn=trainer_function,
+        tester_fn=test_function,
     )
     results.append({
         'optimizer': optimizer_class.__name__,

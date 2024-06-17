@@ -1,0 +1,46 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 10 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running IMDB Reviews Training with Optimizer = SimpleSGD
+params= {'lr': 0.001}
+Running Loop: 1/10
+Epoch 1, Loss: 0.3332
+Epoch 2, Loss: 0.1517
+Test set: Average loss: 0.0019, Accuracy: 24888/25000 (99.55%)
+Running Loop: 2/10
+Epoch 1, Loss: 0.3263
+Epoch 2, Loss: 0.1623
+Test set: Average loss: 0.0021, Accuracy: 24329/25000 (97.32%)
+Running Loop: 3/10
+Epoch 1, Loss: 0.3005
+Epoch 2, Loss: 0.1356
+Test set: Average loss: 0.0018, Accuracy: 24761/25000 (99.04%)
+Running Loop: 4/10
+Epoch 1, Loss: 0.2906
+Epoch 2, Loss: 0.1310
+Test set: Average loss: 0.0017, Accuracy: 24737/25000 (98.95%)
+Running Loop: 5/10
+Epoch 1, Loss: 0.3314
+Epoch 2, Loss: 0.1525
+Test set: Average loss: 0.0020, Accuracy: 24347/25000 (97.39%)
+Running Loop: 6/10
+Epoch 1, Loss: 0.3080
+Epoch 2, Loss: 0.1485
+Test set: Average loss: 0.0019, Accuracy: 24495/25000 (97.98%)
+Running Loop: 7/10
+Epoch 1, Loss: 0.2816
+Epoch 2, Loss: 0.1392
+Test set: Average loss: 0.0018, Accuracy: 24465/25000 (97.86%)
+Running Loop: 8/10
+Epoch 1, Loss: 0.2919
+Epoch 2, Loss: 0.1401
+Test set: Average loss: 0.0018, Accuracy: 24813/25000 (99.25%)
+Running Loop: 9/10
+Epoch 1, Loss: 0.3202
+Epoch 2, Loss: 0.1475
+Test set: Average loss: 0.0019, Accuracy: 24558/25000 (98.23%)
+Running Loop: 10/10
+Epoch 1, Loss: 0.3099
+Epoch 2, Loss: 0.1583
+Test set: Average loss: 0.0021, Accuracy: 24485/25000 (97.94%)

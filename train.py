@@ -5,13 +5,12 @@ import sys
 project_root =os.getcwd()
 sys.path.insert(0, project_root)
 
-import torch
 from tqdm import tqdm
 
 def train(model, train_loader, criterion, optimizer, device, num_epochs=10):
     model.train()
     for epoch in tqdm(range(num_epochs), desc="Epochs"):
-        running_loss = 0.0
+        epoch_loss = 0.0
         for inputs, targets in tqdm(train_loader, desc=f"Training Epoch {epoch+1}"):
             inputs, targets = inputs.to(device), targets.to(device)
 
@@ -23,6 +22,28 @@ def train(model, train_loader, criterion, optimizer, device, num_epochs=10):
                 return loss
 
             loss = optimizer.step(closure)
-            running_loss += loss.item()
+            epoch_loss += loss.item()
 
-        print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {running_loss/len(train_loader):.4f}")
+        print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {epoch_loss/len(train_loader):.4f}")
+
+
+def train_lm(model, train_loader, criterion, optimizer, device, num_epochs=10):
+    model.to(device)
+    model.train()
+    for epoch in tqdm(range(num_epochs), desc="Epochs"):
+        epoch_loss = 0
+        for text, labels, lengths in tqdm(train_loader):
+            # text, labels, lengths = text.to(device), labels.to(device), lengths.to(device)
+            text, labels = text.to(device), labels.to(device)
+
+            def closure():
+                optimizer.zero_grad()
+                model.flatten_parameters()  # Ensure RNN weights are compacted
+                predictions = model(text, lengths).squeeze(1)
+                loss = criterion(predictions, labels)
+                loss.backward()
+                return loss
+
+            loss = optimizer.step(closure)
+            epoch_loss += loss.item()
+        print(f'Epoch {epoch+1}, Loss: {epoch_loss/len(train_loader):.4f}')
