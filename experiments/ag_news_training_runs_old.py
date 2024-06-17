@@ -11,12 +11,13 @@ sys.path.insert(0, project_root)
 from experiment_utils import run_experiment
 from utilities import write_to_file
 from optimizer_params import optimizers
-from models.bert_model import BERTClassifier
-from data_loaders.ag_news_bert import load_ag_news
+from models.simpleRNN_multiclass import SimpleRNN
+from data_loaders.ag_news import vocab
 import torch
 import torch.nn as nn
-from train import train_bert
-from test import test_bert
+from data_loaders.ag_news import load_ag_news
+from train import train_lm
+from test import test_lm_multiclass
 
 results = []
 
@@ -35,20 +36,23 @@ for optimizer_class, default_params in optimizers:
 
     # Hyperparameters
     model_hyperparams = {
-        'num_classes': 4,
-        'freeze_bert': False
+        'vocab_size': len(vocab),
+        'embed_dim': 100,
+        'hidden_dim': 256,
+        'output_dim': 4,
+        'pad_idx': vocab["<pad>"],
     }
-    model = BERTClassifier
-    trainer_function = train_bert
-    test_function = test_bert
+    model = SimpleRNN
+    trainer_function = train_lm
+    test_function = test_lm_multiclass
     loss_criterion = nn.CrossEntropyLoss
     mean_accuracy, std_accuracy = run_experiment(
         optimizer_class,
         params,
         dataset_loader=dataset_loader,
         model_class=model,
-        num_runs=1,
-        num_epochs=2,
+        num_runs=10,
+        num_epochs=10,
         debug_logs=True,
         model_hyperparams=model_hyperparams,
         loss_criterion=loss_criterion,

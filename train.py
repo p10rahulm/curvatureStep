@@ -48,3 +48,23 @@ def train_lm(model, train_loader, criterion, optimizer, device, num_epochs=10):
             epoch_loss += loss.item()
         
         print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {epoch_loss/len(train_loader):.4f}")
+
+
+def train_bert(model, train_loader, criterion, optimizer, device, num_epochs=10):
+    model.to(device)
+    model.train()
+    for epoch in range(num_epochs):
+        epoch_loss = 0
+        for batch in tqdm(train_loader):
+            input_ids = batch['input_ids'].to(device)
+            attention_mask = batch['attention_mask'].to(device)
+            labels = batch['label'].to(device)
+
+            optimizer.zero_grad()
+            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+            loss = criterion(outputs, labels)
+            loss.backward()
+            optimizer.step()
+            epoch_loss += loss.item()
+        
+        print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {epoch_loss/len(train_loader):.4f}")

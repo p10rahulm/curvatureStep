@@ -65,3 +65,26 @@ def test_lm_multiclass(model, test_loader, criterion, device):
     print(f"Test set: Average loss: {epoch_loss:.4f}, Accuracy: {correct_preds}/{total_preds} ({accuracy:.2f}%)")
     return 1.0 * correct_preds / total_preds
 
+
+def test_bert(model, test_loader, criterion, device):
+    model.to(device)
+    model.eval()
+    epoch_loss = 0.0
+    correct_preds = 0
+    total_preds = 0
+    with torch.no_grad():
+        for batch in tqdm(test_loader):
+            input_ids = batch['input_ids'].to(device)
+            attention_mask = batch['attention_mask'].to(device)
+            labels = batch['label'].to(device)
+            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+            loss = criterion(outputs, labels)
+            epoch_loss += loss.item()
+            predicted_labels = torch.argmax(outputs, dim=1)
+            correct_preds += (predicted_labels == labels).sum().item()
+            total_preds += len(labels)
+    epoch_loss /= len(test_loader.dataset)
+    accuracy = 100. * correct_preds / total_preds
+    print(f"Test set: Average loss: {epoch_loss:.4f}, Accuracy: {correct_preds}/{total_preds} ({accuracy:.2f}%)")
+    return 1.0 * correct_preds / total_preds
+
