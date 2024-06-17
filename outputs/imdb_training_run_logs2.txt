@@ -1,0 +1,11 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 10 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running IMDB Reviews Training with Optimizer = RMSPropMomentum
+params= {'lr': 0.01, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.05}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.0215
+Epoch 2/2 completed, Average Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 2/10

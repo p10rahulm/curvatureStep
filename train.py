@@ -46,4 +46,5 @@ def train_lm(model, train_loader, criterion, optimizer, device, num_epochs=10):
 
             loss = optimizer.step(closure)
             epoch_loss += loss.item()
-        print(f'Epoch {epoch+1}, Loss: {epoch_loss/len(train_loader):.4f}')
+        
+        print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {epoch_loss/len(train_loader):.4f}")

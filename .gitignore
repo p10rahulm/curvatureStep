@@ -15,6 +15,8 @@ data/SpeechCommands/*
 data/speech_commands_v0.02.tar.gz
 data/dbpedia/*
 data/dbpedia
+data/yelp/*
+data/yelp
 
 # User-specific stuff
 .idea/**/workspace.xml

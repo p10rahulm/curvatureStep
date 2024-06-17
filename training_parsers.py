@@ -91,6 +91,7 @@ def parse_training_logs(log_file_path, dataset_name):
 
 # Example usage for CIFAR-10 and MNIST
 parse_training_logs('outputs/cifar10_training_run_logs.txt', 'Cifar10')
-parse_training_logs('outputs/mnist_training_run_logs.txt', 'MNIST')
 parse_training_logs('outputs/fashion_mnist_training_run_logs.txt', 'FashionMNIST')
+parse_training_logs('outputs/mnist_training_run_logs.txt', 'MNIST')
 
+parse_training_logs('outputs/cola_training_run_logs.txt', 'CoLA')

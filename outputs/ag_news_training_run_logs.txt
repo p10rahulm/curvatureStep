@@ -137,3 +137,64 @@ Epoch 3, Loss: 1.3819
 Epoch 4, Loss: 1.3803
 Epoch 5, Loss: 1.3788
 Epoch 6, Loss: 1.3773
+Epoch 7, Loss: 1.3759
+Epoch 8, Loss: 1.3745
+Epoch 9, Loss: 1.3732
+Epoch 10, Loss: 1.3718
+Test set: Average loss: 0.0215, Accuracy: 2319/7600 (30.51%)
+accuracy= 0.3051315789473684
+accuracies= [0.3126315789473684, 0.3161842105263158, 0.3207894736842105, 0.33, 0.3311842105263158, 0.3101315789473684, 0.3240789473684211, 0.31342105263157893, 0.32789473684210524, 0.3051315789473684]
+
+Running AG News Training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1, Loss: 1.2969
+Epoch 2, Loss: 1.2409
+Epoch 3, Loss: 1.4048
+Epoch 4, Loss: 1.3532
+Epoch 5, Loss: 1.3595
+Epoch 6, Loss: 1.3506
+Epoch 7, Loss: 1.3384
+Epoch 8, Loss: 1.3290
+Epoch 9, Loss: 1.3302
+Epoch 10, Loss: 1.3089
+Test set: Average loss: 0.0200, Accuracy: 3281/7600 (43.17%)
+accuracy= 0.4317105263157895
+accuracies= [0.4317105263157895]
+Running Loop: 2/10
+Epoch 1, Loss: 1.2950
+Epoch 2, Loss: 1.3110
+Epoch 3, Loss: 1.2728
+Epoch 4, Loss: 1.3349
+Epoch 5, Loss: 1.3245
+Epoch 6, Loss: 1.3676
+Epoch 7, Loss: 1.3488
+Epoch 8, Loss: 1.3406
+Epoch 9, Loss: 1.3535
+Epoch 10, Loss: 1.3523
+Test set: Average loss: 0.0221, Accuracy: 2029/7600 (26.70%)
+accuracy= 0.2669736842105263
+accuracies= [0.4317105263157895, 0.2669736842105263]
+Running Loop: 3/10
+Epoch 1, Loss: 1.2877
+Epoch 2, Loss: 1.2807
+Epoch 3, Loss: 1.3793
+Epoch 4, Loss: 1.3632
+Epoch 5, Loss: 1.3431
+Epoch 6, Loss: 1.3240
+Epoch 7, Loss: 1.3102
+Epoch 8, Loss: 1.3203
+Epoch 9, Loss: 1.3216
+Epoch 10, Loss: 1.3029
+Test set: Average loss: 0.0205, Accuracy: 3086/7600 (40.61%)
+accuracy= 0.4060526315789474
+accuracies= [0.4317105263157895, 0.2669736842105263, 0.4060526315789474]
+Running Loop: 4/10
+Epoch 1, Loss: 1.3889
+Epoch 2, Loss: 1.3817
+Epoch 3, Loss: 1.3620
+Epoch 4, Loss: 1.3405
+Epoch 5, Loss: 1.3244
+Epoch 6, Loss: 1.3178
+Epoch 7, Loss: 1.3103
+Epoch 8, Loss: 1.3190
