@@ -24,7 +24,7 @@ dataset_loader = load_fashion_mnist
 model_class = SimpleCNNFashionMNIST
 
 for optimizer_class, default_params in optimizers:
-    print(f"\nRunning FashionMNIST Training with Optimizer = {str(optimizer_class.__name__)}")
+    print(f"\nRunning FashionMNIST training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
     
     # Set device to GPU 0

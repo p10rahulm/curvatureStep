@@ -1,4 +1,4 @@
-# experiments/ag_news_training_runs.py
+# experiments/cola_training_runs.py
 
 # Define the relative path to the project root from the current script
 import os
@@ -12,10 +12,10 @@ from experiment_utils import run_experiment
 from utilities import write_to_file
 from optimizer_params import optimizers
 from models.simpleRNN_multiclass import SimpleRNN
-from data_loaders.ag_news import vocab
+from data_loaders.cola import vocab
 import torch
 import torch.nn as nn
-from data_loaders.ag_news import load_ag_news
+from data_loaders.cola import load_cola
 from train import train_lm
 from test import test_lm_multiclass
 
@@ -26,20 +26,20 @@ print("# Running 10 epochs of training - 10 runs")
 print("#", "-" * 100)
 
 for optimizer_class, default_params in optimizers:
-    print(f"\nRunning AG News training with Optimizer = {str(optimizer_class.__name__)}")
+    print(f"\nRunning CoLA training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
 
     # Set device to GPU
-    device = torch.device('cuda:3' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
 
-    dataset_loader = load_ag_news
+    dataset_loader = load_cola
 
     # Hyperparameters
     model_hyperparams = {
         'vocab_size': len(vocab),
         'embed_dim': 100,
         'hidden_dim': 256,
-        'output_dim': 4,
+        'output_dim': 2,
         'pad_idx': vocab["<pad>"],
     }
     model = SimpleRNN
@@ -66,4 +66,4 @@ for optimizer_class, default_params in optimizers:
         'std_accuracy': std_accuracy
     })
 
-write_to_file('outputs/ag_news_training_logs.csv', results)
+write_to_file('outputs/cola_training_logs.csv', results)

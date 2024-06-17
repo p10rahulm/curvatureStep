@@ -12,10 +12,10 @@ from experiment_utils import run_experiment
 from utilities import write_to_file
 from optimizer_params import optimizers
 from models.simpleRNN_multiclass import SimpleRNN
-from data_loaders.ag_news import vocab
+from data_loaders.dbpedia import vocab
 import torch
 import torch.nn as nn
-from data_loaders.ag_news import load_ag_news
+from data_loaders.dbpedia import load_dbpedia
 from train import train_lm
 from test import test_lm_multiclass
 
@@ -26,13 +26,13 @@ print("# Running 10 epochs of training - 10 runs")
 print("#", "-" * 100)
 
 for optimizer_class, default_params in optimizers:
-    print(f"\nRunning AG News training with Optimizer = {str(optimizer_class.__name__)}")
+    print(f"\nRunning dbpedia training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
 
     # Set device to GPU
-    device = torch.device('cuda:3' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
 
-    dataset_loader = load_ag_news
+    dataset_loader = load_dbpedia
 
     # Hyperparameters
     model_hyperparams = {
@@ -51,8 +51,8 @@ for optimizer_class, default_params in optimizers:
         params,
         dataset_loader=dataset_loader,
         model_class=model,
-        num_runs=10,
-        num_epochs=10,
+        num_runs=1,
+        num_epochs=1,
         debug_logs=True,
         model_hyperparams=model_hyperparams,
         loss_criterion=loss_criterion,
@@ -66,4 +66,4 @@ for optimizer_class, default_params in optimizers:
         'std_accuracy': std_accuracy
     })
 
-write_to_file('outputs/ag_news_training_logs.csv', results)
+write_to_file('outputs/dbpedia_training_logs.csv', results)

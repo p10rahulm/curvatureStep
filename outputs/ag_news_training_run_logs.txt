@@ -15,3 +15,64 @@ Epoch 7, Loss: 1.3728
 Epoch 8, Loss: 1.3711
 Epoch 9, Loss: 1.3693
 Epoch 10, Loss: 1.3675
+Test set: Average loss: 0.0214, Accuracy: 2376/7600 (31.26%)
+accuracy= 0.3126315789473684
+accuracies= [0.3126315789473684]
+Running Loop: 2/10
+Epoch 1, Loss: 1.3857
+Epoch 2, Loss: 1.3835
+Epoch 3, Loss: 1.3816
+Epoch 4, Loss: 1.3797
+Epoch 5, Loss: 1.3779
+Epoch 6, Loss: 1.3761
+Epoch 7, Loss: 1.3744
+Epoch 8, Loss: 1.3726
+Epoch 9, Loss: 1.3709
+Epoch 10, Loss: 1.3692
+Test set: Average loss: 0.0214, Accuracy: 2403/7600 (31.62%)
+accuracy= 0.3161842105263158
+accuracies= [0.3126315789473684, 0.3161842105263158]
+Running Loop: 3/10
+Epoch 1, Loss: 1.3852
+Epoch 2, Loss: 1.3830
+Epoch 3, Loss: 1.3810
+Epoch 4, Loss: 1.3790
+Epoch 5, Loss: 1.3770
+Epoch 6, Loss: 1.3751
+Epoch 7, Loss: 1.3731
+Epoch 8, Loss: 1.3711
+Epoch 9, Loss: 1.3691
+Epoch 10, Loss: 1.3669
+Test set: Average loss: 0.0214, Accuracy: 2438/7600 (32.08%)
+accuracy= 0.3207894736842105
+accuracies= [0.3126315789473684, 0.3161842105263158, 0.3207894736842105]
+Running Loop: 4/10
+Epoch 1, Loss: 1.3847
+Epoch 2, Loss: 1.3823
+Epoch 3, Loss: 1.3803
+Epoch 4, Loss: 1.3785
+Epoch 5, Loss: 1.3766
+Epoch 6, Loss: 1.3747
+Epoch 7, Loss: 1.3727
+Epoch 8, Loss: 1.3706
+Epoch 9, Loss: 1.3683
+Epoch 10, Loss: 1.3659
+Test set: Average loss: 0.0214, Accuracy: 2508/7600 (33.00%)
+accuracy= 0.33
+accuracies= [0.3126315789473684, 0.3161842105263158, 0.3207894736842105, 0.33]
+Running Loop: 5/10
+Epoch 1, Loss: 1.3852
+Epoch 2, Loss: 1.3831
+Epoch 3, Loss: 1.3811
+Epoch 4, Loss: 1.3791
+Epoch 5, Loss: 1.3771
+Epoch 6, Loss: 1.3751
+Epoch 7, Loss: 1.3730
+Epoch 8, Loss: 1.3709
+Epoch 9, Loss: 1.3688
+Epoch 10, Loss: 1.3664
+Test set: Average loss: 0.0214, Accuracy: 2517/7600 (33.12%)
+accuracy= 0.3311842105263158
+accuracies= [0.3126315789473684, 0.3161842105263158, 0.3207894736842105, 0.33, 0.3311842105263158]
+Running Loop: 6/10
+Epoch 1, Loss: 1.3864

@@ -13,6 +13,7 @@ data/TIMIT.zip
 data/SpeechCommands
 data/SpeechCommands/*
 data/speech_commands_v0.02.tar.gz
+data/dbpedia/*
 
 # User-specific stuff
 .idea/**/workspace.xml

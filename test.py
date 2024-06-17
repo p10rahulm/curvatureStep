@@ -45,4 +45,23 @@ def test_lm(model, test_loader, criterion, device):
     print(f"Test set: Average loss: {epoch_loss:.4f}, Accuracy: {correct_preds}/{total_preds} ({accuracy:.2f}%)")
     return 1.0 * correct_preds / total_preds
 
+def test_lm_multiclass(model, test_loader, criterion, device):
+    model.to(device)
+    model.eval()
+    epoch_loss = 0.0
+    correct_preds = 0
+    total_preds = 0
+    with torch.no_grad():
+        for text, labels, lengths in tqdm(test_loader):
+            text, labels = text.to(device), labels.to(device)
+            predictions = model(text, lengths)
+            loss = criterion(predictions, labels)
+            epoch_loss += loss.item()
+            predicted_labels = torch.argmax(predictions, dim=1)
+            correct_preds += (predicted_labels == labels).sum().item()
+            total_preds += len(labels)
+    epoch_loss /= len(test_loader.dataset)
+    accuracy = 100. * correct_preds / total_preds
+    print(f"Test set: Average loss: {epoch_loss:.4f}, Accuracy: {correct_preds}/{total_preds} ({accuracy:.2f}%)")
+    return 1.0 * correct_preds / total_preds
 

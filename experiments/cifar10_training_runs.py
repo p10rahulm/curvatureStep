@@ -22,7 +22,7 @@ dataset_loader = load_cifar10  # Set the dataset loader
 model_class = SimpleCNN  # Set the model class
 
 for optimizer_class, default_params in optimizers:
-    print(f"\nRunning Cifar10 Training with Optimizer = {str(optimizer_class.__name__)}")
+    print(f"\nRunning Cifar10 training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
 
     # Set device to GPU 0
