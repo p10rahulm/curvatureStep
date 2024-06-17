@@ -8,6 +8,11 @@
 data/cifar-10-python.tar.gz
 data/cifar-10-batches-py/*
 data/FashionMNIST/*
+data/TIMIT/*
+data/TIMIT.zip
+data/SpeechCommands
+data/SpeechCommands/*
+data/speech_commands_v0.02.tar.gz
 
 # User-specific stuff
 .idea/**/workspace.xml

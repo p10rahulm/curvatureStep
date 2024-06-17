@@ -38,24 +38,31 @@ from data_loaders.mnist import load_mnist
 
 def run_experiment(optimizer_class, optimizer_params, dataset_loader=None, 
                    model_class=None, num_runs=10, num_epochs=2, debug_logs=False,
-                   device=None):
+                   device=None, model_hyperparams=None,
+                   loss_criterion=None):
     if device is None:
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     if dataset_loader is None:
         dataset_loader = load_mnist
     if model_class is None:
         model_class = SimpleNN
+    if loss_criterion is None:
+        loss_criterion = torch.nn.CrossEntropyLoss
     set_seed(42)
     print("params=", optimizer_params)
     train_loader, test_loader = dataset_loader()
 
-    criterion = torch.nn.CrossEntropyLoss()
+    criterion = loss_criterion()
     accuracies = []
     for run_number in range(num_runs):
         if debug_logs:
             print(f"Running Loop: {run_number + 1}/{num_runs}")
 
-        model = model_class().to(device)
+        if model_hyperparams is None:
+            model = model_class().to(device)
+        else:
+            model = model_class(**model_hyperparams).to(device)
+
         optimizer = optimizer_class(model.parameters(), **optimizer_params)
         train(model, train_loader, criterion, optimizer, device, num_epochs=num_epochs)
         accuracy = test(model, test_loader, criterion, device)
