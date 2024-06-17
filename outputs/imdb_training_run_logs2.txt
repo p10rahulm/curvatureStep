@@ -2,7 +2,7 @@
 # Running 10 epochs of training - 10 runs
 # ----------------------------------------------------------------------------------------------------
 
-Running IMDB Reviews Training with Optimizer = RMSPropMomentum
+Running IMDB training with Optimizer = RMSPropMomentum
 params= {'lr': 0.01, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.05}
 Running Loop: 1/10
 Epoch 1/2 completed, Average Loss: 0.0215
@@ -45,7 +45,7 @@ Epoch 1/2 completed, Average Loss: 0.0269
 Epoch 2/2 completed, Average Loss: 0.0066
 Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
 
-Running IMDB Reviews Training with Optimizer = AdamW
+Running IMDB training with Optimizer = AdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Running Loop: 1/10
 Epoch 1/2 completed, Average Loss: 0.0087
@@ -88,7 +88,7 @@ Epoch 1/2 completed, Average Loss: 0.0089
 Epoch 2/2 completed, Average Loss: 0.0004
 Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
 
-Running IMDB Reviews Training with Optimizer = NAdam
+Running IMDB training with Optimizer = NAdam
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Running Loop: 1/10
 Epoch 1/2 completed, Average Loss: 0.0175
@@ -131,7 +131,7 @@ Epoch 1/2 completed, Average Loss: 0.0062
 Epoch 2/2 completed, Average Loss: 0.0000
 Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
 
-Running IMDB Reviews Training with Optimizer = NAdamW
+Running IMDB training with Optimizer = NAdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Running Loop: 1/10
 Epoch 1/2 completed, Average Loss: 0.0088
@@ -174,7 +174,7 @@ Epoch 1/2 completed, Average Loss: 0.0062
 Epoch 2/2 completed, Average Loss: 0.0000
 Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
 
-Running IMDB Reviews Training with Optimizer = AMSGrad
+Running IMDB training with Optimizer = AMSGrad
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Running Loop: 1/10
 Epoch 1/2 completed, Average Loss: 0.0088
@@ -201,3 +201,22 @@ Epoch 1/2 completed, Average Loss: 0.0093
 Epoch 2/2 completed, Average Loss: 0.0007
 Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
 Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.0076
+Epoch 2/2 completed, Average Loss: 0.0017
+Test set: Average loss: 0.0000, Accuracy: 24997/25000 (99.99%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 0.0099
+Epoch 2/2 completed, Average Loss: 0.0002
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 0.0120
+Epoch 2/2 completed, Average Loss: 0.0007
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 0.0090
+Epoch 2/2 completed, Average Loss: 0.0006
+Test set: Average loss: 0.0000, Accuracy: 24998/25000 (99.99%)
+
+Running IMDB training with Optimizer = Shampoo
+params= {'lr': 0.001, 'momentum': 0.1}
+Running Loop: 1/10

@@ -67,7 +67,7 @@ def collate_batch(batch, vocab=vocab):
     return text_list, label_list, lengths
 
 # Function to load DBpedia dataset
-def load_dbpedia(batch_size=64):
+def load_dbpedia(batch_size=1):
     train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True, collate_fn=collate_batch)
     test_loader = DataLoader(test_data, batch_size=batch_size, shuffle=False, collate_fn=collate_batch)
 

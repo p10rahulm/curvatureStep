@@ -26,7 +26,7 @@ print("# Running 10 epochs of training - 10 runs")
 print("#", "-" * 100)
 
 for optimizer_class, default_params in optimizers:
-    print(f"\nRunning IMDB Reviews Training with Optimizer = {str(optimizer_class.__name__)}")
+    print(f"\nRunning IMDB training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
 
     # Set device to GPU 2
