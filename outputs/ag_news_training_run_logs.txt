@@ -76,3 +76,64 @@ accuracy= 0.3311842105263158
 accuracies= [0.3126315789473684, 0.3161842105263158, 0.3207894736842105, 0.33, 0.3311842105263158]
 Running Loop: 6/10
 Epoch 1, Loss: 1.3864
+Epoch 2, Loss: 1.3843
+Epoch 3, Loss: 1.3823
+Epoch 4, Loss: 1.3804
+Epoch 5, Loss: 1.3786
+Epoch 6, Loss: 1.3769
+Epoch 7, Loss: 1.3751
+Epoch 8, Loss: 1.3734
+Epoch 9, Loss: 1.3717
+Epoch 10, Loss: 1.3700
+Test set: Average loss: 0.0214, Accuracy: 2357/7600 (31.01%)
+accuracy= 0.3101315789473684
+accuracies= [0.3126315789473684, 0.3161842105263158, 0.3207894736842105, 0.33, 0.3311842105263158, 0.3101315789473684]
+Running Loop: 7/10
+Epoch 1, Loss: 1.3870
+Epoch 2, Loss: 1.3845
+Epoch 3, Loss: 1.3826
+Epoch 4, Loss: 1.3807
+Epoch 5, Loss: 1.3788
+Epoch 6, Loss: 1.3769
+Epoch 7, Loss: 1.3751
+Epoch 8, Loss: 1.3733
+Epoch 9, Loss: 1.3714
+Epoch 10, Loss: 1.3695
+Test set: Average loss: 0.0214, Accuracy: 2463/7600 (32.41%)
+accuracy= 0.3240789473684211
+accuracies= [0.3126315789473684, 0.3161842105263158, 0.3207894736842105, 0.33, 0.3311842105263158, 0.3101315789473684, 0.3240789473684211]
+Running Loop: 8/10
+Epoch 1, Loss: 1.3866
+Epoch 2, Loss: 1.3841
+Epoch 3, Loss: 1.3822
+Epoch 4, Loss: 1.3803
+Epoch 5, Loss: 1.3785
+Epoch 6, Loss: 1.3767
+Epoch 7, Loss: 1.3750
+Epoch 8, Loss: 1.3733
+Epoch 9, Loss: 1.3715
+Epoch 10, Loss: 1.3698
+Test set: Average loss: 0.0215, Accuracy: 2382/7600 (31.34%)
+accuracy= 0.31342105263157893
+accuracies= [0.3126315789473684, 0.3161842105263158, 0.3207894736842105, 0.33, 0.3311842105263158, 0.3101315789473684, 0.3240789473684211, 0.31342105263157893]
+Running Loop: 9/10
+Epoch 1, Loss: 1.3848
+Epoch 2, Loss: 1.3823
+Epoch 3, Loss: 1.3799
+Epoch 4, Loss: 1.3776
+Epoch 5, Loss: 1.3753
+Epoch 6, Loss: 1.3730
+Epoch 7, Loss: 1.3706
+Epoch 8, Loss: 1.3682
+Epoch 9, Loss: 1.3655
+Epoch 10, Loss: 1.3627
+Test set: Average loss: 0.0213, Accuracy: 2492/7600 (32.79%)
+accuracy= 0.32789473684210524
+accuracies= [0.3126315789473684, 0.3161842105263158, 0.3207894736842105, 0.33, 0.3311842105263158, 0.3101315789473684, 0.3240789473684211, 0.31342105263157893, 0.32789473684210524]
+Running Loop: 10/10
+Epoch 1, Loss: 1.3859
+Epoch 2, Loss: 1.3837
+Epoch 3, Loss: 1.3819
+Epoch 4, Loss: 1.3803
+Epoch 5, Loss: 1.3788
+Epoch 6, Loss: 1.3773

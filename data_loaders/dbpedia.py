@@ -1,5 +1,7 @@
 # data_loaders/dbpedia.py
 
+import os
+import csv
 import torch
 from torch.utils.data import DataLoader
 from torch.nn.utils.rnn import pad_sequence
@@ -8,7 +10,6 @@ torchtext.disable_torchtext_deprecation_warning()
 
 from torchtext.data.utils import get_tokenizer
 from torchtext.vocab import build_vocab_from_iterator
-from torchtext.datasets import DBpedia
 
 # Define tokenizer
 tokenizer = get_tokenizer('spacy', language='en_core_web_sm')
@@ -18,12 +19,26 @@ def yield_tokens(data_iter):
     for _, text in data_iter:
         yield tokenizer(text)
 
+# Function to read CSV and yield rows
+def read_csv(file_path):
+    with open(file_path, newline='', encoding='utf-8') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            yield row
+
 # Load your dataset
-train_iter, test_iter = DBpedia(split=('train', 'test'))
+train_file_path = 'data/dbpedia/train.csv'
+test_file_path = 'data/dbpedia/test.csv'
+
+train_iter = read_csv(train_file_path)
+test_iter = read_csv(test_file_path)
 
 # Build the vocabulary from the training dataset
 vocab = build_vocab_from_iterator(yield_tokens(train_iter), specials=["<unk>", "<pad>"])
 vocab.set_default_index(vocab["<unk>"])
+
+# Reset the train iterator to build the DataLoader
+train_iter = read_csv(train_file_path)
 
 # Function to convert text to tensor
 def text_pipeline(x, vocab):
@@ -58,3 +73,16 @@ def load_dbpedia(batch_size=64):
     test_loader = DataLoader(test_data, batch_size=batch_size, shuffle=False, collate_fn=collate_batch)
 
     return train_loader, test_loader
+
+# Example usage:
+train_loader, test_loader = load_dbpedia(batch_size=64)
+
+for batch in train_loader:
+    text, label, lengths = batch
+    print(text.shape, label.shape, lengths.shape)
+    break
+
+for batch in test_loader:
+    text, label, lengths = batch
+    print(text.shape, label.shape, lengths.shape)
+    break

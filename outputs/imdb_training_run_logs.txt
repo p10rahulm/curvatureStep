@@ -409,3 +409,94 @@ accuracies= [1.0, 1.0, 1.0, 1.0]
 Running Loop: 5/10
 Epoch 1, Loss: 0.0063
 Epoch 2, Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0, 1.0, 1.0, 1.0]
+Running Loop: 6/10
+Epoch 1, Loss: 0.0058
+Epoch 2, Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+Running Loop: 7/10
+Epoch 1, Loss: 0.0056
+Epoch 2, Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+Running Loop: 8/10
+Epoch 1, Loss: 0.0056
+Epoch 2, Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+Running Loop: 9/10
+Epoch 1, Loss: 0.0058
+Epoch 2, Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+Running Loop: 10/10
+Epoch 1, Loss: 0.0059
+Epoch 2, Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+Running IMDB Reviews Training with Optimizer = Adagrad
+params= {'lr': 0.01, 'eps': 1e-10}
+Running Loop: 1/10
+Epoch 1, Loss: 0.0335
+Epoch 2, Loss: 0.0036
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0]
+Running Loop: 2/10
+Epoch 1, Loss: 0.0141
+Epoch 2, Loss: 0.0003
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0]
+Running Loop: 3/10
+Epoch 1, Loss: 0.0039
+Epoch 2, Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0, 1.0]
+Running Loop: 4/10
+Epoch 1, Loss: 0.0464
+Epoch 2, Loss: 0.0037
+Test set: Average loss: 0.0000, Accuracy: 24998/25000 (99.99%)
+accuracy= 0.99992
+accuracies= [1.0, 1.0, 1.0, 0.99992]
+Running Loop: 5/10
+Epoch 1, Loss: 0.0172
+Epoch 2, Loss: 0.0007
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0, 1.0, 0.99992, 1.0]
+Running Loop: 6/10
+Epoch 1, Loss: 0.0036
+Epoch 2, Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0, 1.0, 0.99992, 1.0, 1.0]
+Running Loop: 7/10
+Epoch 1, Loss: 0.0029
+Epoch 2, Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+accuracy= 0.99996
+accuracies= [1.0, 1.0, 1.0, 0.99992, 1.0, 1.0, 0.99996]
+Running Loop: 8/10
+Epoch 1, Loss: 0.0043
+Epoch 2, Loss: 0.0004
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0, 1.0, 0.99992, 1.0, 1.0, 0.99996, 1.0]
+Running Loop: 9/10
+Epoch 1, Loss: 0.0033
+Epoch 2, Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+accuracy= 1.0
+accuracies= [1.0, 1.0, 1.0, 0.99992, 1.0, 1.0, 0.99996, 1.0, 1.0]
+Running Loop: 10/10
