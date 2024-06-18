@@ -1,0 +1,54 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 5 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running AGNews training with Optimizer = AdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.3872
+Epoch 2/5 completed, Average Loss: 1.3866
+Epoch 3/5 completed, Average Loss: 1.3863
+Epoch 4/5 completed, Average Loss: 1.3865
+Epoch 5/5 completed, Average Loss: 1.3866
+Test set: Average loss: 0.0867, Accuracy: 1900/7600 (25.00%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.3851
+Epoch 2/5 completed, Average Loss: 1.3866
+Epoch 3/5 completed, Average Loss: 1.3865
+Epoch 4/5 completed, Average Loss: 1.3170
+Epoch 5/5 completed, Average Loss: 1.1237
+Test set: Average loss: 0.0665, Accuracy: 5150/7600 (67.76%)
+
+Running AGNews training with Optimizer = NAdam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.3881
+Epoch 2/5 completed, Average Loss: 1.3892
+Epoch 3/5 completed, Average Loss: 1.3919
+Epoch 4/5 completed, Average Loss: 1.4598
+Epoch 5/5 completed, Average Loss: 1.4937
+Test set: Average loss: 0.0934, Accuracy: 1900/7600 (25.00%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.3879
+Epoch 2/5 completed, Average Loss: 1.3900
+Epoch 3/5 completed, Average Loss: 1.4071
+Epoch 4/5 completed, Average Loss: 1.4937
+Epoch 5/5 completed, Average Loss: 1.4933
+Test set: Average loss: 0.0934, Accuracy: 1900/7600 (25.00%)
+
+Running AGNews training with Optimizer = NAdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.3881
+Epoch 2/5 completed, Average Loss: 1.3893
+Epoch 3/5 completed, Average Loss: 1.3921
+Epoch 4/5 completed, Average Loss: 1.3937
+Epoch 5/5 completed, Average Loss: 1.3954
+Test set: Average loss: 0.0867, Accuracy: 1900/7600 (25.00%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.3879
+Epoch 2/5 completed, Average Loss: 1.3891
+Epoch 3/5 completed, Average Loss: 1.3914
+Epoch 4/5 completed, Average Loss: 1.3933
+Epoch 5/5 completed, Average Loss: 1.3962
+Test set: Average loss: 0.0868, Accuracy: 1900/7600 (25.00%)

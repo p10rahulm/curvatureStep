@@ -1,0 +1,73 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 1 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running EuroSAT training with Optimizer = SimpleSGD
+params= {'lr': 0.001}
+Running Loop: 1/2
+Epoch 1/1 completed, Average Loss: 1.6045
+Test set: Average loss: 0.0206, Accuracy: 1571/2700 (58.19%)
+Running Loop: 2/2
+Epoch 1/1 completed, Average Loss: 1.6595
+Test set: Average loss: 0.0231, Accuracy: 1423/2700 (52.70%)
+
+Running EuroSAT training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/1 completed, Average Loss: 1.1869
+Test set: Average loss: 0.0289, Accuracy: 1264/2700 (46.81%)
+Running Loop: 2/2
+Epoch 1/1 completed, Average Loss: 1.1421
+Test set: Average loss: 0.0164, Accuracy: 1719/2700 (63.67%)
+
+Running EuroSAT training with Optimizer = Adam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/1 completed, Average Loss: 0.9447
+Test set: Average loss: 0.0394, Accuracy: 1179/2700 (43.67%)
+Running Loop: 2/2
+Epoch 1/1 completed, Average Loss: 0.9672
+Test set: Average loss: 0.0102, Accuracy: 2099/2700 (77.74%)
+
+Running EuroSAT training with Optimizer = HeavyBall
+params= {'lr': 0.001, 'momentum': 0.9}
+Running Loop: 1/2
+Epoch 1/1 completed, Average Loss: 1.0357
+Test set: Average loss: 0.0171, Accuracy: 1702/2700 (63.04%)
+Running Loop: 2/2
+Epoch 1/1 completed, Average Loss: 1.0570
+Test set: Average loss: 0.0112, Accuracy: 2009/2700 (74.41%)
+
+Running EuroSAT training with Optimizer = HeavyBallCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/1 completed, Average Loss: 1.1463
+Test set: Average loss: 0.0120, Accuracy: 1950/2700 (72.22%)
+Running Loop: 2/2
+Epoch 1/1 completed, Average Loss: 1.1295
+Test set: Average loss: 0.0119, Accuracy: 1999/2700 (74.04%)
+
+Running EuroSAT training with Optimizer = NAG
+params= {'lr': 0.001, 'momentum': 0.9}
+Running Loop: 1/2
+Epoch 1/1 completed, Average Loss: 1.0143
+Test set: Average loss: 0.0234, Accuracy: 1609/2700 (59.59%)
+Running Loop: 2/2
+Epoch 1/1 completed, Average Loss: 1.0495
+Test set: Average loss: 0.0141, Accuracy: 1830/2700 (67.78%)
+
+Running EuroSAT training with Optimizer = NAGCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/1 completed, Average Loss: 1.2004
+Test set: Average loss: 0.0149, Accuracy: 1817/2700 (67.30%)
+Running Loop: 2/2
+Epoch 1/1 completed, Average Loss: 1.1567
+Test set: Average loss: 0.0153, Accuracy: 1767/2700 (65.44%)
+
+Running EuroSAT training with Optimizer = Adagrad
+params= {'lr': 0.01, 'eps': 1e-10}
+Running Loop: 1/2
+Epoch 1/1 completed, Average Loss: 1.1217
+Test set: Average loss: 0.0235, Accuracy: 1471/2700 (54.48%)
+Running Loop: 2/2

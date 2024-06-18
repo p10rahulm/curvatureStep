@@ -1,0 +1,9 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 5 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running AGNews training with Optimizer = Shampoo
+params= {'lr': 0.001, 'momentum': 0.1}
+Running Loop: 1/2
+
+Intel MKL ERROR: Parameter 12 was incorrect on entry to SGESDD.

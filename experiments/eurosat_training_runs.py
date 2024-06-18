@@ -1,4 +1,4 @@
-# experiments/ag_news_training_runs.py
+# experiments/eurosat_training_runs.py
 
 # Define the relative path to the project root from the current script
 import os
@@ -11,47 +11,44 @@ sys.path.insert(0, project_root)
 from experiment_utils import run_experiment
 from utilities import write_to_file
 from optimizer_params import optimizers
-from models.bert_model import BERTClassifier, TinyBERTClassifier
-from data_loaders.ag_news_bert import load_ag_news
+from models.resnet import SimpleResNet  # Change to the ResNet model
+from data_loaders.eurosat import load_eurosat
 import torch
 import torch.nn as nn
-from train import train_bert
-from test import test_bert
+from train import train
+from test import test
 
 results = []
 
-total_epochs = 5
+total_epochs = 1
 total_runs = 2
 
 print("#", "-" * 100)
 print(f"# Running {total_epochs} epochs of training - {total_runs} runs")
 print("#", "-" * 100)
 
-
 for optimizer_class, default_params in optimizers:
-    print(f"\nRunning AGNews training with Optimizer = {str(optimizer_class.__name__)}")
+    print(f"\nRunning EuroSAT training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
 
     # Set device to GPU
-    device = torch.device('cuda:3' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
 
-    dataset_loader = load_ag_news
+    dataset_loader = load_eurosat
+    model_class = SimpleResNet
 
     # Hyperparameters
     model_hyperparams = {
-        'num_classes': 4,
-        'freeze_bert': False
+        'num_classes': 10  # EuroSAT has 10 classes
     }
-    # model = BERTClassifier
-    model = TinyBERTClassifier
-    trainer_function = train_bert
-    test_function = test_bert
     loss_criterion = nn.CrossEntropyLoss
+    trainer_function = train
+    test_function = test
     mean_accuracy, std_accuracy = run_experiment(
         optimizer_class,
         params,
         dataset_loader=dataset_loader,
-        model_class=model,
+        model_class=model_class,
         num_runs=total_runs,
         num_epochs=total_epochs,
         debug_logs=True,
@@ -67,4 +64,4 @@ for optimizer_class, default_params in optimizers:
         'std_accuracy': std_accuracy
     })
 
-write_to_file('outputs/ag_news_training_logs.csv', results)
+write_to_file('outputs/eurosat_training_logs.csv', results)

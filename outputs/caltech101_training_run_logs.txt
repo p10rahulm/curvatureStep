@@ -12,3 +12,63 @@ Epoch 2/10 completed, Average Loss: 4.1425
 Epoch 3/10 completed, Average Loss: 4.0457
 Epoch 4/10 completed, Average Loss: 3.9662
 Epoch 5/10 completed, Average Loss: 3.9022
+Epoch 6/10 completed, Average Loss: 3.8434
+Epoch 7/10 completed, Average Loss: 3.7865
+Epoch 8/10 completed, Average Loss: 3.7430
+Epoch 9/10 completed, Average Loss: 3.7036
+Epoch 10/10 completed, Average Loss: 3.6728
+Test set: Average loss: 0.0570, Accuracy: 2039/8677 (23.50%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 4.4477
+Epoch 2/10 completed, Average Loss: 4.1519
+Epoch 3/10 completed, Average Loss: 4.0341
+Epoch 4/10 completed, Average Loss: 3.9618
+Epoch 5/10 completed, Average Loss: 3.9030
+Epoch 6/10 completed, Average Loss: 3.8469
+Epoch 7/10 completed, Average Loss: 3.7963
+Epoch 8/10 completed, Average Loss: 3.7465
+Epoch 9/10 completed, Average Loss: 3.7128
+Epoch 10/10 completed, Average Loss: 3.6754
+Test set: Average loss: 0.0573, Accuracy: 1998/8677 (23.03%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 4.4153
+Epoch 2/10 completed, Average Loss: 4.1422
+Epoch 3/10 completed, Average Loss: 4.0407
+Epoch 4/10 completed, Average Loss: 3.9638
+Epoch 5/10 completed, Average Loss: 3.8977
+Epoch 6/10 completed, Average Loss: 3.8400
+Epoch 7/10 completed, Average Loss: 3.7885
+Epoch 8/10 completed, Average Loss: 3.7487
+Epoch 9/10 completed, Average Loss: 3.7063
+Epoch 10/10 completed, Average Loss: 3.6743
+Test set: Average loss: 0.0571, Accuracy: 2067/8677 (23.82%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 4.4486
+Epoch 2/10 completed, Average Loss: 4.1765
+Epoch 3/10 completed, Average Loss: 4.0605
+Epoch 4/10 completed, Average Loss: 3.9792
+Epoch 5/10 completed, Average Loss: 3.9131
+Epoch 6/10 completed, Average Loss: 3.8503
+Epoch 7/10 completed, Average Loss: 3.7944
+Epoch 8/10 completed, Average Loss: 3.7466
+Epoch 9/10 completed, Average Loss: 3.7058
+Epoch 10/10 completed, Average Loss: 3.6708
+Test set: Average loss: 0.0570, Accuracy: 2017/8677 (23.25%)
+
+Running Caltech101 training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.7390
+Epoch 2/10 completed, Average Loss: 2.7229
+Epoch 3/10 completed, Average Loss: 2.2780
+Epoch 4/10 completed, Average Loss: 1.9020
+Epoch 5/10 completed, Average Loss: 1.6306
+Epoch 6/10 completed, Average Loss: 1.3422
+Epoch 7/10 completed, Average Loss: 1.0691
+Epoch 8/10 completed, Average Loss: 0.8382
+Epoch 9/10 completed, Average Loss: 0.6074
+Epoch 10/10 completed, Average Loss: 0.3979
+Test set: Average loss: 0.0152, Accuracy: 6215/8677 (71.63%)
+Running Loop: 2/4

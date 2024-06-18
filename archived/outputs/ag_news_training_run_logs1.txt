@@ -1,0 +1,37 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 5 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running AGNews training with Optimizer = SimpleSGD
+params= {'lr': 0.001}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.3866
+Epoch 2/5 completed, Average Loss: 1.3865
+Epoch 3/5 completed, Average Loss: 1.3865
+Epoch 4/5 completed, Average Loss: 1.3864
+Epoch 5/5 completed, Average Loss: 1.3865
+Test set: Average loss: 0.0866, Accuracy: 1900/7600 (25.00%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.3866
+Epoch 2/5 completed, Average Loss: 1.3865
+Epoch 3/5 completed, Average Loss: 1.3865
+Epoch 4/5 completed, Average Loss: 1.3865
+Epoch 5/5 completed, Average Loss: 1.3865
+Test set: Average loss: 0.0866, Accuracy: 1924/7600 (25.32%)
+
+Running AGNews training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.3872
+Epoch 2/5 completed, Average Loss: 1.3866
+Epoch 3/5 completed, Average Loss: 1.3866
+Epoch 4/5 completed, Average Loss: 1.3853
+Epoch 5/5 completed, Average Loss: 1.0985
+Test set: Average loss: 0.0622, Accuracy: 5641/7600 (74.22%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.3873
+Epoch 2/5 completed, Average Loss: 1.3866
+Epoch 3/5 completed, Average Loss: 1.3866
+Epoch 4/5 completed, Average Loss: 1.3866
+Epoch 5/5 completed, Average Loss: 1.3087
+Test set: Average loss: 0.0676, Accuracy: 5023/7600 (66.09%)

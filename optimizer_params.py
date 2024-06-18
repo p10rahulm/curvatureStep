@@ -36,7 +36,7 @@ optimizers = [
     (SimpleSGD, {'lr': 1e-3}),
     (SimpleSGDCurvature, {'lr': 1e-3, 'epsilon': 0.01}),
     (Adam, {'lr': 1e-3, 'betas': (0.9, 0.999)}),
-    # (AdamCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
+    (AdamCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
     (HeavyBall, {'lr': 1e-3, 'momentum': 0.9}),
     (HeavyBallCurvature, {'lr': 1e-3, 'momentum': 0.55, 'epsilon': 0.01}),
     (NAG, {'lr': 1e-3, 'momentum': 0.9}),

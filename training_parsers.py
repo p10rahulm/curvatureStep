@@ -95,3 +95,4 @@ parse_training_logs('outputs/fashion_mnist_training_run_logs.txt', 'FashionMNIST
 parse_training_logs('outputs/mnist_training_run_logs.txt', 'MNIST')
 parse_training_logs('outputs/imdb_training_run_logs.txt', 'IMDB')
 parse_training_logs('outputs/cola_training_run_logs.txt', 'CoLA')
+parse_training_logs('outputs/ag_news_training_run_logs.txt', 'AGNews')

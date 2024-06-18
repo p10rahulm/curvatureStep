@@ -12,7 +12,7 @@ from experiment_utils import run_experiment
 from utilities import write_to_file
 from optimizer_params import optimizers
 from models.resnet import SimpleResNet  # Change to the ResNet model
-from data_loaders.food101 import load_food101
+from archived.data_loaders.food101 import load_food101
 import torch
 import torch.nn as nn
 from train import train

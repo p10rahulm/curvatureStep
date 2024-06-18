@@ -1,0 +1,20 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 5 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running AGNews training with Optimizer = AMSGrad
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.3803
+Epoch 2/5 completed, Average Loss: 1.3793
+Epoch 3/5 completed, Average Loss: 1.3197
+Epoch 4/5 completed, Average Loss: 1.2458
+Epoch 5/5 completed, Average Loss: 1.1144
+Test set: Average loss: 0.0658, Accuracy: 5209/7600 (68.54%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.3858
+Epoch 2/5 completed, Average Loss: 1.3862
+Epoch 3/5 completed, Average Loss: 1.3864
+Epoch 4/5 completed, Average Loss: 1.3864
+Epoch 5/5 completed, Average Loss: 1.3864
+Test set: Average loss: 0.0866, Accuracy: 1900/7600 (25.00%)
