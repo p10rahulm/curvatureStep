@@ -19,6 +19,13 @@ data/dbpedia/*
 data/dbpedia
 data/yelp/*
 data/yelp
+data/oxford-iiit-pet/annotations.tar.gz
+data/oxford-iiit-pet/*
+data/caltech101
+data/*
+
+
+
 
 # User-specific stuff
 .idea/**/workspace.xml

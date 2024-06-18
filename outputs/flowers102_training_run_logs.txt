@@ -1,0 +1,22 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running Flowers102 training with Optimizer = SimpleSGD
+params= {'lr': 0.001}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.7199
+Epoch 2/10 completed, Average Loss: 4.6985
+Epoch 3/10 completed, Average Loss: 4.6832
+Epoch 4/10 completed, Average Loss: 4.6676
+Epoch 5/10 completed, Average Loss: 4.6531
+Epoch 6/10 completed, Average Loss: 4.6366
+Epoch 7/10 completed, Average Loss: 4.6251
+Epoch 8/10 completed, Average Loss: 4.6127
+Epoch 9/10 completed, Average Loss: 4.6023
+Epoch 10/10 completed, Average Loss: 4.5902
+Test set: Average loss: 0.0733, Accuracy: 81/6149 (1.32%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 4.7446
+Epoch 2/10 completed, Average Loss: 4.7206
+Epoch 3/10 completed, Average Loss: 4.6999

@@ -1,0 +1,14 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running Caltech101 training with Optimizer = SimpleSGD
+params= {'lr': 0.001}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.3738
+Epoch 2/10 completed, Average Loss: 4.1425
+Epoch 3/10 completed, Average Loss: 4.0457
+Epoch 4/10 completed, Average Loss: 3.9662
+Epoch 5/10 completed, Average Loss: 3.9022

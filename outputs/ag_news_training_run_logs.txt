@@ -27,3 +27,9 @@ Running AG News training with Optimizer = HeavyBall
 params= {'lr': 0.001, 'momentum': 0.9}
 Running Loop: 1/1
 Epoch 1/2 completed, Average Loss: 0.8617
+Epoch 2/2 completed, Average Loss: 0.8340
+Test set: Average loss: 0.0516, Accuracy: 6973/7600 (91.75%)
+
+Running AG News training with Optimizer = HeavyBallCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Running Loop: 1/1

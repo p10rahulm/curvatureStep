@@ -1,0 +1,25 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running OxfordPet training with Optimizer = SimpleSGD
+params= {'lr': 0.001}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.6574
+Epoch 2/10 completed, Average Loss: 3.6148
+Epoch 3/10 completed, Average Loss: 3.5930
+Epoch 4/10 completed, Average Loss: 3.5786
+Epoch 5/10 completed, Average Loss: 3.5643
+Epoch 6/10 completed, Average Loss: 3.5540
+Epoch 7/10 completed, Average Loss: 3.5424
+Epoch 8/10 completed, Average Loss: 3.5319
+Epoch 9/10 completed, Average Loss: 3.5228
+Epoch 10/10 completed, Average Loss: 3.5143
+Test set: Average loss: 0.0563, Accuracy: 201/3669 (5.48%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.6767
+Epoch 2/10 completed, Average Loss: 3.6263
+Epoch 3/10 completed, Average Loss: 3.6003
+Epoch 4/10 completed, Average Loss: 3.5829
+Epoch 5/10 completed, Average Loss: 3.5703
+Epoch 6/10 completed, Average Loss: 3.5617
