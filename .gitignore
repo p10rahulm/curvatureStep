@@ -7,6 +7,8 @@
 
 data/cifar-10-python.tar.gz
 data/cifar-10-batches-py/*
+data/cifar-100-python.tar.gz
+data/cifar-100-python/*
 data/FashionMNIST/*
 data/TIMIT/*
 data/TIMIT.zip

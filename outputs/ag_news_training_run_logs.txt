@@ -5,3 +5,25 @@
 Running AG News training with Optimizer = SimpleSGD
 params= {'lr': 0.001}
 Running Loop: 1/1
+Epoch 1/2 completed, Average Loss: 0.8881
+Epoch 2/2 completed, Average Loss: 0.8313
+Test set: Average loss: 0.0519, Accuracy: 6946/7600 (91.39%)
+
+Running AG News training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01}
+Running Loop: 1/1
+Epoch 1/2 completed, Average Loss: 1.3893
+Epoch 2/2 completed, Average Loss: 1.3871
+Test set: Average loss: 0.0867, Accuracy: 1900/7600 (25.00%)
+
+Running AG News training with Optimizer = Adam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/1
+Epoch 1/2 completed, Average Loss: 1.4662
+Epoch 2/2 completed, Average Loss: 1.4937
+Test set: Average loss: 0.0934, Accuracy: 1900/7600 (25.00%)
+
+Running AG News training with Optimizer = HeavyBall
+params= {'lr': 0.001, 'momentum': 0.9}
+Running Loop: 1/1
+Epoch 1/2 completed, Average Loss: 0.8617
