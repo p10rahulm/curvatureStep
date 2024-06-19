@@ -2,8 +2,11 @@
 # Running 10 epochs of training - 4 runs
 # ----------------------------------------------------------------------------------------------------
 
-Running CIFAR-100 training with Optimizer = NAdamW
-params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Running CIFAR-100 training with Optimizer = Adagrad
+params= {'lr': 0.001, 'eps': 1e-10}
 Files already downloaded and verified
 Files already downloaded and verified
 Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.5471
+Epoch 2/10 completed, Average Loss: 2.9876
+Epoch 3/10 completed, Average Loss: 2.7122
