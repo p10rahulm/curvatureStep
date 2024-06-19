@@ -1,0 +1,69 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 10 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running FashionMNIST training with Optimizer = AdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/10 completed, Average Loss: 0.4114
+Epoch 2/10 completed, Average Loss: 0.2544
+Epoch 3/10 completed, Average Loss: 0.2072
+Epoch 4/10 completed, Average Loss: 0.1730
+Epoch 5/10 completed, Average Loss: 0.1417
+Epoch 6/10 completed, Average Loss: 0.1173
+Epoch 7/10 completed, Average Loss: 0.0937
+Epoch 8/10 completed, Average Loss: 0.0749
+Epoch 9/10 completed, Average Loss: 0.0591
+Epoch 10/10 completed, Average Loss: 0.0474
+Test set: Average loss: 0.0051, Accuracy: 9186/10000 (91.86%)
+Running Loop: 2/10
+Epoch 1/10 completed, Average Loss: 0.4207
+Epoch 2/10 completed, Average Loss: 0.2616
+Epoch 3/10 completed, Average Loss: 0.2117
+Epoch 4/10 completed, Average Loss: 0.1759
+Epoch 5/10 completed, Average Loss: 0.1461
+Epoch 6/10 completed, Average Loss: 0.1176
+Epoch 7/10 completed, Average Loss: 0.0936
+Epoch 8/10 completed, Average Loss: 0.0760
+Epoch 9/10 completed, Average Loss: 0.0571
+Epoch 10/10 completed, Average Loss: 0.0468
+Test set: Average loss: 0.0051, Accuracy: 9207/10000 (92.07%)
+Running Loop: 3/10
+Epoch 1/10 completed, Average Loss: 0.4073
+Epoch 2/10 completed, Average Loss: 0.2554
+Epoch 3/10 completed, Average Loss: 0.2072
+Epoch 4/10 completed, Average Loss: 0.1728
+Epoch 5/10 completed, Average Loss: 0.1420
+Epoch 6/10 completed, Average Loss: 0.1136
+Epoch 7/10 completed, Average Loss: 0.0904
+Epoch 8/10 completed, Average Loss: 0.0679
+Epoch 9/10 completed, Average Loss: 0.0517
+Epoch 10/10 completed, Average Loss: 0.0428
+Test set: Average loss: 0.0054, Accuracy: 9223/10000 (92.23%)
+Running Loop: 4/10
+Epoch 1/10 completed, Average Loss: 0.4033
+Epoch 2/10 completed, Average Loss: 0.2549
+Epoch 3/10 completed, Average Loss: 0.2032
+Epoch 4/10 completed, Average Loss: 0.1717
+Epoch 5/10 completed, Average Loss: 0.1405
+Epoch 6/10 completed, Average Loss: 0.1130
+Epoch 7/10 completed, Average Loss: 0.0912
+Epoch 8/10 completed, Average Loss: 0.0693
+Epoch 9/10 completed, Average Loss: 0.0527
+Epoch 10/10 completed, Average Loss: 0.0410
+Test set: Average loss: 0.0052, Accuracy: 9210/10000 (92.10%)
+Running Loop: 5/10
+Epoch 1/10 completed, Average Loss: 0.3978
+Epoch 2/10 completed, Average Loss: 0.2472
+Epoch 3/10 completed, Average Loss: 0.2035
+Epoch 4/10 completed, Average Loss: 0.1680
+Epoch 5/10 completed, Average Loss: 0.1391
+Epoch 6/10 completed, Average Loss: 0.1127
+Epoch 7/10 completed, Average Loss: 0.0911
+Epoch 8/10 completed, Average Loss: 0.0693
+Epoch 9/10 completed, Average Loss: 0.0568
+Epoch 10/10 completed, Average Loss: 0.0418
+Test set: Average loss: 0.0050, Accuracy: 9206/10000 (92.06%)
+Running Loop: 6/10
+Epoch 1/10 completed, Average Loss: 0.4121
+Epoch 2/10 completed, Average Loss: 0.2630

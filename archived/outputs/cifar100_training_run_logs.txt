@@ -60,3 +60,4 @@ params= {'lr': 0.001, 'epsilon': 0.01}
 Files already downloaded and verified
 Files already downloaded and verified
 Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.7210

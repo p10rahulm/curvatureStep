@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import os
 
 def parse_training_logs(log_file_path, dataset_name):
     # Regular expressions to extract information
@@ -56,9 +57,13 @@ def parse_training_logs(log_file_path, dataset_name):
     test_df['Average Test set Loss'] = pd.to_numeric(test_df['Average Test set Loss'], errors='coerce')
     test_df['Average Test set accuracy'] = pd.to_numeric(test_df['Average Test set accuracy'], errors='coerce')
 
+    # Create output directory if it doesn't exist
+    output_dir = f'outputs/{dataset_name.lower()}'
+    os.makedirs(output_dir, exist_ok=True)
+
     # Save full logs to CSV files
-    train_df.to_csv(f'outputs/{dataset_name.lower()}_train_full_logs.csv', index=True, sep="|")
-    test_df.to_csv(f'outputs/{dataset_name.lower()}_test_full_logs.csv', index=True, sep="|")
+    train_df.to_csv(f'{output_dir}/{dataset_name.lower()}_train_full_logs.csv', index=True, sep="|")
+    test_df.to_csv(f'{output_dir}/{dataset_name.lower()}_test_full_logs.csv', index=True, sep="|")
 
     # Group by 'Optimizer Name', and 'Epoch number', and calculate mean and standard deviation
     train_grouped = train_df.groupby(['Optimizer Name', 'Epoch number']).agg(
@@ -76,7 +81,7 @@ def parse_training_logs(log_file_path, dataset_name):
     pivot_train_df = pivot_train_df.reset_index()
 
     # Save the DataFrame to a CSV file
-    pivot_train_df.to_csv(f'outputs/{dataset_name.lower()}_train_grouped_logs.csv', index=False, sep="|")
+    pivot_train_df.to_csv(f'{output_dir}/{dataset_name.lower()}_train_grouped_logs.csv', index=False, sep="|")
 
     # Group by 'Optimizer Name' and calculate mean and standard deviation
     test_grouped = test_df.groupby(['Optimizer Name']).agg(
@@ -87,7 +92,7 @@ def parse_training_logs(log_file_path, dataset_name):
     ).reset_index()
 
     # Save the DataFrame to a CSV file
-    test_grouped.to_csv(f'outputs/{dataset_name.lower()}_test_grouped_logs.csv', index=False, sep="|")
+    test_grouped.to_csv(f'{output_dir}/{dataset_name.lower()}_test_grouped_logs.csv', index=False, sep="|")
 
 # Example usage for CIFAR-10 and MNIST
 parse_training_logs('outputs/cifar10_training_run_logs.txt', 'Cifar10')
@@ -96,4 +101,4 @@ parse_training_logs('outputs/mnist_training_run_logs.txt', 'MNIST')
 parse_training_logs('outputs/imdb_training_run_logs.txt', 'IMDB')
 parse_training_logs('outputs/cola_training_run_logs.txt', 'CoLA')
 parse_training_logs('outputs/ag_news_training_run_logs.txt', 'AGNews')
-parse_training_logs('outputs/flowers102_training_run_logs2.txt', 'Flowers102')
+parse_training_logs('outputs/flowers102_training_run_logs.txt', 'Flowers102')

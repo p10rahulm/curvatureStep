@@ -1,0 +1,13 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running Flowers102 training with Optimizer = RMSPropCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'epsilon': 0.01}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 5.2070
+Epoch 2/10 completed, Average Loss: 4.3621
+Epoch 3/10 completed, Average Loss: 4.0241
+Epoch 4/10 completed, Average Loss: 3.8562
+Epoch 5/10 completed, Average Loss: 3.6952
+Epoch 6/10 completed, Average Loss: 3.5048

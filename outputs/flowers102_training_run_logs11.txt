@@ -1,0 +1,14 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running Flowers102 training with Optimizer = NAdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.7592
+Epoch 2/10 completed, Average Loss: 4.1530
+Epoch 3/10 completed, Average Loss: 3.8253
+Epoch 4/10 completed, Average Loss: 3.5667
+Epoch 5/10 completed, Average Loss: 3.4166
+Epoch 6/10 completed, Average Loss: 3.2559
+Epoch 7/10 completed, Average Loss: 3.0743

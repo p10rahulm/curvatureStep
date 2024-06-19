@@ -1,0 +1,13 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running Flowers102 training with Optimizer = AdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.4805
+Epoch 2/10 completed, Average Loss: 3.6363
+Epoch 3/10 completed, Average Loss: 3.2310
+Epoch 4/10 completed, Average Loss: 3.0077
+Epoch 5/10 completed, Average Loss: 2.7780
+Epoch 6/10 completed, Average Loss: 2.5714

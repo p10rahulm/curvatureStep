@@ -238,3 +238,6 @@ Test set: Average loss: 0.0393, Accuracy: 355/515 (68.93%)
 Running Loop: 2/2
 Epoch 1/4 completed, Average Loss: 0.6077
 Epoch 2/4 completed, Average Loss: 0.5983
+Epoch 3/4 completed, Average Loss: 0.5878
+Epoch 4/4 completed, Average Loss: 0.5847
+Test set: Average loss: 0.0399, Accuracy: 353/515 (68.54%)

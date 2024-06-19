@@ -260,3 +260,10 @@ Test set: Average loss: 0.1787, Accuracy: 287/3669 (7.82%)
 Running OxfordPet training with Optimizer = NAG
 params= {'lr': 0.001, 'momentum': 0.9}
 Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.6202
+Epoch 2/10 completed, Average Loss: 3.5465
+Epoch 3/10 completed, Average Loss: 3.4883
+Epoch 4/10 completed, Average Loss: 3.4304
+Epoch 5/10 completed, Average Loss: 3.3691
+Epoch 6/10 completed, Average Loss: 3.2997
+Epoch 7/10 completed, Average Loss: 3.2381

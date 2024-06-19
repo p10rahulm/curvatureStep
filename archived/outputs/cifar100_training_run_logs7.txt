@@ -12,3 +12,4 @@ Epoch 2/10 completed, Average Loss: 2.9876
 Epoch 3/10 completed, Average Loss: 2.7122
 Epoch 4/10 completed, Average Loss: 2.5137
 Epoch 5/10 completed, Average Loss: 2.3659
+Epoch 6/10 completed, Average Loss: 2.2324

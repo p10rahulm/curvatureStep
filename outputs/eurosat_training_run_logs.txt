@@ -131,3 +131,6 @@ Test set: Average loss: 0.0119, Accuracy: 1964/2700 (72.74%)
 Running EuroSAT training with Optimizer = AMSGrad
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Running Loop: 1/2
+Epoch 1/1 completed, Average Loss: 0.9370
+Test set: Average loss: 0.0253, Accuracy: 1664/2700 (61.63%)
+Running Loop: 2/2
