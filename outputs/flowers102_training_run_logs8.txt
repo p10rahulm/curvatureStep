@@ -1,0 +1,47 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running Flowers102 training with Optimizer = RMSProp
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 5.2343
+Epoch 2/10 completed, Average Loss: 4.3686
+Epoch 3/10 completed, Average Loss: 4.0180
+Epoch 4/10 completed, Average Loss: 3.8175
+Epoch 5/10 completed, Average Loss: 3.6695
+Epoch 6/10 completed, Average Loss: 3.5188
+Epoch 7/10 completed, Average Loss: 3.2902
+Epoch 8/10 completed, Average Loss: 3.2782
+Epoch 9/10 completed, Average Loss: 3.1008
+Epoch 10/10 completed, Average Loss: 2.9845
+Test set: Average loss: 0.0592, Accuracy: 844/6149 (13.73%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 5.2964
+Epoch 2/10 completed, Average Loss: 4.3481
+Epoch 3/10 completed, Average Loss: 3.9411
+Epoch 4/10 completed, Average Loss: 3.6802
+Epoch 5/10 completed, Average Loss: 3.5496
+Epoch 6/10 completed, Average Loss: 3.3297
+Epoch 7/10 completed, Average Loss: 3.2468
+Epoch 8/10 completed, Average Loss: 3.1186
+Epoch 9/10 completed, Average Loss: 3.0187
+Epoch 10/10 completed, Average Loss: 2.8961
+Test set: Average loss: 0.0579, Accuracy: 770/6149 (12.52%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 5.4194
+Epoch 2/10 completed, Average Loss: 4.3528
+Epoch 3/10 completed, Average Loss: 4.0525
+Epoch 4/10 completed, Average Loss: 3.8054
+Epoch 5/10 completed, Average Loss: 3.5865
+Epoch 6/10 completed, Average Loss: 3.3978
+Epoch 7/10 completed, Average Loss: 3.2450
+Epoch 8/10 completed, Average Loss: 3.1903
+Epoch 9/10 completed, Average Loss: 3.0365
+Epoch 10/10 completed, Average Loss: 2.9903
+Test set: Average loss: 0.0563, Accuracy: 1017/6149 (16.54%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 5.3409
+Epoch 2/10 completed, Average Loss: 4.3960
+Epoch 3/10 completed, Average Loss: 4.0812
+Epoch 4/10 completed, Average Loss: 3.8022

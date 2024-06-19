@@ -10,3 +10,4 @@ Running Loop: 1/4
 Epoch 1/10 completed, Average Loss: 3.5471
 Epoch 2/10 completed, Average Loss: 2.9876
 Epoch 3/10 completed, Average Loss: 2.7122
+Epoch 4/10 completed, Average Loss: 2.5137

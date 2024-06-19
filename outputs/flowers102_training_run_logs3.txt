@@ -1,0 +1,45 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running Flowers102 training with Optimizer = NAdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.7302
+Epoch 2/10 completed, Average Loss: 4.1091
+Epoch 3/10 completed, Average Loss: 3.7804
+Epoch 4/10 completed, Average Loss: 3.6027
+Epoch 5/10 completed, Average Loss: 3.4262
+Epoch 6/10 completed, Average Loss: 3.2775
+Epoch 7/10 completed, Average Loss: 3.0871
+Epoch 8/10 completed, Average Loss: 3.0160
+Epoch 9/10 completed, Average Loss: 2.9282
+Epoch 10/10 completed, Average Loss: 2.8087
+Test set: Average loss: 0.0619, Accuracy: 820/6149 (13.34%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 4.7537
+Epoch 2/10 completed, Average Loss: 4.1217
+Epoch 3/10 completed, Average Loss: 3.8700
+Epoch 4/10 completed, Average Loss: 3.6008
+Epoch 5/10 completed, Average Loss: 3.4819
+Epoch 6/10 completed, Average Loss: 3.2576
+Epoch 7/10 completed, Average Loss: 3.2113
+Epoch 8/10 completed, Average Loss: 3.0684
+Epoch 9/10 completed, Average Loss: 2.9127
+Epoch 10/10 completed, Average Loss: 2.7813
+Test set: Average loss: 0.0605, Accuracy: 734/6149 (11.94%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 4.7689
+Epoch 2/10 completed, Average Loss: 4.1132
+Epoch 3/10 completed, Average Loss: 3.8414
+Epoch 4/10 completed, Average Loss: 3.5771
+Epoch 5/10 completed, Average Loss: 3.4230
+Epoch 6/10 completed, Average Loss: 3.3311
+Epoch 7/10 completed, Average Loss: 3.1381
+Epoch 8/10 completed, Average Loss: 3.0344
+Epoch 9/10 completed, Average Loss: 2.9178
+Epoch 10/10 completed, Average Loss: 2.8914
+Test set: Average loss: 0.0591, Accuracy: 939/6149 (15.27%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 4.7795
+Epoch 2/10 completed, Average Loss: 4.1426

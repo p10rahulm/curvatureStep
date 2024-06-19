@@ -50,3 +50,27 @@ Epoch 6/10 completed, Average Loss: 1.3478
 Epoch 7/10 completed, Average Loss: 0.9652
 Epoch 8/10 completed, Average Loss: 0.6858
 Epoch 9/10 completed, Average Loss: 0.4672
+Epoch 10/10 completed, Average Loss: 0.3166
+Test set: Average loss: 0.0482, Accuracy: 666/3669 (18.15%)
+
+Running OxfordPet training with Optimizer = Adadelta
+params= {'lr': 0.001, 'rho': 0.95, 'eps': 1e-06}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.6800
+Epoch 2/10 completed, Average Loss: 3.6567
+Epoch 3/10 completed, Average Loss: 3.6364
+Epoch 4/10 completed, Average Loss: 3.6190
+Epoch 5/10 completed, Average Loss: 3.6027
+Epoch 6/10 completed, Average Loss: 3.5900
+Epoch 7/10 completed, Average Loss: 3.5776
+Epoch 8/10 completed, Average Loss: 3.5647
+Epoch 9/10 completed, Average Loss: 3.5543
+Epoch 10/10 completed, Average Loss: 3.5448
+Test set: Average loss: 0.0567, Accuracy: 186/3669 (5.07%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.7069
+Epoch 2/10 completed, Average Loss: 3.6808
+Epoch 3/10 completed, Average Loss: 3.6578
+Epoch 4/10 completed, Average Loss: 3.6368
+Epoch 5/10 completed, Average Loss: 3.6200
+Epoch 6/10 completed, Average Loss: 3.6054

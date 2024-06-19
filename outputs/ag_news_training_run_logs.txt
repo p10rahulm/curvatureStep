@@ -156,38 +156,38 @@ Epoch 5/5 completed, Average Loss: 1.3865
 Test set: Average loss: 0.0866, Accuracy: 1906/7600 (25.08%)
 
 Running AGNews training with Optimizer = RMSProp
-params= {'lr': 0.001, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0}
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0}
 Running Loop: 1/2
-Epoch 1/5 completed, Average Loss: 0.9796
-Epoch 2/5 completed, Average Loss: 0.8982
-Epoch 3/5 completed, Average Loss: 0.8823
-Epoch 4/5 completed, Average Loss: 0.8713
-Epoch 5/5 completed, Average Loss: 0.8635
-Test set: Average loss: 0.0537, Accuracy: 6717/7600 (88.38%)
+Epoch 1/5 completed, Average Loss: 1.3884
+Epoch 2/5 completed, Average Loss: 1.3855
+Epoch 3/5 completed, Average Loss: 1.3821
+Epoch 4/5 completed, Average Loss: 1.3412
+Epoch 5/5 completed, Average Loss: 1.3379
+Test set: Average loss: 0.0860, Accuracy: 2070/7600 (27.24%)
 Running Loop: 2/2
-Epoch 1/5 completed, Average Loss: 0.9462
-Epoch 2/5 completed, Average Loss: 0.9031
-Epoch 3/5 completed, Average Loss: 0.9007
-Epoch 4/5 completed, Average Loss: 0.8990
-Epoch 5/5 completed, Average Loss: 0.8951
-Test set: Average loss: 0.0558, Accuracy: 6466/7600 (85.08%)
+Epoch 1/5 completed, Average Loss: 1.3880
+Epoch 2/5 completed, Average Loss: 1.3867
+Epoch 3/5 completed, Average Loss: 1.3867
+Epoch 4/5 completed, Average Loss: 1.3867
+Epoch 5/5 completed, Average Loss: 1.3863
+Test set: Average loss: 0.0869, Accuracy: 1905/7600 (25.07%)
 
 Running AGNews training with Optimizer = RMSPropMomentum
-params= {'lr': 0.001, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.05}
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-16, 'weight_decay': 0, 'momentum': 0.1}
 Running Loop: 1/2
-Epoch 1/5 completed, Average Loss: 1.0179
-Epoch 2/5 completed, Average Loss: 1.0003
-Epoch 3/5 completed, Average Loss: 0.9853
-Epoch 4/5 completed, Average Loss: 0.9736
-Epoch 5/5 completed, Average Loss: 0.9708
-Test set: Average loss: 0.0590, Accuracy: 6080/7600 (80.00%)
+Epoch 1/5 completed, Average Loss: 1.3816
+Epoch 2/5 completed, Average Loss: 1.2726
+Epoch 3/5 completed, Average Loss: 1.0558
+Epoch 4/5 completed, Average Loss: 1.0133
+Epoch 5/5 completed, Average Loss: 1.0320
+Test set: Average loss: 0.0635, Accuracy: 5516/7600 (72.58%)
 Running Loop: 2/2
-Epoch 1/5 completed, Average Loss: 0.9523
-Epoch 2/5 completed, Average Loss: 0.9202
-Epoch 3/5 completed, Average Loss: 0.9033
-Epoch 4/5 completed, Average Loss: 0.8969
-Epoch 5/5 completed, Average Loss: 0.8891
-Test set: Average loss: 0.0548, Accuracy: 6587/7600 (86.67%)
+Epoch 1/5 completed, Average Loss: 1.3884
+Epoch 2/5 completed, Average Loss: 1.3870
+Epoch 3/5 completed, Average Loss: 1.3869
+Epoch 4/5 completed, Average Loss: 1.3869
+Epoch 5/5 completed, Average Loss: 1.3869
+Test set: Average loss: 0.0867, Accuracy: 1900/7600 (25.00%)
 
 Running AGNews training with Optimizer = AdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}

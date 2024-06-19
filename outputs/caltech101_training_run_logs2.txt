@@ -47,3 +47,17 @@ Epoch 1/10 completed, Average Loss: 3.2337
 Epoch 2/10 completed, Average Loss: 2.3348
 Epoch 3/10 completed, Average Loss: 1.7799
 Epoch 4/10 completed, Average Loss: 1.3506
+Epoch 5/10 completed, Average Loss: 1.0456
+Epoch 6/10 completed, Average Loss: 0.7836
+Epoch 7/10 completed, Average Loss: 0.5684
+Epoch 8/10 completed, Average Loss: 0.3902
+Epoch 9/10 completed, Average Loss: 0.2330
+Epoch 10/10 completed, Average Loss: 0.1100
+Test set: Average loss: 0.0012, Accuracy: 8539/8677 (98.41%)
+
+Running Caltech101 training with Optimizer = HeavyBall
+params= {'lr': 0.001, 'momentum': 0.9}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.0480

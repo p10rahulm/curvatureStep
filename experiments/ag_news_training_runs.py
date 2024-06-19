@@ -23,6 +23,7 @@ results = []
 total_epochs = 5
 total_runs = 2
 
+
 print("#", "-" * 100)
 print(f"# Running {total_epochs} epochs of training - {total_runs} runs")
 print("#", "-" * 100)

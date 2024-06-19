@@ -127,3 +127,55 @@ Epoch 5/10 completed, Average Loss: 3.5415
 Epoch 6/10 completed, Average Loss: 3.3444
 Epoch 7/10 completed, Average Loss: 3.2030
 Epoch 8/10 completed, Average Loss: 3.0618
+Epoch 9/10 completed, Average Loss: 2.9195
+Epoch 10/10 completed, Average Loss: 2.7613
+Test set: Average loss: 0.0549, Accuracy: 1059/6149 (17.22%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 4.8277
+Epoch 2/10 completed, Average Loss: 4.1211
+Epoch 3/10 completed, Average Loss: 3.8369
+Epoch 4/10 completed, Average Loss: 3.5614
+Epoch 5/10 completed, Average Loss: 3.4007
+Epoch 6/10 completed, Average Loss: 3.2635
+Epoch 7/10 completed, Average Loss: 3.0205
+Epoch 8/10 completed, Average Loss: 2.9507
+Epoch 9/10 completed, Average Loss: 2.8379
+Epoch 10/10 completed, Average Loss: 2.7328
+Test set: Average loss: 0.0579, Accuracy: 1035/6149 (16.83%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 4.7647
+Epoch 2/10 completed, Average Loss: 4.1653
+Epoch 3/10 completed, Average Loss: 3.8441
+Epoch 4/10 completed, Average Loss: 3.6158
+Epoch 5/10 completed, Average Loss: 3.4652
+Epoch 6/10 completed, Average Loss: 3.2452
+Epoch 7/10 completed, Average Loss: 3.1160
+Epoch 8/10 completed, Average Loss: 2.9778
+Epoch 9/10 completed, Average Loss: 2.8053
+Epoch 10/10 completed, Average Loss: 2.6262
+Test set: Average loss: 0.0585, Accuracy: 1078/6149 (17.53%)
+
+Running Flowers102 training with Optimizer = RMSPropMomentum
+params= {'lr': 0.001, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.05}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.8317
+Epoch 2/10 completed, Average Loss: 4.2392
+Epoch 3/10 completed, Average Loss: 3.8785
+Epoch 4/10 completed, Average Loss: 3.7326
+Epoch 5/10 completed, Average Loss: 3.5280
+Epoch 6/10 completed, Average Loss: 3.3252
+Epoch 7/10 completed, Average Loss: 3.1670
+Epoch 8/10 completed, Average Loss: 3.0999
+Epoch 9/10 completed, Average Loss: 2.9711
+Epoch 10/10 completed, Average Loss: 2.8142
+Test set: Average loss: 0.0717, Accuracy: 776/6149 (12.62%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 4.8083
+Epoch 2/10 completed, Average Loss: 4.1536
+Epoch 3/10 completed, Average Loss: 3.8369
+Epoch 4/10 completed, Average Loss: 3.6618
+Epoch 5/10 completed, Average Loss: 3.4958
+Epoch 6/10 completed, Average Loss: 3.2852
+Epoch 7/10 completed, Average Loss: 3.1352
+Epoch 8/10 completed, Average Loss: 2.9709
+Epoch 9/10 completed, Average Loss: 2.8527

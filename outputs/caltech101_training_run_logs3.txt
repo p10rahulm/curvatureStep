@@ -47,3 +47,17 @@ Epoch 1/10 completed, Average Loss: 4.0605
 Epoch 2/10 completed, Average Loss: 3.6264
 Epoch 3/10 completed, Average Loss: 3.3993
 Epoch 4/10 completed, Average Loss: 3.1713
+Epoch 5/10 completed, Average Loss: 2.9869
+Epoch 6/10 completed, Average Loss: 2.8290
+Epoch 7/10 completed, Average Loss: 2.6893
+Epoch 8/10 completed, Average Loss: 2.5868
+Epoch 9/10 completed, Average Loss: 2.4818
+Epoch 10/10 completed, Average Loss: 2.3951
+Test set: Average loss: 0.0371, Accuracy: 3912/8677 (45.08%)
+
+Running Caltech101 training with Optimizer = NAGCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.8798

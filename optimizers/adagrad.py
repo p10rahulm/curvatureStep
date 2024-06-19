@@ -2,7 +2,7 @@ import torch
 from torch.optim import Optimizer
 
 class Adagrad(Optimizer):
-    def __init__(self, params, lr=1e-2, eps=1e-10, weight_decay=0):
+    def __init__(self, params, lr=1e-3, eps=1e-6, weight_decay=0.01):
         defaults = dict(lr=lr, eps=eps, weight_decay=weight_decay)
         super(Adagrad, self).__init__(params, defaults)
 

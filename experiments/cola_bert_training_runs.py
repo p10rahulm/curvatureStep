@@ -11,7 +11,7 @@ sys.path.insert(0, project_root)
 from experiment_utils import run_experiment
 from utilities import write_to_file
 from optimizer_params import optimizers
-from models.bert_model import TinyBERTClassifier
+from models.bert_model import TinyBERTClassifierND
 from data_loaders.cola_bert import load_cola
 import torch
 import torch.nn as nn
@@ -20,7 +20,7 @@ from test import test_bert
 
 results = []
 
-total_epochs = 20
+total_epochs = 4
 total_runs = 2
 
 print("#", "-" * 100)
@@ -30,7 +30,7 @@ print("#", "-" * 100)
 for optimizer_class, default_params in optimizers:
     print(f"\nRunning CoLA training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
-    params['lr'] = 5e-3
+    params['lr'] = 1e-3
     if 'eps' in params.keys():
         params['eps'] = 1e-6
     if 'epsilon' in params.keys():
@@ -48,7 +48,7 @@ for optimizer_class, default_params in optimizers:
         'num_classes': 2,
         'freeze_bert': False
     }
-    model = TinyBERTClassifier
+    model = TinyBERTClassifierND
     trainer_function = train_bert
     test_function = test_bert
     loss_criterion = nn.CrossEntropyLoss
