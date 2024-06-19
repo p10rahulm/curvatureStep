@@ -61,3 +61,10 @@ Files already downloaded and verified
 Files already downloaded and verified
 Running Loop: 1/4
 Epoch 1/10 completed, Average Loss: 3.5976
+Epoch 2/10 completed, Average Loss: 2.6685
+Epoch 3/10 completed, Average Loss: 2.1009
+Epoch 4/10 completed, Average Loss: 1.6160
+Epoch 5/10 completed, Average Loss: 1.2745
+Epoch 6/10 completed, Average Loss: 0.9694
+Epoch 7/10 completed, Average Loss: 0.7237
+Epoch 8/10 completed, Average Loss: 0.5052

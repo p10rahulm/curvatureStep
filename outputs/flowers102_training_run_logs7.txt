@@ -179,3 +179,29 @@ Epoch 6/10 completed, Average Loss: 3.2852
 Epoch 7/10 completed, Average Loss: 3.1352
 Epoch 8/10 completed, Average Loss: 2.9709
 Epoch 9/10 completed, Average Loss: 2.8527
+Epoch 10/10 completed, Average Loss: 2.6973
+Test set: Average loss: 0.0613, Accuracy: 702/6149 (11.42%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 4.8609
+Epoch 2/10 completed, Average Loss: 4.1416
+Epoch 3/10 completed, Average Loss: 3.8513
+Epoch 4/10 completed, Average Loss: 3.6015
+Epoch 5/10 completed, Average Loss: 3.3883
+Epoch 6/10 completed, Average Loss: 3.2240
+Epoch 7/10 completed, Average Loss: 3.0692
+Epoch 8/10 completed, Average Loss: 2.9406
+Epoch 9/10 completed, Average Loss: 2.8100
+Epoch 10/10 completed, Average Loss: 2.7287
+Test set: Average loss: 0.0538, Accuracy: 1174/6149 (19.09%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 4.7683
+Epoch 2/10 completed, Average Loss: 4.1236
+Epoch 3/10 completed, Average Loss: 3.8542
+Epoch 4/10 completed, Average Loss: 3.5987
+Epoch 5/10 completed, Average Loss: 3.4304
+Epoch 6/10 completed, Average Loss: 3.2460
+Epoch 7/10 completed, Average Loss: 3.1066
+Epoch 8/10 completed, Average Loss: 2.9869
+Epoch 9/10 completed, Average Loss: 2.7927
+Epoch 10/10 completed, Average Loss: 2.6370
+Test set: Average loss: 0.0544, Accuracy: 1184/6149 (19.26%)
