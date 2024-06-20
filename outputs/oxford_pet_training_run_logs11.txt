@@ -108,3 +108,11 @@ Running OxfordPet training with Optimizer = AdadeltaCurvature
 params= {'lr': 0.001, 'rho': 0.6, 'eps': 1e-06, 'epsilon': 0.01}
 Running Loop: 1/4
 Epoch 1/10 completed, Average Loss: 3.6775
+Epoch 2/10 completed, Average Loss: 3.6460
+Epoch 3/10 completed, Average Loss: 3.6176
+Epoch 4/10 completed, Average Loss: 3.5920
+Epoch 5/10 completed, Average Loss: 3.5672
+Epoch 6/10 completed, Average Loss: 3.5467
+Epoch 7/10 completed, Average Loss: 3.5271
+Epoch 8/10 completed, Average Loss: 3.5067
+Epoch 9/10 completed, Average Loss: 3.4898

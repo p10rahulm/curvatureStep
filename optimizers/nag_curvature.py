@@ -2,8 +2,9 @@ import torch
 from torch.optim import Optimizer
 
 class NAGCurvature(Optimizer):
-    def __init__(self, params, lr=1e-3, momentum=0.55, epsilon=0.01):
+    def __init__(self, params, lr=1e-3, momentum=0.55, epsilon=0.01, clip_radius=None):
         defaults = dict(lr=lr, momentum=momentum, epsilon=epsilon)
+        self.clip_radius=clip_radius
         super(NAGCurvature, self).__init__(params, defaults)
 
     def step(self, closure=None):
@@ -50,6 +51,10 @@ class NAGCurvature(Optimizer):
 
                 radius = torch.norm(last_grad) / torch.maximum(torch.tensor(epsilon, device=grad.device),
                                                                torch.norm(current_grad - last_grad))
+                
+                if self.clip_radius is not None:
+                    radius = torch.min(torch.tensor(self.clip_radius), radius)
+                
                 normed_last_grad = last_grad / torch.norm(last_grad)
                 grad = radius * normed_last_grad
 

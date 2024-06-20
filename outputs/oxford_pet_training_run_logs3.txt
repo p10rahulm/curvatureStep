@@ -108,3 +108,11 @@ Running OxfordPet training with Optimizer = AdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Running Loop: 1/4
 Epoch 1/10 completed, Average Loss: 3.5264
+Epoch 2/10 completed, Average Loss: 3.1715
+Epoch 3/10 completed, Average Loss: 2.9573
+Epoch 4/10 completed, Average Loss: 2.7666
+Epoch 5/10 completed, Average Loss: 2.5772
+Epoch 6/10 completed, Average Loss: 2.3457
+Epoch 7/10 completed, Average Loss: 2.1386
+Epoch 8/10 completed, Average Loss: 1.9404
+Epoch 9/10 completed, Average Loss: 1.7222

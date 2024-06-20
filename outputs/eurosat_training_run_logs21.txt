@@ -5,3 +5,6 @@
 Running EuroSAT training with Optimizer = AdamWCurvature
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
 Running Loop: 1/2
+Epoch 1/1 completed, Average Loss: 0.9298
+Test set: Average loss: 0.0399, Accuracy: 1276/2700 (47.26%)
+Running Loop: 2/2

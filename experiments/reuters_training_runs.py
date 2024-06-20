@@ -13,8 +13,8 @@ from utilities import write_to_file
 from optimizer_params import optimizers
 from models.simpleRNN_multiclass import SimpleRNN
 
-from data_loaders.yelp import load_yelp as load_dataset
-from data_loaders.yelp import vocab_size, pad_idx
+from data_loaders.reuters import load_dataset
+from data_loaders.reuters import vocab_size, pad_idx
 
 import torch
 import torch.nn as nn
@@ -33,13 +33,12 @@ print("#", "-" * 100)
 for optimizer_class, default_params in optimizers:
     print(f"\nRunning reuters training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
-
-    if str(optimizer_class.__name__)=="SimpleSGDCurvature" or \
-        str(optimizer_class.__name__)=="HeavyBallCurvature":
+    if optimizer_class.__name__ in ("SimpleSGDCurvature","HeavyBallCurvature", "NAGCurvature"):
         params['clip_radius'] = 10
 
+    
     # Set device to GPU
-    device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
 
     dataset_loader = load_dataset
 
@@ -48,7 +47,7 @@ for optimizer_class, default_params in optimizers:
         'vocab_size': vocab_size,
         'embed_dim': 100,
         'hidden_dim': 256,
-        'output_dim': 2,
+        'output_dim': 46,
         'pad_idx': pad_idx,
     }
     # model = SimpleRNN

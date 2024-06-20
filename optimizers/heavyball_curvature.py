@@ -2,7 +2,7 @@ import torch
 from torch.optim import Optimizer
 
 class HeavyBallCurvature(Optimizer):
-    def __init__(self, params, lr=1e-3, momentum=0.55, epsilon=0.01, clip_radius=10):
+    def __init__(self, params, lr=1e-3, momentum=0.55, epsilon=0.01, clip_radius=None):
         defaults = dict(lr=lr, momentum=momentum, epsilon=epsilon)
         self.clip_radius=clip_radius
         super(HeavyBallCurvature, self).__init__(params, defaults)
@@ -50,7 +50,8 @@ class HeavyBallCurvature(Optimizer):
 
                 radius = torch.norm(last_grad) / torch.maximum(torch.tensor(epsilon, device=grad.device),
                                                                torch.norm(current_grad - last_grad))
-                radius = torch.min(torch.tensor(self.clip_radius), radius)
+                if self.clip_radius is not None:
+                    radius = torch.min(torch.tensor(self.clip_radius), radius)
                 normed_last_grad = last_grad / torch.norm(last_grad)
                 grad_new = radius * normed_last_grad
                 # grad_new = current_grad/ torch.maximum(torch.tensor(epsilon, device=grad.device),

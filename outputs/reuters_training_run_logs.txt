@@ -1,0 +1,8 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 5 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running reuters training with Optimizer = SimpleSGD
+params= {'lr': 0.001}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 3.1891

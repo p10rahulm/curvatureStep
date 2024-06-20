@@ -5,3 +5,23 @@
 Running reuters training with Optimizer = SimpleSGDCurvature
 params= {'lr': 0.001, 'epsilon': 0.01}
 Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.5991
+Epoch 2/5 completed, Average Loss: 0.5418
+Epoch 3/5 completed, Average Loss: 0.5269
+Epoch 4/5 completed, Average Loss: 0.5147
+Epoch 5/5 completed, Average Loss: 0.5041
+Test set: Average loss: 0.0005, Accuracy: 29073/38000 (76.51%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.5925
+Epoch 2/5 completed, Average Loss: 0.5282
+Epoch 3/5 completed, Average Loss: 0.5101
+Epoch 4/5 completed, Average Loss: 0.4971
+Epoch 5/5 completed, Average Loss: 0.4821
+Test set: Average loss: 0.0005, Accuracy: 29620/38000 (77.95%)
+
+Running reuters training with Optimizer = HeavyBallCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.5762
+Epoch 2/5 completed, Average Loss: 0.5228
+Epoch 3/5 completed, Average Loss: 0.4993

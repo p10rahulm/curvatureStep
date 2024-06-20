@@ -42,3 +42,47 @@ Running Loop: 1/2
 Epoch 1/5 completed, Average Loss: 2.5305
 Epoch 2/5 completed, Average Loss: 2.5687
 Epoch 3/5 completed, Average Loss: 2.5578
+Epoch 4/5 completed, Average Loss: 2.6686
+Epoch 5/5 completed, Average Loss: 2.6569
+Test set: Average loss: 0.0013, Accuracy: 5069/70000 (7.24%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 2.4338
+Epoch 2/5 completed, Average Loss: 2.5161
+Epoch 3/5 completed, Average Loss: 2.5757
+Epoch 4/5 completed, Average Loss: 2.5366
+Epoch 5/5 completed, Average Loss: 2.6293
+Test set: Average loss: 0.0013, Accuracy: 5025/70000 (7.18%)
+
+Running reuters training with Optimizer = NAdam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.7479
+Epoch 2/5 completed, Average Loss: 0.7911
+Epoch 3/5 completed, Average Loss: 0.7285
+Epoch 4/5 completed, Average Loss: 0.7657
+Epoch 5/5 completed, Average Loss: 1.2129
+Test set: Average loss: 0.0022, Accuracy: 5001/70000 (7.14%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.6951
+Epoch 2/5 completed, Average Loss: 1.0903
+Epoch 3/5 completed, Average Loss: 1.2859
+Epoch 4/5 completed, Average Loss: 1.3762
+Epoch 5/5 completed, Average Loss: 1.3910
+Test set: Average loss: 0.0020, Accuracy: 5055/70000 (7.22%)
+
+Running reuters training with Optimizer = NAdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.8790
+Epoch 2/5 completed, Average Loss: 0.9603
+Epoch 3/5 completed, Average Loss: 1.3003
+Epoch 4/5 completed, Average Loss: 1.4132
+Epoch 5/5 completed, Average Loss: 1.5445
+Test set: Average loss: 0.0021, Accuracy: 5000/70000 (7.14%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.6724
+Epoch 2/5 completed, Average Loss: 0.6716
+Epoch 3/5 completed, Average Loss: 1.1689
+Epoch 4/5 completed, Average Loss: 1.5151
+Epoch 5/5 completed, Average Loss: 1.3466
+Test set: Average loss: 0.0033, Accuracy: 5001/70000 (7.14%)

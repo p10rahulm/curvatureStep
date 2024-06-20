@@ -46,3 +46,26 @@ Epoch 4/5 completed, Average Loss: 2.6768
 Epoch 5/5 completed, Average Loss: 2.6763
 Test set: Average loss: 0.0013, Accuracy: 4995/70000 (7.14%)
 Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 2.4914
+Epoch 2/5 completed, Average Loss: 2.7178
+Epoch 3/5 completed, Average Loss: 2.7070
+Epoch 4/5 completed, Average Loss: 2.6474
+Epoch 5/5 completed, Average Loss: 2.6282
+Test set: Average loss: 0.0025, Accuracy: 4927/70000 (7.04%)
+
+Running reuters training with Optimizer = AMSGradCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 2.3556
+Epoch 2/5 completed, Average Loss: 3.3706
+Epoch 3/5 completed, Average Loss: 2.5838
+Epoch 4/5 completed, Average Loss: 2.5391
+Epoch 5/5 completed, Average Loss: 2.6774
+Test set: Average loss: 0.0013, Accuracy: 5268/70000 (7.53%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 2.8888
+Epoch 2/5 completed, Average Loss: 2.5708
+Epoch 3/5 completed, Average Loss: 2.8275
+Epoch 4/5 completed, Average Loss: 2.8079
+Epoch 5/5 completed, Average Loss: 2.6834
+Test set: Average loss: 0.0013, Accuracy: 4833/70000 (6.90%)
