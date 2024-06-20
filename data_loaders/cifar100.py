@@ -4,7 +4,7 @@ from torch.utils.data import DataLoader
 
 def load_cifar100(batch_size=64):
     transform = transforms.Compose([
-        transforms.Resize(224),  # Resize to 224x224 as ResNet requires this input size
+        transforms.Resize((96,96)),  # Resize to 96x96 as ResNet requires this input size
         transforms.ToTensor(),
         transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))  # Use ImageNet mean and std
     ])

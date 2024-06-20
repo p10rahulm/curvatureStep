@@ -1,0 +1,58 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running OxfordPet training with Optimizer = AdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.5347
+Epoch 2/10 completed, Average Loss: 3.1917
+Epoch 3/10 completed, Average Loss: 2.9764
+Epoch 4/10 completed, Average Loss: 2.7923
+Epoch 5/10 completed, Average Loss: 2.6372
+Epoch 6/10 completed, Average Loss: 2.4015
+Epoch 7/10 completed, Average Loss: 2.2128
+Epoch 8/10 completed, Average Loss: 2.0655
+Epoch 9/10 completed, Average Loss: 1.8246
+Epoch 10/10 completed, Average Loss: 1.5152
+Test set: Average loss: 0.0468, Accuracy: 908/3669 (24.75%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.5437
+Epoch 2/10 completed, Average Loss: 3.1540
+Epoch 3/10 completed, Average Loss: 2.9751
+Epoch 4/10 completed, Average Loss: 2.7822
+Epoch 5/10 completed, Average Loss: 2.6222
+Epoch 6/10 completed, Average Loss: 2.4222
+Epoch 7/10 completed, Average Loss: 2.2527
+Epoch 8/10 completed, Average Loss: 2.0576
+Epoch 9/10 completed, Average Loss: 1.8133
+Epoch 10/10 completed, Average Loss: 1.6088
+Test set: Average loss: 0.0488, Accuracy: 844/3669 (23.00%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.5360
+Epoch 2/10 completed, Average Loss: 3.1680
+Epoch 3/10 completed, Average Loss: 2.9654
+Epoch 4/10 completed, Average Loss: 2.7724
+Epoch 5/10 completed, Average Loss: 2.5722
+Epoch 6/10 completed, Average Loss: 2.3825
+Epoch 7/10 completed, Average Loss: 2.1626
+Epoch 8/10 completed, Average Loss: 1.9639
+Epoch 9/10 completed, Average Loss: 1.6923
+Epoch 10/10 completed, Average Loss: 1.4258
+Test set: Average loss: 0.0531, Accuracy: 745/3669 (20.31%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.5777
+Epoch 2/10 completed, Average Loss: 3.1722
+Epoch 3/10 completed, Average Loss: 2.9734
+Epoch 4/10 completed, Average Loss: 2.8210
+Epoch 5/10 completed, Average Loss: 2.5870
+Epoch 6/10 completed, Average Loss: 2.4545
+Epoch 7/10 completed, Average Loss: 2.2484
+Epoch 8/10 completed, Average Loss: 2.0484
+Epoch 9/10 completed, Average Loss: 1.8246
+Epoch 10/10 completed, Average Loss: 1.6115
+Test set: Average loss: 0.0487, Accuracy: 943/3669 (25.70%)
+
+Running OxfordPet training with Optimizer = AdagradCurvature
+params= {'lr': 0.001, 'eps': 1e-06, 'epsilon': 0.01}
+Running Loop: 1/4

@@ -10,16 +10,21 @@ from experiment_utils import run_experiment
 from utilities import write_to_file
 from optimizer_params import optimizers
 from data_loaders.cifar10 import load_cifar10  # Change to the dataset loader you want to use
-from models.simpleCNN import SimpleCNN  # Change to the model you want to use
+from models.simpleCNN_template import SimpleCNN
+import torch.nn as nn
+from train import train
+from test import test
 
 results = []
 
+total_epochs = 10
+total_runs = 10
+
 print("#", "-" * 100)
-print("# Running 10 epochs of training - 10 runs")
+print(f"# Running {total_epochs} epochs of training - {total_runs} runs")
 print("#", "-" * 100)
 
-dataset_loader = load_cifar10  # Set the dataset loader
-model_class = SimpleCNN  # Set the model class
+
 
 for optimizer_class, default_params in optimizers:
     print(f"\nRunning Cifar10 training with Optimizer = {str(optimizer_class.__name__)}")
@@ -27,16 +32,33 @@ for optimizer_class, default_params in optimizers:
 
     # Set device to GPU 0
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+
+    dataset_loader = load_cifar10
+    model_class = SimpleCNN
+
+    # Hyperparameters
+    model_hyperparams = {
+        'num_classes': 10,
+        'image_width': 32, 
+        'num_channels': 3
+    }
     
+    loss_criterion = nn.CrossEntropyLoss
+    trainer_function = train
+    test_function = test
     mean_accuracy, std_accuracy = run_experiment(
         optimizer_class,
         params,
         dataset_loader=dataset_loader,
         model_class=model_class,
-        num_runs=10,
-        num_epochs=10,
+        num_runs=total_runs,
+        num_epochs=total_epochs,
         debug_logs=True,
-        device=device
+        model_hyperparams=model_hyperparams,
+        loss_criterion=loss_criterion,
+        device=device,
+        trainer_fn=trainer_function,
+        tester_fn=test_function,
     )
     results.append({
         'optimizer': optimizer_class.__name__,

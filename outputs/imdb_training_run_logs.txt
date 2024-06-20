@@ -787,6 +787,389 @@ Epoch 1/2 completed, Average Loss: 0.0090
 Epoch 2/2 completed, Average Loss: 0.0006
 Test set: Average loss: 0.0000, Accuracy: 24998/25000 (99.99%)
 
-Running IMDB training with Optimizer = Shampoo
-params= {'lr': 0.001, 'momentum': 0.1}
+Running IMDB training with Optimizer = AdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
 Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.0088
+Epoch 2/2 completed, Average Loss: 0.0005
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 0.0100
+Epoch 2/2 completed, Average Loss: 0.0018
+Test set: Average loss: 0.0001, Accuracy: 24948/25000 (99.79%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 0.0100
+Epoch 2/2 completed, Average Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 0.0102
+Epoch 2/2 completed, Average Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.0098
+Epoch 2/2 completed, Average Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.0102
+Epoch 2/2 completed, Average Loss: 0.0004
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.0084
+Epoch 2/2 completed, Average Loss: 0.0004
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 0.0095
+Epoch 2/2 completed, Average Loss: 0.0003
+Test set: Average loss: 0.0000, Accuracy: 24998/25000 (99.99%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 0.0119
+Epoch 2/2 completed, Average Loss: 0.0008
+Test set: Average loss: 0.0000, Accuracy: 24994/25000 (99.98%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 0.0090
+Epoch 2/2 completed, Average Loss: 0.0006
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+
+Running IMDB training with Optimizer = AdagradCurvature
+params= {'lr': 0.001, 'eps': 1e-06, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.0118
+Epoch 2/2 completed, Average Loss: 0.0018
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 0.0109
+Epoch 2/2 completed, Average Loss: 0.0014
+Test set: Average loss: 0.0000, Accuracy: 24995/25000 (99.98%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 0.0118
+Epoch 2/2 completed, Average Loss: 0.0019
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 0.0110
+Epoch 2/2 completed, Average Loss: 0.0013
+Test set: Average loss: 0.0000, Accuracy: 24997/25000 (99.99%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.0141
+Epoch 2/2 completed, Average Loss: 0.0014
+Test set: Average loss: 0.0000, Accuracy: 24997/25000 (99.99%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.0115
+Epoch 2/2 completed, Average Loss: 0.0014
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.0111
+Epoch 2/2 completed, Average Loss: 0.0012
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 0.0111
+Epoch 2/2 completed, Average Loss: 0.0018
+Test set: Average loss: 0.0001, Accuracy: 24984/25000 (99.94%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 0.0125
+Epoch 2/2 completed, Average Loss: 0.0025
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 0.0094
+Epoch 2/2 completed, Average Loss: 0.0015
+Test set: Average loss: 0.0000, Accuracy: 24998/25000 (99.99%)
+
+Running IMDB training with Optimizer = AdadeltaCurvature
+params= {'lr': 0.001, 'rho': 0.6, 'eps': 1e-06, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.5442
+Epoch 2/2 completed, Average Loss: 0.2892
+Test set: Average loss: 0.0033, Accuracy: 24908/25000 (99.63%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 0.5501
+Epoch 2/2 completed, Average Loss: 0.2888
+Test set: Average loss: 0.0034, Accuracy: 24283/25000 (97.13%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 0.5494
+Epoch 2/2 completed, Average Loss: 0.2710
+Test set: Average loss: 0.0032, Accuracy: 24321/25000 (97.28%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 0.5316
+Epoch 2/2 completed, Average Loss: 0.2571
+Test set: Average loss: 0.0030, Accuracy: 24794/25000 (99.18%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.6284
+Epoch 2/2 completed, Average Loss: 0.3151
+Test set: Average loss: 0.0037, Accuracy: 23983/25000 (95.93%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.5309
+Epoch 2/2 completed, Average Loss: 0.2741
+Test set: Average loss: 0.0032, Accuracy: 24427/25000 (97.71%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.4699
+Epoch 2/2 completed, Average Loss: 0.2476
+Test set: Average loss: 0.0031, Accuracy: 24329/25000 (97.32%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 0.5176
+Epoch 2/2 completed, Average Loss: 0.2516
+Test set: Average loss: 0.0029, Accuracy: 24817/25000 (99.27%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 0.5637
+Epoch 2/2 completed, Average Loss: 0.2961
+Test set: Average loss: 0.0035, Accuracy: 24366/25000 (97.46%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 0.4996
+Epoch 2/2 completed, Average Loss: 0.2689
+Test set: Average loss: 0.0033, Accuracy: 24364/25000 (97.46%)
+
+Running IMDB training with Optimizer = RMSPropCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.0116
+Epoch 2/2 completed, Average Loss: 0.0002
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 0.0476
+Epoch 2/2 completed, Average Loss: 0.0006
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 0.0040
+Epoch 2/2 completed, Average Loss: 0.0006
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 0.0276
+Epoch 2/2 completed, Average Loss: 0.0002
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.0124
+Epoch 2/2 completed, Average Loss: 0.0002
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.0055
+Epoch 2/2 completed, Average Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.0149
+Epoch 2/2 completed, Average Loss: 0.0004
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 0.0051
+Epoch 2/2 completed, Average Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 0.0042
+Epoch 2/2 completed, Average Loss: 0.0002
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 0.0457
+Epoch 2/2 completed, Average Loss: 0.0019
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+
+Running IMDB training with Optimizer = RMSPropMomentumCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'momentum': 0.1, 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.0180
+Epoch 2/2 completed, Average Loss: 0.0005
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 0.0049
+Epoch 2/2 completed, Average Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 0.0043
+Epoch 2/2 completed, Average Loss: 0.0002
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 0.0119
+Epoch 2/2 completed, Average Loss: 0.0013
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.0059
+Epoch 2/2 completed, Average Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.0052
+Epoch 2/2 completed, Average Loss: 0.0003
+Test set: Average loss: 0.0000, Accuracy: 24998/25000 (99.99%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.0176
+Epoch 2/2 completed, Average Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 0.0195
+Epoch 2/2 completed, Average Loss: 0.0014
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 0.0037
+Epoch 2/2 completed, Average Loss: 0.0006
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 0.0050
+Epoch 2/2 completed, Average Loss: 0.0011
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+
+Running IMDB training with Optimizer = AdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.0089
+Epoch 2/2 completed, Average Loss: 0.0007
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 0.0100
+Epoch 2/2 completed, Average Loss: 0.0010
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 0.0095
+Epoch 2/2 completed, Average Loss: 0.0004
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 0.0102
+Epoch 2/2 completed, Average Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.0098
+Epoch 2/2 completed, Average Loss: 0.0025
+Test set: Average loss: 0.0000, Accuracy: 24994/25000 (99.98%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.0102
+Epoch 2/2 completed, Average Loss: 0.0004
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.0084
+Epoch 2/2 completed, Average Loss: 0.0004
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 0.0095
+Epoch 2/2 completed, Average Loss: 0.0006
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 0.0119
+Epoch 2/2 completed, Average Loss: 0.0008
+Test set: Average loss: 0.0000, Accuracy: 24995/25000 (99.98%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 0.0089
+Epoch 2/2 completed, Average Loss: 0.0003
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+
+Running IMDB training with Optimizer = NAdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.0074
+Epoch 2/2 completed, Average Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 0.0404
+Epoch 2/2 completed, Average Loss: 0.0029
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 0.0283
+Epoch 2/2 completed, Average Loss: 0.0017
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 0.0077
+Epoch 2/2 completed, Average Loss: 0.0011
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.0079
+Epoch 2/2 completed, Average Loss: 0.0004
+Test set: Average loss: 0.0000, Accuracy: 24995/25000 (99.98%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.0066
+Epoch 2/2 completed, Average Loss: 0.0181
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.0069
+Epoch 2/2 completed, Average Loss: 0.0012
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 0.0066
+Epoch 2/2 completed, Average Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 0.0082
+Epoch 2/2 completed, Average Loss: 0.0006
+Test set: Average loss: 0.0000, Accuracy: 24998/25000 (99.99%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 0.0064
+Epoch 2/2 completed, Average Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+
+Running IMDB training with Optimizer = NAdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.0074
+Epoch 2/2 completed, Average Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 0.0221
+Epoch 2/2 completed, Average Loss: 0.0004
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 0.0388
+Epoch 2/2 completed, Average Loss: 0.0137
+Test set: Average loss: 0.0001, Accuracy: 24993/25000 (99.97%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 0.0262
+Epoch 2/2 completed, Average Loss: 0.0015
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.0078
+Epoch 2/2 completed, Average Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.0066
+Epoch 2/2 completed, Average Loss: 0.0070
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.0070
+Epoch 2/2 completed, Average Loss: 0.0121
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 0.0066
+Epoch 2/2 completed, Average Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 0.0081
+Epoch 2/2 completed, Average Loss: 0.0000
+Test set: Average loss: 0.0000, Accuracy: 24995/25000 (99.98%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 0.0284
+Epoch 2/2 completed, Average Loss: 0.0127
+Test set: Average loss: 0.0001, Accuracy: 24974/25000 (99.90%)
+
+Running IMDB training with Optimizer = AMSGradCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/10
+Epoch 1/2 completed, Average Loss: 0.0089
+Epoch 2/2 completed, Average Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 2/10
+Epoch 1/2 completed, Average Loss: 0.0100
+Epoch 2/2 completed, Average Loss: 0.0014
+Test set: Average loss: 0.0003, Accuracy: 24845/25000 (99.38%)
+Running Loop: 3/10
+Epoch 1/2 completed, Average Loss: 0.0088
+Epoch 2/2 completed, Average Loss: 0.0002
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 4/10
+Epoch 1/2 completed, Average Loss: 0.0102
+Epoch 2/2 completed, Average Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 24999/25000 (100.00%)
+Running Loop: 5/10
+Epoch 1/2 completed, Average Loss: 0.0098
+Epoch 2/2 completed, Average Loss: 0.0008
+Test set: Average loss: 0.0001, Accuracy: 24981/25000 (99.92%)
+Running Loop: 6/10
+Epoch 1/2 completed, Average Loss: 0.0094
+Epoch 2/2 completed, Average Loss: 0.0012
+Test set: Average loss: 0.0000, Accuracy: 24988/25000 (99.95%)
+Running Loop: 7/10
+Epoch 1/2 completed, Average Loss: 0.0076
+Epoch 2/2 completed, Average Loss: 0.0009
+Test set: Average loss: 0.0000, Accuracy: 24994/25000 (99.98%)
+Running Loop: 8/10
+Epoch 1/2 completed, Average Loss: 0.0102
+Epoch 2/2 completed, Average Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 9/10
+Epoch 1/2 completed, Average Loss: 0.0120
+Epoch 2/2 completed, Average Loss: 0.0007
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)
+Running Loop: 10/10
+Epoch 1/2 completed, Average Loss: 0.0089
+Epoch 2/2 completed, Average Loss: 0.0001
+Test set: Average loss: 0.0000, Accuracy: 25000/25000 (100.00%)

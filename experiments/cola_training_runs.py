@@ -38,14 +38,6 @@ for optimizer_class, default_params in optimizers:
 
     dataset_loader = load_cola
 
-    # Hyperparameters
-    # model_hyperparams = {
-    #     'vocab_size': len(vocab),
-    #     'embed_dim': 128,
-    #     'hidden_dim': 128,
-    #     'output_dim': 2,
-    #     'pad_idx': vocab["<pad>"],
-    # }
     model_hyperparams = {
         'vocab_size': len(vocab),
         'embed_dim': 100,

@@ -11,7 +11,7 @@ sys.path.insert(0, project_root)
 from experiment_utils import run_experiment
 from utilities import write_to_file
 from optimizer_params import optimizers
-from models.resnet import SimpleResNet  # Change to the ResNet model
+from models.simpleCNN_template import SimpleCNN
 from data_loaders.cifar100 import load_cifar100
 import torch
 import torch.nn as nn
@@ -21,26 +21,30 @@ from test import test
 results = []
 
 total_epochs = 10
-total_runs = 4
+total_runs = 2
 
 print("#", "-" * 100)
 print(f"# Running {total_epochs} epochs of training - {total_runs} runs")
 print("#", "-" * 100)
+
 
 for optimizer_class, default_params in optimizers:
     print(f"\nRunning CIFAR-100 training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
 
     # Set device to GPU
-    device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:3' if torch.cuda.is_available() else 'cpu')
 
     dataset_loader = load_cifar100
-    model_class = SimpleResNet
+    model_class = SimpleCNN
 
     # Hyperparameters
     model_hyperparams = {
-        'num_classes': 100
+        'num_classes': 100,
+        'image_width': 96, 
+        'num_channels': 3
     }
+
     loss_criterion = nn.CrossEntropyLoss
     trainer_function = train
     test_function = test

@@ -16,3 +16,9 @@ def load_stl10(batch_size=64):
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
     return train_loader, test_loader
+
+
+if __name__=="__main__":
+    train, test = load_stl10()
+    print(f"len(train)={len(train)}")
+    print(f"len(test)={len(test)}")

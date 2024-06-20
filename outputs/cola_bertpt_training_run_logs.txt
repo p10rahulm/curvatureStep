@@ -2,7 +2,7 @@
 # Running 4 epochs of training - 2 runs
 # ----------------------------------------------------------------------------------------------------
 
-Running CoLA training with Optimizer = SimpleSGD
+Running CoLABert training with Optimizer = SimpleSGD
 params= {'lr': 0.001}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6087
@@ -17,7 +17,7 @@ Epoch 3/4 completed, Average Loss: 0.6059
 Epoch 4/4 completed, Average Loss: 0.6057
 Test set: Average loss: 0.0399, Accuracy: 353/515 (68.54%)
 
-Running CoLA training with Optimizer = SimpleSGDCurvature
+Running CoLABert training with Optimizer = SimpleSGDCurvature
 params= {'lr': 0.001, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6090
@@ -32,7 +32,7 @@ Epoch 3/4 completed, Average Loss: 0.6028
 Epoch 4/4 completed, Average Loss: 0.5993
 Test set: Average loss: 0.0396, Accuracy: 354/515 (68.74%)
 
-Running CoLA training with Optimizer = Adam
+Running CoLABert training with Optimizer = Adam
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6068
@@ -47,7 +47,7 @@ Epoch 3/4 completed, Average Loss: 0.5879
 Epoch 4/4 completed, Average Loss: 0.5851
 Test set: Average loss: 0.0400, Accuracy: 353/515 (68.54%)
 
-Running CoLA training with Optimizer = HeavyBall
+Running CoLABert training with Optimizer = HeavyBall
 params= {'lr': 0.001, 'momentum': 0.9}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6069
@@ -62,7 +62,7 @@ Epoch 3/4 completed, Average Loss: 0.6024
 Epoch 4/4 completed, Average Loss: 0.6005
 Test set: Average loss: 0.0396, Accuracy: 353/515 (68.54%)
 
-Running CoLA training with Optimizer = HeavyBallCurvature
+Running CoLABert training with Optimizer = HeavyBallCurvature
 params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6087
@@ -77,7 +77,7 @@ Epoch 3/4 completed, Average Loss: 0.6088
 Epoch 4/4 completed, Average Loss: 0.6076
 Test set: Average loss: 0.0401, Accuracy: 353/515 (68.54%)
 
-Running CoLA training with Optimizer = NAG
+Running CoLABert training with Optimizer = NAG
 params= {'lr': 0.001, 'momentum': 0.9}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6069
@@ -92,7 +92,7 @@ Epoch 3/4 completed, Average Loss: 0.6024
 Epoch 4/4 completed, Average Loss: 0.6005
 Test set: Average loss: 0.0396, Accuracy: 353/515 (68.54%)
 
-Running CoLA training with Optimizer = NAGCurvature
+Running CoLABert training with Optimizer = NAGCurvature
 params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6087
@@ -107,7 +107,7 @@ Epoch 3/4 completed, Average Loss: 0.6094
 Epoch 4/4 completed, Average Loss: 0.6087
 Test set: Average loss: 0.0400, Accuracy: 353/515 (68.54%)
 
-Running CoLA training with Optimizer = Adagrad
+Running CoLABert training with Optimizer = Adagrad
 params= {'lr': 0.001, 'eps': 1e-06}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6058
@@ -122,7 +122,7 @@ Epoch 3/4 completed, Average Loss: 0.6043
 Epoch 4/4 completed, Average Loss: 0.6037
 Test set: Average loss: 0.0397, Accuracy: 353/515 (68.54%)
 
-Running CoLA training with Optimizer = Adadelta
+Running CoLABert training with Optimizer = Adadelta
 params= {'lr': 0.001, 'rho': 0.95, 'eps': 1e-06}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6217
@@ -137,7 +137,7 @@ Epoch 3/4 completed, Average Loss: 0.6120
 Epoch 4/4 completed, Average Loss: 0.6087
 Test set: Average loss: 0.0398, Accuracy: 354/515 (68.74%)
 
-Running CoLA training with Optimizer = RMSProp
+Running CoLABert training with Optimizer = RMSProp
 params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0.01}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6051
@@ -152,7 +152,7 @@ Epoch 3/4 completed, Average Loss: 0.5943
 Epoch 4/4 completed, Average Loss: 0.5915
 Test set: Average loss: 0.0393, Accuracy: 353/515 (68.54%)
 
-Running CoLA training with Optimizer = RMSPropMomentum
+Running CoLABert training with Optimizer = RMSPropMomentum
 params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0.01, 'momentum': 0.1}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6073
@@ -167,7 +167,7 @@ Epoch 3/4 completed, Average Loss: 0.5913
 Epoch 4/4 completed, Average Loss: 0.5864
 Test set: Average loss: 0.0391, Accuracy: 356/515 (69.13%)
 
-Running CoLA training with Optimizer = AdamW
+Running CoLABert training with Optimizer = AdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6068
@@ -182,22 +182,7 @@ Epoch 3/4 completed, Average Loss: 0.5909
 Epoch 4/4 completed, Average Loss: 0.5859
 Test set: Average loss: 0.0400, Accuracy: 353/515 (68.54%)
 
-Running CoLA training with Optimizer = AdamWCurvature
-params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
-Running Loop: 1/2
-Epoch 1/4 completed, Average Loss: 0.6068
-Epoch 2/4 completed, Average Loss: 0.5958
-Epoch 3/4 completed, Average Loss: 0.5902
-Epoch 4/4 completed, Average Loss: 0.5872
-Test set: Average loss: 0.0393, Accuracy: 355/515 (68.93%)
-Running Loop: 2/2
-Epoch 1/4 completed, Average Loss: 0.6083
-Epoch 2/4 completed, Average Loss: 0.6032
-Epoch 3/4 completed, Average Loss: 0.5897
-Epoch 4/4 completed, Average Loss: 0.5856
-Test set: Average loss: 0.0400, Accuracy: 353/515 (68.54%)
-
-Running CoLA training with Optimizer = NAdam
+Running CoLABert training with Optimizer = NAdam
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6161
@@ -212,7 +197,7 @@ Epoch 3/4 completed, Average Loss: 0.6094
 Epoch 4/4 completed, Average Loss: 0.6092
 Test set: Average loss: 0.0402, Accuracy: 353/515 (68.54%)
 
-Running CoLA training with Optimizer = NAdamW
+Running CoLABert training with Optimizer = NAdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6161
@@ -227,8 +212,143 @@ Epoch 3/4 completed, Average Loss: 0.6096
 Epoch 4/4 completed, Average Loss: 0.6090
 Test set: Average loss: 0.0403, Accuracy: 353/515 (68.54%)
 
-Running CoLA training with Optimizer = AMSGrad
+Running CoLABert training with Optimizer = AMSGrad
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/4 completed, Average Loss: 0.6068
+Epoch 2/4 completed, Average Loss: 0.5958
+Epoch 3/4 completed, Average Loss: 0.5902
+Epoch 4/4 completed, Average Loss: 0.5872
+Test set: Average loss: 0.0393, Accuracy: 355/515 (68.93%)
+Running Loop: 2/2
+Epoch 1/4 completed, Average Loss: 0.6077
+Epoch 2/4 completed, Average Loss: 0.5983
+Epoch 3/4 completed, Average Loss: 0.5878
+Epoch 4/4 completed, Average Loss: 0.5847
+Test set: Average loss: 0.0399, Accuracy: 353/515 (68.54%)
+
+Running CoLABert training with Optimizer = AdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/4 completed, Average Loss: 0.6068
+Epoch 2/4 completed, Average Loss: 0.5958
+Epoch 3/4 completed, Average Loss: 0.5902
+Epoch 4/4 completed, Average Loss: 0.5872
+Test set: Average loss: 0.0393, Accuracy: 355/515 (68.93%)
+Running Loop: 2/2
+Epoch 1/4 completed, Average Loss: 0.6083
+Epoch 2/4 completed, Average Loss: 0.5993
+Epoch 3/4 completed, Average Loss: 0.5879
+Epoch 4/4 completed, Average Loss: 0.5851
+Test set: Average loss: 0.0400, Accuracy: 353/515 (68.54%)
+
+Running CoLABert training with Optimizer Epoch 1/4 completed, Average Loss: 0.6073
+eps': 1e-06, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/4 completed, Average Loss: 0.6058
+Epoch 2/4 completed, Average Loss: 0.6040
+Epoch 3/4 completed, Average Loss: 0.6028
+Epoch 4/4 completed, Average Loss: 0.6035
+Test set: Average loss: 0.0396, Accuracy: 354/515 (68.74%)
+Running Loop: 2/2
+Epoch 1/4 completed, Average Loss: 0.6084
+Epoch 2/4 completed, Average Loss: 0.6057
+Epoch 3/4 completed, Average Loss: 0.6042
+Epoch 4/4 completed, Average Loss: 0.6036
+Test set: Average loss: 0.0397, Accuracy: 353/515 (68.54%)
+
+Running CoLABert training with Optimizer = AdadeltaCurvature
+params= {'lr': 0.001, 'rho': 0.6, 'eps': 1e-06, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/4 completed, Average Loss: 0.6271
+Epoch 2/4 completed, Average Loss: 0.6167
+Epoch 3/4 completed, Average Loss: 0.6116
+Epoch 4/4 completed, Average Loss: 0.6098
+Test set: Average loss: 0.0397, Accuracy: 354/515 (68.74%)
+Running Loop: 2/2
+Epoch 1/4 completed, Average Loss: 0.6886
+Epoch 2/4 completed, Average Loss: 0.6470
+Epoch 3/4 completed, Average Loss: 0.6263
+Epoch 4/4 completed, Average Loss: 0.6170
+Test set: Average loss: 0.0399, Accuracy: 354/515 (68.74%)
+
+Running CoLABert training with Optimizer = RMSPropCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0.01, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/4 completed, Average Loss: 0.6080
+Epoch 2/4 completed, Average Loss: 0.5953
+Epoch 3/4 completed, Average Loss: 0.5898
+Epoch 4/4 completed, Average Loss: 0.5878
+Test set: Average loss: 0.0376, Accuracy: 366/515 (71.07%)
+Running Loop: 2/2
+Epoch 1/4 completed, Average Loss: 0.6096
+Epoch 2/4 completed, Average Loss: 0.5970
+Epoch 3/4 completed, Average Loss: 0.5893
+Epoch 4/4 completed, Average Loss: 0.5855
+Test set: Average loss: 0.0391, Accuracy: 356/515 (69.13%)
+
+Running CoLABert training with Optimizer = RMSPropMomentumCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0.01, 'momentum': 0.1, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/4 completed, Average Loss: 0.6070
+Epoch 2/4 completed, Average Loss: 0.5947
+Epoch 3/4 completed, Average Loss: 0.5898
+Epoch 4/4 completed, Average Loss: 0.5875
+Test set: Average loss: 0.0374, Accuracy: 366/515 (71.07%)
+Running Loop: 2/2
+Epoch 1/4 completed, Average Loss: 0.6097
+Epoch 2/4 completed, Average Loss: 0.6025
+Epoch 3/4 completed, Average Loss: 0.5910
+Epoch 4/4 completed, Average Loss: 0.5863
+Test set: Average loss: 0.0391, Accuracy: 356/515 (69.13%)
+
+Running CoLABert training with Optimizer = AdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/4 completed, Average Loss: 0.6068
+Epoch 2/4 completed, Average Loss: 0.5958
+Epoch 3/4 completed, Average Loss: 0.5902
+Epoch 4/4 completed, Average Loss: 0.5872
+Test set: Average loss: 0.0393, Accuracy: 355/515 (68.93%)
+Running Loop: 2/2
+Epoch 1/4 completed, Average Loss: 0.6083
+Epoch 2/4 completed, Average Loss: 0.6032
+Epoch 3/4 completed, Average Loss: 0.5897
+Epoch 4/4 completed, Average Loss: 0.5856
+Test set: Average loss: 0.0400, Accuracy: 353/515 (68.54%)
+
+Running CoLABert training with Optimizer = NAdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/4 completed, Average Loss: 0.6161
+Epoch 2/4 completed, Average Loss: 0.6074
+Epoch 3/4 completed, Average Loss: 0.6064
+Epoch 4/4 completed, Average Loss: 0.6030
+Test set: Average loss: 0.0386, Accuracy: 362/515 (70.29%)
+Running Loop: 2/2
+Epoch 1/4 completed, Average Loss: 0.6097
+Epoch 2/4 completed, Average Loss: 0.6089
+Epoch 3/4 completed, Average Loss: 0.6088
+Epoch 4/4 completed, Average Loss: 0.6088
+Test set: Average loss: 0.0403, Accuracy: 353/515 (68.54%)
+
+Running CoLABert training with Optimizer = NAdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/4 completed, Average Loss: 0.6161
+Epoch 2/4 completed, Average Loss: 0.6115
+Epoch 3/4 completed, Average Loss: 0.6050
+Epoch 4/4 completed, Average Loss: 0.6005
+Test set: Average loss: 0.0389, Accuracy: 358/515 (69.51%)
+Running Loop: 2/2
+Epoch 1/4 completed, Average Loss: 0.6095
+Epoch 2/4 completed, Average Loss: 0.6090
+Epoch 3/4 completed, Average Loss: 0.6093
+Epoch 4/4 completed, Average Loss: 0.6095
+Test set: Average loss: 0.0401, Accuracy: 355/515 (68.93%)
+
+Running CoLABert training with Optimizer = AMSGradCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/4 completed, Average Loss: 0.6068
 Epoch 2/4 completed, Average Loss: 0.5958
