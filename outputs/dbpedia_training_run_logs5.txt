@@ -44,3 +44,5 @@ Epoch 2/5 completed, Average Loss: 2.7686
 Epoch 3/5 completed, Average Loss: 2.7517
 Epoch 4/5 completed, Average Loss: 2.6768
 Epoch 5/5 completed, Average Loss: 2.6763
+Test set: Average loss: 0.0013, Accuracy: 4995/70000 (7.14%)
+Running Loop: 2/2
