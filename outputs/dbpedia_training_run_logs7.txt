@@ -1,0 +1,9 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 5 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running reuters training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 2.3618
+Epoch 2/5 completed, Average Loss: 2.4339

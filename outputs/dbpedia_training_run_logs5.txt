@@ -1,0 +1,46 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 5 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running reuters training with Optimizer = NAdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.8007
+Epoch 2/5 completed, Average Loss: 0.8379
+Epoch 3/5 completed, Average Loss: 1.3594
+Epoch 4/5 completed, Average Loss: 1.2771
+Epoch 5/5 completed, Average Loss: 1.8292
+Test set: Average loss: 0.0017, Accuracy: 5030/70000 (7.19%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.1098
+Epoch 2/5 completed, Average Loss: 1.0535
+Epoch 3/5 completed, Average Loss: 0.9909
+Epoch 4/5 completed, Average Loss: 0.9658
+Epoch 5/5 completed, Average Loss: 1.0725
+Test set: Average loss: 0.0025, Accuracy: 5007/70000 (7.15%)
+
+Running reuters training with Optimizer = NAdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.5783
+Epoch 2/5 completed, Average Loss: 0.8470
+Epoch 3/5 completed, Average Loss: 1.5880
+Epoch 4/5 completed, Average Loss: 1.4242
+Epoch 5/5 completed, Average Loss: 1.3671
+Test set: Average loss: 0.0028, Accuracy: 5004/70000 (7.15%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.6348
+Epoch 2/5 completed, Average Loss: 0.6221
+Epoch 3/5 completed, Average Loss: 1.1358
+Epoch 4/5 completed, Average Loss: 1.3380
+Epoch 5/5 completed, Average Loss: 1.2011
+Test set: Average loss: 0.0027, Accuracy: 5001/70000 (7.14%)
+
+Running reuters training with Optimizer = AMSGrad
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 2.7455
+Epoch 2/5 completed, Average Loss: 2.7686
+Epoch 3/5 completed, Average Loss: 2.7517
+Epoch 4/5 completed, Average Loss: 2.6768
+Epoch 5/5 completed, Average Loss: 2.6763

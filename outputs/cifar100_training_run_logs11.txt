@@ -11,3 +11,624 @@ Epoch 1/10 completed, Average Loss: 4.5616
 Epoch 2/10 completed, Average Loss: 4.3625
 Epoch 3/10 completed, Average Loss: 4.0121
 Epoch 4/10 completed, Average Loss: 3.7737
+Epoch 5/10 completed, Average Loss: 3.6396
+Epoch 6/10 completed, Average Loss: 3.5356
+Epoch 7/10 completed, Average Loss: 3.4468
+Epoch 8/10 completed, Average Loss: 3.3696
+Epoch 9/10 completed, Average Loss: 3.3003
+Epoch 10/10 completed, Average Loss: 3.2370
+Test set: Average loss: 0.0546, Accuracy: 1901/10000 (19.01%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 4.5629
+Epoch 2/10 completed, Average Loss: 4.3727
+Epoch 3/10 completed, Average Loss: 4.0295
+Epoch 4/10 completed, Average Loss: 3.7863
+Epoch 5/10 completed, Average Loss: 3.6500
+Epoch 6/10 completed, Average Loss: 3.5505
+Epoch 7/10 completed, Average Loss: 3.4664
+Epoch 8/10 completed, Average Loss: 3.3896
+Epoch 9/10 completed, Average Loss: 3.3186
+Epoch 10/10 completed, Average Loss: 3.2529
+Test set: Average loss: 0.0535, Accuracy: 2085/10000 (20.85%)
+
+Running CIFAR-100 training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.6667
+Epoch 2/10 completed, Average Loss: 2.9789
+Epoch 3/10 completed, Average Loss: 2.5041
+Epoch 4/10 completed, Average Loss: 2.0033
+Epoch 5/10 completed, Average Loss: 1.4108
+Epoch 6/10 completed, Average Loss: 0.7815
+Epoch 7/10 completed, Average Loss: 0.3826
+Epoch 8/10 completed, Average Loss: 0.2190
+Epoch 9/10 completed, Average Loss: 0.1367
+Epoch 10/10 completed, Average Loss: 0.0898
+Test set: Average loss: 0.0988, Accuracy: 3089/10000 (30.89%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.6810
+Epoch 2/10 completed, Average Loss: 2.9933
+Epoch 3/10 completed, Average Loss: 2.5112
+Epoch 4/10 completed, Average Loss: 2.0101
+Epoch 5/10 completed, Average Loss: 1.4376
+Epoch 6/10 completed, Average Loss: 0.8150
+Epoch 7/10 completed, Average Loss: 0.4107
+Epoch 8/10 completed, Average Loss: 0.2143
+Epoch 9/10 completed, Average Loss: 0.1371
+Epoch 10/10 completed, Average Loss: 0.0886
+Test set: Average loss: 0.0906, Accuracy: 3193/10000 (31.93%)
+
+Running CIFAR-100 training with Optimizer = Adam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.4490
+Epoch 2/10 completed, Average Loss: 2.6959
+Epoch 3/10 completed, Average Loss: 2.2175
+Epoch 4/10 completed, Average Loss: 1.6144
+Epoch 5/10 completed, Average Loss: 0.9693
+Epoch 6/10 completed, Average Loss: 0.5178
+Epoch 7/10 completed, Average Loss: 0.3027
+Epoch 8/10 completed, Average Loss: 0.2339
+Epoch 9/10 completed, Average Loss: 0.2062
+Epoch 10/10 completed, Average Loss: 0.1672
+Test set: Average loss: 0.1113, Accuracy: 2905/10000 (29.05%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.4863
+Epoch 2/10 completed, Average Loss: 2.6847
+Epoch 3/10 completed, Average Loss: 2.0523
+Epoch 4/10 completed, Average Loss: 1.3460
+Epoch 5/10 completed, Average Loss: 0.6795
+Epoch 6/10 completed, Average Loss: 0.3161
+Epoch 7/10 completed, Average Loss: 0.2075
+Epoch 8/10 completed, Average Loss: 0.1708
+Epoch 9/10 completed, Average Loss: 0.1404
+Epoch 10/10 completed, Average Loss: 0.1373
+Test set: Average loss: 0.1092, Accuracy: 2909/10000 (29.09%)
+
+Running CIFAR-100 training with Optimizer = AdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.5338
+Epoch 2/10 completed, Average Loss: 2.7492
+Epoch 3/10 completed, Average Loss: 2.2171
+Epoch 4/10 completed, Average Loss: 1.6641
+Epoch 5/10 completed, Average Loss: 1.0988
+Epoch 6/10 completed, Average Loss: 0.6349
+Epoch 7/10 completed, Average Loss: 0.3572
+Epoch 8/10 completed, Average Loss: 0.2459
+Epoch 9/10 completed, Average Loss: 0.1982
+Epoch 10/10 completed, Average Loss: 0.1854
+Test set: Average loss: 0.1046, Accuracy: 2913/10000 (29.13%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.4524
+Epoch 2/10 completed, Average Loss: 2.5738
+Epoch 3/10 completed, Average Loss: 1.9544
+Epoch 4/10 completed, Average Loss: 1.2686
+Epoch 5/10 completed, Average Loss: 0.6276
+Epoch 6/10 completed, Average Loss: 0.2926
+Epoch 7/10 completed, Average Loss: 0.1887
+Epoch 8/10 completed, Average Loss: 0.1603
+Epoch 9/10 completed, Average Loss: 0.1397
+Epoch 10/10 completed, Average Loss: 0.1390
+Test set: Average loss: 0.1060, Accuracy: 3012/10000 (30.12%)
+
+Running CIFAR-100 training with Optimizer = HeavyBall
+params= {'lr': 0.001, 'momentum': 0.9}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.9987
+Epoch 2/10 completed, Average Loss: 3.4028
+Epoch 3/10 completed, Average Loss: 3.1194
+Epoch 4/10 completed, Average Loss: 2.8759
+Epoch 5/10 completed, Average Loss: 2.6479
+Epoch 6/10 completed, Average Loss: 2.4191
+Epoch 7/10 completed, Average Loss: 2.1928
+Epoch 8/10 completed, Average Loss: 1.9656
+Epoch 9/10 completed, Average Loss: 1.7326
+Epoch 10/10 completed, Average Loss: 1.4748
+Test set: Average loss: 0.0471, Accuracy: 3212/10000 (32.12%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 4.0005
+Epoch 2/10 completed, Average Loss: 3.4197
+Epoch 3/10 completed, Average Loss: 3.1360
+Epoch 4/10 completed, Average Loss: 2.9237
+Epoch 5/10 completed, Average Loss: 2.7325
+Epoch 6/10 completed, Average Loss: 2.5407
+Epoch 7/10 completed, Average Loss: 2.3378
+Epoch 8/10 completed, Average Loss: 2.1170
+Epoch 9/10 completed, Average Loss: 1.8892
+Epoch 10/10 completed, Average Loss: 1.6495
+Test set: Average loss: 0.0456, Accuracy: 3341/10000 (33.41%)
+
+Running CIFAR-100 training with Optimizer = HeavyBallCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.6755
+Epoch 2/10 completed, Average Loss: 2.9137
+Epoch 3/10 completed, Average Loss: 2.2647
+Epoch 4/10 completed, Average Loss: 1.4600
+Epoch 5/10 completed, Average Loss: 0.6843
+Epoch 6/10 completed, Average Loss: 0.3716
+Epoch 7/10 completed, Average Loss: 0.2698
+Epoch 8/10 completed, Average Loss: 0.2188
+Epoch 9/10 completed, Average Loss: 0.1861
+Epoch 10/10 completed, Average Loss: 0.1651
+Test set: Average loss: 0.1005, Accuracy: 2831/10000 (28.31%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.7432
+Epoch 2/10 completed, Average Loss: 3.0405
+Epoch 3/10 completed, Average Loss: 2.4809
+Epoch 4/10 completed, Average Loss: 1.8250
+Epoch 5/10 completed, Average Loss: 1.0830
+Epoch 6/10 completed, Average Loss: 0.5652
+Epoch 7/10 completed, Average Loss: 0.3852
+Epoch 8/10 completed, Average Loss: 0.3049
+Epoch 9/10 completed, Average Loss: 0.2545
+Epoch 10/10 completed, Average Loss: 0.2203
+Test set: Average loss: 0.1071, Accuracy: 2723/10000 (27.23%)
+
+Running CIFAR-100 training with Optimizer = NAG
+params= {'lr': 0.001, 'momentum': 0.9}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.9991
+Epoch 2/10 completed, Average Loss: 3.4023
+Epoch 3/10 completed, Average Loss: 3.1181
+Epoch 4/10 completed, Average Loss: 2.8741
+Epoch 5/10 completed, Average Loss: 2.6466
+Epoch 6/10 completed, Average Loss: 2.4162
+Epoch 7/10 completed, Average Loss: 2.1897
+Epoch 8/10 completed, Average Loss: 1.9589
+Epoch 9/10 completed, Average Loss: 1.7232
+Epoch 10/10 completed, Average Loss: 1.4668
+Test set: Average loss: 0.0473, Accuracy: 3290/10000 (32.90%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 4.0006
+Epoch 2/10 completed, Average Loss: 3.4186
+Epoch 3/10 completed, Average Loss: 3.1338
+Epoch 4/10 completed, Average Loss: 2.9226
+Epoch 5/10 completed, Average Loss: 2.7317
+Epoch 6/10 completed, Average Loss: 2.5403
+Epoch 7/10 completed, Average Loss: 2.3379
+Epoch 8/10 completed, Average Loss: 2.1188
+Epoch 9/10 completed, Average Loss: 1.8869
+Epoch 10/10 completed, Average Loss: 1.6510
+Test set: Average loss: 0.0458, Accuracy: 3345/10000 (33.45%)
+
+Running CIFAR-100 training with Optimizer = NAGCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.6678
+Epoch 2/10 completed, Average Loss: 2.9070
+Epoch 3/10 completed, Average Loss: 2.2478
+Epoch 4/10 completed, Average Loss: 1.4417
+Epoch 5/10 completed, Average Loss: 0.6771
+Epoch 6/10 completed, Average Loss: 0.3869
+Epoch 7/10 completed, Average Loss: 0.2884
+Epoch 8/10 completed, Average Loss: 0.2302
+Epoch 9/10 completed, Average Loss: 0.2002
+Epoch 10/10 completed, Average Loss: 0.1427
+Test set: Average loss: 0.1097, Accuracy: 2870/10000 (28.70%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.7473
+Epoch 2/10 completed, Average Loss: 3.0721
+Epoch 3/10 completed, Average Loss: 2.4652
+Epoch 4/10 completed, Average Loss: 1.7373
+Epoch 5/10 completed, Average Loss: 0.9628
+Epoch 6/10 completed, Average Loss: 0.4967
+Epoch 7/10 completed, Average Loss: 0.3356
+Epoch 8/10 completed, Average Loss: 0.2708
+Epoch 9/10 completed, Average Loss: 0.2148
+Epoch 10/10 completed, Average Loss: 0.1850
+Test set: Average loss: 0.1117, Accuracy: 2823/10000 (28.23%)
+
+Running CIFAR-100 training with Optimizer = Adagrad
+params= {'lr': 0.001, 'eps': 1e-06}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.7271
+Epoch 2/10 completed, Average Loss: 3.3097
+Epoch 3/10 completed, Average Loss: 3.1517
+Epoch 4/10 completed, Average Loss: 3.0366
+Epoch 5/10 completed, Average Loss: 2.9506
+Epoch 6/10 completed, Average Loss: 2.8721
+Epoch 7/10 completed, Average Loss: 2.8038
+Epoch 8/10 completed, Average Loss: 2.7431
+Epoch 9/10 completed, Average Loss: 2.6878
+Epoch 10/10 completed, Average Loss: 2.6381
+Test set: Average loss: 0.0467, Accuracy: 2845/10000 (28.45%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.7074
+Epoch 2/10 completed, Average Loss: 3.3079
+Epoch 3/10 completed, Average Loss: 3.1620
+Epoch 4/10 completed, Average Loss: 3.0611
+Epoch 5/10 completed, Average Loss: 2.9808
+Epoch 6/10 completed, Average Loss: 2.9109
+Epoch 7/10 completed, Average Loss: 2.8483
+Epoch 8/10 completed, Average Loss: 2.7914
+Epoch 9/10 completed, Average Loss: 2.7379
+Epoch 10/10 completed, Average Loss: 2.6885
+Test set: Average loss: 0.0469, Accuracy: 2824/10000 (28.24%)
+
+Running CIFAR-100 training with Optimizer = AdagradCurvature
+params= {'lr': 0.001, 'eps': 1e-06, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.6446
+Epoch 2/10 completed, Average Loss: 3.1412
+Epoch 3/10 completed, Average Loss: 2.9476
+Epoch 4/10 completed, Average Loss: 2.8111
+Epoch 5/10 completed, Average Loss: 2.7089
+Epoch 6/10 completed, Average Loss: 2.6203
+Epoch 7/10 completed, Average Loss: 2.5459
+Epoch 8/10 completed, Average Loss: 2.4801
+Epoch 9/10 completed, Average Loss: 2.4209
+Epoch 10/10 completed, Average Loss: 2.3685
+Test set: Average loss: 0.0447, Accuracy: 3109/10000 (31.09%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.6373
+Epoch 2/10 completed, Average Loss: 3.1726
+Epoch 3/10 completed, Average Loss: 2.9944
+Epoch 4/10 completed, Average Loss: 2.8681
+Epoch 5/10 completed, Average Loss: 2.7668
+Epoch 6/10 completed, Average Loss: 2.6816
+Epoch 7/10 completed, Average Loss: 2.6073
+Epoch 8/10 completed, Average Loss: 2.5414
+Epoch 9/10 completed, Average Loss: 2.4832
+Epoch 10/10 completed, Average Loss: 2.4296
+Test set: Average loss: 0.0447, Accuracy: 3104/10000 (31.04%)
+
+Running CIFAR-100 training with Optimizer = Adadelta
+params= {'lr': 0.001, 'rho': 0.95, 'eps': 1e-06}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 4.5666
+Epoch 2/10 completed, Average Loss: 4.4342
+Epoch 3/10 completed, Average Loss: 4.2290
+Epoch 4/10 completed, Average Loss: 4.0254
+Epoch 5/10 completed, Average Loss: 3.8763
+Epoch 6/10 completed, Average Loss: 3.7686
+Epoch 7/10 completed, Average Loss: 3.6870
+Epoch 8/10 completed, Average Loss: 3.6208
+Epoch 9/10 completed, Average Loss: 3.5642
+Epoch 10/10 completed, Average Loss: 3.5152
+Test set: Average loss: 0.0564, Accuracy: 1804/10000 (18.04%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 4.5666
+Epoch 2/10 completed, Average Loss: 4.4335
+Epoch 3/10 completed, Average Loss: 4.2216
+Epoch 4/10 completed, Average Loss: 4.0181
+Epoch 5/10 completed, Average Loss: 3.8706
+Epoch 6/10 completed, Average Loss: 3.7652
+Epoch 7/10 completed, Average Loss: 3.6862
+Epoch 8/10 completed, Average Loss: 3.6211
+Epoch 9/10 completed, Average Loss: 3.5669
+Epoch 10/10 completed, Average Loss: 3.5182
+Test set: Average loss: 0.0563, Accuracy: 1803/10000 (18.03%)
+
+Running CIFAR-100 training with Optimizer = AdadeltaCurvature
+params= {'lr': 0.001, 'rho': 0.6, 'eps': 1e-06, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 4.5106
+Epoch 2/10 completed, Average Loss: 4.2764
+Epoch 3/10 completed, Average Loss: 4.0623
+Epoch 4/10 completed, Average Loss: 3.8997
+Epoch 5/10 completed, Average Loss: 3.7856
+Epoch 6/10 completed, Average Loss: 3.6997
+Epoch 7/10 completed, Average Loss: 3.6335
+Epoch 8/10 completed, Average Loss: 3.5792
+Epoch 9/10 completed, Average Loss: 3.5324
+Epoch 10/10 completed, Average Loss: 3.4927
+Test set: Average loss: 0.0559, Accuracy: 1863/10000 (18.63%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 4.4948
+Epoch 2/10 completed, Average Loss: 4.2406
+Epoch 3/10 completed, Average Loss: 4.0274
+Epoch 4/10 completed, Average Loss: 3.8782
+Epoch 5/10 completed, Average Loss: 3.7736
+Epoch 6/10 completed, Average Loss: 3.6953
+Epoch 7/10 completed, Average Loss: 3.6353
+Epoch 8/10 completed, Average Loss: 3.5842
+Epoch 9/10 completed, Average Loss: 3.5420
+Epoch 10/10 completed, Average Loss: 3.5041
+Test set: Average loss: 0.0560, Accuracy: 1859/10000 (18.59%)
+
+Running CIFAR-100 training with Optimizer = RMSProp
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.8272
+Epoch 2/10 completed, Average Loss: 2.6725
+Epoch 3/10 completed, Average Loss: 2.0205
+Epoch 4/10 completed, Average Loss: 1.3363
+Epoch 5/10 completed, Average Loss: 0.7191
+Epoch 6/10 completed, Average Loss: 0.3579
+Epoch 7/10 completed, Average Loss: 0.2288
+Epoch 8/10 completed, Average Loss: 0.1733
+Epoch 9/10 completed, Average Loss: 0.1549
+Epoch 10/10 completed, Average Loss: 0.1287
+Test set: Average loss: 0.1277, Accuracy: 2683/10000 (26.83%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.7596
+Epoch 2/10 completed, Average Loss: 2.6521
+Epoch 3/10 completed, Average Loss: 1.9660
+Epoch 4/10 completed, Average Loss: 1.2250
+Epoch 5/10 completed, Average Loss: 0.5943
+Epoch 6/10 completed, Average Loss: 0.2924
+Epoch 7/10 completed, Average Loss: 0.1963
+Epoch 8/10 completed, Average Loss: 0.1553
+Epoch 9/10 completed, Average Loss: 0.1272
+Epoch 10/10 completed, Average Loss: 0.1173
+Test set: Average loss: 0.1182, Accuracy: 2870/10000 (28.70%)
+
+Running CIFAR-100 training with Optimizer = RMSPropCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.8357
+Epoch 2/10 completed, Average Loss: 2.6557
+Epoch 3/10 completed, Average Loss: 1.9895
+Epoch 4/10 completed, Average Loss: 1.2672
+Epoch 5/10 completed, Average Loss: 0.6462
+Epoch 6/10 completed, Average Loss: 0.3211
+Epoch 7/10 completed, Average Loss: 0.2110
+Epoch 8/10 completed, Average Loss: 0.1616
+Epoch 9/10 completed, Average Loss: 0.1367
+Epoch 10/10 completed, Average Loss: 0.1177
+Test set: Average loss: 0.1149, Accuracy: 2987/10000 (29.87%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.7735
+Epoch 2/10 completed, Average Loss: 2.6470
+Epoch 3/10 completed, Average Loss: 1.9352
+Epoch 4/10 completed, Average Loss: 1.1330
+Epoch 5/10 completed, Average Loss: 0.5052
+Epoch 6/10 completed, Average Loss: 0.2512
+Epoch 7/10 completed, Average Loss: 0.1722
+Epoch 8/10 completed, Average Loss: 0.1402
+Epoch 9/10 completed, Average Loss: 0.1220
+Epoch 10/10 completed, Average Loss: 0.1076
+Test set: Average loss: 0.1100, Accuracy: 3018/10000 (30.18%)
+
+Running CIFAR-100 training with Optimizer = RMSPropMomentum
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-16, 'weight_decay': 0, 'momentum': 0.1}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.9262
+Epoch 2/10 completed, Average Loss: 2.7435
+Epoch 3/10 completed, Average Loss: 2.0998
+Epoch 4/10 completed, Average Loss: 1.3908
+Epoch 5/10 completed, Average Loss: 0.7312
+Epoch 6/10 completed, Average Loss: 0.3540
+Epoch 7/10 completed, Average Loss: 0.2217
+Epoch 8/10 completed, Average Loss: 0.1735
+Epoch 9/10 completed, Average Loss: 0.1466
+Epoch 10/10 completed, Average Loss: 0.1269
+Test set: Average loss: 0.1213, Accuracy: 2951/10000 (29.51%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.8312
+Epoch 2/10 completed, Average Loss: 2.7472
+Epoch 3/10 completed, Average Loss: 2.0650
+Epoch 4/10 completed, Average Loss: 1.3331
+Epoch 5/10 completed, Average Loss: 0.6852
+Epoch 6/10 completed, Average Loss: 0.3361
+Epoch 7/10 completed, Average Loss: 0.2143
+Epoch 8/10 completed, Average Loss: 0.1688
+Epoch 9/10 completed, Average Loss: 0.1360
+Epoch 10/10 completed, Average Loss: 0.1221
+Test set: Average loss: 0.1202, Accuracy: 2768/10000 (27.68%)
+
+Running CIFAR-100 training with Optimizer = RMSPropMomentumCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'momentum': 0.1, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.9166
+Epoch 2/10 completed, Average Loss: 2.7410
+Epoch 3/10 completed, Average Loss: 2.1409
+Epoch 4/10 completed, Average Loss: 1.4746
+Epoch 5/10 completed, Average Loss: 0.8422
+Epoch 6/10 completed, Average Loss: 0.4268
+Epoch 7/10 completed, Average Loss: 0.2568
+Epoch 8/10 completed, Average Loss: 0.1946
+Epoch 9/10 completed, Average Loss: 0.1578
+Epoch 10/10 completed, Average Loss: 0.1427
+Test set: Average loss: 0.1184, Accuracy: 2793/10000 (27.93%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.8223
+Epoch 2/10 completed, Average Loss: 2.7565
+Epoch 3/10 completed, Average Loss: 2.1010
+Epoch 4/10 completed, Average Loss: 1.3455
+Epoch 5/10 completed, Average Loss: 0.6710
+Epoch 6/10 completed, Average Loss: 0.3285
+Epoch 7/10 completed, Average Loss: 0.2168
+Epoch 8/10 completed, Average Loss: 0.1715
+Epoch 9/10 completed, Average Loss: 0.1445
+Epoch 10/10 completed, Average Loss: 0.1330
+Test set: Average loss: 0.1294, Accuracy: 2839/10000 (28.39%)
+
+Running CIFAR-100 training with Optimizer = AdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.5290
+Epoch 2/10 completed, Average Loss: 2.7660
+Epoch 3/10 completed, Average Loss: 2.1989
+Epoch 4/10 completed, Average Loss: 1.6147
+Epoch 5/10 completed, Average Loss: 1.0307
+Epoch 6/10 completed, Average Loss: 0.5628
+Epoch 7/10 completed, Average Loss: 0.3235
+Epoch 8/10 completed, Average Loss: 0.2397
+Epoch 9/10 completed, Average Loss: 0.1973
+Epoch 10/10 completed, Average Loss: 0.1715
+Test set: Average loss: 0.0995, Accuracy: 2987/10000 (29.87%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.4751
+Epoch 2/10 completed, Average Loss: 2.6300
+Epoch 3/10 completed, Average Loss: 1.9628
+Epoch 4/10 completed, Average Loss: 1.2569
+Epoch 5/10 completed, Average Loss: 0.6039
+Epoch 6/10 completed, Average Loss: 0.2819
+Epoch 7/10 completed, Average Loss: 0.1843
+Epoch 8/10 completed, Average Loss: 0.1725
+Epoch 9/10 completed, Average Loss: 0.1449
+Epoch 10/10 completed, Average Loss: 0.1340
+Test set: Average loss: 0.0979, Accuracy: 3078/10000 (30.78%)
+
+Running CIFAR-100 training with Optimizer = AdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.4886
+Epoch 2/10 completed, Average Loss: 2.7273
+Epoch 3/10 completed, Average Loss: 2.2183
+Epoch 4/10 completed, Average Loss: 1.6341
+Epoch 5/10 completed, Average Loss: 1.0334
+Epoch 6/10 completed, Average Loss: 0.5726
+Epoch 7/10 completed, Average Loss: 0.3427
+Epoch 8/10 completed, Average Loss: 0.2487
+Epoch 9/10 completed, Average Loss: 0.2118
+Epoch 10/10 completed, Average Loss: 0.1808
+Test set: Average loss: 0.1074, Accuracy: 2924/10000 (29.24%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.4723
+Epoch 2/10 completed, Average Loss: 2.6144
+Epoch 3/10 completed, Average Loss: 1.9186
+Epoch 4/10 completed, Average Loss: 1.1925
+Epoch 5/10 completed, Average Loss: 0.5645
+Epoch 6/10 completed, Average Loss: 0.2651
+Epoch 7/10 completed, Average Loss: 0.1877
+Epoch 8/10 completed, Average Loss: 0.1652
+Epoch 9/10 completed, Average Loss: 0.1389
+Epoch 10/10 completed, Average Loss: 0.1272
+Test set: Average loss: 0.1054, Accuracy: 3034/10000 (30.34%)
+
+Running CIFAR-100 training with Optimizer = NAdam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.4081
+Epoch 2/10 completed, Average Loss: 2.5575
+Epoch 3/10 completed, Average Loss: 1.8600
+Epoch 4/10 completed, Average Loss: 1.1061
+Epoch 5/10 completed, Average Loss: 0.6386
+Epoch 6/10 completed, Average Loss: 0.5363
+Epoch 7/10 completed, Average Loss: 0.5025
+Epoch 8/10 completed, Average Loss: 0.5042
+Epoch 9/10 completed, Average Loss: 0.5330
+Epoch 10/10 completed, Average Loss: 0.5367
+Test set: Average loss: 0.1203, Accuracy: 2350/10000 (23.50%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.3996
+Epoch 2/10 completed, Average Loss: 2.5602
+Epoch 3/10 completed, Average Loss: 1.9034
+Epoch 4/10 completed, Average Loss: 1.1779
+Epoch 5/10 completed, Average Loss: 0.6806
+Epoch 6/10 completed, Average Loss: 0.5313
+Epoch 7/10 completed, Average Loss: 0.5072
+Epoch 8/10 completed, Average Loss: 0.5611
+Epoch 9/10 completed, Average Loss: 0.4742
+Epoch 10/10 completed, Average Loss: 0.5508
+Test set: Average loss: 0.1285, Accuracy: 2140/10000 (21.40%)
+
+Running CIFAR-100 training with Optimizer = NAdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.3990
+Epoch 2/10 completed, Average Loss: 2.6051
+Epoch 3/10 completed, Average Loss: 2.0189
+Epoch 4/10 completed, Average Loss: 1.3588
+Epoch 5/10 completed, Average Loss: 0.8033
+Epoch 6/10 completed, Average Loss: 0.6299
+Epoch 7/10 completed, Average Loss: 0.5344
+Epoch 8/10 completed, Average Loss: 0.5554
+Epoch 9/10 completed, Average Loss: 0.5274
+Epoch 10/10 completed, Average Loss: 0.5586
+Test set: Average loss: 0.1235, Accuracy: 2339/10000 (23.39%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.3981
+Epoch 2/10 completed, Average Loss: 2.5260
+Epoch 3/10 completed, Average Loss: 1.8323
+Epoch 4/10 completed, Average Loss: 1.0766
+Epoch 5/10 completed, Average Loss: 0.6234
+Epoch 6/10 completed, Average Loss: 0.5214
+Epoch 7/10 completed, Average Loss: 0.4720
+Epoch 8/10 completed, Average Loss: 0.4733
+Epoch 9/10 completed, Average Loss: 0.6148
+Epoch 10/10 completed, Average Loss: 0.4521
+Test set: Average loss: 0.1265, Accuracy: 2347/10000 (23.47%)
+
+Running CIFAR-100 training with Optimizer = NAdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.4039
+Epoch 2/10 completed, Average Loss: 2.5806
+Epoch 3/10 completed, Average Loss: 1.9311
+Epoch 4/10 completed, Average Loss: 1.2065
+Epoch 5/10 completed, Average Loss: 0.7068
+Epoch 6/10 completed, Average Loss: 0.5586
+Epoch 7/10 completed, Average Loss: 0.5366
+Epoch 8/10 completed, Average Loss: 0.5134
+Epoch 9/10 completed, Average Loss: 0.4915
+Epoch 10/10 completed, Average Loss: 0.5205
+Test set: Average loss: 0.1113, Accuracy: 2318/10000 (23.18%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.4129
+Epoch 2/10 completed, Average Loss: 2.5167
+Epoch 3/10 completed, Average Loss: 1.7648
+Epoch 4/10 completed, Average Loss: 0.9731
+Epoch 5/10 completed, Average Loss: 0.5932
+Epoch 6/10 completed, Average Loss: 0.4953
+Epoch 7/10 completed, Average Loss: 0.4775
+Epoch 8/10 completed, Average Loss: 0.4760
+Epoch 9/10 completed, Average Loss: 0.4848
+Epoch 10/10 completed, Average Loss: 0.5171
+Test set: Average loss: 0.1183, Accuracy: 2359/10000 (23.59%)
+
+Running CIFAR-100 training with Optimizer = NAdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 3.4018
+Epoch 2/10 completed, Average Loss: 2.5468
+Epoch 3/10 completed, Average Loss: 1.9095
+Epoch 4/10 completed, Average Loss: 1.2501
+Epoch 5/10 completed, Average Loss: 0.7558
+Epoch 6/10 completed, Average Loss: 0.5803
+Epoch 7/10 completed, Average Loss: 0.5340
+Epoch 8/10 completed, Average Loss: 0.5140
+Epoch 9/10 completed, Average Loss: 0.5092
+Epoch 10/10 completed, Average Loss: 0.5361
+Test set: Average loss: 0.1014, Accuracy: 2428/10000 (24.28%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 3.4071
+Epoch 2/10 completed, Average Loss: 2.5162
+Epoch 3/10 completed, Average Loss: 1.7732
+Epoch 4/10 completed, Average Loss: 0.9953

@@ -3,8 +3,9 @@ from torch.optim import Optimizer
 
 
 class SimpleSGDCurvature(Optimizer):
-    def __init__(self, params, lr=1e-3, epsilon=0.01):
+    def __init__(self, params, lr=1e-3, epsilon=0.01, clip_radius=10):
         defaults = dict(lr=lr, epsilon=epsilon)
+        self.clip_radius = clip_radius
         super(SimpleSGDCurvature, self).__init__(params, defaults)
 
     def step(self, closure=None):
@@ -49,6 +50,7 @@ class SimpleSGDCurvature(Optimizer):
 
                 radius = torch.norm(last_grad) / torch.maximum(torch.tensor(epsilon, device=grad.device),
                                                                torch.norm(current_grad - last_grad))
+                radius = torch.min(torch.tensor(self.clip_radius), radius)
                 normed_last_grad = last_grad / torch.norm(last_grad)
                 p.data = p.data - step_size * radius * normed_last_grad
 

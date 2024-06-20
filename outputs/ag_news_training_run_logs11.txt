@@ -93,3 +93,64 @@ Running Loop: 1/2
 Epoch 1/5 completed, Average Loss: 1.3847
 Epoch 2/5 completed, Average Loss: 1.3867
 Epoch 3/5 completed, Average Loss: 1.3866
+Epoch 4/5 completed, Average Loss: 1.3866
+Epoch 5/5 completed, Average Loss: 1.3866
+Test set: Average loss: 0.0867, Accuracy: 1900/7600 (25.00%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.3877
+Epoch 2/5 completed, Average Loss: 1.3867
+Epoch 3/5 completed, Average Loss: 1.3866
+Epoch 4/5 completed, Average Loss: 1.3866
+Epoch 5/5 completed, Average Loss: 1.3866
+Test set: Average loss: 0.0866, Accuracy: 1900/7600 (25.00%)
+
+Running AGNews training with Optimizer = NAdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.3882
+Epoch 2/5 completed, Average Loss: 1.3891
+Epoch 3/5 completed, Average Loss: 1.3920
+Epoch 4/5 completed, Average Loss: 1.3937
+Epoch 5/5 completed, Average Loss: 1.4394
+Test set: Average loss: 0.0934, Accuracy: 1900/7600 (25.00%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.3880
+Epoch 2/5 completed, Average Loss: 1.3894
+Epoch 3/5 completed, Average Loss: 1.3920
+Epoch 4/5 completed, Average Loss: 1.3935
+Epoch 5/5 completed, Average Loss: 1.3953
+Test set: Average loss: 0.0884, Accuracy: 1900/7600 (25.00%)
+
+Running AGNews training with Optimizer = NAdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.3881
+Epoch 2/5 completed, Average Loss: 1.3889
+Epoch 3/5 completed, Average Loss: nan
+Epoch 4/5 completed, Average Loss: nan
+Epoch 5/5 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 1900/7600 (25.00%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.3878
+Epoch 2/5 completed, Average Loss: 1.3892
+Epoch 3/5 completed, Average Loss: nan
+Epoch 4/5 completed, Average Loss: nan
+Epoch 5/5 completed, Average Loss: nan
+Test set: Average loss: nan, Accuracy: 1900/7600 (25.00%)
+
+Running AGNews training with Optimizer = AMSGradCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.2601
+Epoch 2/5 completed, Average Loss: 1.1172
+Epoch 3/5 completed, Average Loss: 1.1002
+Epoch 4/5 completed, Average Loss: 1.0384
+Epoch 5/5 completed, Average Loss: 1.0305
+Test set: Average loss: 0.0651, Accuracy: 5307/7600 (69.83%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.3858
+Epoch 2/5 completed, Average Loss: 1.3865
+Epoch 3/5 completed, Average Loss: 1.3864
+Epoch 4/5 completed, Average Loss: 1.2867
+Epoch 5/5 completed, Average Loss: 1.1574
+Test set: Average loss: 0.0730, Accuracy: 4329/7600 (56.96%)

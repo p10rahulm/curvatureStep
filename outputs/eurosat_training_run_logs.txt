@@ -89,15 +89,17 @@ Running Loop: 1/2
 Epoch 1/1 completed, Average Loss: 1.1158
 Test set: Average loss: 0.0116, Accuracy: 2013/2700 (74.56%)
 Running Loop: 2/2
+Epoch 1/1 completed, Average Loss: 1.1785
+Test set: Average loss: 0.0345, Accuracy: 1446/2700 (53.56%)
 
 Running EuroSAT training with Optimizer = RMSPropMomentum
-params= {'lr': 0.01, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.05}
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-16, 'weight_decay': 0, 'momentum': 0.1}
 Running Loop: 1/2
-Epoch 1/1 completed, Average Loss: 1.3877
-Test set: Average loss: 0.0175, Accuracy: 1630/2700 (60.37%)
+Epoch 1/1 completed, Average Loss: 1.1224
+Test set: Average loss: 0.0123, Accuracy: 1909/2700 (70.70%)
 Running Loop: 2/2
-Epoch 1/1 completed, Average Loss: 1.4412
-Test set: Average loss: 0.0151, Accuracy: 1736/2700 (64.30%)
+Epoch 1/1 completed, Average Loss: 1.1365
+Test set: Average loss: 0.0507, Accuracy: 1397/2700 (51.74%)
 
 Running EuroSAT training with Optimizer = AdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
@@ -159,6 +161,8 @@ Running Loop: 1/2
 Epoch 1/1 completed, Average Loss: 1.6018
 Test set: Average loss: 0.0200, Accuracy: 1589/2700 (58.85%)
 Running Loop: 2/2
+Epoch 1/1 completed, Average Loss: 1.6527
+Test set: Average loss: 0.0196, Accuracy: 1655/2700 (61.30%)
 
 Running EuroSAT training with Optimizer = RMSPropCurvature
 params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'epsilon': 0.01}

@@ -24,7 +24,8 @@ data/oxford-iiit-pet/*
 data/caltech101
 data/*
 
-
+.vector_cache
+.vector_cache/*
 
 
 # User-specific stuff

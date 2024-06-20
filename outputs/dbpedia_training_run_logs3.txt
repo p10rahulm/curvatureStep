@@ -1,0 +1,88 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 5 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running reuters training with Optimizer = Adadelta
+params= {'lr': 0.001, 'rho': 0.95, 'eps': 1e-06}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 2.6632
+Epoch 2/5 completed, Average Loss: 2.6535
+Epoch 3/5 completed, Average Loss: 2.6479
+Epoch 4/5 completed, Average Loss: 2.6434
+Epoch 5/5 completed, Average Loss: 2.6394
+Test set: Average loss: 0.0013, Accuracy: 6073/70000 (8.68%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 2.6644
+Epoch 2/5 completed, Average Loss: 2.6546
+Epoch 3/5 completed, Average Loss: 2.6489
+Epoch 4/5 completed, Average Loss: 2.6444
+Epoch 5/5 completed, Average Loss: 2.6403
+Test set: Average loss: 0.0013, Accuracy: 6785/70000 (9.69%)
+
+Running reuters training with Optimizer = AdadeltaCurvature
+params= {'lr': 0.001, 'rho': 0.6, 'eps': 1e-06, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 2.6600
+Epoch 2/5 completed, Average Loss: 2.6614
+Epoch 3/5 completed, Average Loss: 2.6563
+Epoch 4/5 completed, Average Loss: 2.6513
+Epoch 5/5 completed, Average Loss: 2.6466
+Test set: Average loss: 0.0013, Accuracy: 5866/70000 (8.38%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 2.6617
+Epoch 2/5 completed, Average Loss: 2.6626
+Epoch 3/5 completed, Average Loss: 2.6575
+Epoch 4/5 completed, Average Loss: 2.6525
+Epoch 5/5 completed, Average Loss: 2.6478
+Test set: Average loss: 0.0013, Accuracy: 7583/70000 (10.83%)
+
+Running reuters training with Optimizer = RMSProp
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.5689
+Epoch 2/5 completed, Average Loss: 0.4105
+Epoch 3/5 completed, Average Loss: 0.3575
+Epoch 4/5 completed, Average Loss: 0.3714
+Epoch 5/5 completed, Average Loss: 0.3702
+Test set: Average loss: 0.0036, Accuracy: 5000/70000 (7.14%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.4992
+Epoch 2/5 completed, Average Loss: 0.4035
+Epoch 3/5 completed, Average Loss: 0.3790
+Epoch 4/5 completed, Average Loss: 0.3739
+Epoch 5/5 completed, Average Loss: 0.3549
+Test set: Average loss: 0.0035, Accuracy: 5000/70000 (7.14%)
+
+Running reuters training with Optimizer = RMSPropCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.5631
+Epoch 2/5 completed, Average Loss: 0.4028
+Epoch 3/5 completed, Average Loss: 0.4066
+Epoch 4/5 completed, Average Loss: 0.3966
+Epoch 5/5 completed, Average Loss: 0.3867
+Test set: Average loss: 0.0034, Accuracy: 5000/70000 (7.14%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.6206
+Epoch 2/5 completed, Average Loss: 0.4300
+Epoch 3/5 completed, Average Loss: 0.4078
+Epoch 4/5 completed, Average Loss: 0.3962
+Epoch 5/5 completed, Average Loss: 0.3460
+Test set: Average loss: 0.0038, Accuracy: 5000/70000 (7.14%)
+
+Running reuters training with Optimizer = RMSPropMomentum
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-16, 'weight_decay': 0, 'momentum': 0.1}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.5749
+Epoch 2/5 completed, Average Loss: 0.4339
+Epoch 3/5 completed, Average Loss: 0.3856
+Epoch 4/5 completed, Average Loss: 0.3883
+Epoch 5/5 completed, Average Loss: 0.3860
+Test set: Average loss: 0.0037, Accuracy: 5000/70000 (7.14%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.7206
+Epoch 2/5 completed, Average Loss: 0.5326
+Epoch 3/5 completed, Average Loss: 0.3792
+Epoch 4/5 completed, Average Loss: 0.3990
+Epoch 5/5 completed, Average Loss: 0.3960
+Test set: Average loss: 0.0037, Accuracy: 5000/70000 (7.14%)

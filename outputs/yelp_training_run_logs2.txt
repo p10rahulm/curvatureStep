@@ -1,0 +1,88 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 5 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running reuters training with Optimizer = HeavyBallCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.6519
+Epoch 2/5 completed, Average Loss: 0.6067
+Epoch 3/5 completed, Average Loss: 0.6028
+Epoch 4/5 completed, Average Loss: 0.6022
+Epoch 5/5 completed, Average Loss: 0.5815
+Test set: Average loss: 0.0006, Accuracy: 24701/38000 (65.00%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.6291
+Epoch 2/5 completed, Average Loss: 0.6502
+Epoch 3/5 completed, Average Loss: 2.8950
+Epoch 4/5 completed, Average Loss: 3.3351
+Epoch 5/5 completed, Average Loss: 2.8752
+Test set: Average loss: 0.0015, Accuracy: 22395/38000 (58.93%)
+
+Running reuters training with Optimizer = NAG
+params= {'lr': 0.001, 'momentum': 0.9}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.6655
+Epoch 2/5 completed, Average Loss: 0.6515
+Epoch 3/5 completed, Average Loss: 0.6092
+Epoch 4/5 completed, Average Loss: 0.5351
+Epoch 5/5 completed, Average Loss: 0.5214
+Test set: Average loss: 0.0005, Accuracy: 29341/38000 (77.21%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.6661
+Epoch 2/5 completed, Average Loss: 0.6524
+Epoch 3/5 completed, Average Loss: 0.5992
+Epoch 4/5 completed, Average Loss: 0.5235
+Epoch 5/5 completed, Average Loss: 0.4992
+Test set: Average loss: 0.0005, Accuracy: 29896/38000 (78.67%)
+
+Running reuters training with Optimizer = NAGCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.6432
+Epoch 2/5 completed, Average Loss: 0.6165
+Epoch 3/5 completed, Average Loss: 0.6077
+Epoch 4/5 completed, Average Loss: 0.5806
+Epoch 5/5 completed, Average Loss: 0.5780
+Test set: Average loss: 0.0007, Accuracy: 22649/38000 (59.60%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.6177
+Epoch 2/5 completed, Average Loss: 0.6163
+Epoch 3/5 completed, Average Loss: 0.5993
+Epoch 4/5 completed, Average Loss: 0.6282
+Epoch 5/5 completed, Average Loss: 0.6032
+Test set: Average loss: 0.0006, Accuracy: 25364/38000 (66.75%)
+
+Running reuters training with Optimizer = Adagrad
+params= {'lr': 0.001, 'eps': 1e-06}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.5613
+Epoch 2/5 completed, Average Loss: 0.5259
+Epoch 3/5 completed, Average Loss: 0.5152
+Epoch 4/5 completed, Average Loss: 0.5064
+Epoch 5/5 completed, Average Loss: 0.4979
+Test set: Average loss: 0.0005, Accuracy: 29079/38000 (76.52%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.5548
+Epoch 2/5 completed, Average Loss: 0.5152
+Epoch 3/5 completed, Average Loss: 0.5045
+Epoch 4/5 completed, Average Loss: 0.4957
+Epoch 5/5 completed, Average Loss: 0.4875
+Test set: Average loss: 0.0005, Accuracy: 29586/38000 (77.86%)
+
+Running reuters training with Optimizer = AdagradCurvature
+params= {'lr': 0.001, 'eps': 1e-06, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.6185
+Epoch 2/5 completed, Average Loss: 0.5506
+Epoch 3/5 completed, Average Loss: 0.4941
+Epoch 4/5 completed, Average Loss: 0.4734
+Epoch 5/5 completed, Average Loss: 0.4566
+Test set: Average loss: 0.0004, Accuracy: 30304/38000 (79.75%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.5194
+Epoch 2/5 completed, Average Loss: 0.4460
+Epoch 3/5 completed, Average Loss: 0.4101
+Epoch 4/5 completed, Average Loss: 0.3840
+Epoch 5/5 completed, Average Loss: 0.3641
+Test set: Average loss: 0.0003, Accuracy: 32382/38000 (85.22%)

@@ -31,7 +31,7 @@
 29|AMSGrad|2|0.0399|68.54
 30|AdamCurvature|1|0.0393|68.93
 31|AdamCurvature|2|0.04|68.54
-32|AdamCurvature|1|0.0396|68.74
+32|AdamCurvature|2|0.0396|68.74
 33|AdamCurvature|2|0.0397|68.54
 34|AdadeltaCurvature|1|0.0397|68.74
 35|AdadeltaCurvature|2|0.0399|68.74

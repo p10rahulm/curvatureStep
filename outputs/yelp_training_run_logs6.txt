@@ -1,7 +1,7 @@
 # ----------------------------------------------------------------------------------------------------
-# Running 10 epochs of training - 4 runs
+# Running 5 epochs of training - 2 runs
 # ----------------------------------------------------------------------------------------------------
 
-Running OxfordPet training with Optimizer = RMSPropCurvature
-params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'epsilon': 0.01}
-Running Loop: 1/4
+Running reuters training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01}
+Running Loop: 1/2

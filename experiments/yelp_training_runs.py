@@ -1,6 +1,3 @@
-# experiments/ag_news_training_runs.py
-
-# Define the relative path to the project root from the current script
 import os
 import sys
 
@@ -8,40 +5,49 @@ import sys
 project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
+import torchtext
+torchtext.disable_torchtext_deprecation_warning()
+
 from experiment_utils import run_experiment
 from utilities import write_to_file
 from optimizer_params import optimizers
 from models.simpleRNN_multiclass import SimpleRNN
-from data_loaders.dbpedia import vocab
+
+from data_loaders.yelp import load_yelp as load_dataset
+from data_loaders.yelp import vocab_size, pad_idx
+
 import torch
 import torch.nn as nn
-from data_loaders.dbpedia import load_dbpedia
 from train import train_lm
 from test import test_lm_multiclass
 
 results = []
 
+total_epochs = 5
+total_runs = 2
+
 print("#", "-" * 100)
-print("# Running 10 epochs of training - 10 runs")
+print(f"# Running {total_epochs} epochs of training - {total_runs} runs")
 print("#", "-" * 100)
 
 for optimizer_class, default_params in optimizers:
-    print(f"\nRunning dbpedia training with Optimizer = {str(optimizer_class.__name__)}")
+    print(f"\nRunning reuters training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
 
     # Set device to GPU
-    device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
 
-    dataset_loader = load_dbpedia
+    dataset_loader = load_dataset
 
     # Hyperparameters
     model_hyperparams = {
-        'vocab_size': len(vocab),
+        'vocab_size': vocab_size,
         'embed_dim': 100,
         'hidden_dim': 256,
-        'output_dim': 4,
-        'pad_idx': vocab["<pad>"],
+        'output_dim': 2,
+        'pad_idx': pad_idx,
     }
+    # model = SimpleRNN
     model = SimpleRNN
     trainer_function = train_lm
     test_function = test_lm_multiclass
@@ -51,8 +57,8 @@ for optimizer_class, default_params in optimizers:
         params,
         dataset_loader=dataset_loader,
         model_class=model,
-        num_runs=1,
-        num_epochs=1,
+        num_runs=total_runs,
+        num_epochs=total_epochs,
         debug_logs=True,
         model_hyperparams=model_hyperparams,
         loss_criterion=loss_criterion,
@@ -66,4 +72,4 @@ for optimizer_class, default_params in optimizers:
         'std_accuracy': std_accuracy
     })
 
-write_to_file('outputs/dbpedia_training_logs.csv', results)
+write_to_file('outputs/reuters_training_logs.csv', results)

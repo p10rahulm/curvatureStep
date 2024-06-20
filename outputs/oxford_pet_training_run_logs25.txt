@@ -1,0 +1,52 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running OxfordPet training with Optimizer = AdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.5173
+Epoch 2/10 completed, Average Loss: 3.1571
+Epoch 3/10 completed, Average Loss: 2.9673
+Epoch 4/10 completed, Average Loss: 2.7594
+Epoch 5/10 completed, Average Loss: 2.5952
+Epoch 6/10 completed, Average Loss: 2.3853
+Epoch 7/10 completed, Average Loss: 2.1638
+Epoch 8/10 completed, Average Loss: 1.9500
+Epoch 9/10 completed, Average Loss: 1.6978
+Epoch 10/10 completed, Average Loss: 1.4340
+Test set: Average loss: 0.0417, Accuracy: 1072/3669 (29.22%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.5430
+Epoch 2/10 completed, Average Loss: 3.1480
+Epoch 3/10 completed, Average Loss: 2.9512
+Epoch 4/10 completed, Average Loss: 2.7528
+Epoch 5/10 completed, Average Loss: 2.5851
+Epoch 6/10 completed, Average Loss: 2.3423
+Epoch 7/10 completed, Average Loss: 2.1888
+Epoch 8/10 completed, Average Loss: 1.9746
+Epoch 9/10 completed, Average Loss: 1.7127
+Epoch 10/10 completed, Average Loss: 1.4819
+Test set: Average loss: 0.0605, Accuracy: 720/3669 (19.62%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.5322
+Epoch 2/10 completed, Average Loss: 3.1712
+Epoch 3/10 completed, Average Loss: 2.9620
+Epoch 4/10 completed, Average Loss: 2.7689
+Epoch 5/10 completed, Average Loss: 2.5663
+Epoch 6/10 completed, Average Loss: 2.3824
+Epoch 7/10 completed, Average Loss: 2.1866
+Epoch 8/10 completed, Average Loss: 1.9749
+Epoch 9/10 completed, Average Loss: 1.7132
+Epoch 10/10 completed, Average Loss: 1.4450
+Test set: Average loss: 0.0477, Accuracy: 827/3669 (22.54%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.5809
+Epoch 2/10 completed, Average Loss: 3.1991
+Epoch 3/10 completed, Average Loss: 2.9732
+Epoch 4/10 completed, Average Loss: 2.8028
+Epoch 5/10 completed, Average Loss: 2.5510
+Epoch 6/10 completed, Average Loss: 2.4022
+Epoch 7/10 completed, Average Loss: 2.1825
+Epoch 8/10 completed, Average Loss: 1.9143
+Epoch 9/10 completed, Average Loss: 1.6852
