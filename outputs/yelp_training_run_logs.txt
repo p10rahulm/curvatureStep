@@ -22,19 +22,19 @@ Test set: Average loss: 0.0007, Accuracy: 22479/38000 (59.16%)
 Running yelp training with Optimizer = SimpleSGDCurvature
 params= {'lr': 0.001, 'epsilon': 0.01}
 Running Loop: 1/2
-Epoch 1/5 completed, Average Loss: 0.6359
-Epoch 2/5 completed, Average Loss: 2.6052
-Epoch 3/5 completed, Average Loss: 4.3021
-Epoch 4/5 completed, Average Loss: 4.4590
-Epoch 5/5 completed, Average Loss: 4.9069
-Test set: Average loss: 0.0030, Accuracy: 22459/38000 (59.10%)
+Epoch 1/5 completed, Average Loss: 0.5991
+Epoch 2/5 completed, Average Loss: 0.5418
+Epoch 3/5 completed, Average Loss: 0.5269
+Epoch 4/5 completed, Average Loss: 0.5147
+Epoch 5/5 completed, Average Loss: 0.5041
+Test set: Average loss: 0.0005, Accuracy: 29073/38000 (76.51%)
 Running Loop: 2/2
-Epoch 1/5 completed, Average Loss: 0.6312
-Epoch 2/5 completed, Average Loss: 0.6125
-Epoch 3/5 completed, Average Loss: 0.6174
-Epoch 4/5 completed, Average Loss: 0.6180
-Epoch 5/5 completed, Average Loss: 0.6269
-Test set: Average loss: 0.0006, Accuracy: 26404/38000 (69.48%)
+Epoch 1/5 completed, Average Loss: 0.5925
+Epoch 2/5 completed, Average Loss: 0.5282
+Epoch 3/5 completed, Average Loss: 0.5101
+Epoch 4/5 completed, Average Loss: 0.4971
+Epoch 5/5 completed, Average Loss: 0.4821
+Test set: Average loss: 0.0005, Accuracy: 29620/38000 (77.95%)
 
 Running yelp training with Optimizer = Adam
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
@@ -90,19 +90,19 @@ Test set: Average loss: 0.0005, Accuracy: 29482/38000 (77.58%)
 Running yelp training with Optimizer = HeavyBallCurvature
 params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
 Running Loop: 1/2
-Epoch 1/5 completed, Average Loss: 0.6519
-Epoch 2/5 completed, Average Loss: 0.6067
-Epoch 3/5 completed, Average Loss: 0.6028
-Epoch 4/5 completed, Average Loss: 0.6022
-Epoch 5/5 completed, Average Loss: 0.5815
-Test set: Average loss: 0.0006, Accuracy: 24701/38000 (65.00%)
+Epoch 1/5 completed, Average Loss: 0.5762
+Epoch 2/5 completed, Average Loss: 0.5228
+Epoch 3/5 completed, Average Loss: 0.4993
+Epoch 4/5 completed, Average Loss: 0.4815
+Epoch 5/5 completed, Average Loss: 0.4618
+Test set: Average loss: 0.0004, Accuracy: 31245/38000 (82.22%)
 Running Loop: 2/2
-Epoch 1/5 completed, Average Loss: 0.6291
-Epoch 2/5 completed, Average Loss: 0.6502
-Epoch 3/5 completed, Average Loss: 2.8950
-Epoch 4/5 completed, Average Loss: 3.3351
-Epoch 5/5 completed, Average Loss: 2.8752
-Test set: Average loss: 0.0015, Accuracy: 22395/38000 (58.93%)
+Epoch 1/5 completed, Average Loss: 0.5675
+Epoch 2/5 completed, Average Loss: 0.5106
+Epoch 3/5 completed, Average Loss: 0.4833
+Epoch 4/5 completed, Average Loss: 0.4660
+Epoch 5/5 completed, Average Loss: 0.4488
+Test set: Average loss: 0.0005, Accuracy: 28746/38000 (75.65%)
 
 Running yelp training with Optimizer = NAG
 params= {'lr': 0.001, 'momentum': 0.9}

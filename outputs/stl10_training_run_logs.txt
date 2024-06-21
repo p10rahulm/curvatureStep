@@ -286,3 +286,137 @@ Epoch 6/10 completed, Average Loss: 1.4458
 Epoch 7/10 completed, Average Loss: 1.3286
 Epoch 8/10 completed, Average Loss: 1.2604
 Epoch 9/10 completed, Average Loss: 1.2030
+Epoch 10/10 completed, Average Loss: 1.0899
+Test set: Average loss: 0.0294, Accuracy: 3603/8000 (45.04%)
+
+Running STL10 training with Optimizer = Adagrad
+params= {'lr': 0.01, 'eps': 1e-10}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/3
+Epoch 1/10 completed, Average Loss: 2.1186
+Epoch 2/10 completed, Average Loss: 1.7418
+Epoch 3/10 completed, Average Loss: 1.6228
+Epoch 4/10 completed, Average Loss: 1.5253
+Epoch 5/10 completed, Average Loss: 1.4573
+Epoch 6/10 completed, Average Loss: 1.3705
+Epoch 7/10 completed, Average Loss: 1.2938
+Epoch 8/10 completed, Average Loss: 1.2055
+Epoch 9/10 completed, Average Loss: 1.1139
+Epoch 10/10 completed, Average Loss: 1.0549
+Test set: Average loss: 0.0268, Accuracy: 3389/8000 (42.36%)
+Running Loop: 2/3
+Epoch 1/10 completed, Average Loss: 2.1236
+Epoch 2/10 completed, Average Loss: 1.7004
+Epoch 3/10 completed, Average Loss: 1.6021
+Epoch 4/10 completed, Average Loss: 1.5341
+Epoch 5/10 completed, Average Loss: 1.4462
+Epoch 6/10 completed, Average Loss: 1.3893
+Epoch 7/10 completed, Average Loss: 1.3099
+Epoch 8/10 completed, Average Loss: 1.2212
+Epoch 9/10 completed, Average Loss: 1.1652
+Epoch 10/10 completed, Average Loss: 1.0919
+Test set: Average loss: 0.0353, Accuracy: 2973/8000 (37.16%)
+Running Loop: 3/3
+Epoch 1/10 completed, Average Loss: 2.1100
+Epoch 2/10 completed, Average Loss: 1.6769
+Epoch 3/10 completed, Average Loss: 1.5793
+Epoch 4/10 completed, Average Loss: 1.5446
+Epoch 5/10 completed, Average Loss: 1.3982
+Epoch 6/10 completed, Average Loss: 1.3292
+Epoch 7/10 completed, Average Loss: 1.2285
+Epoch 8/10 completed, Average Loss: 1.1573
+Epoch 9/10 completed, Average Loss: 1.1159
+Epoch 10/10 completed, Average Loss: 1.0255
+Test set: Average loss: 0.0282, Accuracy: 3675/8000 (45.94%)
+
+Running STL10 training with Optimizer = Adadelta
+params= {'lr': 1.0, 'rho': 0.95, 'eps': 1e-06}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/3
+Epoch 1/10 completed, Average Loss: 2.1260
+Epoch 2/10 completed, Average Loss: 1.7228
+Epoch 3/10 completed, Average Loss: 1.5842
+Epoch 4/10 completed, Average Loss: 1.4320
+Epoch 5/10 completed, Average Loss: 1.3438
+Epoch 6/10 completed, Average Loss: 1.2377
+Epoch 7/10 completed, Average Loss: 1.1721
+Epoch 8/10 completed, Average Loss: 1.0638
+Epoch 9/10 completed, Average Loss: 0.9477
+Epoch 10/10 completed, Average Loss: 0.8793
+Test set: Average loss: 0.0559, Accuracy: 2397/8000 (29.96%)
+Running Loop: 2/3
+Epoch 1/10 completed, Average Loss: 2.1039
+Epoch 2/10 completed, Average Loss: 1.7010
+Epoch 3/10 completed, Average Loss: 1.5499
+Epoch 4/10 completed, Average Loss: 1.4647
+Epoch 5/10 completed, Average Loss: 1.3561
+Epoch 6/10 completed, Average Loss: 1.2437
+Epoch 7/10 completed, Average Loss: 1.1475
+Epoch 8/10 completed, Average Loss: 1.0367
+Epoch 9/10 completed, Average Loss: 0.9600
+Epoch 10/10 completed, Average Loss: 0.8366
+Test set: Average loss: 0.1150, Accuracy: 2070/8000 (25.88%)
+Running Loop: 3/3
+Epoch 1/10 completed, Average Loss: 2.0927
+Epoch 2/10 completed, Average Loss: 1.7118
+Epoch 3/10 completed, Average Loss: 1.5549
+Epoch 4/10 completed, Average Loss: 1.5317
+Epoch 5/10 completed, Average Loss: 1.3262
+Epoch 6/10 completed, Average Loss: 1.2465
+Epoch 7/10 completed, Average Loss: 1.1436
+Epoch 8/10 completed, Average Loss: 1.0460
+Epoch 9/10 completed, Average Loss: 0.9800
+Epoch 10/10 completed, Average Loss: 0.8656
+Test set: Average loss: 0.0548, Accuracy: 3015/8000 (37.69%)
+
+Running STL10 training with Optimizer = RMSProp
+params= {'lr': 0.01, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/3
+Epoch 1/10 completed, Average Loss: 2.6999
+Epoch 2/10 completed, Average Loss: 1.8454
+Epoch 3/10 completed, Average Loss: 1.7041
+Epoch 4/10 completed, Average Loss: 1.6077
+Epoch 5/10 completed, Average Loss: 1.5400
+Epoch 6/10 completed, Average Loss: 1.4848
+Epoch 7/10 completed, Average Loss: 1.3991
+Epoch 8/10 completed, Average Loss: 1.3169
+Epoch 9/10 completed, Average Loss: 1.1985
+Epoch 10/10 completed, Average Loss: 1.1413
+Test set: Average loss: 0.0245, Accuracy: 3671/8000 (45.89%)
+Running Loop: 2/3
+Epoch 1/10 completed, Average Loss: 2.5702
+Epoch 2/10 completed, Average Loss: 1.8629
+Epoch 3/10 completed, Average Loss: 1.7100
+Epoch 4/10 completed, Average Loss: 1.6349
+Epoch 5/10 completed, Average Loss: 1.5140
+Epoch 6/10 completed, Average Loss: 1.4431
+Epoch 7/10 completed, Average Loss: 1.3527
+Epoch 8/10 completed, Average Loss: 1.2404
+Epoch 9/10 completed, Average Loss: 1.1731
+Epoch 10/10 completed, Average Loss: 1.0796
+Test set: Average loss: 0.0245, Accuracy: 3650/8000 (45.62%)
+Running Loop: 3/3
+Epoch 1/10 completed, Average Loss: 2.5481
+Epoch 2/10 completed, Average Loss: 1.8366
+Epoch 3/10 completed, Average Loss: 1.7268
+Epoch 4/10 completed, Average Loss: 1.6428
+Epoch 5/10 completed, Average Loss: 1.5583
+Epoch 6/10 completed, Average Loss: 1.4990
+Epoch 7/10 completed, Average Loss: 1.4237
+Epoch 8/10 completed, Average Loss: 1.3643
+Epoch 9/10 completed, Average Loss: 1.3026
+Epoch 10/10 completed, Average Loss: 1.2018
+Test set: Average loss: 0.0307, Accuracy: 3404/8000 (42.55%)
+
+Running STL10 training with Optimizer = RMSPropMomentum
+params= {'lr': 0.01, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.05}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/3
+Epoch 1/10 completed, Average Loss: 2.7045
+Epoch 2/10 completed, Average Loss: 1.8723
+Epoch 3/10 completed, Average Loss: 1.7261

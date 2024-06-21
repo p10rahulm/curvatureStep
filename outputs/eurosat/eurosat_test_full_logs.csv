@@ -40,8 +40,10 @@
 38|RMSPropMomentumCurvature|1|0.0217|55.07
 39|RMSPropMomentumCurvature|2|0.0135|67.85
 40|AdamWCurvature|1|0.0399|47.26
-41|NAdamCurvature|1|0.0122|72.19
-42|NAdamCurvature|2|0.0203|60.33
-43|NAdamWCurvature|1|0.0115|74.11
-44|NAdamWCurvature|2|0.0123|70.96
-45|AMSGradCurvature|1|0.0457|46.67
+41|AdamWCurvature|2|0.0146|68.0
+42|NAdamCurvature|1|0.0122|72.19
+43|NAdamCurvature|2|0.0203|60.33
+44|NAdamWCurvature|1|0.0115|74.11
+45|NAdamWCurvature|2|0.0123|70.96
+46|AMSGradCurvature|1|0.0457|46.67
+47|AMSGradCurvature|2|0.0148|65.3

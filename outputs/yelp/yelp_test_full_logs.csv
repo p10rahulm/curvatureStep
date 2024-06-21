@@ -1,16 +1,16 @@
 |Optimizer Name|Running loop number|Average Test set Loss|Average Test set accuracy
 0|SimpleSGD|1|0.0007|59.67
 1|SimpleSGD|2|0.0007|59.16
-2|SimpleSGDCurvature|1|0.003|59.1
-3|SimpleSGDCurvature|2|0.0006|69.48
+2|SimpleSGDCurvature|1|0.0005|76.51
+3|SimpleSGDCurvature|2|0.0005|77.95
 4|Adam|1|0.0007|57.9
 5|Adam|2|0.0006|60.69
 6|AdamCurvature|1|0.0006|61.69
 7|AdamCurvature|2|0.0004|85.81
 8|HeavyBall|1|0.0005|76.62
 9|HeavyBall|2|0.0005|77.58
-10|HeavyBallCurvature|1|0.0006|65.0
-11|HeavyBallCurvature|2|0.0015|58.93
+10|HeavyBallCurvature|1|0.0004|82.22
+11|HeavyBallCurvature|2|0.0005|75.65
 12|NAG|1|0.0005|77.21
 13|NAG|2|0.0005|78.67
 14|NAGCurvature|1|0.0007|59.6

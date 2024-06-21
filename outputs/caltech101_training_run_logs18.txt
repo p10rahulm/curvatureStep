@@ -1,0 +1,18 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running Caltech101 training with Optimizer = RMSPropMomentum
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-16, 'weight_decay': 0, 'momentum': 0.1}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.7890
+Epoch 2/10 completed, Average Loss: 2.9188
+Epoch 3/10 completed, Average Loss: 2.4128
+Epoch 4/10 completed, Average Loss: 1.9007
+Epoch 5/10 completed, Average Loss: 1.4873
+Epoch 6/10 completed, Average Loss: 1.1514
+Epoch 7/10 completed, Average Loss: 0.8627
+Epoch 8/10 completed, Average Loss: 0.6355
+Epoch 9/10 completed, Average Loss: 0.4503

@@ -31,7 +31,7 @@ print(f"# Running {total_epochs} epochs of training - {total_runs} runs")
 print("#", "-" * 100)
 
 for optimizer_class, default_params in optimizers:
-    print(f"\nRunning reuters training with Optimizer = {str(optimizer_class.__name__)}")
+    print(f"\nRunning yelp training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
 
     if str(optimizer_class.__name__)=="SimpleSGDCurvature" or \

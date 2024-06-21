@@ -1,0 +1,20 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 5 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running dbpedia training with Optimizer = NAGCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 2.2786
+Epoch 2/5 completed, Average Loss: 2.2855
+Epoch 3/5 completed, Average Loss: 2.1251
+Epoch 4/5 completed, Average Loss: 2.0645
+Epoch 5/5 completed, Average Loss: 2.0380
+Test set: Average loss: 0.0031, Accuracy: 5000/70000 (7.14%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 2.3144
+Epoch 2/5 completed, Average Loss: 2.3343
+Epoch 3/5 completed, Average Loss: 2.1610
+Epoch 4/5 completed, Average Loss: 2.0346
+Epoch 5/5 completed, Average Loss: 2.0089
+Test set: Average loss: 0.0030, Accuracy: 5000/70000 (7.14%)

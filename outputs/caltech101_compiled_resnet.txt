@@ -1,0 +1,746 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+
+Running Caltech101-resnet training with Optimizer = SimpleSGD
+params= {'lr': 0.001}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.3738
+Epoch 2/10 completed, Average Loss: 4.1425
+Epoch 3/10 completed, Average Loss: 4.0457
+Epoch 4/10 completed, Average Loss: 3.9662
+Epoch 5/10 completed, Average Loss: 3.9022
+Epoch 6/10 completed, Average Loss: 3.8434
+Epoch 7/10 completed, Average Loss: 3.7865
+Epoch 8/10 completed, Average Loss: 3.7430
+Epoch 9/10 completed, Average Loss: 3.7036
+Epoch 10/10 completed, Average Loss: 3.6728
+Test set: Average loss: 0.0570, Accuracy: 2039/8677 (23.50%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 4.4477
+Epoch 2/10 completed, Average Loss: 4.1519
+Epoch 3/10 completed, Average Loss: 4.0341
+Epoch 4/10 completed, Average Loss: 3.9618
+Epoch 5/10 completed, Average Loss: 3.9030
+Epoch 6/10 completed, Average Loss: 3.8469
+Epoch 7/10 completed, Average Loss: 3.7963
+Epoch 8/10 completed, Average Loss: 3.7465
+Epoch 9/10 completed, Average Loss: 3.7128
+Epoch 10/10 completed, Average Loss: 3.6754
+Test set: Average loss: 0.0573, Accuracy: 1998/8677 (23.03%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 4.4153
+Epoch 2/10 completed, Average Loss: 4.1422
+Epoch 3/10 completed, Average Loss: 4.0407
+Epoch 4/10 completed, Average Loss: 3.9638
+Epoch 5/10 completed, Average Loss: 3.8977
+Epoch 6/10 completed, Average Loss: 3.8400
+Epoch 7/10 completed, Average Loss: 3.7885
+Epoch 8/10 completed, Average Loss: 3.7487
+Epoch 9/10 completed, Average Loss: 3.7063
+Epoch 10/10 completed, Average Loss: 3.6743
+Test set: Average loss: 0.0571, Accuracy: 2067/8677 (23.82%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 4.4486
+Epoch 2/10 completed, Average Loss: 4.1765
+Epoch 3/10 completed, Average Loss: 4.0605
+Epoch 4/10 completed, Average Loss: 3.9792
+Epoch 5/10 completed, Average Loss: 3.9131
+Epoch 6/10 completed, Average Loss: 3.8503
+Epoch 7/10 completed, Average Loss: 3.7944
+Epoch 8/10 completed, Average Loss: 3.7466
+Epoch 9/10 completed, Average Loss: 3.7058
+Epoch 10/10 completed, Average Loss: 3.6708
+Test set: Average loss: 0.0570, Accuracy: 2017/8677 (23.25%)
+
+Running Caltech101-resnet training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.7390
+Epoch 2/10 completed, Average Loss: 2.7229
+Epoch 3/10 completed, Average Loss: 2.2780
+Epoch 4/10 completed, Average Loss: 1.9020
+Epoch 5/10 completed, Average Loss: 1.6306
+Epoch 6/10 completed, Average Loss: 1.3422
+Epoch 7/10 completed, Average Loss: 1.0691
+Epoch 8/10 completed, Average Loss: 0.8382
+Epoch 9/10 completed, Average Loss: 0.6074
+Epoch 10/10 completed, Average Loss: 0.3979
+Test set: Average loss: 0.0152, Accuracy: 6215/8677 (71.63%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.7512
+Epoch 2/10 completed, Average Loss: 2.7804
+Epoch 3/10 completed, Average Loss: 2.3017
+Epoch 4/10 completed, Average Loss: 1.9561
+Epoch 5/10 completed, Average Loss: 1.6268
+Epoch 6/10 completed, Average Loss: 1.3660
+Epoch 7/10 completed, Average Loss: 1.0917
+Epoch 8/10 completed, Average Loss: 0.8297
+Epoch 9/10 completed, Average Loss: 0.6167
+Epoch 10/10 completed, Average Loss: 0.4096
+Test set: Average loss: 0.0220, Accuracy: 5471/8677 (63.05%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.6566
+Epoch 2/10 completed, Average Loss: 2.7561
+Epoch 3/10 completed, Average Loss: 2.2838
+Epoch 4/10 completed, Average Loss: 1.9275
+Epoch 5/10 completed, Average Loss: 1.5810
+Epoch 6/10 completed, Average Loss: 1.2827
+Epoch 7/10 completed, Average Loss: 1.0008
+Epoch 8/10 completed, Average Loss: 0.7568
+Epoch 9/10 completed, Average Loss: 0.5110
+Epoch 10/10 completed, Average Loss: 0.3176
+Test set: Average loss: 0.0073, Accuracy: 7546/8677 (86.97%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.6795
+Epoch 2/10 completed, Average Loss: 2.7701
+Epoch 3/10 completed, Average Loss: 2.3205
+Epoch 4/10 completed, Average Loss: 1.9660
+Epoch 5/10 completed, Average Loss: 1.6437
+Epoch 6/10 completed, Average Loss: 1.3471
+Epoch 7/10 completed, Average Loss: 1.0912
+Epoch 8/10 completed, Average Loss: 0.8510
+Epoch 9/10 completed, Average Loss: 0.6050
+Epoch 10/10 completed, Average Loss: 0.3757
+Test set: Average loss: 0.0112, Accuracy: 6948/8677 (80.07%)
+
+Running Caltech101-resnet training with Optimizer = Adam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.1572
+Epoch 2/10 completed, Average Loss: 2.2532
+Epoch 3/10 completed, Average Loss: 1.7350
+Epoch 4/10 completed, Average Loss: 1.3280
+Epoch 5/10 completed, Average Loss: 1.0056
+Epoch 6/10 completed, Average Loss: 0.7389
+Epoch 7/10 completed, Average Loss: 0.5256
+Epoch 8/10 completed, Average Loss: 0.3412
+Epoch 9/10 completed, Average Loss: 0.1991
+Epoch 10/10 completed, Average Loss: 0.0884
+Test set: Average loss: 0.0012, Accuracy: 8544/8677 (98.47%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.2964
+Epoch 2/10 completed, Average Loss: 2.4077
+Epoch 3/10 completed, Average Loss: 1.8600
+Epoch 4/10 completed, Average Loss: 1.4366
+Epoch 5/10 completed, Average Loss: 1.1167
+Epoch 6/10 completed, Average Loss: 0.8382
+Epoch 7/10 completed, Average Loss: 0.6186
+Epoch 8/10 completed, Average Loss: 0.4278
+Epoch 9/10 completed, Average Loss: 0.2698
+Epoch 10/10 completed, Average Loss: 0.1363
+Test set: Average loss: 0.0020, Accuracy: 8421/8677 (97.05%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.1788
+Epoch 2/10 completed, Average Loss: 2.2498
+Epoch 3/10 completed, Average Loss: 1.7089
+Epoch 4/10 completed, Average Loss: 1.3624
+Epoch 5/10 completed, Average Loss: 1.0072
+Epoch 6/10 completed, Average Loss: 0.7714
+Epoch 7/10 completed, Average Loss: 0.5570
+Epoch 8/10 completed, Average Loss: 0.3690
+Epoch 9/10 completed, Average Loss: 0.2146
+Epoch 10/10 completed, Average Loss: 0.1073
+Test set: Average loss: 0.0016, Accuracy: 8490/8677 (97.84%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.2337
+Epoch 2/10 completed, Average Loss: 2.3348
+Epoch 3/10 completed, Average Loss: 1.7799
+Epoch 4/10 completed, Average Loss: 1.3506
+Epoch 5/10 completed, Average Loss: 1.0456
+Epoch 6/10 completed, Average Loss: 0.7836
+Epoch 7/10 completed, Average Loss: 0.5684
+Epoch 8/10 completed, Average Loss: 0.3902
+Epoch 9/10 completed, Average Loss: 0.2330
+Epoch 10/10 completed, Average Loss: 0.1100
+Test set: Average loss: 0.0012, Accuracy: 8539/8677 (98.41%)
+
+Running Caltech101-resnet training with Optimizer = HeavyBall
+params= {'lr': 0.001, 'momentum': 0.9}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.0480
+Epoch 2/10 completed, Average Loss: 3.6341
+Epoch 3/10 completed, Average Loss: 3.4100
+Epoch 4/10 completed, Average Loss: 3.1835
+Epoch 5/10 completed, Average Loss: 3.0004
+Epoch 6/10 completed, Average Loss: 2.8503
+Epoch 7/10 completed, Average Loss: 2.7166
+Epoch 8/10 completed, Average Loss: 2.6039
+Epoch 9/10 completed, Average Loss: 2.4864
+Epoch 10/10 completed, Average Loss: 2.3989
+Test set: Average loss: 0.0392, Accuracy: 3819/8677 (44.01%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 4.0697
+Epoch 2/10 completed, Average Loss: 3.6416
+Epoch 3/10 completed, Average Loss: 3.3963
+Epoch 4/10 completed, Average Loss: 3.1747
+Epoch 5/10 completed, Average Loss: 2.9940
+Epoch 6/10 completed, Average Loss: 2.8339
+Epoch 7/10 completed, Average Loss: 2.6943
+Epoch 8/10 completed, Average Loss: 2.5563
+Epoch 9/10 completed, Average Loss: 2.4617
+Epoch 10/10 completed, Average Loss: 2.3719
+Test set: Average loss: 0.0366, Accuracy: 3930/8677 (45.29%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 4.0531
+Epoch 2/10 completed, Average Loss: 3.6259
+Epoch 3/10 completed, Average Loss: 3.3902
+Epoch 4/10 completed, Average Loss: 3.1791
+Epoch 5/10 completed, Average Loss: 3.0144
+Epoch 6/10 completed, Average Loss: 2.8671
+Epoch 7/10 completed, Average Loss: 2.7419
+Epoch 8/10 completed, Average Loss: 2.6238
+Epoch 9/10 completed, Average Loss: 2.5137
+Epoch 10/10 completed, Average Loss: 2.4238
+Test set: Average loss: 0.0375, Accuracy: 3904/8677 (44.99%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 4.0552
+Epoch 2/10 completed, Average Loss: 3.6201
+Epoch 3/10 completed, Average Loss: 3.3972
+Epoch 4/10 completed, Average Loss: 3.1761
+Epoch 5/10 completed, Average Loss: 2.9884
+Epoch 6/10 completed, Average Loss: 2.8247
+Epoch 7/10 completed, Average Loss: 2.6810
+Epoch 8/10 completed, Average Loss: 2.5715
+Epoch 9/10 completed, Average Loss: 2.4671
+Epoch 10/10 completed, Average Loss: 2.3820
+Test set: Average loss: 0.0366, Accuracy: 4037/8677 (46.53%)
+
+Running Caltech101-resnet training with Optimizer = HeavyBallCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.8686
+Epoch 2/10 completed, Average Loss: 2.8170
+Epoch 3/10 completed, Average Loss: 2.2991
+Epoch 4/10 completed, Average Loss: 1.8551
+Epoch 5/10 completed, Average Loss: 1.4828
+Epoch 6/10 completed, Average Loss: 1.1308
+Epoch 7/10 completed, Average Loss: 0.8389
+Epoch 8/10 completed, Average Loss: 0.5715
+Epoch 9/10 completed, Average Loss: 0.3451
+Epoch 10/10 completed, Average Loss: 0.1344
+Test set: Average loss: 0.0020, Accuracy: 8398/8677 (96.78%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.5888
+Epoch 2/10 completed, Average Loss: 2.5484
+Epoch 3/10 completed, Average Loss: 2.0044
+Epoch 4/10 completed, Average Loss: 1.5856
+Epoch 5/10 completed, Average Loss: 1.2083
+Epoch 6/10 completed, Average Loss: 0.8959
+Epoch 7/10 completed, Average Loss: 0.6090
+Epoch 8/10 completed, Average Loss: 0.3467
+Epoch 9/10 completed, Average Loss: 0.1528
+Epoch 10/10 completed, Average Loss: 0.0431
+Test set: Average loss: 0.0002, Accuracy: 8673/8677 (99.95%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.5473
+Epoch 2/10 completed, Average Loss: 2.5855
+Epoch 3/10 completed, Average Loss: 2.0513
+Epoch 4/10 completed, Average Loss: 1.5965
+Epoch 5/10 completed, Average Loss: 1.1933
+Epoch 6/10 completed, Average Loss: 0.9076
+Epoch 7/10 completed, Average Loss: 0.5973
+Epoch 8/10 completed, Average Loss: 0.3467
+Epoch 9/10 completed, Average Loss: 0.1501
+Epoch 10/10 completed, Average Loss: 0.0465
+Test set: Average loss: 0.0003, Accuracy: 8670/8677 (99.92%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.6166
+Epoch 2/10 completed, Average Loss: 2.5438
+Epoch 3/10 completed, Average Loss: 1.9983
+Epoch 4/10 completed, Average Loss: 1.5543
+Epoch 5/10 completed, Average Loss: 1.1554
+Epoch 6/10 completed, Average Loss: 0.8584
+Epoch 7/10 completed, Average Loss: 0.5711
+Epoch 8/10 completed, Average Loss: 0.3139
+Epoch 9/10 completed, Average Loss: 0.1081
+Epoch 10/10 completed, Average Loss: 0.0309
+Test set: Average loss: 0.0002, Accuracy: 8673/8677 (99.95%)
+
+Running Caltech101-resnet training with Optimizer = NAG
+params= {'lr': 0.001, 'momentum': 0.9}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.0470
+Epoch 2/10 completed, Average Loss: 3.6285
+Epoch 3/10 completed, Average Loss: 3.4108
+Epoch 4/10 completed, Average Loss: 3.2093
+Epoch 5/10 completed, Average Loss: 3.0360
+Epoch 6/10 completed, Average Loss: 2.8866
+Epoch 7/10 completed, Average Loss: 2.7559
+Epoch 8/10 completed, Average Loss: 2.6345
+Epoch 9/10 completed, Average Loss: 2.5059
+Epoch 10/10 completed, Average Loss: 2.4098
+Test set: Average loss: 0.0373, Accuracy: 4012/8677 (46.24%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 4.0488
+Epoch 2/10 completed, Average Loss: 3.6247
+Epoch 3/10 completed, Average Loss: 3.4122
+Epoch 4/10 completed, Average Loss: 3.2004
+Epoch 5/10 completed, Average Loss: 3.0228
+Epoch 6/10 completed, Average Loss: 2.8672
+Epoch 7/10 completed, Average Loss: 2.7347
+Epoch 8/10 completed, Average Loss: 2.5920
+Epoch 9/10 completed, Average Loss: 2.4885
+Epoch 10/10 completed, Average Loss: 2.3888
+Test set: Average loss: 0.0375, Accuracy: 3927/8677 (45.26%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 4.0436
+Epoch 2/10 completed, Average Loss: 3.6252
+Epoch 3/10 completed, Average Loss: 3.4140
+Epoch 4/10 completed, Average Loss: 3.1930
+Epoch 5/10 completed, Average Loss: 3.0148
+Epoch 6/10 completed, Average Loss: 2.8563
+Epoch 7/10 completed, Average Loss: 2.7276
+Epoch 8/10 completed, Average Loss: 2.6132
+Epoch 9/10 completed, Average Loss: 2.5092
+Epoch 10/10 completed, Average Loss: 2.4254
+Test set: Average loss: 0.0366, Accuracy: 3958/8677 (45.61%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 4.0605
+Epoch 2/10 completed, Average Loss: 3.6264
+Epoch 3/10 completed, Average Loss: 3.3993
+Epoch 4/10 completed, Average Loss: 3.1713
+Epoch 5/10 completed, Average Loss: 2.9869
+Epoch 6/10 completed, Average Loss: 2.8290
+Epoch 7/10 completed, Average Loss: 2.6893
+Epoch 8/10 completed, Average Loss: 2.5868
+Epoch 9/10 completed, Average Loss: 2.4818
+Epoch 10/10 completed, Average Loss: 2.3951
+Test set: Average loss: 0.0371, Accuracy: 3912/8677 (45.08%)
+
+Running Caltech101-resnet training with Optimizer = NAGCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.8798
+Epoch 2/10 completed, Average Loss: 2.8498
+Epoch 3/10 completed, Average Loss: 2.3152
+Epoch 4/10 completed, Average Loss: 1.8893
+Epoch 5/10 completed, Average Loss: 1.5617
+Epoch 6/10 completed, Average Loss: 1.2423
+Epoch 7/10 completed, Average Loss: 0.9612
+Epoch 8/10 completed, Average Loss: 0.7037
+Epoch 9/10 completed, Average Loss: 0.4737
+Epoch 10/10 completed, Average Loss: 0.2392
+Test set: Average loss: 0.0026, Accuracy: 8343/8677 (96.15%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.6049
+Epoch 2/10 completed, Average Loss: 2.5881
+Epoch 3/10 completed, Average Loss: 2.0224
+Epoch 4/10 completed, Average Loss: 1.5841
+Epoch 5/10 completed, Average Loss: 1.1931
+Epoch 6/10 completed, Average Loss: 0.8806
+Epoch 7/10 completed, Average Loss: 0.5792
+Epoch 8/10 completed, Average Loss: 0.3350
+Epoch 9/10 completed, Average Loss: 0.1372
+Epoch 10/10 completed, Average Loss: 0.0428
+Test set: Average loss: 0.0003, Accuracy: 8672/8677 (99.94%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.6045
+Epoch 2/10 completed, Average Loss: 2.5918
+Epoch 3/10 completed, Average Loss: 2.0128
+Epoch 4/10 completed, Average Loss: 1.5534
+Epoch 5/10 completed, Average Loss: 1.1451
+Epoch 6/10 completed, Average Loss: 0.8540
+Epoch 7/10 completed, Average Loss: 0.5522
+Epoch 8/10 completed, Average Loss: 0.2956
+Epoch 9/10 completed, Average Loss: 0.1124
+Epoch 10/10 completed, Average Loss: 0.0331
+Test set: Average loss: 0.0003, Accuracy: 8670/8677 (99.92%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.5845
+Epoch 2/10 completed, Average Loss: 2.5525
+Epoch 3/10 completed, Average Loss: 2.0220
+Epoch 4/10 completed, Average Loss: 1.5712
+Epoch 5/10 completed, Average Loss: 1.1863
+Epoch 6/10 completed, Average Loss: 0.8784
+Epoch 7/10 completed, Average Loss: 0.6005
+Epoch 8/10 completed, Average Loss: 0.3310
+Epoch 9/10 completed, Average Loss: 0.1284
+Epoch 10/10 completed, Average Loss: 0.0389
+Test set: Average loss: 0.0002, Accuracy: 8673/8677 (99.95%)
+
+Running Caltech101-resnet training with Optimizer = Adagrad
+params= {'lr': 0.01, 'eps': 1e-10}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.7485
+Epoch 2/10 completed, Average Loss: 2.8786
+Epoch 3/10 completed, Average Loss: 2.4051
+Epoch 4/10 completed, Average Loss: 1.9663
+Epoch 5/10 completed, Average Loss: 1.6168
+Epoch 6/10 completed, Average Loss: 1.3110
+Epoch 7/10 completed, Average Loss: 1.0448
+Epoch 8/10 completed, Average Loss: 0.8342
+Epoch 9/10 completed, Average Loss: 0.6445
+Epoch 10/10 completed, Average Loss: 0.4765
+Test set: Average loss: 0.0107, Accuracy: 7058/8677 (81.34%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.7562
+Epoch 2/10 completed, Average Loss: 2.9186
+Epoch 3/10 completed, Average Loss: 2.3866
+Epoch 4/10 completed, Average Loss: 1.9737
+Epoch 5/10 completed, Average Loss: 1.6299
+Epoch 6/10 completed, Average Loss: 1.3532
+Epoch 7/10 completed, Average Loss: 1.1094
+Epoch 8/10 completed, Average Loss: 0.8878
+Epoch 9/10 completed, Average Loss: 0.7041
+Epoch 10/10 completed, Average Loss: 0.5443
+Test set: Average loss: 0.0128, Accuracy: 6678/8677 (76.96%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.7176
+Epoch 2/10 completed, Average Loss: 2.8674
+Epoch 3/10 completed, Average Loss: 2.3725
+Epoch 4/10 completed, Average Loss: 1.9733
+Epoch 5/10 completed, Average Loss: 1.6312
+Epoch 6/10 completed, Average Loss: 1.3625
+Epoch 7/10 completed, Average Loss: 1.1162
+Epoch 8/10 completed, Average Loss: 0.9142
+Epoch 9/10 completed, Average Loss: 0.7283
+Epoch 10/10 completed, Average Loss: 0.5611
+Test set: Average loss: 0.0073, Accuracy: 7739/8677 (89.19%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.7600
+Epoch 2/10 completed, Average Loss: 2.9792
+Epoch 3/10 completed, Average Loss: 2.4688
+Epoch 4/10 completed, Average Loss: 2.0832
+Epoch 5/10 completed, Average Loss: 1.7601
+Epoch 6/10 completed, Average Loss: 1.4974
+Epoch 7/10 completed, Average Loss: 1.2658
+Epoch 8/10 completed, Average Loss: 1.0619
+Epoch 9/10 completed, Average Loss: 0.8766
+Epoch 10/10 completed, Average Loss: 0.7206
+Test set: Average loss: 0.0154, Accuracy: 6330/8677 (72.95%)
+
+Running Caltech101-resnet training with Optimizer = RMSProp
+params= {'lr': 0.01, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.2670
+Epoch 2/10 completed, Average Loss: 3.2957
+Epoch 3/10 completed, Average Loss: 2.7254
+Epoch 4/10 completed, Average Loss: 2.1998
+Epoch 5/10 completed, Average Loss: 1.7403
+Epoch 6/10 completed, Average Loss: 1.3498
+Epoch 7/10 completed, Average Loss: 1.0381
+Epoch 8/10 completed, Average Loss: 0.7827
+Epoch 9/10 completed, Average Loss: 0.5687
+Epoch 10/10 completed, Average Loss: 0.3984
+Test set: Average loss: 0.0070, Accuracy: 7522/8677 (86.69%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 4.3115
+Epoch 2/10 completed, Average Loss: 3.2837
+Epoch 3/10 completed, Average Loss: 2.6990
+Epoch 4/10 completed, Average Loss: 2.2066
+Epoch 5/10 completed, Average Loss: 1.7502
+Epoch 6/10 completed, Average Loss: 1.3838
+Epoch 7/10 completed, Average Loss: 1.0649
+Epoch 8/10 completed, Average Loss: 0.8100
+Epoch 9/10 completed, Average Loss: 0.6046
+Epoch 10/10 completed, Average Loss: 0.4277
+Test set: Average loss: 0.0098, Accuracy: 7128/8677 (82.15%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 4.2587
+Epoch 2/10 completed, Average Loss: 3.2745
+Epoch 3/10 completed, Average Loss: 2.7390
+Epoch 4/10 completed, Average Loss: 2.2735
+Epoch 5/10 completed, Average Loss: 1.8669
+Epoch 6/10 completed, Average Loss: 1.4812
+Epoch 7/10 completed, Average Loss: 1.1399
+Epoch 8/10 completed, Average Loss: 0.8810
+Epoch 9/10 completed, Average Loss: 0.6417
+Epoch 10/10 completed, Average Loss: 0.4612
+Test set: Average loss: 0.0093, Accuracy: 7096/8677 (81.78%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 4.3580
+Epoch 2/10 completed, Average Loss: 3.3536
+Epoch 3/10 completed, Average Loss: 2.7425
+Epoch 4/10 completed, Average Loss: 2.2228
+Epoch 5/10 completed, Average Loss: 1.7541
+Epoch 6/10 completed, Average Loss: 1.3680
+Epoch 7/10 completed, Average Loss: 1.0765
+Epoch 8/10 completed, Average Loss: 0.8090
+Epoch 9/10 completed, Average Loss: 0.5857
+Epoch 10/10 completed, Average Loss: 0.4025
+Test set: Average loss: 0.0067, Accuracy: 7608/8677 (87.68%)
+
+Running Caltech101-resnet training with Optimizer = RMSPropMomentum
+params= {'lr': 0.01, 'alpha': 0.9, 'eps': 1e-08, 'weight_decay': 0, 'momentum': 0.05}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 4.3059
+Epoch 2/10 completed, Average Loss: 3.5561
+Epoch 3/10 completed, Average Loss: 2.8776
+Epoch 4/10 completed, Average Loss: 2.1978
+Epoch 5/10 completed, Average Loss: 1.7306
+Epoch 6/10 completed, Average Loss: 1.3419
+Epoch 7/10 completed, Average Loss: 1.0190
+Epoch 8/10 completed, Average Loss: 0.7652
+Epoch 9/10 completed, Average Loss: 0.5390
+Epoch 10/10 completed, Average Loss: 0.3786
+Test set: Average loss: 0.0069, Accuracy: 7555/8677 (87.07%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 4.3125
+Epoch 2/10 completed, Average Loss: 3.3955
+Epoch 3/10 completed, Average Loss: 2.7803
+Epoch 4/10 completed, Average Loss: 2.2259
+Epoch 5/10 completed, Average Loss: 1.7682
+Epoch 6/10 completed, Average Loss: 1.3888
+Epoch 7/10 completed, Average Loss: 1.0778
+Epoch 8/10 completed, Average Loss: 0.7996
+Epoch 9/10 completed, Average Loss: 0.5806
+Epoch 10/10 completed, Average Loss: 0.4143
+Test set: Average loss: 0.0057, Accuracy: 7720/8677 (88.97%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 4.2589
+Epoch 2/10 completed, Average Loss: 3.3101
+Epoch 3/10 completed, Average Loss: 2.6522
+Epoch 4/10 completed, Average Loss: 2.1669
+Epoch 5/10 completed, Average Loss: 1.7819
+Epoch 6/10 completed, Average Loss: 1.4178
+Epoch 7/10 completed, Average Loss: 1.1141
+Epoch 8/10 completed, Average Loss: 0.8759
+Epoch 9/10 completed, Average Loss: 0.6525
+Epoch 10/10 completed, Average Loss: 0.4753
+Test set: Average loss: 0.0080, Accuracy: 7383/8677 (85.09%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 4.3582
+Epoch 2/10 completed, Average Loss: 3.3944
+Epoch 3/10 completed, Average Loss: 2.8098
+Epoch 4/10 completed, Average Loss: 2.3374
+Epoch 5/10 completed, Average Loss: 1.9001
+Epoch 6/10 completed, Average Loss: 1.5301
+Epoch 7/10 completed, Average Loss: 1.1971
+Epoch 8/10 completed, Average Loss: 0.9218
+Epoch 9/10 completed, Average Loss: 0.6712
+Epoch 10/10 completed, Average Loss: 0.4765
+Test set: Average loss: 0.0092, Accuracy: 7151/8677 (82.41%)
+
+Running Caltech101-resnet training with Optimizer = AdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.1940
+Epoch 2/10 completed, Average Loss: 2.3139
+Epoch 3/10 completed, Average Loss: 1.7633
+Epoch 4/10 completed, Average Loss: 1.3686
+Epoch 5/10 completed, Average Loss: 1.0510
+Epoch 6/10 completed, Average Loss: 0.7854
+Epoch 7/10 completed, Average Loss: 0.5757
+Epoch 8/10 completed, Average Loss: 0.3657
+Epoch 9/10 completed, Average Loss: 0.2133
+Epoch 10/10 completed, Average Loss: 0.1152
+Test set: Average loss: 0.0019, Accuracy: 8483/8677 (97.76%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.2834
+Epoch 2/10 completed, Average Loss: 2.4157
+Epoch 3/10 completed, Average Loss: 1.8735
+Epoch 4/10 completed, Average Loss: 1.4671
+Epoch 5/10 completed, Average Loss: 1.1290
+Epoch 6/10 completed, Average Loss: 0.8817
+Epoch 7/10 completed, Average Loss: 0.6590
+Epoch 8/10 completed, Average Loss: 0.4568
+Epoch 9/10 completed, Average Loss: 0.2910
+Epoch 10/10 completed, Average Loss: 0.1668
+Test set: Average loss: 0.0041, Accuracy: 8069/8677 (92.99%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.2132
+Epoch 2/10 completed, Average Loss: 2.2887
+Epoch 3/10 completed, Average Loss: 1.7405
+Epoch 4/10 completed, Average Loss: 1.3785
+Epoch 5/10 completed, Average Loss: 1.0392
+Epoch 6/10 completed, Average Loss: 0.7955
+Epoch 7/10 completed, Average Loss: 0.5741
+Epoch 8/10 completed, Average Loss: 0.3825
+Epoch 9/10 completed, Average Loss: 0.2354
+Epoch 10/10 completed, Average Loss: 0.1331
+Test set: Average loss: 0.0043, Accuracy: 7969/8677 (91.84%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.2463
+Epoch 2/10 completed, Average Loss: 2.3471
+Epoch 3/10 completed, Average Loss: 1.8294
+Epoch 4/10 completed, Average Loss: 1.3874
+Epoch 5/10 completed, Average Loss: 1.0736
+Epoch 6/10 completed, Average Loss: 0.8136
+Epoch 7/10 completed, Average Loss: 0.5769
+Epoch 8/10 completed, Average Loss: 0.4065
+Epoch 9/10 completed, Average Loss: 0.2304
+Epoch 10/10 completed, Average Loss: 0.1126
+Test set: Average loss: 0.0011, Accuracy: 8565/8677 (98.71%)
+
+Running Caltech101-resnet training with Optimizer = NAdam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.6643
+Epoch 2/10 completed, Average Loss: 2.7479
+Epoch 3/10 completed, Average Loss: 2.1754
+Epoch 4/10 completed, Average Loss: 1.6958
+Epoch 5/10 completed, Average Loss: 1.3429
+Epoch 6/10 completed, Average Loss: 1.0294
+Epoch 7/10 completed, Average Loss: 0.7600
+Epoch 8/10 completed, Average Loss: 0.5461
+Epoch 9/10 completed, Average Loss: 0.3675
+Epoch 10/10 completed, Average Loss: 0.2142
+Test set: Average loss: 0.0056, Accuracy: 7713/8677 (88.89%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.5425
+Epoch 2/10 completed, Average Loss: 2.6852
+Epoch 3/10 completed, Average Loss: 2.1102
+Epoch 4/10 completed, Average Loss: 1.6216
+Epoch 5/10 completed, Average Loss: 1.2115
+Epoch 6/10 completed, Average Loss: 0.8945
+Epoch 7/10 completed, Average Loss: 0.6367
+Epoch 8/10 completed, Average Loss: 0.4146
+Epoch 9/10 completed, Average Loss: 0.2346
+Epoch 10/10 completed, Average Loss: 0.1463
+Test set: Average loss: 0.0092, Accuracy: 7123/8677 (82.09%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.5496
+Epoch 2/10 completed, Average Loss: 2.6912
+Epoch 3/10 completed, Average Loss: 2.0938
+Epoch 4/10 completed, Average Loss: 1.6207
+Epoch 5/10 completed, Average Loss: 1.2430
+Epoch 6/10 completed, Average Loss: 0.9513
+Epoch 7/10 completed, Average Loss: 0.7056
+Epoch 8/10 completed, Average Loss: 0.4889
+Epoch 9/10 completed, Average Loss: 0.3057
+Epoch 10/10 completed, Average Loss: 0.1602
+Test set: Average loss: 0.0048, Accuracy: 7820/8677 (90.12%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.6174
+Epoch 2/10 completed, Average Loss: 2.7469
+Epoch 3/10 completed, Average Loss: 2.1758
+Epoch 4/10 completed, Average Loss: 1.7002
+Epoch 5/10 completed, Average Loss: 1.3027
+Epoch 6/10 completed, Average Loss: 1.0054
+Epoch 7/10 completed, Average Loss: 0.7442
+Epoch 8/10 completed, Average Loss: 0.5142
+Epoch 9/10 completed, Average Loss: 0.3432
+Epoch 10/10 completed, Average Loss: 0.1994
+Test set: Average loss: 0.0054, Accuracy: 7779/8677 (89.65%)
+
+Running Caltech101-resnet training with Optimizer = NAdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.5976
+Epoch 2/10 completed, Average Loss: 2.6685
+Epoch 3/10 completed, Average Loss: 2.1009
+Epoch 4/10 completed, Average Loss: 1.6160
+Epoch 5/10 completed, Average Loss: 1.2745
+Epoch 6/10 completed, Average Loss: 0.9694
+Epoch 7/10 completed, Average Loss: 0.7237
+Epoch 8/10 completed, Average Loss: 0.5052
+Epoch 9/10 completed, Average Loss: 0.3279
+Epoch 10/10 completed, Average Loss: 0.1808
+Test set: Average loss: 0.0062, Accuracy: 7622/8677 (87.84%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.5259
+Epoch 2/10 completed, Average Loss: 2.6224
+Epoch 3/10 completed, Average Loss: 2.0247
+Epoch 4/10 completed, Average Loss: 1.5550
+Epoch 5/10 completed, Average Loss: 1.1772
+Epoch 6/10 completed, Average Loss: 0.8894
+Epoch 7/10 completed, Average Loss: 0.6345
+Epoch 8/10 completed, Average Loss: 0.4162
+Epoch 9/10 completed, Average Loss: 0.2600
+Epoch 10/10 completed, Average Loss: 0.1624
+Test set: Average loss: 0.0075, Accuracy: 7389/8677 (85.16%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.5469
+Epoch 2/10 completed, Average Loss: 2.6795
+Epoch 3/10 completed, Average Loss: 2.1200
+Epoch 4/10 completed, Average Loss: 1.6772
+Epoch 5/10 completed, Average Loss: 1.3067
+Epoch 6/10 completed, Average Loss: 1.0097
+Epoch 7/10 completed, Average Loss: 0.7480
+Epoch 8/10 completed, Average Loss: 0.5350
+Epoch 9/10 completed, Average Loss: 0.3481
+Epoch 10/10 completed, Average Loss: 0.1982
+Test set: Average loss: 0.0036, Accuracy: 8071/8677 (93.02%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.6492
+Epoch 2/10 completed, Average Loss: 2.7415
+Epoch 3/10 completed, Average Loss: 2.1439
+Epoch 4/10 completed, Average Loss: 1.6712
+Epoch 5/10 completed, Average Loss: 1.2805
+Epoch 6/10 completed, Average Loss: 0.9928
+Epoch 7/10 completed, Average Loss: 0.7436
+Epoch 8/10 completed, Average Loss: 0.5266
+Epoch 9/10 completed, Average Loss: 0.3353
+Epoch 10/10 completed, Average Loss: 0.2064
+Test set: Average loss: 0.0061, Accuracy: 7682/8677 (88.53%)
+
+Running Caltech101-resnet training with Optimizer = AMSGrad
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.1579
+Epoch 2/10 completed, Average Loss: 2.2590
+Epoch 3/10 completed, Average Loss: 1.7346
+Epoch 4/10 completed, Average Loss: 1.3246
+Epoch 5/10 completed, Average Loss: 1.0179
+Epoch 6/10 completed, Average Loss: 0.7434
+Epoch 7/10 completed, Average Loss: 0.5157
+Epoch 8/10 completed, Average Loss: 0.3366
+Epoch 9/10 completed, Average Loss: 0.1810
+Epoch 10/10 completed, Average Loss: 0.0878
+Test set: Average loss: 0.0006, Accuracy: 8641/8677 (99.59%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.2869
+Epoch 2/10 completed, Average Loss: 2.4145
+Epoch 3/10 completed, Average Loss: 1.8564
+Epoch 4/10 completed, Average Loss: 1.4326
+Epoch 5/10 completed, Average Loss: 1.1157
+Epoch 6/10 completed, Average Loss: 0.8524
+Epoch 7/10 completed, Average Loss: 0.6307
+Epoch 8/10 completed, Average Loss: 0.4319
+Epoch 9/10 completed, Average Loss: 0.2806
+Epoch 10/10 completed, Average Loss: 0.1521
+Test set: Average loss: 0.0029, Accuracy: 8261/8677 (95.21%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.2067
+Epoch 2/10 completed, Average Loss: 2.2687
+Epoch 3/10 completed, Average Loss: 1.7360
+Epoch 4/10 completed, Average Loss: 1.3639
+Epoch 5/10 completed, Average Loss: 1.0160
+Epoch 6/10 completed, Average Loss: 0.7860
+Epoch 7/10 completed, Average Loss: 0.5664
+Epoch 8/10 completed, Average Loss: 0.3680
+Epoch 9/10 completed, Average Loss: 0.2253
+Epoch 10/10 completed, Average Loss: 0.1163
+Test set: Average loss: 0.0013, Accuracy: 8533/8677 (98.34%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.2412
+Epoch 2/10 completed, Average Loss: 2.3355
+Epoch 3/10 completed, Average Loss: 1.8045
+Epoch 4/10 completed, Average Loss: 1.3666
+Epoch 5/10 completed, Average Loss: 1.0462
+Epoch 6/10 completed, Average Loss: 0.7829
+Epoch 7/10 completed, Average Loss: 0.5726
+Epoch 8/10 completed, Average Loss: 0.3863
+Epoch 9/10 completed, Average Loss: 0.2285
+Epoch 10/10 completed, Average Loss: 0.1191
+Test set: Average loss: 0.0017, Accuracy: 8444/8677 (97.31%)

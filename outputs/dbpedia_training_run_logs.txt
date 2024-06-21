@@ -87,7 +87,7 @@ Epoch 4/5 completed, Average Loss: 1.5004
 Epoch 5/5 completed, Average Loss: 1.4097
 Test set: Average loss: 0.0032, Accuracy: 5027/70000 (7.18%)
 
-Running reuters training with Optimizer = HeavyBallCurvature
+Running dbpedia training with Optimizer = HeavyBallCurvature
 params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/5 completed, Average Loss: 2.2786
@@ -123,21 +123,21 @@ Epoch 5/5 completed, Average Loss: 1.4097
 Test set: Average loss: 0.0032, Accuracy: 5027/70000 (7.18%)
 
 Running dbpedia training with Optimizer = NAGCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
 Running Loop: 1/2
-Epoch 1/5 completed, Average Loss: nan
-Epoch 2/5 completed, Average Loss: nan
-Epoch 3/5 completed, Average Loss: nan
-Epoch 4/5 completed, Average Loss: nan
-Epoch 5/5 completed, Average Loss: nan
-Test set: Average loss: nan, Accuracy: 5000/70000 (7.14%)
+Epoch 1/5 completed, Average Loss: 2.2786
+Epoch 2/5 completed, Average Loss: 2.2855
+Epoch 3/5 completed, Average Loss: 2.1251
+Epoch 4/5 completed, Average Loss: 2.0645
+Epoch 5/5 completed, Average Loss: 2.0380
+Test set: Average loss: 0.0031, Accuracy: 5000/70000 (7.14%)
 Running Loop: 2/2
-Epoch 1/5 completed, Average Loss: nan
-Epoch 2/5 completed, Average Loss: nan
-Epoch 3/5 completed, Average Loss: nan
-Epoch 4/5 completed, Average Loss: nan
-Epoch 5/5 completed, Average Loss: nan
-Test set: Average loss: nan, Accuracy: 5000/70000 (7.14%)
+Epoch 1/5 completed, Average Loss: 2.3144
+Epoch 2/5 completed, Average Loss: 2.3343
+Epoch 3/5 completed, Average Loss: 2.1610
+Epoch 4/5 completed, Average Loss: 2.0346
+Epoch 5/5 completed, Average Loss: 2.0089
+Test set: Average loss: 0.0030, Accuracy: 5000/70000 (7.14%)
 
 Running dbpedia training with Optimizer = Adagrad
 params= {'lr': 0.001, 'eps': 1e-06}
@@ -258,17 +258,7 @@ Epoch 4/5 completed, Average Loss: 0.3990
 Epoch 5/5 completed, Average Loss: 0.3960
 Test set: Average loss: 0.0037, Accuracy: 5000/70000 (7.14%)
 
-Running dbpedia training with Optimizer = NAdamW
-params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
-Running Loop: 1/2
-Epoch 1/5 completed, Average Loss: 0.8007
-Epoch 2/5 completed, Average Loss: 0.8379
-Epoch 3/5 completed, Average Loss: 1.3594
-Epoch 4/5 completed, Average Loss: 1.2771
-Epoch 5/5 completed, Average Loss: 1.8292
-Test set: Average loss: 0.0017, Accuracy: 5030/70000 (7.19%)
-
-Running reuters training with Optimizer = RMSPropMomentumCurvature
+Running dbpedia training with Optimizer = RMSPropMomentumCurvature
 params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'momentum': 0.1, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/5 completed, Average Loss: 0.5095
@@ -285,7 +275,7 @@ Epoch 4/5 completed, Average Loss: 0.4155
 Epoch 5/5 completed, Average Loss: 0.4025
 Test set: Average loss: 0.0037, Accuracy: 5000/70000 (7.14%)
 
-Running reuters training with Optimizer = AdamW
+Running dbpedia training with Optimizer = AdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Running Loop: 1/2
 Epoch 1/5 completed, Average Loss: 2.5616
@@ -302,7 +292,7 @@ Epoch 4/5 completed, Average Loss: 2.6234
 Epoch 5/5 completed, Average Loss: 2.6152
 Test set: Average loss: 0.0014, Accuracy: 5013/70000 (7.16%)
 
-Running reuters training with Optimizer = AdamWCurvature
+Running dbpedia training with Optimizer = AdamWCurvature
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/5 completed, Average Loss: 2.5305
@@ -318,3 +308,106 @@ Epoch 3/5 completed, Average Loss: 2.5757
 Epoch 4/5 completed, Average Loss: 2.5366
 Epoch 5/5 completed, Average Loss: 2.6293
 Test set: Average loss: 0.0013, Accuracy: 5025/70000 (7.18%)
+
+Running dbpedia training with Optimizer = NAdam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.7479
+Epoch 2/5 completed, Average Loss: 0.7911
+Epoch 3/5 completed, Average Loss: 0.7285
+Epoch 4/5 completed, Average Loss: 0.7657
+Epoch 5/5 completed, Average Loss: 1.2129
+Test set: Average loss: 0.0022, Accuracy: 5001/70000 (7.14%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.6951
+Epoch 2/5 completed, Average Loss: 1.0903
+Epoch 3/5 completed, Average Loss: 1.2859
+Epoch 4/5 completed, Average Loss: 1.3762
+Epoch 5/5 completed, Average Loss: 1.3910
+Test set: Average loss: 0.0020, Accuracy: 5055/70000 (7.22%)
+
+Running dbpedia training with Optimizer = NAdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.8790
+Epoch 2/5 completed, Average Loss: 0.9603
+Epoch 3/5 completed, Average Loss: 1.3003
+Epoch 4/5 completed, Average Loss: 1.4132
+Epoch 5/5 completed, Average Loss: 1.5445
+Test set: Average loss: 0.0021, Accuracy: 5000/70000 (7.14%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.6724
+Epoch 2/5 completed, Average Loss: 0.6716
+Epoch 3/5 completed, Average Loss: 1.1689
+Epoch 4/5 completed, Average Loss: 1.5151
+Epoch 5/5 completed, Average Loss: 1.3466
+Test set: Average loss: 0.0033, Accuracy: 5001/70000 (7.14%)
+
+Running dbpedia training with Optimizer = NAdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.8007
+Epoch 2/5 completed, Average Loss: 0.8379
+Epoch 3/5 completed, Average Loss: 1.3594
+Epoch 4/5 completed, Average Loss: 1.2771
+Epoch 5/5 completed, Average Loss: 1.8292
+Test set: Average loss: 0.0017, Accuracy: 5030/70000 (7.19%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.1098
+Epoch 2/5 completed, Average Loss: 1.0535
+Epoch 3/5 completed, Average Loss: 0.9909
+Epoch 4/5 completed, Average Loss: 0.9658
+Epoch 5/5 completed, Average Loss: 1.0725
+Test set: Average loss: 0.0025, Accuracy: 5007/70000 (7.15%)
+
+Running dbpedia training with Optimizer = NAdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 0.5783
+Epoch 2/5 completed, Average Loss: 0.8470
+Epoch 3/5 completed, Average Loss: 1.5880
+Epoch 4/5 completed, Average Loss: 1.4242
+Epoch 5/5 completed, Average Loss: 1.3671
+Test set: Average loss: 0.0028, Accuracy: 5004/70000 (7.15%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 0.6348
+Epoch 2/5 completed, Average Loss: 0.6221
+Epoch 3/5 completed, Average Loss: 1.1358
+Epoch 4/5 completed, Average Loss: 1.3380
+Epoch 5/5 completed, Average Loss: 1.2011
+Test set: Average loss: 0.0027, Accuracy: 5001/70000 (7.14%)
+
+Running dbpedia training with Optimizer = AMSGrad
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 2.7455
+Epoch 2/5 completed, Average Loss: 2.7686
+Epoch 3/5 completed, Average Loss: 2.7517
+Epoch 4/5 completed, Average Loss: 2.6768
+Epoch 5/5 completed, Average Loss: 2.6763
+Test set: Average loss: 0.0013, Accuracy: 4995/70000 (7.14%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 2.4914
+Epoch 2/5 completed, Average Loss: 2.7178
+Epoch 3/5 completed, Average Loss: 2.7070
+Epoch 4/5 completed, Average Loss: 2.6474
+Epoch 5/5 completed, Average Loss: 2.6282
+Test set: Average loss: 0.0025, Accuracy: 4927/70000 (7.04%)
+
+Running dbpedia training with Optimizer = AMSGradCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 2.3556
+Epoch 2/5 completed, Average Loss: 3.3706
+Epoch 3/5 completed, Average Loss: 2.5838
+Epoch 4/5 completed, Average Loss: 2.5391
+Epoch 5/5 completed, Average Loss: 2.6774
+Test set: Average loss: 0.0013, Accuracy: 5268/70000 (7.53%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 2.8888
+Epoch 2/5 completed, Average Loss: 2.5708
+Epoch 3/5 completed, Average Loss: 2.8275
+Epoch 4/5 completed, Average Loss: 2.8079
+Epoch 5/5 completed, Average Loss: 2.6834
+Test set: Average loss: 0.0013, Accuracy: 4833/70000 (6.90%)
+

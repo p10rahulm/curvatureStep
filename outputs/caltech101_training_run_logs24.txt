@@ -1,0 +1,18 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running Caltech101 training with Optimizer = RMSPropMomentumCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'momentum': 0.1, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.7519
+Epoch 2/10 completed, Average Loss: 2.8311
+Epoch 3/10 completed, Average Loss: 2.3384
+Epoch 4/10 completed, Average Loss: 1.8590
+Epoch 5/10 completed, Average Loss: 1.5066
+Epoch 6/10 completed, Average Loss: 1.2003
+Epoch 7/10 completed, Average Loss: 0.9288
+Epoch 8/10 completed, Average Loss: 0.7005
+Epoch 9/10 completed, Average Loss: 0.5204

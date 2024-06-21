@@ -1,0 +1,18 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 4 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running Caltech101 training with Optimizer = AdagradCurvature
+params= {'lr': 0.001, 'eps': 1e-06, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.1170
+Epoch 2/10 completed, Average Loss: 2.3924
+Epoch 3/10 completed, Average Loss: 2.0716
+Epoch 4/10 completed, Average Loss: 1.8155
+Epoch 5/10 completed, Average Loss: 1.6232
+Epoch 6/10 completed, Average Loss: 1.4524
+Epoch 7/10 completed, Average Loss: 1.2930
+Epoch 8/10 completed, Average Loss: 1.1528
+Epoch 9/10 completed, Average Loss: 1.0203

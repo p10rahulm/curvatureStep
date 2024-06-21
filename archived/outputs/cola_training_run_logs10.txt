@@ -278,3 +278,4 @@ Running CoLA training with Optimizer = Shampoo
 params= {'lr': 0.001, 'momentum': 0.1}
 Running Loop: 1/2
 Epoch 1/5 completed, Average Loss: 0.6187
+Epoch 2/5 completed, Average Loss: 0.6013

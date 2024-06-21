@@ -245,11 +245,11 @@ Test set: Average loss: 0.0400, Accuracy: 353/515 (68.54%)
 Running CoLABert training with Optimizer Epoch 1/4 completed, Average Loss: 0.6073
 Epoch 2/4 completed, Average Loss: 0.6028
 Epoch 3/4 completed, Average Loss: 0.6003
-.6058
-Epoch 2/4 completed, Average Loss: 0.6040
-Epoch 3/4 completed, Average Loss: 0.6028
-Epoch 4/4 completed, Average Loss: 0.6035
-Test set: Average loss: 0.0396, Accuracy: 354/515 (68.74%)
+Epoch 4/4 completed, Average Loss: 0.5994
+Test set: Average loss: 0.0393, Accuracy: 354/515 (68.74%)
+Running Loop: 2/2
+Epoch 1/4 completed, Average Loss: 0.6137
+6, Accuracy: 354/515 (68.74%)
 Running Loop: 2/2
 Epoch 1/4 completed, Average Loss: 0.6084
 Epoch 2/4 completed, Average Loss: 0.6057

@@ -8,3 +8,14 @@ Running Loop: 1/2
 Epoch 1/1 completed, Average Loss: 0.9298
 Test set: Average loss: 0.0399, Accuracy: 1276/2700 (47.26%)
 Running Loop: 2/2
+Epoch 1/1 completed, Average Loss: 0.9822
+Test set: Average loss: 0.0146, Accuracy: 1836/2700 (68.00%)
+
+Running EuroSAT training with Optimizer = AMSGradCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/1 completed, Average Loss: 0.9413
+Test set: Average loss: 0.0457, Accuracy: 1260/2700 (46.67%)
+Running Loop: 2/2
+Epoch 1/1 completed, Average Loss: 0.9611
+Test set: Average loss: 0.0148, Accuracy: 1763/2700 (65.30%)

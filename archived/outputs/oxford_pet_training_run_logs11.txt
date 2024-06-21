@@ -116,3 +116,99 @@ Epoch 6/10 completed, Average Loss: 3.5467
 Epoch 7/10 completed, Average Loss: 3.5271
 Epoch 8/10 completed, Average Loss: 3.5067
 Epoch 9/10 completed, Average Loss: 3.4898
+Epoch 10/10 completed, Average Loss: 3.4729
+Test set: Average loss: 0.0561, Accuracy: 184/3669 (5.01%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.7045
+Epoch 2/10 completed, Average Loss: 3.6712
+Epoch 3/10 completed, Average Loss: 3.6417
+Epoch 4/10 completed, Average Loss: 3.6151
+Epoch 5/10 completed, Average Loss: 3.5927
+Epoch 6/10 completed, Average Loss: 3.5730
+Epoch 7/10 completed, Average Loss: 3.5522
+Epoch 8/10 completed, Average Loss: 3.5358
+Epoch 9/10 completed, Average Loss: 3.5165
+Epoch 10/10 completed, Average Loss: 3.5011
+Test set: Average loss: 0.0564, Accuracy: 185/3669 (5.04%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.6957
+Epoch 2/10 completed, Average Loss: 3.6648
+Epoch 3/10 completed, Average Loss: 3.6345
+Epoch 4/10 completed, Average Loss: 3.6108
+Epoch 5/10 completed, Average Loss: 3.5865
+Epoch 6/10 completed, Average Loss: 3.5632
+Epoch 7/10 completed, Average Loss: 3.5452
+Epoch 8/10 completed, Average Loss: 3.5286
+Epoch 9/10 completed, Average Loss: 3.5100
+Epoch 10/10 completed, Average Loss: 3.4920
+Test set: Average loss: 0.0563, Accuracy: 153/3669 (4.17%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.6971
+Epoch 2/10 completed, Average Loss: 3.6650
+Epoch 3/10 completed, Average Loss: 3.6387
+Epoch 4/10 completed, Average Loss: 3.6155
+Epoch 5/10 completed, Average Loss: 3.5936
+Epoch 6/10 completed, Average Loss: 3.5733
+Epoch 7/10 completed, Average Loss: 3.5558
+Epoch 8/10 completed, Average Loss: 3.5376
+Epoch 9/10 completed, Average Loss: 3.5207
+Epoch 10/10 completed, Average Loss: 3.5036
+Test set: Average loss: 0.0563, Accuracy: 199/3669 (5.42%)
+
+Running OxfordPet training with Optimizer = RMSPropCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'epsilon': 0.01}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.8588
+Epoch 2/10 completed, Average Loss: 3.5023
+Epoch 3/10 completed, Average Loss: 3.3605
+Epoch 4/10 completed, Average Loss: 3.2120
+Epoch 5/10 completed, Average Loss: 3.0393
+Epoch 6/10 completed, Average Loss: 2.9183
+Epoch 7/10 completed, Average Loss: 2.7587
+Epoch 8/10 completed, Average Loss: 2.6411
+Epoch 9/10 completed, Average Loss: 2.5025
+Epoch 10/10 completed, Average Loss: 2.3317
+Test set: Average loss: 0.0506, Accuracy: 551/3669 (15.02%)
+Running Loop: 2/4
+Epoch 1/10 completed, Average Loss: 3.8574
+Epoch 2/10 completed, Average Loss: 3.5157
+Epoch 3/10 completed, Average Loss: 3.3714
+Epoch 4/10 completed, Average Loss: 3.2225
+Epoch 5/10 completed, Average Loss: 3.0517
+Epoch 6/10 completed, Average Loss: 2.9034
+Epoch 7/10 completed, Average Loss: 2.7439
+Epoch 8/10 completed, Average Loss: 2.5679
+Epoch 9/10 completed, Average Loss: 2.4123
+Epoch 10/10 completed, Average Loss: 2.2735
+Test set: Average loss: 0.0505, Accuracy: 640/3669 (17.44%)
+Running Loop: 3/4
+Epoch 1/10 completed, Average Loss: 3.8349
+Epoch 2/10 completed, Average Loss: 3.4473
+Epoch 3/10 completed, Average Loss: 3.2910
+Epoch 4/10 completed, Average Loss: 3.1271
+Epoch 5/10 completed, Average Loss: 2.9745
+Epoch 6/10 completed, Average Loss: 2.8250
+Epoch 7/10 completed, Average Loss: 2.6879
+Epoch 8/10 completed, Average Loss: 2.5304
+Epoch 9/10 completed, Average Loss: 2.3670
+Epoch 10/10 completed, Average Loss: 2.2001
+Test set: Average loss: 0.0500, Accuracy: 653/3669 (17.80%)
+Running Loop: 4/4
+Epoch 1/10 completed, Average Loss: 3.7991
+Epoch 2/10 completed, Average Loss: 3.4641
+Epoch 3/10 completed, Average Loss: 3.3119
+Epoch 4/10 completed, Average Loss: 3.1415
+Epoch 5/10 completed, Average Loss: 2.9856
+Epoch 6/10 completed, Average Loss: 2.8674
+Epoch 7/10 completed, Average Loss: 2.7083
+Epoch 8/10 completed, Average Loss: 2.5862
+Epoch 9/10 completed, Average Loss: 2.4523
+Epoch 10/10 completed, Average Loss: 2.2548
+Test set: Average loss: 0.0546, Accuracy: 533/3669 (14.53%)
+
+Running OxfordPet training with Optimizer = RMSPropMomentumCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'momentum': 0.1, 'epsilon': 0.01}
+Running Loop: 1/4
+Epoch 1/10 completed, Average Loss: 3.8500
+Epoch 2/10 completed, Average Loss: 3.4995
+Epoch 3/10 completed, Average Loss: 3.3950
