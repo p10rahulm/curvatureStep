@@ -7,6 +7,9 @@ from torch.nn.utils.rnn import pad_sequence
 from torchtext.data.utils import get_tokenizer  # Updated import
 import csv
 import torch.nn as nn
+import sys
+
+csv.field_size_limit(sys.maxsize)
 
 # Load GloVe embeddings
 glove = GloVe(name='6B', dim=100)
@@ -18,19 +21,26 @@ tokenizer = get_tokenizer('basic_english')
 vocab_size = len(glove.stoi)
 pad_idx = glove.stoi['pad']
 
+
+def truncate_field(field, max_length=10000):
+    return field[:max_length] if len(field) > max_length else field
+
+max_field_length = 1024  # Define your desired maximum field length
+
+
 # Function to read CSV and yield rows, concatenating the second and third columns
 def read_csv(file_path):
     with open(file_path, newline='', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile)
-        next(reader)  # Skip the header row
         for row in reader:
-            label = row[0]
-            content = row[1]
+            truncated_row = [truncate_field(field, max_length=max_field_length) for field in row]
+            label = truncated_row[0]
+            content = truncated_row[1] + " " + truncated_row[2]
             yield label, content
 
 # Load your dataset
-train_file_path = 'data/reuters/reuters_train.csv'
-test_file_path = 'data/reuters/reuters_test.csv'
+train_file_path = 'data/sogou/train.csv'
+test_file_path = 'data/sogou/test.csv'
 
 def get_data_iter(file_path):
     return iter(read_csv(file_path))
@@ -41,10 +51,7 @@ def text_pipeline(x):
 
 # Function to convert label to tensor
 def label_pipeline(x):
-    label = int(x)  # Convert labels to zero-index
-    if label < 0 or label >= 46:
-        raise ValueError(f"Label out of range: {label}")
-    return label
+    return int(x) - 1  # Convert labels to zero-index
 
 # Collate function for DataLoader
 def collate_batch(batch):
@@ -57,7 +64,7 @@ def collate_batch(batch):
         lengths.append(len(processed_text))
     
     # Pad sequences
-    text_list = pad_sequence(text_list, batch_first=True, padding_value=pad_idx)
+    text_list = pad_sequence(text_list, batch_first=True, padding_value=glove.stoi['pad'])
     label_list = torch.tensor(label_list, dtype=torch.int64)
     lengths = torch.tensor(lengths, dtype=torch.int64)
     
@@ -67,8 +74,11 @@ def collate_batch(batch):
 def create_dataloader(file_path, batch_size=64):
     return DataLoader(list(read_csv(file_path)), batch_size=batch_size, collate_fn=collate_batch)
 
-def load_dataset(batch_size=2048):
+# Function to load dataset
+def load_dataset(batch_size=256):
     train_loader = create_dataloader(train_file_path, batch_size=batch_size)
     test_loader = create_dataloader(test_file_path, batch_size=batch_size)
     
     return train_loader, test_loader
+
+

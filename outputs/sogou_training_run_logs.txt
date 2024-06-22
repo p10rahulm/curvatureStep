@@ -1,0 +1,66 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 5 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running sogou-news training with Optimizer = SimpleSGD
+params= {'lr': 0.001}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.3569
+Epoch 2/5 completed, Average Loss: 1.3699
+Epoch 3/5 completed, Average Loss: 1.3576
+Epoch 4/5 completed, Average Loss: 1.3485
+Epoch 5/5 completed, Average Loss: 1.3423
+Test set: Average loss: 0.0091, Accuracy: 12179/60000 (20.30%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.3506
+Epoch 2/5 completed, Average Loss: 1.3587
+Epoch 3/5 completed, Average Loss: 1.3463
+Epoch 4/5 completed, Average Loss: 1.3382
+Epoch 5/5 completed, Average Loss: 1.3323
+Test set: Average loss: 0.0093, Accuracy: 12186/60000 (20.31%)
+
+Running sogou-news training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.1754
+Epoch 2/5 completed, Average Loss: 1.1416
+Epoch 3/5 completed, Average Loss: 1.1229
+Epoch 4/5 completed, Average Loss: 1.1251
+Epoch 5/5 completed, Average Loss: 3.0645
+Test set: Average loss: 0.0184, Accuracy: 12858/60000 (21.43%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.1763
+Epoch 2/5 completed, Average Loss: 1.1441
+Epoch 3/5 completed, Average Loss: 1.1251
+Epoch 4/5 completed, Average Loss: 1.2013
+Epoch 5/5 completed, Average Loss: 1.8715
+Test set: Average loss: 0.0172, Accuracy: 12719/60000 (21.20%)
+
+Running sogou-news training with Optimizer = Adam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.2306
+Epoch 2/5 completed, Average Loss: 1.2513
+Epoch 3/5 completed, Average Loss: 1.2455
+Epoch 4/5 completed, Average Loss: 1.2324
+Epoch 5/5 completed, Average Loss: 1.2184
+Test set: Average loss: 0.0124, Accuracy: 12038/60000 (20.06%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.2323
+Epoch 2/5 completed, Average Loss: 1.2558
+Epoch 3/5 completed, Average Loss: 1.2529
+Epoch 4/5 completed, Average Loss: 1.2325
+Epoch 5/5 completed, Average Loss: 1.2180
+Test set: Average loss: 0.0117, Accuracy: 12100/60000 (20.17%)
+
+Running sogou-news training with Optimizer = AdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/5 completed, Average Loss: 1.2337
+Epoch 2/5 completed, Average Loss: 1.2446
+Epoch 3/5 completed, Average Loss: 1.2390
+Epoch 4/5 completed, Average Loss: 1.2290
+Epoch 5/5 completed, Average Loss: 1.2151
+Test set: Average loss: 0.0126, Accuracy: 12039/60000 (20.07%)
+Running Loop: 2/2
+Epoch 1/5 completed, Average Loss: 1.2287

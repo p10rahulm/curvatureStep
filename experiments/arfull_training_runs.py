@@ -13,8 +13,8 @@ from utilities import write_to_file
 from optimizer_params import optimizers
 from models.simpleRNN_multiclass import SimpleRNN
 
-from data_loaders.reuters import load_dataset
-from data_loaders.reuters import vocab_size, pad_idx
+from data_loaders.arfull import load_dataset
+from data_loaders.arfull import vocab_size, pad_idx
 
 import torch
 import torch.nn as nn
@@ -23,22 +23,19 @@ from test import test_lm_multiclass
 
 results = []
 
-total_epochs = 50
-total_runs = 1
+total_epochs = 10
+total_runs = 2
 
 print("#", "-" * 100)
 print(f"# Running {total_epochs} epochs of training - {total_runs} runs")
 print("#", "-" * 100)
 
 for optimizer_class, default_params in optimizers:
-    print(f"\nRunning reuters training with Optimizer = {str(optimizer_class.__name__)}")
+    print(f"\nRunning amazon-review-full training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
-    if optimizer_class.__name__ in ("HeavyBallCurvature", "NAGCurvature"):
-        params['clip_radius'] = 10
 
-    
     # Set device to GPU
-    device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:3' if torch.cuda.is_available() else 'cpu')
 
     dataset_loader = load_dataset
 
@@ -47,14 +44,7 @@ for optimizer_class, default_params in optimizers:
         'vocab_size': vocab_size,
         'embed_dim': 100,
         'hidden_dim': 256,
-        'output_dim': 46,
-        'pad_idx': pad_idx,
-    }
-    model_hyperparams = {
-        'vocab_size': vocab_size,
-        'embed_dim': 300,
-        'hidden_dim': 750,
-        'output_dim': 46,
+        'output_dim': 5,
         'pad_idx': pad_idx,
     }
     # model = SimpleRNN
@@ -82,4 +72,4 @@ for optimizer_class, default_params in optimizers:
         'std_accuracy': std_accuracy
     })
 
-write_to_file('outputs/reuters_training_logs.csv', results)
+

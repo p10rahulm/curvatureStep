@@ -1,0 +1,25 @@
+Optimizer Name|Mean_Test_Set_Loss|Std_Test_Set_Loss|Mean_Test_Set_Accuracy|Std_Test_Set_Accuracy
+AMSGrad|0.0031||46.82|
+AMSGradCurvature|0.0033||44.63|
+Adadelta|0.0023||36.04|
+AdadeltaCurvature|0.0022||36.12|
+Adagrad|0.0018||43.74|
+AdagradCurvature|0.0017||51.05|
+Adam|0.0033||45.52|
+AdamCurvature|0.0032||49.44|
+AdamW|0.002||51.31|
+AdamWCurvature|0.003||49.93|
+HeavyBall|0.0021||37.68|
+HeavyBallCurvature|0.0018||52.56|
+NAG|0.0021||37.68|
+NAGCurvature|0.0018||52.96|
+NAdam|0.0022||31.18|
+NAdamCurvature|0.002||48.73|
+NAdamW|0.0019||49.71|
+NAdamWCurvature|0.0021||39.24|
+RMSProp|0.0021||45.43|
+RMSPropCurvature|0.0019||48.82|
+RMSPropMomentum|0.002||47.35|
+RMSPropMomentumCurvature|0.0022||35.14|
+SimpleSGD|0.0022||36.04|
+SimpleSGDCurvature|0.0021||34.65|

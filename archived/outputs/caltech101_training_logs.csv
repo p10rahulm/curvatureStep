@@ -1,0 +1,2 @@
+optimizer,momentum,mean_accuracy,std_accuracy
+RMSPropMomentumCurvature,,0.7813184280281202,0.06830750077524912
