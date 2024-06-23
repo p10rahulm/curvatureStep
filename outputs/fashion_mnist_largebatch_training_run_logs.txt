@@ -2,7 +2,7 @@
 # Running 50 epochs of training - 2 runs
 # ----------------------------------------------------------------------------------------------------
 
-Running FashionMNIST training with Optimizer = SimpleSGD
+Running FashionMNIST-largebatch training with Optimizer = SimpleSGD
 params= {'lr': 0.001}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 2.2896
@@ -109,7 +109,7 @@ Epoch 49/50 completed, Average Loss: 0.5803
 Epoch 50/50 completed, Average Loss: 0.5764
 Test set: Average loss: 0.0012, Accuracy: 7842/10000 (78.42%)
 
-Running FashionMNIST training with Optimizer = SimpleSGDCurvature
+Running FashionMNIST-largebatch training with Optimizer = SimpleSGDCurvature
 params= {'lr': 0.001, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 1.0497
@@ -216,7 +216,7 @@ Epoch 49/50 completed, Average Loss: 0.1168
 Epoch 50/50 completed, Average Loss: 0.1155
 Test set: Average loss: 0.0005, Accuracy: 9140/10000 (91.40%)
 
-Running FashionMNIST training with Optimizer = Adam
+Running FashionMNIST-largebatch training with Optimizer = Adam
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.5870
@@ -323,7 +323,7 @@ Epoch 49/50 completed, Average Loss: 0.0002
 Epoch 50/50 completed, Average Loss: 0.0002
 Test set: Average loss: 0.0011, Accuracy: 9263/10000 (92.63%)
 
-Running FashionMNIST training with Optimizer = AdamCurvature
+Running FashionMNIST-largebatch training with Optimizer = AdamCurvature
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.5870
@@ -430,7 +430,7 @@ Epoch 49/50 completed, Average Loss: 0.0002
 Epoch 50/50 completed, Average Loss: 0.0002
 Test set: Average loss: 0.0011, Accuracy: 9277/10000 (92.77%)
 
-Running FashionMNIST training with Optimizer = HeavyBall
+Running FashionMNIST-largebatch training with Optimizer = HeavyBall
 params= {'lr': 0.001, 'momentum': 0.9}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 2.1475
@@ -537,7 +537,7 @@ Epoch 49/50 completed, Average Loss: 0.3068
 Epoch 50/50 completed, Average Loss: 0.3067
 Test set: Average loss: 0.0007, Accuracy: 8655/10000 (86.55%)
 
-Running FashionMNIST training with Optimizer = HeavyBallCurvature
+Running FashionMNIST-largebatch training with Optimizer = HeavyBallCurvature
 params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.8462
@@ -644,7 +644,7 @@ Epoch 49/50 completed, Average Loss: 0.0165
 Epoch 50/50 completed, Average Loss: 0.0159
 Test set: Average loss: 0.0008, Accuracy: 9104/10000 (91.04%)
 
-Running FashionMNIST training with Optimizer = NAG
+Running FashionMNIST-largebatch training with Optimizer = NAG
 params= {'lr': 0.001, 'momentum': 0.9}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 2.1475
@@ -751,7 +751,7 @@ Epoch 49/50 completed, Average Loss: 0.3068
 Epoch 50/50 completed, Average Loss: 0.3066
 Test set: Average loss: 0.0007, Accuracy: 8655/10000 (86.55%)
 
-Running FashionMNIST training with Optimizer = NAGCurvature
+Running FashionMNIST-largebatch training with Optimizer = NAGCurvature
 params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.8448
@@ -858,7 +858,7 @@ Epoch 49/50 completed, Average Loss: 0.0167
 Epoch 50/50 completed, Average Loss: 0.0133
 Test set: Average loss: 0.0008, Accuracy: 9148/10000 (91.48%)
 
-Running FashionMNIST training with Optimizer = Adagrad
+Running FashionMNIST-largebatch training with Optimizer = Adagrad
 params= {'lr': 0.001, 'eps': 1e-06}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.8141
@@ -965,7 +965,7 @@ Epoch 49/50 completed, Average Loss: 0.3556
 Epoch 50/50 completed, Average Loss: 0.3549
 Test set: Average loss: 0.0008, Accuracy: 8547/10000 (85.47%)
 
-Running FashionMNIST training with Optimizer = AdagradCurvature
+Running FashionMNIST-largebatch training with Optimizer = AdagradCurvature
 params= {'lr': 0.001, 'eps': 1e-06, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.7748
@@ -1072,7 +1072,7 @@ Epoch 49/50 completed, Average Loss: 0.2884
 Epoch 50/50 completed, Average Loss: 0.2869
 Test set: Average loss: 0.0007, Accuracy: 8791/10000 (87.91%)
 
-Running FashionMNIST training with Optimizer = Adadelta
+Running FashionMNIST-largebatch training with Optimizer = Adadelta
 params= {'lr': 0.001, 'rho': 0.95, 'eps': 1e-06}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 2.2906
@@ -1179,7 +1179,7 @@ Epoch 49/50 completed, Average Loss: 0.6179
 Epoch 50/50 completed, Average Loss: 0.6135
 Test set: Average loss: 0.0013, Accuracy: 7742/10000 (77.42%)
 
-Running FashionMNIST training with Optimizer = AdadeltaCurvature
+Running FashionMNIST-largebatch training with Optimizer = AdadeltaCurvature
 params= {'lr': 0.001, 'rho': 0.6, 'eps': 1e-06, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 2.2623
@@ -1286,7 +1286,7 @@ Epoch 49/50 completed, Average Loss: 0.5159
 Epoch 50/50 completed, Average Loss: 0.5128
 Test set: Average loss: 0.0011, Accuracy: 8098/10000 (80.98%)
 
-Running FashionMNIST training with Optimizer = RMSProp
+Running FashionMNIST-largebatch training with Optimizer = RMSProp
 params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.7907
@@ -1393,7 +1393,7 @@ Epoch 49/50 completed, Average Loss: 0.0059
 Epoch 50/50 completed, Average Loss: 0.0004
 Test set: Average loss: 0.0011, Accuracy: 9239/10000 (92.39%)
 
-Running FashionMNIST training with Optimizer = RMSPropCurvature
+Running FashionMNIST-largebatch training with Optimizer = RMSPropCurvature
 params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.7646
@@ -1500,7 +1500,7 @@ Epoch 49/50 completed, Average Loss: 0.0011
 Epoch 50/50 completed, Average Loss: 0.0178
 Test set: Average loss: 0.0010, Accuracy: 9237/10000 (92.37%)
 
-Running FashionMNIST training with Optimizer = RMSPropMomentum
+Running FashionMNIST-largebatch training with Optimizer = RMSPropMomentum
 params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-16, 'weight_decay': 0, 'momentum': 0.1}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.7747
@@ -1607,7 +1607,7 @@ Epoch 49/50 completed, Average Loss: 0.0500
 Epoch 50/50 completed, Average Loss: 0.0039
 Test set: Average loss: 0.0010, Accuracy: 9226/10000 (92.26%)
 
-Running FashionMNIST training with Optimizer = RMSPropMomentumCurvature
+Running FashionMNIST-largebatch training with Optimizer = RMSPropMomentumCurvature
 params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'momentum': 0.1, 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.7681
@@ -1714,7 +1714,7 @@ Epoch 49/50 completed, Average Loss: 0.0004
 Epoch 50/50 completed, Average Loss: 0.0002
 Test set: Average loss: 0.0011, Accuracy: 9267/10000 (92.67%)
 
-Running FashionMNIST training with Optimizer = AdamW
+Running FashionMNIST-largebatch training with Optimizer = AdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.5864
@@ -1821,7 +1821,7 @@ Epoch 49/50 completed, Average Loss: 0.0003
 Epoch 50/50 completed, Average Loss: 0.0002
 Test set: Average loss: 0.0010, Accuracy: 9265/10000 (92.65%)
 
-Running FashionMNIST training with Optimizer = AdamWCurvature
+Running FashionMNIST-largebatch training with Optimizer = AdamWCurvature
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.5871
@@ -1928,7 +1928,7 @@ Epoch 49/50 completed, Average Loss: 0.0003
 Epoch 50/50 completed, Average Loss: 0.0003
 Test set: Average loss: 0.0010, Accuracy: 9269/10000 (92.69%)
 
-Running FashionMNIST training with Optimizer = NAdam
+Running FashionMNIST-largebatch training with Optimizer = NAdam
 params= {'lr': 0.001, 'betas': (0.9, 0.999)}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.6151
@@ -2035,7 +2035,7 @@ Epoch 49/50 completed, Average Loss: 0.0199
 Epoch 50/50 completed, Average Loss: 0.0185
 Test set: Average loss: 0.0013, Accuracy: 9151/10000 (91.51%)
 
-Running FashionMNIST training with Optimizer = NAdamCurvature
+Running FashionMNIST-largebatch training with Optimizer = NAdamCurvature
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.6057
@@ -2142,7 +2142,7 @@ Epoch 49/50 completed, Average Loss: 0.0178
 Epoch 50/50 completed, Average Loss: 0.0119
 Test set: Average loss: 0.0014, Accuracy: 9100/10000 (91.00%)
 
-Running FashionMNIST training with Optimizer = NAdamW
+Running FashionMNIST-largebatch training with Optimizer = NAdamW
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.6150
@@ -2249,7 +2249,7 @@ Epoch 49/50 completed, Average Loss: 0.0241
 Epoch 50/50 completed, Average Loss: 0.0357
 Test set: Average loss: 0.0013, Accuracy: 9102/10000 (91.02%)
 
-Running FashionMNIST training with Optimizer = NAdamWCurvature
+Running FashionMNIST-largebatch training with Optimizer = NAdamWCurvature
 params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
 Running Loop: 1/2
 Epoch 1/50 completed, Average Loss: 0.6057
@@ -2331,3 +2331,241 @@ Epoch 24/50 completed, Average Loss: 0.0195
 Epoch 25/50 completed, Average Loss: 0.0178
 Epoch 26/50 completed, Average Loss: 0.0177
 Epoch 27/50 completed, Average Loss: 0.0127
+Epoch 28/50 completed, Average Loss: 0.0148
+Epoch 29/50 completed, Average Loss: 0.0094
+Epoch 30/50 completed, Average Loss: 0.0090
+Epoch 31/50 completed, Average Loss: 0.0265
+Epoch 32/50 completed, Average Loss: 0.0239
+Epoch 33/50 completed, Average Loss: 0.0182
+Epoch 34/50 completed, Average Loss: 0.0138
+Epoch 35/50 completed, Average Loss: 0.0176
+Epoch 36/50 completed, Average Loss: 0.0128
+Epoch 37/50 completed, Average Loss: 0.0127
+Epoch 38/50 completed, Average Loss: 0.0231
+Epoch 39/50 completed, Average Loss: 0.0222
+Epoch 40/50 completed, Average Loss: 0.0146
+Epoch 41/50 completed, Average Loss: 0.0140
+Epoch 42/50 completed, Average Loss: 0.0153
+Epoch 43/50 completed, Average Loss: 0.0166
+Epoch 44/50 completed, Average Loss: 0.0118
+Epoch 45/50 completed, Average Loss: 0.0174
+Epoch 46/50 completed, Average Loss: 0.0216
+Epoch 47/50 completed, Average Loss: 0.0200
+Epoch 48/50 completed, Average Loss: 0.0181
+Epoch 49/50 completed, Average Loss: 0.0084
+Epoch 50/50 completed, Average Loss: 0.0306
+Test set: Average loss: 0.0012, Accuracy: 9133/10000 (91.33%)
+
+Running FashionMNIST-largebatch training with Optimizer = AMSGrad
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/50 completed, Average Loss: 0.5867
+Epoch 2/50 completed, Average Loss: 0.3519
+Epoch 3/50 completed, Average Loss: 0.3052
+Epoch 4/50 completed, Average Loss: 0.2650
+Epoch 5/50 completed, Average Loss: 0.2478
+Epoch 6/50 completed, Average Loss: 0.2267
+Epoch 7/50 completed, Average Loss: 0.2043
+Epoch 8/50 completed, Average Loss: 0.1920
+Epoch 9/50 completed, Average Loss: 0.1827
+Epoch 10/50 completed, Average Loss: 0.1682
+Epoch 11/50 completed, Average Loss: 0.1588
+Epoch 12/50 completed, Average Loss: 0.1452
+Epoch 13/50 completed, Average Loss: 0.1329
+Epoch 14/50 completed, Average Loss: 0.1234
+Epoch 15/50 completed, Average Loss: 0.1142
+Epoch 16/50 completed, Average Loss: 0.1061
+Epoch 17/50 completed, Average Loss: 0.0982
+Epoch 18/50 completed, Average Loss: 0.0895
+Epoch 19/50 completed, Average Loss: 0.0842
+Epoch 20/50 completed, Average Loss: 0.0703
+Epoch 21/50 completed, Average Loss: 0.0626
+Epoch 22/50 completed, Average Loss: 0.0558
+Epoch 23/50 completed, Average Loss: 0.0469
+Epoch 24/50 completed, Average Loss: 0.0448
+Epoch 25/50 completed, Average Loss: 0.0396
+Epoch 26/50 completed, Average Loss: 0.0338
+Epoch 27/50 completed, Average Loss: 0.0312
+Epoch 28/50 completed, Average Loss: 0.0296
+Epoch 29/50 completed, Average Loss: 0.0216
+Epoch 30/50 completed, Average Loss: 0.0187
+Epoch 31/50 completed, Average Loss: 0.0163
+Epoch 32/50 completed, Average Loss: 0.0132
+Epoch 33/50 completed, Average Loss: 0.0128
+Epoch 34/50 completed, Average Loss: 0.0088
+Epoch 35/50 completed, Average Loss: 0.0063
+Epoch 36/50 completed, Average Loss: 0.0056
+Epoch 37/50 completed, Average Loss: 0.0060
+Epoch 38/50 completed, Average Loss: 0.0034
+Epoch 39/50 completed, Average Loss: 0.0028
+Epoch 40/50 completed, Average Loss: 0.0020
+Epoch 41/50 completed, Average Loss: 0.0016
+Epoch 42/50 completed, Average Loss: 0.0014
+Epoch 43/50 completed, Average Loss: 0.0013
+Epoch 44/50 completed, Average Loss: 0.0012
+Epoch 45/50 completed, Average Loss: 0.0010
+Epoch 46/50 completed, Average Loss: 0.0010
+Epoch 47/50 completed, Average Loss: 0.0009
+Epoch 48/50 completed, Average Loss: 0.0008
+Epoch 49/50 completed, Average Loss: 0.0008
+Epoch 50/50 completed, Average Loss: 0.0007
+Test set: Average loss: 0.0009, Accuracy: 9275/10000 (92.75%)
+Running Loop: 2/2
+Epoch 1/50 completed, Average Loss: 0.5885
+Epoch 2/50 completed, Average Loss: 0.3543
+Epoch 3/50 completed, Average Loss: 0.3028
+Epoch 4/50 completed, Average Loss: 0.2714
+Epoch 5/50 completed, Average Loss: 0.2487
+Epoch 6/50 completed, Average Loss: 0.2250
+Epoch 7/50 completed, Average Loss: 0.2060
+Epoch 8/50 completed, Average Loss: 0.1931
+Epoch 9/50 completed, Average Loss: 0.1771
+Epoch 10/50 completed, Average Loss: 0.1678
+Epoch 11/50 completed, Average Loss: 0.1564
+Epoch 12/50 completed, Average Loss: 0.1442
+Epoch 13/50 completed, Average Loss: 0.1324
+Epoch 14/50 completed, Average Loss: 0.1179
+Epoch 15/50 completed, Average Loss: 0.1088
+Epoch 16/50 completed, Average Loss: 0.0974
+Epoch 17/50 completed, Average Loss: 0.0877
+Epoch 18/50 completed, Average Loss: 0.0795
+Epoch 19/50 completed, Average Loss: 0.0753
+Epoch 20/50 completed, Average Loss: 0.0655
+Epoch 21/50 completed, Average Loss: 0.0542
+Epoch 22/50 completed, Average Loss: 0.0514
+Epoch 23/50 completed, Average Loss: 0.0423
+Epoch 24/50 completed, Average Loss: 0.0406
+Epoch 25/50 completed, Average Loss: 0.0316
+Epoch 26/50 completed, Average Loss: 0.0261
+Epoch 27/50 completed, Average Loss: 0.0258
+Epoch 28/50 completed, Average Loss: 0.0206
+Epoch 29/50 completed, Average Loss: 0.0191
+Epoch 30/50 completed, Average Loss: 0.0163
+Epoch 31/50 completed, Average Loss: 0.0090
+Epoch 32/50 completed, Average Loss: 0.0073
+Epoch 33/50 completed, Average Loss: 0.0070
+Epoch 34/50 completed, Average Loss: 0.0051
+Epoch 35/50 completed, Average Loss: 0.0035
+Epoch 36/50 completed, Average Loss: 0.0025
+Epoch 37/50 completed, Average Loss: 0.0024
+Epoch 38/50 completed, Average Loss: 0.0019
+Epoch 39/50 completed, Average Loss: 0.0018
+Epoch 40/50 completed, Average Loss: 0.0014
+Epoch 41/50 completed, Average Loss: 0.0012
+Epoch 42/50 completed, Average Loss: 0.0011
+Epoch 43/50 completed, Average Loss: 0.0010
+Epoch 44/50 completed, Average Loss: 0.0010
+Epoch 45/50 completed, Average Loss: 0.0008
+Epoch 46/50 completed, Average Loss: 0.0008
+Epoch 47/50 completed, Average Loss: 0.0007
+Epoch 48/50 completed, Average Loss: 0.0007
+Epoch 49/50 completed, Average Loss: 0.0007
+Epoch 50/50 completed, Average Loss: 0.0006
+Test set: Average loss: 0.0010, Accuracy: 9262/10000 (92.62%)
+
+Running FashionMNIST-largebatch training with Optimizer = AMSGradCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/50 completed, Average Loss: 0.5866
+Epoch 2/50 completed, Average Loss: 0.3525
+Epoch 3/50 completed, Average Loss: 0.3052
+Epoch 4/50 completed, Average Loss: 0.2652
+Epoch 5/50 completed, Average Loss: 0.2471
+Epoch 6/50 completed, Average Loss: 0.2263
+Epoch 7/50 completed, Average Loss: 0.2043
+Epoch 8/50 completed, Average Loss: 0.1913
+Epoch 9/50 completed, Average Loss: 0.1814
+Epoch 10/50 completed, Average Loss: 0.1683
+Epoch 11/50 completed, Average Loss: 0.1591
+Epoch 12/50 completed, Average Loss: 0.1451
+Epoch 13/50 completed, Average Loss: 0.1317
+Epoch 14/50 completed, Average Loss: 0.1227
+Epoch 15/50 completed, Average Loss: 0.1133
+Epoch 16/50 completed, Average Loss: 0.1045
+Epoch 17/50 completed, Average Loss: 0.0971
+Epoch 18/50 completed, Average Loss: 0.0892
+Epoch 19/50 completed, Average Loss: 0.0825
+Epoch 20/50 completed, Average Loss: 0.0681
+Epoch 21/50 completed, Average Loss: 0.0597
+Epoch 22/50 completed, Average Loss: 0.0551
+Epoch 23/50 completed, Average Loss: 0.0461
+Epoch 24/50 completed, Average Loss: 0.0439
+Epoch 25/50 completed, Average Loss: 0.0396
+Epoch 26/50 completed, Average Loss: 0.0341
+Epoch 27/50 completed, Average Loss: 0.0297
+Epoch 28/50 completed, Average Loss: 0.0288
+Epoch 29/50 completed, Average Loss: 0.0199
+Epoch 30/50 completed, Average Loss: 0.0184
+Epoch 31/50 completed, Average Loss: 0.0162
+Epoch 32/50 completed, Average Loss: 0.0125
+Epoch 33/50 completed, Average Loss: 0.0105
+Epoch 34/50 completed, Average Loss: 0.0087
+Epoch 35/50 completed, Average Loss: 0.0063
+Epoch 36/50 completed, Average Loss: 0.0041
+Epoch 37/50 completed, Average Loss: 0.0076
+Epoch 38/50 completed, Average Loss: 0.0033
+Epoch 39/50 completed, Average Loss: 0.0024
+Epoch 40/50 completed, Average Loss: 0.0017
+Epoch 41/50 completed, Average Loss: 0.0016
+Epoch 42/50 completed, Average Loss: 0.0013
+Epoch 43/50 completed, Average Loss: 0.0012
+Epoch 44/50 completed, Average Loss: 0.0011
+Epoch 45/50 completed, Average Loss: 0.0010
+Epoch 46/50 completed, Average Loss: 0.0010
+Epoch 47/50 completed, Average Loss: 0.0009
+Epoch 48/50 completed, Average Loss: 0.0008
+Epoch 49/50 completed, Average Loss: 0.0007
+Epoch 50/50 completed, Average Loss: 0.0007
+Test set: Average loss: 0.0009, Accuracy: 9273/10000 (92.73%)
+Running Loop: 2/2
+Epoch 1/50 completed, Average Loss: 0.5882
+Epoch 2/50 completed, Average Loss: 0.3545
+Epoch 3/50 completed, Average Loss: 0.3031
+Epoch 4/50 completed, Average Loss: 0.2714
+Epoch 5/50 completed, Average Loss: 0.2493
+Epoch 6/50 completed, Average Loss: 0.2250
+Epoch 7/50 completed, Average Loss: 0.2064
+Epoch 8/50 completed, Average Loss: 0.1934
+Epoch 9/50 completed, Average Loss: 0.1769
+Epoch 10/50 completed, Average Loss: 0.1684
+Epoch 11/50 completed, Average Loss: 0.1566
+Epoch 12/50 completed, Average Loss: 0.1452
+Epoch 13/50 completed, Average Loss: 0.1326
+Epoch 14/50 completed, Average Loss: 0.1182
+Epoch 15/50 completed, Average Loss: 0.1097
+Epoch 16/50 completed, Average Loss: 0.0990
+Epoch 17/50 completed, Average Loss: 0.0888
+Epoch 18/50 completed, Average Loss: 0.0801
+Epoch 19/50 completed, Average Loss: 0.0756
+Epoch 20/50 completed, Average Loss: 0.0662
+Epoch 21/50 completed, Average Loss: 0.0563
+Epoch 22/50 completed, Average Loss: 0.0513
+Epoch 23/50 completed, Average Loss: 0.0429
+Epoch 24/50 completed, Average Loss: 0.0405
+Epoch 25/50 completed, Average Loss: 0.0324
+Epoch 26/50 completed, Average Loss: 0.0280
+Epoch 27/50 completed, Average Loss: 0.0260
+Epoch 28/50 completed, Average Loss: 0.0201
+Epoch 29/50 completed, Average Loss: 0.0176
+Epoch 30/50 completed, Average Loss: 0.0139
+Epoch 31/50 completed, Average Loss: 0.0122
+Epoch 32/50 completed, Average Loss: 0.0095
+Epoch 33/50 completed, Average Loss: 0.0094
+Epoch 34/50 completed, Average Loss: 0.0055
+Epoch 35/50 completed, Average Loss: 0.0049
+Epoch 36/50 completed, Average Loss: 0.0027
+Epoch 37/50 completed, Average Loss: 0.0025
+Epoch 38/50 completed, Average Loss: 0.0021
+Epoch 39/50 completed, Average Loss: 0.0017
+Epoch 40/50 completed, Average Loss: 0.0014
+Epoch 41/50 completed, Average Loss: 0.0012
+Epoch 42/50 completed, Average Loss: 0.0011
+Epoch 43/50 completed, Average Loss: 0.0010
+Epoch 44/50 completed, Average Loss: 0.0009
+Epoch 45/50 completed, Average Loss: 0.0008
+Epoch 46/50 completed, Average Loss: 0.0008
+Epoch 47/50 completed, Average Loss: 0.0007
+Epoch 48/50 completed, Average Loss: 0.0007
+Epoch 49/50 completed, Average Loss: 0.0007
+Epoch 50/50 completed, Average Loss: 0.0006
+Test set: Average loss: 0.0010, Accuracy: 9257/10000 (92.57%)

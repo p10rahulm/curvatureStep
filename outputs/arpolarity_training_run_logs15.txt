@@ -1,0 +1,15 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running amazon-review-polarity training with Optimizer = NAdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.5985
+Epoch 2/10 completed, Average Loss: 0.5492
+Epoch 3/10 completed, Average Loss: 0.5291
+Epoch 4/10 completed, Average Loss: 0.5367
+Epoch 5/10 completed, Average Loss: 0.5248
+Epoch 6/10 completed, Average Loss: 0.4999
+Epoch 7/10 completed, Average Loss: 0.5777
+Epoch 8/10 completed, Average Loss: 0.5439

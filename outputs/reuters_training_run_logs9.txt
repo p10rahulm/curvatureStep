@@ -1,7 +1,0 @@
-# ----------------------------------------------------------------------------------------------------
-# Running 50 epochs of training - 1 runs
-# ----------------------------------------------------------------------------------------------------
-
-Running reuters training with Optimizer = HeavyBallCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
-Running Loop: 1/1

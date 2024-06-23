@@ -1,0 +1,16 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running amazon-review-polarity training with Optimizer = RMSPropMomentum
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-16, 'weight_decay': 0, 'momentum': 0.1}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.5805
+Epoch 2/10 completed, Average Loss: 0.5187
+Epoch 3/10 completed, Average Loss: 0.4390
+Epoch 4/10 completed, Average Loss: 0.4609
+Epoch 5/10 completed, Average Loss: 0.4325
+Epoch 6/10 completed, Average Loss: 0.4626
+Epoch 7/10 completed, Average Loss: 0.4475
+Epoch 8/10 completed, Average Loss: 0.4474
+Epoch 9/10 completed, Average Loss: 0.4223

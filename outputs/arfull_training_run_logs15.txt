@@ -1,0 +1,26 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running amazon-review-full training with Optimizer = AMSGrad
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.5082
+Epoch 2/10 completed, Average Loss: 1.3040
+Epoch 3/10 completed, Average Loss: 1.3082
+Epoch 4/10 completed, Average Loss: 1.3320
+Epoch 5/10 completed, Average Loss: 1.3595
+Epoch 6/10 completed, Average Loss: 1.2467
+Epoch 7/10 completed, Average Loss: 1.4263
+Epoch 8/10 completed, Average Loss: 1.3367
+Epoch 9/10 completed, Average Loss: 1.2895
+Epoch 10/10 completed, Average Loss: 1.3151
+Test set: Average loss: 0.0006, Accuracy: 272265/650000 (41.89%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.5589
+Epoch 2/10 completed, Average Loss: 1.4944
+Epoch 3/10 completed, Average Loss: 1.4845
+Epoch 4/10 completed, Average Loss: 1.4732
+Epoch 5/10 completed, Average Loss: 1.5407
+Epoch 6/10 completed, Average Loss: 1.4581
+Epoch 7/10 completed, Average Loss: 1.4143

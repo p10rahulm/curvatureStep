@@ -1,0 +1,84 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running sogou-news training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01, 'clip_radius': 10}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.2762
+Epoch 2/10 completed, Average Loss: 1.2636
+Epoch 3/10 completed, Average Loss: 1.2583
+Epoch 4/10 completed, Average Loss: 1.2299
+Epoch 5/10 completed, Average Loss: 1.2201
+Epoch 6/10 completed, Average Loss: 1.1971
+Epoch 7/10 completed, Average Loss: 1.1860
+Epoch 8/10 completed, Average Loss: 1.1876
+Epoch 9/10 completed, Average Loss: 1.1568
+Epoch 10/10 completed, Average Loss: 1.1468
+Test set: Average loss: 0.0146, Accuracy: 12035/60000 (20.06%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.2791
+Epoch 2/10 completed, Average Loss: 1.2699
+Epoch 3/10 completed, Average Loss: 1.2569
+Epoch 4/10 completed, Average Loss: 1.2444
+Epoch 5/10 completed, Average Loss: 1.2300
+Epoch 6/10 completed, Average Loss: 1.2083
+Epoch 7/10 completed, Average Loss: 1.1977
+Epoch 8/10 completed, Average Loss: 1.1758
+Epoch 9/10 completed, Average Loss: 1.1551
+Epoch 10/10 completed, Average Loss: 1.1698
+Test set: Average loss: 0.0156, Accuracy: 12029/60000 (20.05%)
+
+Running sogou-news training with Optimizer = HeavyBallCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.2460
+Epoch 2/10 completed, Average Loss: 1.2044
+Epoch 3/10 completed, Average Loss: 1.1807
+Epoch 4/10 completed, Average Loss: 1.1697
+Epoch 5/10 completed, Average Loss: 1.1568
+Epoch 6/10 completed, Average Loss: 1.1470
+Epoch 7/10 completed, Average Loss: 1.1360
+Epoch 8/10 completed, Average Loss: 1.1242
+Epoch 9/10 completed, Average Loss: 1.1047
+Epoch 10/10 completed, Average Loss: 1.0835
+Test set: Average loss: 0.0119, Accuracy: 12733/60000 (21.22%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.2502
+Epoch 2/10 completed, Average Loss: 1.2164
+Epoch 3/10 completed, Average Loss: 1.1892
+Epoch 4/10 completed, Average Loss: 1.1756
+Epoch 5/10 completed, Average Loss: 1.1674
+Epoch 6/10 completed, Average Loss: 1.1587
+Epoch 7/10 completed, Average Loss: 1.1425
+Epoch 8/10 completed, Average Loss: 1.1322
+Epoch 9/10 completed, Average Loss: 1.1237
+Epoch 10/10 completed, Average Loss: 1.1108
+Test set: Average loss: 0.0111, Accuracy: 12722/60000 (21.20%)
+
+Running sogou-news training with Optimizer = NAGCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.2479
+Epoch 2/10 completed, Average Loss: 1.2057
+Epoch 3/10 completed, Average Loss: 1.1833
+Epoch 4/10 completed, Average Loss: 1.1672
+Epoch 5/10 completed, Average Loss: 1.1611
+Epoch 6/10 completed, Average Loss: 1.1484
+Epoch 7/10 completed, Average Loss: 1.1360
+Epoch 8/10 completed, Average Loss: 1.1284
+Epoch 9/10 completed, Average Loss: 1.1185
+Epoch 10/10 completed, Average Loss: 1.0956
+Test set: Average loss: 0.0117, Accuracy: 12756/60000 (21.26%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.2502
+Epoch 2/10 completed, Average Loss: 1.2159
+Epoch 3/10 completed, Average Loss: 1.1866
+Epoch 4/10 completed, Average Loss: 1.1722
+Epoch 5/10 completed, Average Loss: 1.1654
+Epoch 6/10 completed, Average Loss: 1.1521
+Epoch 7/10 completed, Average Loss: 1.1394
+Epoch 8/10 completed, Average Loss: 1.1303
+Epoch 9/10 completed, Average Loss: 1.1203
+Epoch 10/10 completed, Average Loss: 1.0941
+Test set: Average loss: 0.0116, Accuracy: 12695/60000 (21.16%)

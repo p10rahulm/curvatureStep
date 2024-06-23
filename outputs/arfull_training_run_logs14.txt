@@ -1,0 +1,24 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running amazon-review-full training with Optimizer = NAdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.5794
+Epoch 2/10 completed, Average Loss: 1.5566
+Epoch 3/10 completed, Average Loss: 1.5329
+Epoch 4/10 completed, Average Loss: 1.4801
+Epoch 5/10 completed, Average Loss: 1.4917
+Epoch 6/10 completed, Average Loss: 1.5406
+Epoch 7/10 completed, Average Loss: 1.5239
+Epoch 8/10 completed, Average Loss: 1.5603
+Epoch 9/10 completed, Average Loss: 1.5398
+Epoch 10/10 completed, Average Loss: 1.5198
+Test set: Average loss: 0.0008, Accuracy: 185011/650000 (28.46%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.5358
+Epoch 2/10 completed, Average Loss: 1.5667
+Epoch 3/10 completed, Average Loss: 1.5533
+Epoch 4/10 completed, Average Loss: 1.5121
+Epoch 5/10 completed, Average Loss: 1.4601
