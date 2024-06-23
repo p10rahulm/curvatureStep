@@ -1,0 +1,9 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 3 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running STL10 training with Optimizer = RMSPropMomentumCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'momentum': 0.1, 'epsilon': 0.01}
+Files already downloaded and verified
+Files already downloaded and verified
+Running Loop: 1/3

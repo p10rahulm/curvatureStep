@@ -310,3 +310,190 @@ Epoch 5/10 completed, Average Loss: 1.4399
 Epoch 6/10 completed, Average Loss: 1.4281
 Epoch 7/10 completed, Average Loss: 1.4243
 Epoch 8/10 completed, Average Loss: 1.4248
+Epoch 9/10 completed, Average Loss: 1.4141
+Epoch 10/10 completed, Average Loss: 1.4087
+Test set: Average loss: 0.0125, Accuracy: 12000/60000 (20.00%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.5135
+Epoch 2/10 completed, Average Loss: 1.4961
+Epoch 3/10 completed, Average Loss: 1.4696
+Epoch 4/10 completed, Average Loss: 1.4511
+Epoch 5/10 completed, Average Loss: 1.4409
+Epoch 6/10 completed, Average Loss: 1.4309
+Epoch 7/10 completed, Average Loss: 1.4213
+Epoch 8/10 completed, Average Loss: 1.4182
+Epoch 9/10 completed, Average Loss: 1.4147
+Epoch 10/10 completed, Average Loss: 1.4104
+Test set: Average loss: 0.0126, Accuracy: 11997/60000 (20.00%)
+
+Running sogou-news training with Optimizer = RMSProp
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.2564
+Epoch 2/10 completed, Average Loss: 1.2143
+Epoch 3/10 completed, Average Loss: 1.1846
+Epoch 4/10 completed, Average Loss: 1.1520
+Epoch 5/10 completed, Average Loss: 1.1456
+Epoch 6/10 completed, Average Loss: 1.1385
+Epoch 7/10 completed, Average Loss: 1.1491
+Epoch 8/10 completed, Average Loss: 1.1168
+Epoch 9/10 completed, Average Loss: 1.0997
+Epoch 10/10 completed, Average Loss: 1.0872
+Test set: Average loss: 0.0128, Accuracy: 15325/60000 (25.54%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.2390
+Epoch 2/10 completed, Average Loss: 1.1909
+Epoch 3/10 completed, Average Loss: 1.1729
+Epoch 4/10 completed, Average Loss: 1.1506
+Epoch 5/10 completed, Average Loss: 1.1302
+Epoch 6/10 completed, Average Loss: 1.0878
+Epoch 7/10 completed, Average Loss: 1.0930
+Epoch 8/10 completed, Average Loss: 1.0950
+Epoch 9/10 completed, Average Loss: 1.0816
+Epoch 10/10 completed, Average Loss: 1.0804
+Test set: Average loss: 0.0122, Accuracy: 14850/60000 (24.75%)
+
+Running sogou-news training with Optimizer = RMSPropCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.2401
+Epoch 2/10 completed, Average Loss: 1.1931
+Epoch 3/10 completed, Average Loss: 1.1611
+Epoch 4/10 completed, Average Loss: 1.1256
+Epoch 5/10 completed, Average Loss: 1.0997
+Epoch 6/10 completed, Average Loss: 1.1126
+Epoch 7/10 completed, Average Loss: 1.0970
+Epoch 8/10 completed, Average Loss: 1.0841
+Epoch 9/10 completed, Average Loss: 1.0755
+Epoch 10/10 completed, Average Loss: 1.0613
+Test set: Average loss: 0.0169, Accuracy: 13007/60000 (21.68%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.2432
+Epoch 2/10 completed, Average Loss: 1.1989
+Epoch 3/10 completed, Average Loss: 1.1765
+Epoch 4/10 completed, Average Loss: 1.1574
+Epoch 5/10 completed, Average Loss: 1.1293
+Epoch 6/10 completed, Average Loss: 1.1143
+Epoch 7/10 completed, Average Loss: 1.1063
+Epoch 8/10 completed, Average Loss: 1.1211
+Epoch 9/10 completed, Average Loss: 1.0977
+Epoch 10/10 completed, Average Loss: 1.0741
+Test set: Average loss: 0.0139, Accuracy: 14032/60000 (23.39%)
+
+Running sogou-news training with Optimizer = RMSPropMomentum
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-16, 'weight_decay': 0, 'momentum': 0.1}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.2640
+Epoch 2/10 completed, Average Loss: 1.2146
+Epoch 3/10 completed, Average Loss: 1.1917
+Epoch 4/10 completed, Average Loss: 1.1767
+Epoch 5/10 completed, Average Loss: 1.1580
+Epoch 6/10 completed, Average Loss: 1.1439
+Epoch 7/10 completed, Average Loss: 1.1113
+Epoch 8/10 completed, Average Loss: 1.0987
+Epoch 9/10 completed, Average Loss: 1.0738
+Epoch 10/10 completed, Average Loss: 1.0961
+Test set: Average loss: 0.0130, Accuracy: 15510/60000 (25.85%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.2419
+Epoch 2/10 completed, Average Loss: 1.2196
+Epoch 3/10 completed, Average Loss: 1.2193
+Epoch 4/10 completed, Average Loss: 1.1949
+Epoch 5/10 completed, Average Loss: 1.1814
+Epoch 6/10 completed, Average Loss: 1.1709
+Epoch 7/10 completed, Average Loss: 1.1366
+Epoch 8/10 completed, Average Loss: 1.1055
+Epoch 9/10 completed, Average Loss: 1.0986
+Epoch 10/10 completed, Average Loss: 1.0755
+Test set: Average loss: 0.0117, Accuracy: 16167/60000 (26.95%)
+
+Running sogou-news training with Optimizer = RMSPropMomentumCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'momentum': 0.1, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.2404
+Epoch 2/10 completed, Average Loss: 1.2383
+Epoch 3/10 completed, Average Loss: 1.2031
+Epoch 4/10 completed, Average Loss: 1.1862
+Epoch 5/10 completed, Average Loss: 1.1600
+Epoch 6/10 completed, Average Loss: 1.1407
+Epoch 7/10 completed, Average Loss: 1.1257
+Epoch 8/10 completed, Average Loss: 1.0839
+Epoch 9/10 completed, Average Loss: 1.0812
+Epoch 10/10 completed, Average Loss: 1.0689
+Test set: Average loss: 0.0114, Accuracy: 16831/60000 (28.05%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.2338
+Epoch 2/10 completed, Average Loss: 1.2145
+Epoch 3/10 completed, Average Loss: 1.2019
+Epoch 4/10 completed, Average Loss: 1.2075
+Epoch 5/10 completed, Average Loss: 1.1628
+Epoch 6/10 completed, Average Loss: 1.1339
+Epoch 7/10 completed, Average Loss: 1.1182
+Epoch 8/10 completed, Average Loss: 1.1086
+Epoch 9/10 completed, Average Loss: 1.1068
+Epoch 10/10 completed, Average Loss: 1.1041
+Test set: Average loss: 0.0146, Accuracy: 13978/60000 (23.30%)
+
+Running sogou-news training with Optimizer = AdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.2390
+Epoch 2/10 completed, Average Loss: 1.2576
+Epoch 3/10 completed, Average Loss: 1.2696
+Epoch 4/10 completed, Average Loss: 1.2528
+Epoch 5/10 completed, Average Loss: 1.2726
+Epoch 6/10 completed, Average Loss: 1.2655
+Epoch 7/10 completed, Average Loss: 1.2322
+Epoch 8/10 completed, Average Loss: 1.2556
+Epoch 9/10 completed, Average Loss: 1.3094
+Epoch 10/10 completed, Average Loss: 1.3130
+Test set: Average loss: 0.0098, Accuracy: 13397/60000 (22.33%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.3602
+Epoch 2/10 completed, Average Loss: 1.4107
+Epoch 3/10 completed, Average Loss: 1.3810
+Epoch 4/10 completed, Average Loss: 1.3798
+Epoch 5/10 completed, Average Loss: 1.3422
+Epoch 6/10 completed, Average Loss: 1.3207
+Epoch 7/10 completed, Average Loss: 1.2874
+Epoch 8/10 completed, Average Loss: 1.2750
+Epoch 9/10 completed, Average Loss: 1.2700
+Epoch 10/10 completed, Average Loss: 1.2503
+Test set: Average loss: 0.0132, Accuracy: 13309/60000 (22.18%)
+
+Running sogou-news training with Optimizer = AdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.2547
+Epoch 2/10 completed, Average Loss: 1.2919
+Epoch 3/10 completed, Average Loss: 1.3052
+Epoch 4/10 completed, Average Loss: 1.2577
+Epoch 5/10 completed, Average Loss: 1.2808
+Epoch 6/10 completed, Average Loss: 1.2667
+Epoch 7/10 completed, Average Loss: 1.3028
+Epoch 8/10 completed, Average Loss: 1.3967
+Epoch 9/10 completed, Average Loss: 1.3589
+Epoch 10/10 completed, Average Loss: 1.3451
+Test set: Average loss: 0.0144, Accuracy: 15175/60000 (25.29%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.3751
+Epoch 2/10 completed, Average Loss: 1.3626
+Epoch 3/10 completed, Average Loss: 1.3427
+Epoch 4/10 completed, Average Loss: 1.3221
+Epoch 5/10 completed, Average Loss: 1.2998
+Epoch 6/10 completed, Average Loss: 1.2892
+Epoch 7/10 completed, Average Loss: 1.2714
+Epoch 8/10 completed, Average Loss: 1.2602
+Epoch 9/10 completed, Average Loss: 1.2627
+Epoch 10/10 completed, Average Loss: 1.2503
+Test set: Average loss: 0.0125, Accuracy: 13523/60000 (22.54%)
+
+Running sogou-news training with Optimizer = NAdam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.5542
+Epoch 2/10 completed, Average Loss: 1.4339
+Epoch 3/10 completed, Average Loss: 1.4862
+Epoch 4/10 completed, Average Loss: 1.5535
+Epoch 5/10 completed, Average Loss: 1.6349
+Epoch 6/10 completed, Average Loss: 1.6352

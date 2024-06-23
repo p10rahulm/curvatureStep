@@ -200,3 +200,123 @@ Epoch 3/10 completed, Average Loss: 6.6686
 Epoch 4/10 completed, Average Loss: 6.4584
 Epoch 5/10 completed, Average Loss: 6.4242
 Epoch 6/10 completed, Average Loss: 6.3824
+Epoch 7/10 completed, Average Loss: 6.0512
+Epoch 8/10 completed, Average Loss: 6.1676
+Epoch 9/10 completed, Average Loss: 6.1824
+Epoch 10/10 completed, Average Loss: 6.0397
+Test set: Average loss: 0.0041, Accuracy: 149799/650000 (23.05%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.5734
+Epoch 2/10 completed, Average Loss: 1.6075
+Epoch 3/10 completed, Average Loss: 2.1177
+Epoch 4/10 completed, Average Loss: 8.6977
+Epoch 5/10 completed, Average Loss: 9.5746
+Epoch 6/10 completed, Average Loss: 9.6297
+Epoch 7/10 completed, Average Loss: 9.5896
+Epoch 8/10 completed, Average Loss: 9.4823
+Epoch 9/10 completed, Average Loss: 9.3415
+Epoch 10/10 completed, Average Loss: 9.3935
+Test set: Average loss: 0.0044, Accuracy: 131518/650000 (20.23%)
+
+Running amazon-review-full training with Optimizer = Adagrad
+params= {'lr': 0.001, 'eps': 1e-06}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.5214
+Epoch 2/10 completed, Average Loss: 1.4948
+Epoch 3/10 completed, Average Loss: 1.4602
+Epoch 4/10 completed, Average Loss: 1.4441
+Epoch 5/10 completed, Average Loss: 1.4328
+Epoch 6/10 completed, Average Loss: 1.4223
+Epoch 7/10 completed, Average Loss: 1.4143
+Epoch 8/10 completed, Average Loss: 1.4082
+Epoch 9/10 completed, Average Loss: 1.4034
+Epoch 10/10 completed, Average Loss: 1.3992
+Test set: Average loss: 0.0007, Accuracy: 251095/650000 (38.63%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.5286
+Epoch 2/10 completed, Average Loss: 1.4765
+Epoch 3/10 completed, Average Loss: 1.4516
+Epoch 4/10 completed, Average Loss: 1.4413
+Epoch 5/10 completed, Average Loss: 1.4334
+Epoch 6/10 completed, Average Loss: 1.4272
+Epoch 7/10 completed, Average Loss: 1.4217
+Epoch 8/10 completed, Average Loss: 1.4164
+Epoch 9/10 completed, Average Loss: 1.4110
+Epoch 10/10 completed, Average Loss: 1.4056
+Test set: Average loss: 0.0007, Accuracy: 249746/650000 (38.42%)
+
+Running amazon-review-full training with Optimizer = AdagradCurvature
+params= {'lr': 0.001, 'eps': 1e-06, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.4369
+Epoch 2/10 completed, Average Loss: 1.3484
+Epoch 3/10 completed, Average Loss: 1.3021
+Epoch 4/10 completed, Average Loss: 1.2689
+Epoch 5/10 completed, Average Loss: 1.2449
+Epoch 6/10 completed, Average Loss: 1.2266
+Epoch 7/10 completed, Average Loss: 1.2121
+Epoch 8/10 completed, Average Loss: 1.2002
+Epoch 9/10 completed, Average Loss: 1.1901
+Epoch 10/10 completed, Average Loss: 1.1815
+Test set: Average loss: 0.0006, Accuracy: 318734/650000 (49.04%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.4235
+Epoch 2/10 completed, Average Loss: 1.3318
+Epoch 3/10 completed, Average Loss: 1.2866
+Epoch 4/10 completed, Average Loss: 1.2564
+Epoch 5/10 completed, Average Loss: 1.2352
+Epoch 6/10 completed, Average Loss: 1.2181
+Epoch 7/10 completed, Average Loss: 1.2049
+Epoch 8/10 completed, Average Loss: 1.1939
+Epoch 9/10 completed, Average Loss: 1.1844
+Epoch 10/10 completed, Average Loss: 1.1763
+Test set: Average loss: 0.0006, Accuracy: 318209/650000 (48.96%)
+
+Running amazon-review-full training with Optimizer = Adadelta
+params= {'lr': 0.001, 'rho': 0.95, 'eps': 1e-06}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.6086
+Epoch 2/10 completed, Average Loss: 1.5991
+Epoch 3/10 completed, Average Loss: 1.5966
+Epoch 4/10 completed, Average Loss: 1.5948
+Epoch 5/10 completed, Average Loss: 1.5933
+Epoch 6/10 completed, Average Loss: 1.5918
+Epoch 7/10 completed, Average Loss: 1.5905
+Epoch 8/10 completed, Average Loss: 1.5893
+Epoch 9/10 completed, Average Loss: 1.5881
+Epoch 10/10 completed, Average Loss: 1.5869
+Test set: Average loss: 0.0008, Accuracy: 161735/650000 (24.88%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.6028
+Epoch 2/10 completed, Average Loss: 1.5977
+Epoch 3/10 completed, Average Loss: 1.5957
+Epoch 4/10 completed, Average Loss: 1.5942
+Epoch 5/10 completed, Average Loss: 1.5928
+Epoch 6/10 completed, Average Loss: 1.5915
+Epoch 7/10 completed, Average Loss: 1.5904
+Epoch 8/10 completed, Average Loss: 1.5893
+Epoch 9/10 completed, Average Loss: 1.5882
+Epoch 10/10 completed, Average Loss: 1.5872
+Test set: Average loss: 0.0008, Accuracy: 163406/650000 (25.14%)
+
+Running amazon-review-full training with Optimizer = AdadeltaCurvature
+params= {'lr': 0.001, 'rho': 0.6, 'eps': 1e-06, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.6053
+Epoch 2/10 completed, Average Loss: 1.5937
+Epoch 3/10 completed, Average Loss: 1.5890
+Epoch 4/10 completed, Average Loss: 1.5842
+Epoch 5/10 completed, Average Loss: 1.5759
+Epoch 6/10 completed, Average Loss: 1.5325
+Epoch 7/10 completed, Average Loss: 1.5109
+Epoch 8/10 completed, Average Loss: 1.5014
+Epoch 9/10 completed, Average Loss: 1.4944
+Epoch 10/10 completed, Average Loss: 1.4884
+Test set: Average loss: 0.0007, Accuracy: 210325/650000 (32.36%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.6004
+Epoch 2/10 completed, Average Loss: 1.5927
+Epoch 3/10 completed, Average Loss: 1.5886
+Epoch 4/10 completed, Average Loss: 1.5846
+Epoch 5/10 completed, Average Loss: 1.5789
+Epoch 6/10 completed, Average Loss: 1.5530

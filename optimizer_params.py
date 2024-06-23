@@ -60,3 +60,20 @@ optimizers = [
     # (Shampoo, {'lr': 1e-3, 'momentum': 0.1}),
     # (ShampooCurvature, {'lr': 1e-3, 'momentum': 0.1, 'epsilon': 0.01}),
 ]
+
+optimizers = [
+    # (AdamCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
+    # (NAGCurvature, {'lr': 1e-3, 'momentum': 0.55, 'epsilon': 0.01}),
+    # (Adagrad, {'lr': 1e-3, 'eps': 1e-6}),
+    # (AdagradCurvature, {'lr': 1e-3, 'eps': 1e-6, 'epsilon': 0.01}),
+    # (Adadelta, {'lr': 1e-3, 'rho': 0.95, 'eps': 1e-6}),
+    # (AdadeltaCurvature, {'lr': 1e-3, 'rho': 0.6, 'eps': 1e-6, 'epsilon': 0.01}),
+    # (RMSProp, {'lr': 1e-3, 'alpha': 0.99, 'eps': 1e-6, 'weight_decay': 0}),
+    # (RMSPropCurvature, {'lr': 1e-3, 'alpha': 0.99, 'eps': 1e-6, 'weight_decay': 0, 'epsilon': 0.01}),
+    # (RMSPropMomentum, {'lr': 1e-3, 'alpha': 0.99, 'eps': 1e-16, 'weight_decay': 0, 'momentum': 0.1}),    
+    # (RMSPropMomentumCurvature, {'lr': 1e-3, 'alpha': 0.99, 'eps': 1e-6, 'weight_decay': 0, 'momentum': 0.1, 'epsilon': 0.01}),
+    # (AdamWCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
+    # (NAdamCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
+    # (NAdamWCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
+    (AMSGradCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
+]
