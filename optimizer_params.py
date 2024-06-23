@@ -34,13 +34,13 @@ from optimizers.shampoo_curvature import ShampooCurvature
 
 optimizers = [
     # (SimpleSGD, {'lr': 1e-3}),
-    # (SimpleSGDCurvature, {'lr': 1e-3, 'epsilon': 0.01}),
+    (SimpleSGDCurvature, {'lr': 1e-3, 'epsilon': 0.01}),
     # (Adam, {'lr': 1e-3, 'betas': (0.9, 0.999)}),
     # (AdamCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
     # (HeavyBall, {'lr': 1e-3, 'momentum': 0.9}),
-    # (HeavyBallCurvature, {'lr': 1e-3, 'momentum': 0.55, 'epsilon': 0.01}),
+    (HeavyBallCurvature, {'lr': 1e-3, 'momentum': 0.55, 'epsilon': 0.01}),
     # (NAG, {'lr': 1e-3, 'momentum': 0.9}),
-    # (NAGCurvature, {'lr': 1e-3, 'momentum': 0.55, 'epsilon': 0.01}),
+    (NAGCurvature, {'lr': 1e-3, 'momentum': 0.55, 'epsilon': 0.01}),
     # (Adagrad, {'lr': 1e-3, 'eps': 1e-6}),
     # (AdagradCurvature, {'lr': 1e-3, 'eps': 1e-6, 'epsilon': 0.01}),
     # (Adadelta, {'lr': 1e-3, 'rho': 0.95, 'eps': 1e-6}),
@@ -56,7 +56,7 @@ optimizers = [
     # (NAdamW, {'lr': 1e-3, 'betas': (0.9, 0.999), 'weight_decay': 0.01}),
     # (NAdamWCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
     # (AMSGrad, {'lr': 1e-3, 'betas': (0.9, 0.999)}),
-    (AMSGradCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
+    # (AMSGradCurvature, {'lr': 1e-3, 'betas': (0.9, 0.999), 'epsilon': 0.01}),
     # (Shampoo, {'lr': 1e-3, 'momentum': 0.1}),
     # (ShampooCurvature, {'lr': 1e-3, 'momentum': 0.1, 'epsilon': 0.01}),
 ]

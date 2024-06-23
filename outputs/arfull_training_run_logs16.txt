@@ -1,0 +1,10 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running amazon-review-full training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01, 'clip_radius': 25}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.5185
+Epoch 2/10 completed, Average Loss: 1.4605
+Epoch 3/10 completed, Average Loss: 1.4325

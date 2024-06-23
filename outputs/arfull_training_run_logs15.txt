@@ -24,3 +24,28 @@ Epoch 4/10 completed, Average Loss: 1.4732
 Epoch 5/10 completed, Average Loss: 1.5407
 Epoch 6/10 completed, Average Loss: 1.4581
 Epoch 7/10 completed, Average Loss: 1.4143
+Epoch 8/10 completed, Average Loss: 1.3855
+Epoch 9/10 completed, Average Loss: 1.4572
+Epoch 10/10 completed, Average Loss: 1.5105
+Test set: Average loss: 0.0008, Accuracy: 154147/650000 (23.71%)
+
+Running amazon-review-full training with Optimizer = AMSGradCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.5344
+Epoch 2/10 completed, Average Loss: 1.4768
+Epoch 3/10 completed, Average Loss: 1.4769
+Epoch 4/10 completed, Average Loss: 1.4626
+Epoch 5/10 completed, Average Loss: 1.4740
+Epoch 6/10 completed, Average Loss: 1.5001
+Epoch 7/10 completed, Average Loss: 1.4793
+Epoch 8/10 completed, Average Loss: 1.4729
+Epoch 9/10 completed, Average Loss: 1.4883
+Epoch 10/10 completed, Average Loss: 1.4749
+Test set: Average loss: 0.0007, Accuracy: 232765/650000 (35.81%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.5343
+Epoch 2/10 completed, Average Loss: 1.5259
+Epoch 3/10 completed, Average Loss: 1.5183
+Epoch 4/10 completed, Average Loss: 1.5154
+Epoch 5/10 completed, Average Loss: 1.5169

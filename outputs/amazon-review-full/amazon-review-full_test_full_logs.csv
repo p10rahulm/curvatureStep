@@ -13,8 +13,8 @@
 11|HeavyBallCurvature|2|0.0006|49.25
 12|NAG|1|0.0006|49.49
 13|NAG|2|0.0006|48.28
-14|NAGCurvature|1|0.0041|23.05
-15|NAGCurvature|2|0.0044|20.23
+14|NAGCurvature|1|0.0006|47.44
+15|NAGCurvature|2|0.0006|47.84
 16|Adagrad|1|0.0007|38.63
 17|Adagrad|2|0.0007|38.42
 18|AdagradCurvature|1|0.0006|49.04
@@ -28,3 +28,4 @@
 26|RMSPropCurvature|1|0.0007|37.5
 27|RMSPropCurvature|2|0.0007|37.97
 28|RMSPropMomentum|1|0.0007|39.24
+29|RMSPropMomentum|2|0.0007|37.07

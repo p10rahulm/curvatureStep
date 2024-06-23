@@ -76,3 +76,9 @@ Epoch 2/10 completed, Average Loss: 1.3819
 Epoch 3/10 completed, Average Loss: 1.3444
 Epoch 4/10 completed, Average Loss: 1.3143
 Epoch 5/10 completed, Average Loss: 1.2905
+Epoch 6/10 completed, Average Loss: 1.2740
+Epoch 7/10 completed, Average Loss: 1.2559
+Epoch 8/10 completed, Average Loss: 1.2378
+Epoch 9/10 completed, Average Loss: 1.2255
+Epoch 10/10 completed, Average Loss: 1.2128
+Test set: Average loss: 0.0006, Accuracy: 310978/650000 (47.84%)

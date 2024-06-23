@@ -345,6 +345,29 @@ Test set: Average loss: 0.0002, Accuracy: 339509/400000 (84.88%)
 Running Loop: 2/2
 Epoch 1/10 completed, Average Loss: 0.5712
 Epoch 2/10 completed, Average Loss: 0.4836
-EpoEpoch 4/10 completed, Average Loss: 0.4579
+Epoch 3/10 completed, Average Loss: 0.4626
+Epoch 4/10 completed, Average Loss: 0.4579
 Epoch 5/10 completed, Average Loss: 0.4317
 Epoch 6/10 completed, Average Loss: 0.4463
+Epoch 7/10 completed, Average Loss: 0.4165
+Epoch 8/10 completed, Average Loss: 0.3814
+Epoch 9/10 completed, Average Loss: 0.4179
+Epoch 10/10 completed, Average Loss: 0.4494
+Test set: Average loss: 0.0003, Accuracy: 269139/400000 (67.28%)
+
+Running amazon-review-polarity training with Optimizer = RMSPropCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.5553
+Epoch 2/10 completed, Average Loss: 0.4762
+Epoch 3/10 completed, Average Loss: 0.5015
+Epoch 4/10 completed, Average Loss: 0.3723
+Epoch 5/10 completed, Average Loss: 0.4621
+Epoch 6/10 completed, Average Loss: 0.5094
+EpoEpoch 8/10 completed, Average Loss: 0.4333
+Epoch 9/10 completed, Average Loss: 0.4242
+Epoch 10/10 completed, Average Loss: 0.4173
+Test set: Average loss: 0.0002, Accuracy: 337066/400000 (84.27%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 0.5779
+Epoch 2/10 completed, Average Loss: 0.4740
