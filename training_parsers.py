@@ -166,7 +166,10 @@ def process_files(num_epochs, less_discard=True):
         for index, row in df.iterrows():
             optimizer = row['Optimizer Name']
             mean_losses = row.filter(like='Mean_Training_Loss').values[:num_epochs]  # Restrict to first num_epochs
-            
+            dataset_name = file_path.split('/')[1]
+            if dataset_name=="mnist":
+                print(len(mean_losses))
+
             # Skip if there are less than num_epochs
             if len(mean_losses) < num_epochs:
                 if less_discard:
@@ -175,7 +178,7 @@ def process_files(num_epochs, less_discard=True):
                     mean_losses = np.pad(mean_losses, (0, num_epochs - len(mean_losses)), constant_values=np.nan)
             else:
                 if less_discard:
-                    dataset_name = file_path.split('/')[1]
+                    
                     datasets.add(dataset_name)
             
             if optimizer not in aggregated_data:
