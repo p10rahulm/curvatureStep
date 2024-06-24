@@ -1,6 +1,9 @@
 import pandas as pd
+import numpy as np
 import re
 import os
+
+
 
 def parse_training_logs(log_file_path, dataset_name):
     # Regular expressions to extract information
@@ -118,3 +121,92 @@ parse_training_logs('outputs/reuters_largebatch_training_run_logs.txt', 'reuters
 parse_training_logs('outputs/sogou_training_run_logs.txt', 'sogou-news')
 parse_training_logs('outputs/arfull_training_run_logs.txt', 'amazon-review-full')
 parse_training_logs('outputs/arpolarity_training_run_logs.txt', 'amazon-review-polarity')
+
+
+# ----------------------------
+# Write the mean loss to file.
+# ----------------------------
+
+# List of file paths
+file_paths = [
+    "outputs/cifar-100/cifar-100_train_grouped_logs.csv",
+    "outputs/dbpedia/dbpedia_train_grouped_logs.csv",
+    "outputs/caltech101-resnet/caltech101-resnet_train_grouped_logs.csv",
+    "outputs/amazon-review-polarity/amazon-review-polarity_train_grouped_logs.csv",
+    "outputs/cifar10/cifar10_train_grouped_logs.csv",
+    "outputs/sogou-news/sogou-news_train_grouped_logs.csv",
+    "outputs/yelp/yelp_train_grouped_logs.csv",
+    "outputs/colabert/colabert_train_grouped_logs.csv",
+    "outputs/oxfordpet/oxfordpet_train_grouped_logs.csv",
+    "outputs/reuters-large-batch/reuters-large-batch_train_grouped_logs.csv",
+    "outputs/caltech101/caltech101_train_grouped_logs.csv",
+    "outputs/fashionmnist/fashionmnist_train_grouped_logs.csv",
+    "outputs/amazon-review-full/amazon-review-full_train_grouped_logs.csv",
+    "outputs/fashionmnist-largebatch/fashionmnist-largebatch_train_grouped_logs.csv",
+    "outputs/flowers102/flowers102_train_grouped_logs.csv",
+    "outputs/agnews/agnews_train_grouped_logs.csv",
+    "outputs/mnist/mnist_train_grouped_logs.csv",
+    "outputs/eurosat/eurosat_train_grouped_logs.csv",
+    "outputs/stl10-resnet/stl10-resnet_train_grouped_logs.csv",
+    "outputs/cola/cola_train_grouped_logs.csv",
+    "outputs/stl10/stl10_train_grouped_logs.csv",
+    "outputs/imdb/imdb_train_grouped_logs.csv",
+    "outputs/reuters/reuters_train_grouped_logs.csv"
+]
+
+# Function to process files for a given num_epochs
+def process_files(num_epochs, less_discard=True):
+    # Dictionary to store aggregated data
+    aggregated_data = {}
+    datasets = set()
+    # Read each file and aggregate the data
+    for file_path in file_paths:
+        df = pd.read_csv(file_path, delimiter='|')
+        
+        for index, row in df.iterrows():
+            optimizer = row['Optimizer Name']
+            mean_losses = row.filter(like='Mean_Training_Loss').values[:num_epochs]  # Restrict to first num_epochs
+            
+            # Skip if there are less than num_epochs
+            if len(mean_losses) < num_epochs:
+                if less_discard:
+                    continue
+                else:
+                    mean_losses = np.pad(mean_losses, (0, num_epochs - len(mean_losses)), constant_values=np.nan)
+            else:
+                if less_discard:
+                    dataset_name = file_path.split('/')[1]
+                    datasets.add(dataset_name)
+            
+            if optimizer not in aggregated_data:
+                aggregated_data[optimizer] = []
+            
+            aggregated_data[optimizer].append(mean_losses)
+    
+    # Compute the mean across all files for each optimizer, ignoring NaNs
+    mean_data = {}
+    for optimizer, values in aggregated_data.items():
+        mean_data[optimizer] = np.nanmean(values, axis=0)
+    
+    # Convert the mean data to a DataFrame
+    mean_df = pd.DataFrame(mean_data).transpose()
+    
+    # Rename the columns to reflect the epochs
+    mean_df.columns = [f'Epoch_{i+1}' for i in range(mean_df.shape[1])]
+    
+    # Print the resulting mean DataFrame
+    print(mean_df)
+    if less_discard:
+        print("included datasets = ",datasets)
+    
+    # Save the result to a CSV file
+    if less_discard:
+        mean_df.to_csv(f'outputs/mean_training_loss_{num_epochs}epochs_exact.csv', index=True, sep="|")
+    else:
+        mean_df.to_csv(f'outputs/mean_training_loss_{num_epochs}epochs.csv', index=True, sep="|")
+
+# Process files for num_epochs 5, 10, 50
+for num_epochs in [5, 10, 50]:
+    process_files(num_epochs, less_discard=True)
+
+process_files(10, less_discard=False)
