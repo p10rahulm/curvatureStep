@@ -1,0 +1,84 @@
+# ----------------------------------------------------------------------------------------------------
+# Running 10 epochs of training - 2 runs
+# ----------------------------------------------------------------------------------------------------
+
+Running amazon-review-full training with Optimizer = SimpleSGDCurvature
+params= {'lr': 0.001, 'epsilon': 0.01, 'clip_radius': 5}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.5317
+Epoch 2/10 completed, Average Loss: 1.4720
+Epoch 3/10 completed, Average Loss: 1.4510
+Epoch 4/10 completed, Average Loss: 1.4349
+Epoch 5/10 completed, Average Loss: 1.4202
+Epoch 6/10 completed, Average Loss: 1.4034
+Epoch 7/10 completed, Average Loss: 1.3776
+Epoch 8/10 completed, Average Loss: 1.3566
+Epoch 9/10 completed, Average Loss: 1.3415
+Epoch 10/10 completed, Average Loss: 1.3295
+Test set: Average loss: 0.0007, Accuracy: 271334/650000 (41.74%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.5355
+Epoch 2/10 completed, Average Loss: 1.4700
+Epoch 3/10 completed, Average Loss: 1.4431
+Epoch 4/10 completed, Average Loss: 1.4124
+Epoch 5/10 completed, Average Loss: 1.3810
+Epoch 6/10 completed, Average Loss: 1.3618
+Epoch 7/10 completed, Average Loss: 1.3470
+Epoch 8/10 completed, Average Loss: 1.3341
+Epoch 9/10 completed, Average Loss: 1.3224
+Epoch 10/10 completed, Average Loss: 1.3119
+Test set: Average loss: 0.0006, Accuracy: 278000/650000 (42.77%)
+
+Running amazon-review-full training with Optimizer = HeavyBallCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 5}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.5025
+Epoch 2/10 completed, Average Loss: 1.4392
+Epoch 3/10 completed, Average Loss: 1.3835
+Epoch 4/10 completed, Average Loss: 1.3405
+Epoch 5/10 completed, Average Loss: 1.3185
+Epoch 6/10 completed, Average Loss: 1.2900
+Epoch 7/10 completed, Average Loss: 1.2757
+Epoch 8/10 completed, Average Loss: 1.2621
+Epoch 9/10 completed, Average Loss: 1.2525
+Epoch 10/10 completed, Average Loss: 1.2423
+Test set: Average loss: 0.0006, Accuracy: 301381/650000 (46.37%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.5023
+Epoch 2/10 completed, Average Loss: 1.4026
+Epoch 3/10 completed, Average Loss: 1.3554
+Epoch 4/10 completed, Average Loss: 1.3198
+Epoch 5/10 completed, Average Loss: 1.3024
+Epoch 6/10 completed, Average Loss: 1.2814
+Epoch 7/10 completed, Average Loss: 1.2651
+Epoch 8/10 completed, Average Loss: 1.2473
+Epoch 9/10 completed, Average Loss: 1.2402
+Epoch 10/10 completed, Average Loss: 1.2254
+Test set: Average loss: 0.0006, Accuracy: 301101/650000 (46.32%)
+
+Running amazon-review-full training with Optimizer = NAGCurvature
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 5}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 1.5018
+Epoch 2/10 completed, Average Loss: 1.4408
+Epoch 3/10 completed, Average Loss: 1.3897
+Epoch 4/10 completed, Average Loss: 1.3475
+Epoch 5/10 completed, Average Loss: 1.3211
+Epoch 6/10 completed, Average Loss: 1.2954
+Epoch 7/10 completed, Average Loss: 1.2774
+Epoch 8/10 completed, Average Loss: 1.2686
+Epoch 9/10 completed, Average Loss: 1.2500
+Epoch 10/10 completed, Average Loss: 1.2383
+Test set: Average loss: 0.0006, Accuracy: 307926/650000 (47.37%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 1.5023
+Epoch 2/10 completed, Average Loss: 1.4045
+Epoch 3/10 completed, Average Loss: 1.3560
+Epoch 4/10 completed, Average Loss: 1.3264
+Epoch 5/10 completed, Average Loss: 1.2965
+Epoch 6/10 completed, Average Loss: 1.2798
+Epoch 7/10 completed, Average Loss: 1.2598
+Epoch 8/10 completed, Average Loss: 1.2500
+Epoch 9/10 completed, Average Loss: 1.2370
+Epoch 10/10 completed, Average Loss: 1.2232
+Test set: Average loss: 0.0006, Accuracy: 307017/650000 (47.23%)

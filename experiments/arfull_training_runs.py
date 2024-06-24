@@ -35,11 +35,11 @@ for optimizer_class, default_params in optimizers:
     params = default_params.copy()
 
     if str(optimizer_class.__name__) in ["SimpleSGDCurvature", "HeavyBallCurvature", "NAGCurvature"]:
-        params['clip_radius'] = 10
+        params['clip_radius'] = 5
 
 
     # Set device to GPU
-    device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')
+    device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
 
     dataset_loader = load_dataset
 

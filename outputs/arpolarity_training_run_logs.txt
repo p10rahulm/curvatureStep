@@ -371,3 +371,283 @@ Test set: Average loss: 0.0002, Accuracy: 337066/400000 (84.27%)
 Running Loop: 2/2
 Epoch 1/10 completed, Average Loss: 0.5779
 Epoch 2/10 completed, Average Loss: 0.4740
+Epoch 3/10 completed, Average Loss: 0.4512
+Epoch 4/10 completed, Average Loss: 0.4600
+Epoch 5/10 completed, Average Loss: 0.4184
+Epoch 6/10 completed, Average Loss: 0.4213
+Epoch 7/10 completed, Average Loss: 0.4453
+Epoch 8/10 completed, Average Loss: 0.3859
+Epoch 9/10 completed, Average Loss: 0.4222
+Epoch 10/10 completed, Average Loss: 0.4113
+Test set: Average loss: 0.0002, Accuracy: 331265/400000 (82.82%)
+
+Running amazon-review-polarity training with Optimizer = RMSPropMomentum
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-16, 'weight_decay': 0, 'momentum': 0.1}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.5805
+Epoch 2/10 completed, Average Loss: 0.5187
+Epoch 3/10 completed, Average Loss: 0.4390
+Epoch 4/10 completed, Average Loss: 0.4609
+Epoch 5/10 completed, Average Loss: 0.4325
+Epoch 6/10 completed, Average Loss: 0.4626
+Epoch 7/10 completed, Average Loss: 0.4475
+Epoch 8/10 completed, Average Loss: 0.4474
+Epoch 9/10 completed, Average Loss: 0.4223
+Epoch 10/10 completed, Average Loss: 0.4121
+Test set: Average loss: 0.0002, Accuracy: 336928/400000 (84.23%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 0.5540
+Epoch 2/10 completed, Average Loss: 0.4867
+Epoch 3/10 completed, Average Loss: 0.4781
+Epoch 4/10 completed, Average Loss: 0.4692
+Epoch 5/10 completed, Average Loss: 0.4513
+Epoch 6/10 completed, Average Loss: 0.4156
+Epoch 7/10 completed, Average Loss: 0.3720
+Epoch 8/10 completed, Average Loss: 0.3876
+Epoch 9/10 completed, Average Loss: 0.5876
+Epoch 10/10 completed, Average Loss: 0.5888
+Test set: Average loss: 0.0003, Accuracy: 294716/400000 (73.68%)
+
+Running amazon-review-polarity training with Optimizer = RMSPropMomentumCurvature
+params= {'lr': 0.001, 'alpha': 0.99, 'eps': 1e-06, 'weight_decay': 0, 'momentum': 0.1, 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.5596
+Epoch 2/10 completed, Average Loss: 0.4850
+Epoch 3/10 completed, Average Loss: 0.4663
+Epoch 4/10 completed, Average Loss: 0.4331
+Epoch 5/10 completed, Average Loss: 0.4505
+Epoch 6/10 completed, Average Loss: 0.4026
+Epoch 7/10 completed, Average Loss: 0.3809
+Epoch 8/10 completed, Average Loss: 0.3923
+Epoch 9/10 completed, Average Loss: 0.4063
+Epoch 10/10 completed, Average Loss: 0.4064
+Test set: Average loss: 0.0002, Accuracy: 335660/400000 (83.92%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 0.5655
+Epoch 2/10 completed, Average Loss: 0.5019
+Epoch 3/10 completed, Average Loss: 0.4823
+Epoch 4/10 completed, Average Loss: 0.5065
+Epoch 5/10 completed, Average Loss: 0.4745
+Epoch 6/10 completed, Average Loss: 0.4665
+Epoch 7/10 completed, Average Loss: 0.4872
+Epoch 8/10 completed, Average Loss: 0.4075
+Epoch 9/10 completed, Average Loss: 0.3844
+Epoch 10/10 completed, Average Loss: 0.3316
+Test set: Average loss: 0.0002, Accuracy: 332319/400000 (83.08%)
+
+Running amazon-review-polarity training with Optimizer = AdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.5929
+Epoch 2/10 completed, Average Loss: 0.4994
+Epoch 3/10 completed, Average Loss: 0.5000
+Epoch 4/10 completed, Average Loss: 0.5205
+Epoch 5/10 completed, Average Loss: 0.4675
+Epoch 6/10 completed, Average Loss: 0.5215
+Epoch 7/10 completed, Average Loss: 0.5159
+Epoch 8/10 completed, Average Loss: 0.4471
+Epoch 9/10 completed, Average Loss: 0.4632
+Epoch 10/10 completed, Average Loss: 0.4630
+Test set: Average loss: 0.0003, Accuracy: 294885/400000 (73.72%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 0.5927
+Epoch 2/10 completed, Average Loss: 0.5636
+Epoch 3/10 completed, Average Loss: 0.5035
+Epoch 4/10 completed, Average Loss: 0.5393
+Epoch 5/10 completed, Average Loss: 0.4516
+Epoch 6/10 completed, Average Loss: 0.4102
+Epoch 7/10 completed, Average Loss: 0.4668
+Epoch 8/10 completed, Average Loss: 0.4573
+Epoch 9/10 completed, Average Loss: 0.4564
+Epoch 10/10 completed, Average Loss: 0.4988
+Test set: Average loss: 0.0002, Accuracy: 331336/400000 (82.83%)
+
+Running amazon-review-polarity training with Optimizer = AdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.6032
+Epoch 2/10 completed, Average Loss: 0.5742
+Epoch 3/10 completed, Average Loss: 0.5175
+Epoch 4/10 completed, Average Loss: 0.4564
+Epoch 5/10 completed, Average Loss: 0.4001
+Epoch 6/10 completed, Average Loss: 0.3673
+Epoch 7/10 completed, Average Loss: 0.4523
+Epoch 8/10 completed, Average Loss: 0.5144
+Epoch 9/10 completed, Average Loss: 0.4770
+Epoch 10/10 completed, Average Loss: 0.4778
+Test set: Average loss: 0.0002, Accuracy: 329449/400000 (82.36%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 0.5708
+Epoch 2/10 completed, Average Loss: 0.5338
+Epoch 3/10 completed, Average Loss: 0.6027
+Epoch 4/10 completed, Average Loss: 0.5871
+Epoch 5/10 completed, Average Loss: 0.5942
+Epoch 6/10 completed, Average Loss: 0.5385
+Epoch 7/10 completed, Average Loss: 0.5060
+Epoch 8/10 completed, Average Loss: 0.5391
+Epoch 9/10 completed, Average Loss: 0.5654
+Epoch 10/10 completed, Average Loss: 0.6035
+Test set: Average loss: 0.0003, Accuracy: 258322/400000 (64.58%)
+
+
+Running amazon-review-polarity training with Optimizer = NAdam
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.5727
+Epoch 2/10 completed, Average Loss: 0.5186
+Epoch 3/10 completed, Average Loss: 0.4886
+Epoch 4/10 completed, Average Loss: 0.5081
+Epoch 5/10 completed, Average Loss: 0.4990
+Epoch 6/10 completed, Average Loss: 0.4944
+Epoch 7/10 completed, Average Loss: 0.4692
+Epoch 8/10 completed, Average Loss: 0.4479
+Epoch 9/10 completed, Average Loss: 0.4796
+Epoch 10/10 completed, Average Loss: 0.4883
+Test set: Average loss: 0.0003, Accuracy: 274444/400000 (68.61%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 0.6123
+Epoch 2/10 completed, Average Loss: 0.5715
+Epoch 3/10 completed, Average Loss: 0.5512
+Epoch 4/10 completed, Average Loss: 0.5366
+Epoch 5/10 completed, Average Loss: 0.6008
+Epoch 6/10 completed, Average Loss: 0.5560
+Epoch 7/10 completed, Average Loss: 0.5940
+Epoch 8/10 completed, Average Loss: 0.5924
+Epoch 9/10 completed, Average Loss: 0.5502
+Epoch 10/10 completed, Average Loss: 0.5850
+Test set: Average loss: 0.0003, Accuracy: 304566/400000 (76.14%)
+
+Running amazon-review-polarity training with Optimizer = NAdamCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.6186
+Epoch 2/10 completed, Average Loss: 0.5259
+Epoch 3/10 completed, Average Loss: 0.4897
+Epoch 4/10 completed, Average Loss: 0.5767
+Epoch 5/10 completed, Average Loss: 0.5173
+Epoch 6/10 completed, Average Loss: 0.5218
+Epoch 7/10 completed, Average Loss: 0.5645
+Epoch 8/10 completed, Average Loss: 0.6075
+Epoch 9/10 completed, Average Loss: 0.6056
+Epoch 10/10 completed, Average Loss: 0.6269
+Test set: Average loss: 0.0003, Accuracy: 251463/400000 (62.87%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 0.5642
+Epoch 2/10 completed, Average Loss: 0.5517
+Epoch 3/10 completed, Average Loss: 0.5774
+Epoch 4/10 completed, Average Loss: 0.5378
+Epoch 5/10 completed, Average Loss: 0.5210
+Epoch 6/10 completed, Average Loss: 0.5320
+Epoch 7/10 completed, Average Loss: 0.4859
+Epoch 8/10 completed, Average Loss: 0.4954
+Epoch 9/10 completed, Average Loss: 0.5673
+Epoch 10/10 completed, Average Loss: 0.6367
+Test set: Average loss: 0.0003, Accuracy: 244707/400000 (61.18%)
+
+Running amazon-review-polarity training with Optimizer = NAdamW
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'weight_decay': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.5985
+Epoch 2/10 completed, Average Loss: 0.5492
+Epoch 3/10 completed, Average Loss: 0.5291
+Epoch 4/10 completed, Average Loss: 0.5367
+Epoch 5/10 completed, Average Loss: 0.5248
+Epoch 6/10 completed, Average Loss: 0.4999
+Epoch 7/10 completed, Average Loss: 0.5777
+Epoch 8/10 completed, Average Loss: 0.5439
+Epoch 9/10 completed, Average Loss: 0.5621
+Epoch 10/10 completed, Average Loss: 0.5662
+Test set: Average loss: 0.0003, Accuracy: 294687/400000 (73.67%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 0.6362
+Epoch 2/10 completed, Average Loss: 0.5644
+Epoch 3/10 completed, Average Loss: 0.5652
+Epoch 4/10 completed, Average Loss: 0.5887
+Epoch 5/10 completed, Average Loss: 0.6292
+Epoch 6/10 completed, Average Loss: 0.6288
+Epoch 7/10 completed, Average Loss: 0.6204
+Epoch 8/10 completed, Average Loss: 0.5854
+Epoch 9/10 completed, Average Loss: 0.5827
+Epoch 10/10 completed, Average Loss: 0.5742
+Test set: Average loss: 0.0003, Accuracy: 278524/400000 (69.63%)
+
+Running amazon-review-polarity training with Optimizer = NAdamWCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.5852
+Epoch 2/10 completed, Average Loss: 0.6061
+Epoch 3/10 completed, Average Loss: 0.5399
+Epoch 4/10 completed, Average Loss: 0.5668
+Epoch 5/10 completed, Average Loss: 0.5098
+Epoch 6/10 completed, Average Loss: 0.5323
+Epoch 7/10 completed, Average Loss: 0.5934
+Epoch 8/10 completed, Average Loss: 0.5890
+Epoch 9/10 completed, Average Loss: 0.6084
+Epoch 10/10 completed, Average Loss: 0.6008
+Test set: Average loss: 0.0003, Accuracy: 287705/400000 (71.93%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 0.5850
+Epoch 2/10 completed, Average Loss: 0.5030
+Epoch 3/10 completed, Average Loss: 0.5408
+Epoch 4/10 completed, Average Loss: 0.5032
+Epoch 5/10 completed, Average Loss: 0.5240
+Epoch 6/10 completed, Average Loss: 0.5711
+Epoch 7/10 completed, Average Loss: 0.5993
+Epoch 8/10 completed, Average Loss: 0.6105
+Epoch 9/10 completed, Average Loss: 0.5672
+Epoch 10/10 completed, Average Loss: 0.5334
+Test set: Average loss: 0.0002, Accuracy: 298842/400000 (74.71%)
+
+Running amazon-review-polarity training with Optimizer = AMSGrad
+params= {'lr': 0.001, 'betas': (0.9, 0.999)}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.6337
+Epoch 2/10 completed, Average Loss: 0.5039
+Epoch 3/10 completed, Average Loss: 0.5480
+Epoch 4/10 completed, Average Loss: 0.5291
+Epoch 5/10 completed, Average Loss: 0.5231
+Epoch 6/10 completed, Average Loss: 0.5022
+Epoch 7/10 completed, Average Loss: 0.4730
+Epoch 8/10 completed, Average Loss: 0.4893
+Epoch 9/10 completed, Average Loss: 0.4920
+Epoch 10/10 completed, Average Loss: 0.4852
+Test set: Average loss: 0.0002, Accuracy: 314359/400000 (78.59%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 0.5801
+Epoch 2/10 completed, Average Loss: 0.5248
+Epoch 3/10 completed, Average Loss: 0.4828
+Epoch 4/10 completed, Average Loss: 0.5787
+Epoch 5/10 completed, Average Loss: 0.5914
+Epoch 6/10 completed, Average Loss: 0.5383
+Epoch 7/10 completed, Average Loss: 0.5194
+Epoch 8/10 completed, Average Loss: 0.5057
+Epoch 9/10 completed, Average Loss: 0.4563
+Epoch 10/10 completed, Average Loss: 0.3722
+Test set: Average loss: 0.0002, Accuracy: 346355/400000 (86.59%)
+
+Running amazon-review-polarity training with Optimizer = AMSGradCurvature
+params= {'lr': 0.001, 'betas': (0.9, 0.999), 'epsilon': 0.01}
+Running Loop: 1/2
+Epoch 1/10 completed, Average Loss: 0.5515
+Epoch 2/10 completed, Average Loss: 0.5534
+Epoch 3/10 completed, Average Loss: 0.5207
+Epoch 4/10 completed, Average Loss: 0.5251
+Epoch 5/10 completed, Average Loss: 0.5227
+Epoch 6/10 completed, Average Loss: 0.4894
+Epoch 7/10 completed, Average Loss: 0.5102
+Epoch 8/10 completed, Average Loss: 0.4995
+Epoch 9/10 completed, Average Loss: 0.5337
+Epoch 10/10 completed, Average Loss: 0.5098
+Test set: Average loss: 0.0003, Accuracy: 290015/400000 (72.50%)
+Running Loop: 2/2
+Epoch 1/10 completed, Average Loss: 0.5883
+Epoch 2/10 completed, Average Loss: 0.5932
+Epoch 3/10 completed, Average Loss: 0.4594
+Epoch 4/10 completed, Average Loss: 0.4035
+Epoch 5/10 completed, Average Loss: 0.3557
+Epoch 6/10 completed, Average Loss: 0.3402
+Epoch 7/10 completed, Average Loss: 0.4805
+Epoch 8/10 completed, Average Loss: 0.4451
+Epoch 9/10 completed, Average Loss: 0.3549
+Epoch 10/10 completed, Average Loss: 0.3681
+Test set: Average loss: 0.0002, Accuracy: 339984/400000 (85.00%)
