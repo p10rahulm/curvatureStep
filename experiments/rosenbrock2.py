@@ -96,7 +96,7 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 
 # Save the plot as an image file
-output_file = "outputs/plots/rosenblock.pdf"
+output_file = "outputs/plots/rosenbrock.pdf"
 plt.savefig(output_file)
 
 plt.show()
