@@ -1167,6 +1167,7 @@ The results of the experiments are logged in CSV files located in the `outputs` 
 
 ### Directory Structure
 
+```
 .
 ├── data_loaders
 │   ├── amazon_review_full.py
@@ -1268,7 +1269,7 @@ The results of the experiments are logged in CSV files located in the `outputs` 
 ├── optimizer_params.py
 ├── training_parsers.py
 └── utilities.py
-
+```
 
 ## Conclusion
 
