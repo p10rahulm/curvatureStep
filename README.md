@@ -1047,13 +1047,126 @@ These are the optimizers we include in the `optimizers/` directory:
 - simplesgd.py
 
 
+### Training Log Parsing
+
+We parse the training logs using `training_parsers.py`. We describe this below:
+Specifically, we describe how to parse the raw training logs generated during the experiments into a more usable format for analysis. We provide a Python script, `training_parsers.py`, which reads log files, extracts relevant information, and saves it in structured CSV files. This allows for easier analysis and visualization of training progress and performance metrics across different optimizers and datasets.
+
+#### Script Description
+
+The `training_parsers.py` script performs the following tasks:
+
+1. **Parsing Training Logs:**
+   - Reads log files and extracts optimizer names, training losses, and test set performances.
+   - Supports logs generated from various datasets and optimizers.
+
+2. **Creating DataFrames:**
+   - Stores extracted data in Pandas DataFrames for easy manipulation.
+   - Separates training and test data into different DataFrames.
+
+3. **Aggregating Results:**
+   - Groups the data by optimizer and epoch to calculate mean and standard deviation of training losses.
+   - Pivots the training DataFrame to get a more analysis-friendly format with epochs as columns.
+
+4. **Saving Results:**
+   - Saves the full logs and aggregated results into separate CSV files for each dataset.
+   - Saves the mean training losses across different epochs for easy comparison between optimizers.
+
+#### Example Usage
+
+Below is an example of how to parse training logs for different datasets and save the results:
+
+```python
+import pandas as pd
+import numpy as np
+import re
+import os
+
+def parse_training_logs(log_file_path, dataset_name):
+    optimizer_re = re.compile(rf'Running {dataset_name} training with Optimizer = (\w+)')
+    params_re = re.compile(r'params= ({.+})')
+    loop_re = re.compile(r'Running Loop: (\d+)/(\d+)')
+    epoch_re = re.compile(rf'Epoch (\d+)/(\d+) completed, Average Loss: ([\d.]+)')
+    test_re = re.compile(r'Test set: Average loss: ([\d.]+), Accuracy: (\d+)/(\d+) \(([\d.]+)%\)')
+
+    train_data = []
+    test_data = []
+
+    current_optimizer = None
+    current_loop = None
+
+    with open(log_file_path, 'r') as log_file:
+        for line in log_file:
+            optimizer_match = optimizer_re.search(line)
+            if optimizer_match:
+                current_optimizer = optimizer_match.group(1)
+                continue
+
+            loop_match = loop_re.search(line)
+            if loop_match:
+                current_loop = loop_match.group(1)
+                continue
+
+            epoch_match = epoch_re.search(line)
+            if epoch_match:
+                epoch_number = epoch_match.group(1)
+                avg_loss = epoch_match.group(3)
+                train_data.append([current_optimizer, current_loop, epoch_number, avg_loss])
+                continue
+
+            test_match = test_re.search(line)
+            if test_match:
+                avg_test_loss = test_match.group(1)
+                accuracy = test_match.group(4)
+                test_data.append([current_optimizer, current_loop, avg_test_loss, accuracy])
+                continue
+
+    train_df = pd.DataFrame(train_data, columns=[
+        'Optimizer Name', 'Running loop number', 'Epoch number', 'Average Training Loss'])
+
+    test_df = pd.DataFrame(test_data, columns=[
+        'Optimizer Name', 'Running loop number', 'Average Test set Loss', 'Average Test set accuracy'])
+
+    train_df['Average Training Loss'] = pd.to_numeric(train_df['Average Training Loss'], errors='coerce')
+    test_df['Average Test set Loss'] = pd.to_numeric(test_df['Average Test set Loss'], errors='coerce')
+    test_df['Average Test set accuracy'] = pd.to_numeric(test_df['Average Test set accuracy'], errors='coerce')
+
+    output_dir = f'outputs/{dataset_name.lower()}'
+    os.makedirs(output_dir, exist_ok=True)
+
+    train_df.to_csv(f'{output_dir}/{dataset_name.lower()}_train_full_logs.csv', index=True, sep="|")
+    test_df.to_csv(f'{output_dir}/{dataset_name.lower()}_test_full_logs.csv', index=True, sep="|")
+
+    train_grouped = train_df.groupby(['Optimizer Name', 'Epoch number']).agg(
+        Mean_Training_Loss=('Average Training Loss', 'mean'),
+        Std_Training_Loss=('Average Training Loss', 'std')
+    ).reset_index()
+
+    pivot_train_df = train_grouped.pivot(index=['Optimizer Name'], columns='Epoch number')
+    pivot_train_df.columns = [f'{stat}_epoch{int(epoch)}' for stat, epoch in pivot_train_df.columns]
+    pivot_train_df = pivot_train_df.reset_index()
+    pivot_train_df.to_csv(f'{output_dir}/{dataset_name.lower()}_train_grouped_logs.csv', index=False, sep="|")
+
+    test_grouped = test_df.groupby(['Optimizer Name']).agg(
+        Mean_Test_Set_Loss=('Average Test set Loss', 'mean'),
+        Std_Test_Set_Loss=('Average Test set Loss', 'std'),
+        Mean_Test_Set_Accuracy=('Average Test set accuracy', 'mean'),
+        Std_Test_Set_Accuracy=('Average Test set accuracy', 'std')
+    ).reset_index()
+    test_grouped.to_csv(f'{output_dir}/{dataset_name.lower()}_test_grouped_logs.csv', index=False, sep="|")
+
+# Example usage for CIFAR-10 and MNIST
+parse_training_logs('outputs/cifar10_training_run_logs.txt', 'Cifar10')
+parse_training_logs('outputs/mnist_training_run_logs.txt', 'MNIST')
+
+```
+
 ### Results Logging
 
 The results of the experiments are logged in CSV files located in the `outputs` directory. Each experiment generates a separate log file with detailed performance metrics.
 
 ### Directory Structure
 
-```
 .
 ├── data_loaders
 │   ├── amazon_review_full.py
@@ -1091,7 +1204,38 @@ The results of the experiments are logged in CSV files located in the `outputs` 
 │   ├── bert_model.py
 │   ├── resnet.py
 │   ├── simple_cnn.py
-│   └── simple_rnn_multiclass.py
+│   ├── simpleDQN.py
+│   ├── simpleNN.py
+│   ├── simpleRNN.py
+│   ├── simpleRNN_multiclass.py
+│   └── simpleRNN_speech.py
+├── optimizers
+│   ├── adadelta.py
+│   ├── adadelta_curvature.py
+│   ├── adagrad.py
+│   ├── adagrad_curvature.py
+│   ├── adam.py
+│   ├── adam_curvature.py
+│   ├── adamw.py
+│   ├── adamw_curvature.py
+│   ├── amsgrad.py
+│   ├── amsgrad_curvature.py
+│   ├── heavyball.py
+│   ├── heavyball_curvature.py
+│   ├── nag.py
+│   ├── nag_curvature.py
+│   ├── nadam.py
+│   ├── nadam_curvature.py
+│   ├── nadamw.py
+│   ├── nadamw_curvature.py
+│   ├── rmsprop.py
+│   ├── rmsprop_curvature.py
+│   ├── rmsprop_with_momentum.py
+│   ├── rmsprop_with_momentum_curvature.py
+│   ├── shampoo.py
+│   ├── shampoo_curvature.py
+│   ├── simplesgd.py
+│   ├── simplesgd_curvature.py
 ├── outputs
 │   ├── agnews
 │   ├── amazon-review-full
@@ -1122,8 +1266,9 @@ The results of the experiments are logged in CSV files located in the `outputs` 
 ├── train.py
 ├── experiment_utils.py
 ├── optimizer_params.py
+├── training_parsers.py
 └── utilities.py
-```
+
 
 ## Conclusion
 
