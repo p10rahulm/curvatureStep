@@ -625,6 +625,198 @@ def run_experiment(optimizer_class, optimizer_params, dataset_loader=None,
     return mean_accuracy, std_accuracy
 ```
 
+### Models
+
+This section provides details on the various models used in the experiments, including their architecture and configuration.
+
+#### BERT Classifiers
+
+1. **BERTClassifier**:
+    ```python
+    import torch
+    import torch.nn as nn
+    from transformers import BertModel, BertConfig
+
+    class BERTClassifier(nn.Module):
+        def __init__(self, num_classes=4, freeze_bert=False):
+            super(BERTClassifier, self).__init__()
+            config = BertConfig()
+            self.bert = BertModel(config)
+            self.dropout = nn.Dropout(0.3)
+            self.linear = nn.Linear(config.hidden_size, num_classes)
+            self.softmax = nn.Softmax(dim=1)
+            if freeze_bert:
+                for param in self.bert.parameters():
+                    param.requires_grad = False
+
+        def forward(self, input_ids, attention_mask):
+            outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
+            pooled_output = outputs[1]
+            x = self.dropout(pooled_output)
+            x = self.linear(x)
+            return self.softmax(x)
+    ```
+
+2. **TinyBERTClassifier**:
+    ```python
+    class TinyBERTClassifier(nn.Module):
+        def __init__(self, num_classes=4, freeze_bert=False):
+            super(TinyBERTClassifier, self).__init__()
+            config = BertConfig(
+                hidden_size=128,
+                num_hidden_layers=2,
+                num_attention_heads=2,
+                intermediate_size=512,
+                max_position_embeddings=512,
+                vocab_size=30522,
+                type_vocab_size=2,
+                hidden_act='gelu',
+                initializer_range=0.02,
+                layer_norm_eps=1e-12,
+                pad_token_id=0
+            )
+            self.bert = BertModel(config)
+            self.dropout = nn.Dropout(0.3)
+            self.linear = nn.Linear(config.hidden_size, num_classes)
+            self.softmax = nn.Softmax(dim=1)
+            if freeze_bert:
+                for param in self.bert.parameters():
+                    param.requires_grad = False
+
+        def forward(self, input_ids, attention_mask):
+            outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
+            pooled_output = outputs[1]
+            x = self.dropout(pooled_output)
+            x = self.linear(x)
+            return self.softmax(x)
+    ```
+
+3. **TinyBERTClassifierND**:
+    ```python
+    class TinyBERTClassifierND(nn.Module):
+        def __init__(self, num_classes=4, freeze_bert=False):
+            super(TinyBERTClassifier, self).__init__()
+            config = BertConfig(
+                hidden_size=128,
+                num_hidden_layers=2,
+                num_attention_heads=2,
+                intermediate_size=512,
+                max_position_embeddings=512,
+                vocab_size=30522,
+                type_vocab_size=2,
+                hidden_act='gelu',
+                initializer_range=0.02,
+                layer_norm_eps=1e-12,
+                pad_token_id=0
+            )
+            self.bert = BertModel(config)
+            self.dropout = nn.Dropout(0.01)
+            self.linear = nn.Linear(config.hidden_size, num_classes)
+            self.softmax = nn.Softmax(dim=1)
+            if freeze_bert:
+                for param in self.bert.parameters():
+                    param.requires_grad = False
+
+        def forward(self, input_ids, attention_mask):
+            outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
+            pooled_output = outputs[1]
+            x = self.dropout(pooled_output)
+            x = self.linear(x)
+            return self.softmax(x)
+    ```
+
+4. **PretrainedBERTClassifier**:
+    ```python
+    class PretrainedBERTClassifier(nn.Module):
+        def __init__(self, num_classes=2, freeze_bert=True):
+            super(PretrainedBERTClassifier, self).__init__()
+            self.bert = BertModel.from_pretrained('bert-base-uncased')
+            if freeze_bert:
+                for param in self.bert.parameters():
+                    param.requires_grad = False
+            self.dropout = nn.Dropout(0.3)
+            self.linear = nn.Linear(self.bert.config.hidden_size, num_classes)
+            self.softmax = nn.Softmax(dim=1)
+
+        def forward(self, input_ids, attention_mask):
+            outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
+            pooled_output = outputs[1]
+            x = self.dropout(pooled_output)
+            x = self.linear(x)
+            return self.softmax(x)
+    ```
+
+#### ResNet
+
+```python
+import torch.nn as nn
+import torchvision.models as models
+
+class SimpleResNet(nn.Module):
+    def __init__(self, num_classes=100):
+        super(SimpleResNet, self).__init__()
+        self.model = models.resnet18(weights=None)
+        self.model.fc = nn.Linear(self.model.fc.in_features, num_classes)
+
+    def forward(self, x):
+        return self.model(x)
+```
+
+#### SimpleCNN Template
+
+```python
+import torch.nn as nn
+import torch.nn.functional as F
+
+class SimpleCNN(nn.Module):
+    def __init__(self, num_classes=10, 
+                 image_width=96, 
+                 num_channels=3):
+        super(SimpleCNN, self).__init__()
+        self.num_channels=num_channels
+        self.image_width=image_width
+        self.num_classes=num_classes
+        self.conv1 = nn.Conv2d(num_channels, 32, kernel_size=3, padding=1)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
+        self.pool = nn.MaxPool2d(kernel_size=2, stride=2, padding=0)
+        self.fc1 = nn.Linear(64 * (image_width // 4) * (image_width // 4), 512)
+        self.fc2 = nn.Linear(512, num_classes)
+
+    def forward(self, x):
+        x = self.pool(F.relu(self.conv1(x)))
+        x = self.pool(F.relu(self.conv2(x)))
+        x = x.view(-1, 64 * (self.image_width // 4) * (self.image_width // 4))
+        x = F.relu(self.fc1(x))
+        x = self.fc2(x)
+        return x
+```
+
+#### SimpleRNN Multiclass
+
+```python
+import torch.nn as nn
+import torch.nn.functional as F
+
+class SimpleRNN(nn.Module):
+    def __init__(self, vocab_size, embed_dim, hidden_dim, output_dim, pad_idx):
+        super(SimpleRNN, self).__init__()
+        self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=pad_idx)
+        self.rnn = nn.RNN(embed_dim, hidden_dim, batch_first=True)
+        self.fc = nn.Linear(hidden_dim, output_dim)
+
+    def forward(self, text, lengths):
+        embedded = self.embedding(text)
+        packed_embedded = nn.utils.rnn.pack_padded_sequence(embedded, lengths, batch_first=True, enforce_sorted=False)
+        packed_output, hidden = self.rnn(packed_embedded)
+        hidden = hidden[-1, :, :]
+        return self.fc(hidden)
+
+    def flatten_parameters(self):
+        self.rnn.flatten_parameters()
+```
+
+
+
 ### Results Logging
 
 The results of the experiments are logged in CSV files located in the `outputs` directory. Each experiment generates a separate log file with detailed performance metrics.
