@@ -11,14 +11,14 @@ from torch.optim import Optimizer
 
 from optimizers.simplesgd import SimpleSGD
 from optimizers.simplesgd_curvature import SimpleSGDCurvature
+
 from optimizers.heavyball import HeavyBall
 from optimizers.heavyball_curvature import HeavyBallCurvature
 from optimizers.nag import NAG
 from optimizers.nag_curvature import NAGCurvature
 
-# Define the Himmelblau function
-def himmelblau(x, y):
-    return (x**2 + y - 11)**2 + (x + y**2 - 7)**2
+def beale(x, y):
+    return (1.5 - x + x*y)**2 + (2.25 - x + x*y**2)**2 + (2.625 - x + x*y**3)**2
 
 
 # Function to run optimization
@@ -32,19 +32,19 @@ def run_optimization(optimizer_class, lr, steps, x0):
 
     for _ in range(steps):
         optimizer.zero_grad()
-        loss = (x[0]**2 + x[1] - 11)**2 + (x[0] + x[1]**2 - 7)**2
+        loss = (1.5 - x[0] + x[0]*x[1])**2 + (2.25 - x[0] + x[0]*x[1]**2)**2 + (2.625 - x[0] + x[0]*x[1]**3)**2
         loss.backward()
         optimizer.step()
         path.append(x.detach().numpy().copy())
 
     return np.array(path)
 
-# Create a grid for the Himmelblau function
-x = np.linspace(-5, 5, 200)
-y = np.linspace(-5, 5, 200)
+# Create a grid for the Rosenbrock function
+x = np.linspace(-4.5, 7, 200)
+y = np.linspace(-4.5, 4.5, 200)
 X, Y = np.meshgrid(x, y)
-Z = himmelblau(X, Y)
-num_steps = 50
+Z = beale(X, Y)
+
 
 # List of optimizers to visualize
 optimizers = [
@@ -53,27 +53,22 @@ optimizers = [
 
 # Create a figure with subplots
 fig, axs = plt.subplots(2, 3, figsize=(18, 12))
-fig.suptitle('Optimization Paths on Himmelblau Function', fontsize=16)
+fig.suptitle('Optimization Paths on the Beale Function', fontsize=16)
 
 # Adjust space between plots
 fig.subplots_adjust(hspace=0.4, wspace=0.3)
 
-lr = 1.5e-2
-optima = [
-    (3.0, 2.0),
-    (-2.805118, 3.131312),
-    (-3.779310, -3.283186),
-    (3.584428, -1.848126)
-]
-
+optima = [(3,0.5)]
+lr=1e-3
+x0 = [1.5, 2.5]
+num_steps = 500
 # Run optimizations and plot results for each optimizer
 for ax, optimizer_class in zip(axs.flatten(), optimizers):
-    path = run_optimization(optimizer_class, lr=lr, steps=num_steps, x0=[-4, 4])
+    path = run_optimization(optimizer_class, lr=lr, steps=num_steps, x0=x0)
 
-    # Plot the Himmelblau function and optimization path
-    cs = ax.contour(X, Y, Z, levels=np.logspace(-1, 3, 20), cmap='jet')
+    # Plot the Rosenbrock function and optimization path
+    ax.contour(X, Y, Z, levels=np.logspace(-1, 3, 20), cmap='jet')
     ax.plot(path[:, 0], path[:, 1], 'ro-', label=f'{optimizer_class.__name__}')
-
     for optimum_num in range(len(optima)):
         optimum = optima[optimum_num]
         if len(optima)==1:
@@ -81,17 +76,16 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
         else:
             optima_label = f'Global Optimum {optimum_num}'
         ax.plot(optimum[0],optimum[1], 'x', markersize=8, label=optima_label)
+
     ax.set_xlabel('x')
     ax.set_ylabel('y')
     ax.set_title(f'{optimizer_class.__name__}')
     ax.legend()
-    ax.set_xlim(-5, 5)
-    ax.set_ylim(-5, 5)
 
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 
 # Save the plot as an image file
-output_file = "outputs/plots/himmelblau.pdf"
+output_file = "outputs/plots/beale.pdf"
 plt.savefig(output_file)
 
 plt.show()
