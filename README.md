@@ -1,1171 +1,16 @@
-# Adaptive Curvature Step Size (ACSS)
+# Adaptive Curvature Step Size (ACSS) for Optimizers
 
-## Introduction
+## Overview
 
 We propose an adaptive step size method called Adaptive Curvature Step Size (ACSS), which dynamically adjusts the step size based on the local geometry of the optimization path. Our approach calculates the radius of curvature using consecutive gradients along the iterate path and sets the step size equal to this radius.
 
 The effectiveness of ACSS stems from its ability to adapt to the local landscape of the optimization problem. In regions of low curvature, where consecutive gradient steps are nearly identical, the method allows for larger steps, recognizing that the convergence point is still distant. Conversely, in areas of high curvature, where gradient steps differ significantly in direction, ACSS reduces the step size, acknowledging proximity to a potential convergence point or the need for more careful navigation of a complex landscape.
 
-A key advantage of ACSS is its ability to incorporate second-order gradient information without the need to explicitly compute or store second-order terms. This results in improved optimization performance while maintaining a lower memory footprint compared to methods that directly use second-order information.
+A key advantage of ACSS is its ability to incorporate second-order gradient information, without the need to explicitly compute or store second-order terms. This results in improved optimization performance while maintaining a lower memory footprint compared to methods that directly use second-order information.
 
 Through extensive empirical evaluation on 20 different datasets, we compare ACSS against 12 popular optimization methods, including Adam, SGD, AdaGrad, RMSProp, and their variants. Our results consistently show that ACSS provides performance benefits. We provide PyTorch implementations of ACSS versions for popular optimizers.
 
-## Datasets
-
-The following datasets were used for testing:
-
-- CIFAR-100
-- DBPedia
-- Caltech101
-- Amazon Review Polarity
-- CIFAR-10
-- Sogou News
-- Yelp
-- CoLA
-- Oxford-IIIT Pet
-- Reuters
-- FashionMNIST
-- Amazon Review Full
-- Flowers102
-- AGNews
-- MNIST
-- EuroSat
-- STL-10
-- IMDB
-
-## Optimizers
-
-The following optimizers were tested:
-
-- SimpleSGD
-- HeavyBall
-- NAG
-- Adadelta
-- Adagrad
-- NAdam
-- NAdamW
-- RMSProp
-- RMSPropMomentum
-- AdamW
-- Adam
-- AMSGrad
-
-## Results
-
-### Mean Improvement over 5 Epochs for 12 Optimizers by Using Curvature Step Size over 20 Datasets
-
-| Optimizer        | Epoch_1      | Epoch_2      | Epoch_3      | Epoch_4      | Epoch_5      |
-|------------------|--------------|--------------|--------------|--------------|--------------|
-| SimpleSGD        | 0.539742504  | 1.252146061  | 0.750951018  | 0.821385925  | 0.908407596  |
-| HeavyBall        | 0.167656917  | 0.564890333  | 0.197533917  | 0.280896583  | 0.379726917  |
-| NAG              | 0.155248917  | 0.459523917  | 0.16732425   | 0.237815     | 0.322022583  |
-| Adagrad          | 0.024861417  | 0.046564833  | 0.049125417  | 0.049988917  | 0.056792917  |
-| Adadelta         | 0.010991917  | 0.071387333  | 0.065003     | 0.05667075   | 0.054823333  |
-| RMSProp          | -0.016485167 | 0.046684417  | 0.015839083  | 0.0243955    | 0.046374417  |
-| AMSGrad          | 0.002314167  | 0.004105417  | 0.01043375   | 0.015027333  | 0.03454925   |
-| NAdam            | 0.002429667  | -0.003835417 | 0.001610417  | 0.008449667  | 0.026809167  |
-| NAdamW           | 0.020950583  | 0.069456333  | -0.013666561 | -0.00336811  | 0.019472961  |
-| AdamW            | 0.0108145    | 0.023831917  | 0.010111583  | 0.012479333  | 0.019335167  |
-| Adam             | -0.0067625   | 0.009065833  | -0.008171083 | 0.008893333  | 0.003704917  |
-| RMSPropMomentum  | 0.002767083  | 0.017398167  | -0.018411167 | -0.018351833 | -0.00997575  |
-
-### MNIST Training Losses
-
-| Optimizer Name ↓  Mean Training Loss →  | Epoch 1 | Epoch 2 | Epoch 3 | Epoch 4 | Epoch 5 | Epoch 6 | Epoch 7 | Epoch 8 | Epoch 9 | Epoch 10 |
-|--------------------------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|
-| SimpleSGDCurvature     | 0.39651             | 0.17593 | 0.13057 | 0.10601 | 0.09036 | 0.07877 | 0.06973 | 0.06195 | 0.05586 | 0.05067 |
-| HeavyBallCurvature     | 0.33452             | 0.15764 | 0.12197 | 0.10183 | 0.08857 | 0.0792  | 0.07067 | 0.06429 | 0.05887 | 0.05326 |
-| NAGCurvature           | 0.33464             | 0.1574  | 0.12209 | 0.10172 | 0.08846 | 0.07916 | 0.07075 | 0.06407 | 0.05865 | 0.05351 |
-| AMSGrad                | 0.38229             | 0.19564 | 0.14119 | 0.11287 | 0.09475 | 0.08296 | 0.07267 | 0.06531 | 0.05876 | 0.05411 |
-| AMSGradCurvature       | 0.38224             | 0.19604 | 0.1416  | 0.11305 | 0.09526 | 0.08334 | 0.0735  | 0.06566 | 0.0594  | 0.05448 |
-| Adam                   | 0.3821              | 0.19528 | 0.1412  | 0.11358 | 0.09664 | 0.08501 | 0.0753  | 0.06788 | 0.06244 | 0.05771 |
-| AdamCurvature          | 0.38231             | 0.19535 | 0.14124 | 0.11385 | 0.09683 | 0.08534 | 0.0755  | 0.06868 | 0.06235 | 0.05795 |
-| AdamW                  | 0.38243             | 0.19519 | 0.1416  | 0.11413 | 0.09725 | 0.08565 | 0.07603 | 0.0693  | 0.06338 | 0.0587  |
-| AdamWCurvature         | 0.38209             | 0.19512 | 0.14148 | 0.11425 | 0.09695 | 0.08542 | 0.07564 | 0.06909 | 0.06313 | 0.05913 |
-| RMSPropCurvature       | 0.39926             | 0.20883 | 0.15436 | 0.12608 | 0.10902 | 0.09647 | 0.08718 | 0.07955 | 0.07338 | 0.06823 |
-| RMSProp                | 0.39966             | 0.21042 | 0.15572 | 0.12669 | 0.10897 | 0.09636 | 0.08687 | 0.07933 | 0.07351 | 0.06829 |
-| RMSPropMomentumCurvature| 0.39423            | 0.20636 | 0.15312 | 0.1259  | 0.10941 | 0.09735 | 0.08818 | 0.08072 | 0.07464 | 0.06955 |
-| RMSPropMomentum        | 0.3936              | 0.20554 | 0.15268 | 0.12597 | 0.11013 | 0.09829 | 0.08926 | 0.0817  | 0.07547 | 0.07026 |
-
-
-
-## Setup and Installation
-
-
-### How to Run the Experiments
-
-#### Prerequisites
-
-- Python 3.7 or higher
-- PyTorch
-- Torchtext
-- TQDM
-- Transformers
-- Numpy
-
-Install the required packages using `pip`:
-
-```bash
-pip install -r requirements.txt
-```
-
-#### Running Experiments
-
-
-To use the ACSS method with any dataset and optimizer, you can run the corresponding experiment file. Specifically, to run the experiments for different datasets and models, use the provided training scripts in the `experiments` directory. Below are examples for running experiments on various datasets:
-
-
-Below are some examples:
-
-
-
-##### CIFAR-10
-
-```bash
-python experiments/cifar10_training_runs.py
-```
-
-##### CIFAR-100
-
-```bash
-python experiments/cifar100_training_runs.py
-```
-
-##### Caltech101
-
-```bash
-python experiments/caltech101_training_runs.py
-```
-
-##### DBpedia
-
-```bash
-python experiments/dbpedia_training_runs.py
-```
-
-##### Amazon Review Polarity
-
-```bash
-python experiments/amazon_review_polarity_training_runs.py
-```
-
-##### Sogou News
-
-```bash
-python experiments/sogou_news_training_runs.py
-```
-
-##### CoLA with BERT
-
-```bash
-python experiments/cola_training_runs.py
-```
-
-By following these examples, you can create and run experiments on various datasets and models to evaluate the performance of different optimizers using the Adaptive Curvature Step Size (ACSS) method.
-
-### Data Loaders
-
-The data loaders for various datasets are implemented in the `data_loaders` directory. Each data loader is responsible for loading the respective dataset.
-
-Some of these datasets are created for text related benchmarks, and others for
-vision related benchmarks. In the case of text, we have to additionally tokenize
-the text, and create data batches. The data loaders use the GloVe embeddings for text representation.
-
-We provide three examples of such data loaders below:
-
-#### Amazon Review Full
-
-```python
-import torch
-from torch.utils.data import DataLoader
-from transformers import BertTokenizer
-import torchtext
-torchtext.disable_torchtext_deprecation_warning()
-
-from torch.nn.utils.rnn import pad_sequence
-from torchtext.datasets import AmazonReviewFull
-
-# Define BERT tokenizer
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-
-# Load your dataset
-train_iter, test_iter = AmazonReviewFull(split=('train', 'test'))
-
-# Function to convert text to tensor for BERT
-def text_pipeline(x):
-    return tokenizer(x, padding='max_length', max_length=512, truncation=True, return_tensors='pt')
-
-# Function to convert label to tensor
-def label_pipeline(x):
-    return int(x) - 1  # Convert labels to zero-index
-
-# Collate function for DataLoader
-def collate_batch(batch):
-    label_list, input_ids_list, attention_mask_list = [], [], []
-    for (_label, _text) in batch:
-        label_list.append(label_pipeline(_label))
-        processed_text = text_pipeline(_text)
-        input_ids_list.append(processed_text['input_ids'].squeeze(0))
-        attention_mask_list.append(processed_text['attention_mask'].squeeze(0))
-    
-    input_ids_list = pad_sequence(input_ids_list, batch_first=True, padding_value=tokenizer.pad_token_id)
-    attention_mask_list = pad_sequence(attention_mask_list, batch_first=True, padding_value=0)
-    label_list = torch.tensor(label_list, dtype=torch.int64)
-    
-    return {
-        'input_ids': input_ids_list,
-        'attention_mask': attention_mask_list,
-        'label': label_list
-    }
-
-# Function to load Amazon Review Full dataset
-def load_amazon_review_full(batch_size=16):
-    train_loader = DataLoader(list(train_iter), batch_size=batch_size, shuffle=True, collate_fn=collate_batch)
-    test_loader = DataLoader(list(test_iter), batch_size=batch_size, shuffle=False, collate_fn=collate_batch)
-
-    return train_loader, test_loader
-```
-
-#### Amazon Review Polarity
-
-```python
-import torch
-from torch.utils.data import DataLoader
-from transformers import BertTokenizer
-import torchtext
-torchtext.disable_torchtext_deprecation_warning()
-
-from torch.nn.utils.rnn import pad_sequence
-from torchtext.datasets import AmazonReviewPolarity
-
-# Define BERT tokenizer
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-
-# Load your dataset
-train_iter, test_iter = AmazonReviewPolarity(split=('train', 'test'))
-
-# Function to convert text to tensor for BERT
-def text_pipeline(x):
-    return tokenizer(x, padding='max_length', max_length=512, truncation=True, return_tensors='pt')
-
-# Function to convert label to tensor
-def label_pipeline(x):
-    return int(x) - 1  # Convert labels to zero-index
-
-# Collate function for DataLoader
-def collate_batch(batch):
-    label_list, input_ids_list, attention_mask_list = [], [], []
-    for (_label, _text) in batch:
-        label_list.append(label_pipeline(_label))
-        processed_text = text_pipeline(_text)
-        input_ids_list.append(processed_text['input_ids'].squeeze(0))
-        attention_mask_list.append(processed_text['attention_mask'].squeeze(0))
-    
-    input_ids_list = pad_sequence(input_ids_list, batch_first=True, padding_value=tokenizer.pad_token_id)
-    attention_mask_list = pad_sequence(attention_mask_list, batch_first=True, padding_value=0)
-    label_list = torch.tensor(label_list, dtype=torch.int64)
-    
-    return {
-        'input_ids': input_ids_list,
-        'attention_mask': attention_mask_list,
-        'label': label_list
-    }
-
-# Function to load Amazon Review Polarity dataset
-def load_amazon_review_polarity(batch_size=16):
-    train_loader = DataLoader(list(train_iter), batch_size=batch_size, shuffle=True, collate_fn=collate_batch)
-    test_loader = DataLoader(list(test_iter), batch_size=batch_size, shuffle=False, collate_fn=collate_batch)
-
-    return train_loader, test_loader
-```
-
-#### Sogou News
-
-### Sogou News (Continued)
-
-```python
-import torch
-from torch.utils.data import DataLoader
-from transformers import BertTokenizer
-import torchtext
-torchtext.disable_torchtext_deprecation_warning()
-
-from torch.nn.utils.rnn import pad_sequence
-from torchtext.datasets import SogouNews
-
-# Define BERT tokenizer
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-
-# Load your dataset
-train_iter, test_iter = SogouNews(split=('train', 'test'))
-
-# Function to convert text to tensor for BERT
-def text_pipeline(x):
-    return tokenizer(x, padding='max_length', max_length=512, truncation=True, return_tensors='pt')
-
-# Function to convert label to tensor
-def label_pipeline(x):
-    return int(x) - 1  # Convert labels to zero-index
-
-# Collate function for DataLoader
-def collate_batch(batch):
-    label_list, input_ids_list, attention_mask_list = [], [], []
-    for (_label, _text) in batch:
-        label_list.append(label_pipeline(_label))
-        processed_text = text_pipeline(_text)
-        input_ids_list.append
-
-        processed_text = text_pipeline(_text)
-        input_ids_list.append(processed_text['input_ids'].squeeze(0))
-        attention_mask_list.append(processed_text['attention_mask'].squeeze(0))
-    
-    input_ids_list = pad_sequence(input_ids_list, batch_first=True, padding_value=tokenizer.pad_token_id)
-    attention_mask_list = pad_sequence(attention_mask_list, batch_first=True, padding_value=0)
-    label_list = torch.tensor(label_list, dtype=torch.int64)
-    
-    return {
-        'input_ids': input_ids_list,
-        'attention_mask': attention_mask_list,
-        'label': label_list
-    }
-
-# Function to load Sogou News dataset
-def load_sogou_news(batch_size=16):
-    train_loader = DataLoader(list(train_iter), batch_size=batch_size, shuffle=True, collate_fn=collate_batch)
-    test_loader = DataLoader(list(test_iter), batch_size=batch_size, shuffle=False, collate_fn=collate_batch)
-
-    return train_loader, test_loader
-```
-
-
-### Experiment Runner
-
-The `experiment_utils.py` file contains the `run_experiment` function, which handles the training and testing of the model with different optimizers. Here is an example usage of the `run_experiment` function:
-
-```python
-mean_accuracy, std_accuracy = run_experiment(
-    optimizer_class,
-    params,
-    dataset_loader=dataset_loader,
-    model_class=model,
-    num_runs=total_runs,
-    num_epochs=total_epochs,
-    debug_logs=True,
-    model_hyperparams=model_hyperparams,
-    loss_criterion=loss_criterion,
-    device=device,
-    trainer_fn=trainer_function,
-    tester_fn=test_function,
-)
-```
-
-### Training Functions
-
-The `train.py` file includes various training functions tailored for different models such as simple CNNs, language models, and BERT-based models.
-
-#### train
-
-The `train` function handles the training loop for simple models like CNNs or fully connected networks.
-
-```python
-import os
-import sys
-from tqdm import tqdm
-
-# Add the project root to the system path
-project_root = os.getcwd()
-sys.path.insert(0, project_root)
-
-def train(model, train_loader, criterion, optimizer, device, num_epochs=10):
-    model.train()
-    for epoch in tqdm(range(num_epochs), desc="Epochs"):
-        epoch_loss = 0.0
-        for inputs, targets in tqdm(train_loader, desc=f"Training Epoch {epoch+1}"):
-            inputs, targets = inputs.to(device), targets.to(device)
-
-            def closure():
-                optimizer.zero_grad()
-                outputs = model(inputs)
-                loss = criterion(outputs, targets)
-                loss.backward()
-                return loss
-
-            loss = optimizer.step(closure)
-            epoch_loss += loss.item()
-
-        print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {epoch_loss/len(train_loader):.4f}")
-```
-
-#### train_lm
-
-The `train_lm` function is designed for training language models, ensuring the handling of sequences and compacting RNN weights.
-
-```python
-def train_lm(model, train_loader, criterion, optimizer, device, num_epochs=10):
-    model.to(device)
-    model.train()
-    for epoch in tqdm(range(num_epochs), desc="Epochs"):
-        epoch_loss = 0
-        for text, labels, lengths in tqdm(train_loader):
-            text, labels = text.to(device), labels.to(device)
-
-            def closure():
-                optimizer.zero_grad()
-                model.flatten_parameters()  # Ensure RNN weights are compacted
-                predictions = model(text, lengths).squeeze(1)
-                loss = criterion(predictions, labels)
-                loss.backward()
-                return loss
-
-            loss = optimizer.step(closure)
-            epoch_loss += loss.item()
-        
-        print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {epoch_loss/len(train_loader):.4f}")
-```
-
-#### train_bert
-
-The `train_bert` function is used for training BERT-based models, handling input IDs and attention masks.
-
-```python
-def train_bert(model, train_loader, criterion, optimizer, device, num_epochs=10):
-    model.to(device)
-    model.train()
-    for epoch in range(num_epochs):
-        epoch_loss = 0
-        for batch in tqdm(train_loader):
-            input_ids = batch['input_ids'].to(device)
-            attention_mask = batch['attention_mask'].to(device)
-            labels = batch['label'].to(device)
-
-            optimizer.zero_grad()
-            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
-            loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
-            epoch_loss += loss.item()
-        
-        print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {epoch_loss/len(train_loader):.4f}")
-```
-
-### Testing Functions
-
-The `test.py` file contains functions to evaluate models after training.
-
-#### test
-
-The `test` function evaluates simple models, calculating loss and accuracy.
-
-```python
-import os
-import sys
-import torch
-from tqdm import tqdm
-
-# Add the project root to the system path
-project_root = os.getcwd()
-sys.path.insert(0, project_root)
-
-def test(model, test_loader, criterion, device):
-    model.eval()
-    test_loss = 0
-    correct = 0
-    with torch.no_grad():
-        for inputs, targets in test_loader:
-            inputs, targets = inputs.to(device), targets.to(device)
-            outputs = model(inputs)
-            test_loss += criterion(outputs, targets).item()
-            pred = outputs.argmax(dim=1, keepdim=True)
-            correct += pred.eq(targets.view_as(pred)).sum().item()
-
-    test_loss /= len(test_loader.dataset)
-    accuracy = 100. * correct / len(test_loader.dataset)
-    print(f"Test set: Average loss: {test_loss:.4f}, Accuracy: {correct}/{len(test_loader.dataset)} ({accuracy:.2f}%)")
-    return 1.0 * correct / len(test_loader.dataset)
-```
-
-#### test_lm
-
-The `test_lm` function evaluates language models on sequence data.
-
-```python
-def test_lm(model, test_loader, criterion, device):
-    model.to(device)
-    model.eval()
-    epoch_loss = 0.0
-    correct_preds = 0
-    total_preds = 0
-    with torch.no_grad():
-        for text, labels, lengths in tqdm(test_loader):
-            text, labels = text.to(device), labels.to(device)
-            predictions = model(text, lengths).squeeze(1)
-            loss = criterion(predictions, labels)
-            epoch_loss += loss.item()
-            predicted_labels = (predictions > 0.5).float()
-            correct_preds += (predicted_labels == labels).sum().item()
-            total_preds += len(labels)
-    epoch_loss /= len(test_loader.dataset)
-    accuracy = 100. * correct_preds / total_preds
-    print(f"Test set: Average loss: {epoch_loss:.4f}, Accuracy: {correct_preds}/{total_preds} ({accuracy:.2f}%)")
-    return 1.0 * correct_preds / total_preds
-```
-
-#### test_lm_multiclass
-
-The `test_lm_multiclass` function evaluates multiclass language models.
-
-```python
-def test_lm_multiclass(model, test_loader, criterion, device):
-    model.to(device)
-    model.eval()
-    epoch_loss = 0.0
-    correct_preds = 0
-    total_preds = 0
-    with torch.no_grad():
-        for text, labels, lengths in tqdm(test_loader):
-            text, labels = text.to(device), labels.to(device)
-            predictions = model(text, lengths)
-            loss = criterion(predictions, labels)
-            epoch_loss += loss.item()
-            predicted_labels = torch.argmax(predictions, dim=1)
-            correct_preds += (predicted_labels == labels).sum().item()
-            total_preds += len(labels)
-    epoch_loss /= len(test_loader.dataset)
-    accuracy = 100. * correct_preds / total_preds
-    print(f"Test set: Average loss: {epoch_loss:.4f}, Accuracy: {correct_preds}/{total_preds} ({accuracy:.2f}%)")
-    return 1.0 * correct_preds / total_preds
-```
-
-#### test_bert
-
-The `test_bert` function evaluates BERT-based models.
-
-```python
-def test_bert(model, test_loader, criterion, device):
-    model.to(device)
-    model.eval()
-    epoch_loss = 0.0
-    correct_preds = 0
-    total_preds = 0
-    with torch.no_grad():
-        for batch in tqdm(test_loader):
-            input_ids = batch['input_ids'].to(device)
-            attention_mask = batch['attention_mask'].to(device)
-            labels = batch['label'].to(device)
-            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
-            loss = criterion(outputs, labels)
-            epoch_loss += loss.item()
-            predicted_labels = torch.argmax(outputs, dim=1)
-            correct_preds += (predicted_labels == labels).sum().item()
-            total_preds += len(labels)
-    epoch_loss /= len(test_loader.dataset)
-    accuracy = 100. * correct_preds / total_preds
-    print(f"Test set: Average loss: {epoch_loss:.4f}, Accuracy: {correct_preds}/{total_preds} ({accuracy:.2f}%)")
-    return 1.0 * correct_preds / total_preds
-```
-
-### Experiment Utilities
-
-The `experiment_utils.py` file includes the `run_experiment` function, which facilitates the training and testing of models across different datasets and optimizers.
-
-```python
-import os
-import sys
-import torch
-import numpy as np
-from train import train
-from test import test
-from utilities import set_seed
-from models.simpleNN import SimpleNN
-from data_loaders.mnist import load_mnist
-
-# Add the project root to the system path
-project_root = os.getcwd()
-sys.path.insert(0, project_root)
-
-def run_experiment(optimizer_class, optimizer_params, dataset_loader=None, 
-                   model_class=None, num_runs=10, num_epochs=2, debug_logs=False,
-                   device=None, model_hyperparams=None,
-                   loss_criterion=None, trainer_fn=None, tester_fn=None):
-    if device is None:
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    if dataset_loader is None:
-        dataset_loader = load_mnist
-    if model_class is None:
-        model_class = SimpleNN
-    if loss_criterion is None:
-        loss_criterion = torch.nn.CrossEntropyLoss
-    if trainer_fn is None:
-        trainer_fn = train
-    if tester_fn is None:
-        tester_fn = test
-    
-    set_seed(42)
-    print("params=", optimizer_params)
-    train_loader, test_loader = dataset_loader()
-
-    criterion = loss_criterion()
-    accuracies = []
-    for run_number in range(num_runs):
-        if debug_logs:
-            print(f"Running Loop: {run_number + 1}/{num_runs}")
-
-        if model_hyperparams is None:
-            model = model_class().to(device)
-        else:
-            model = model_class(**model_hyperparams).to(device)
-
-        optimizer = optimizer_class(model.parameters(), **optimizer_params)
-        trainer_fn(model, train_loader, criterion, optimizer, device, num_epochs=num_epochs)
-        accuracy = tester_fn(model, test_loader, criterion, device)
-        accuracies.append(accuracy)
-    mean_accuracy = np.mean(accuracies)
-    std_accuracy = np.std(accuracies)
-
-    return mean_accuracy, std_accuracy
-```
-
-### Models
-
-This section provides details on the various models used in the experiments, including their architecture and configuration.
-
-#### BERT Classifiers
-
-1. **BERTClassifier**:
-    ```python
-    import torch
-    import torch.nn as nn
-    from transformers import BertModel, BertConfig
-
-    class BERTClassifier(nn.Module):
-        def __init__(self, num_classes=4, freeze_bert=False):
-            super(BERTClassifier, self).__init__()
-            config = BertConfig()
-            self.bert = BertModel(config)
-            self.dropout = nn.Dropout(0.3)
-            self.linear = nn.Linear(config.hidden_size, num_classes)
-            self.softmax = nn.Softmax(dim=1)
-            if freeze_bert:
-                for param in self.bert.parameters():
-                    param.requires_grad = False
-
-        def forward(self, input_ids, attention_mask):
-            outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-            pooled_output = outputs[1]
-            x = self.dropout(pooled_output)
-            x = self.linear(x)
-            return self.softmax(x)
-    ```
-
-2. **TinyBERTClassifier**:
-    ```python
-    class TinyBERTClassifier(nn.Module):
-        def __init__(self, num_classes=4, freeze_bert=False):
-            super(TinyBERTClassifier, self).__init__()
-            config = BertConfig(
-                hidden_size=128,
-                num_hidden_layers=2,
-                num_attention_heads=2,
-                intermediate_size=512,
-                max_position_embeddings=512,
-                vocab_size=30522,
-                type_vocab_size=2,
-                hidden_act='gelu',
-                initializer_range=0.02,
-                layer_norm_eps=1e-12,
-                pad_token_id=0
-            )
-            self.bert = BertModel(config)
-            self.dropout = nn.Dropout(0.3)
-            self.linear = nn.Linear(config.hidden_size, num_classes)
-            self.softmax = nn.Softmax(dim=1)
-            if freeze_bert:
-                for param in self.bert.parameters():
-                    param.requires_grad = False
-
-        def forward(self, input_ids, attention_mask):
-            outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-            pooled_output = outputs[1]
-            x = self.dropout(pooled_output)
-            x = self.linear(x)
-            return self.softmax(x)
-    ```
-
-3. **TinyBERTClassifierND**:
-    ```python
-    class TinyBERTClassifierND(nn.Module):
-        def __init__(self, num_classes=4, freeze_bert=False):
-            super(TinyBERTClassifier, self).__init__()
-            config = BertConfig(
-                hidden_size=128,
-                num_hidden_layers=2,
-                num_attention_heads=2,
-                intermediate_size=512,
-                max_position_embeddings=512,
-                vocab_size=30522,
-                type_vocab_size=2,
-                hidden_act='gelu',
-                initializer_range=0.02,
-                layer_norm_eps=1e-12,
-                pad_token_id=0
-            )
-            self.bert = BertModel(config)
-            self.dropout = nn.Dropout(0.01)
-            self.linear = nn.Linear(config.hidden_size, num_classes)
-            self.softmax = nn.Softmax(dim=1)
-            if freeze_bert:
-                for param in self.bert.parameters():
-                    param.requires_grad = False
-
-        def forward(self, input_ids, attention_mask):
-            outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-            pooled_output = outputs[1]
-            x = self.dropout(pooled_output)
-            x = self.linear(x)
-            return self.softmax(x)
-    ```
-
-4. **PretrainedBERTClassifier**:
-    ```python
-    class PretrainedBERTClassifier(nn.Module):
-        def __init__(self, num_classes=2, freeze_bert=True):
-            super(PretrainedBERTClassifier, self).__init__()
-            self.bert = BertModel.from_pretrained('bert-base-uncased')
-            if freeze_bert:
-                for param in self.bert.parameters():
-                    param.requires_grad = False
-            self.dropout = nn.Dropout(0.3)
-            self.linear = nn.Linear(self.bert.config.hidden_size, num_classes)
-            self.softmax = nn.Softmax(dim=1)
-
-        def forward(self, input_ids, attention_mask):
-            outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-            pooled_output = outputs[1]
-            x = self.dropout(pooled_output)
-            x = self.linear(x)
-            return self.softmax(x)
-    ```
-
-#### ResNet
-
-```python
-import torch.nn as nn
-import torchvision.models as models
-
-class SimpleResNet(nn.Module):
-    def __init__(self, num_classes=100):
-        super(SimpleResNet, self).__init__()
-        self.model = models.resnet18(weights=None)
-        self.model.fc = nn.Linear(self.model.fc.in_features, num_classes)
-
-    def forward(self, x):
-        return self.model(x)
-```
-
-#### SimpleCNN Template
-
-```python
-import torch.nn as nn
-import torch.nn.functional as F
-
-class SimpleCNN(nn.Module):
-    def __init__(self, num_classes=10, 
-                 image_width=96, 
-                 num_channels=3):
-        super(SimpleCNN, self).__init__()
-        self.num_channels=num_channels
-        self.image_width=image_width
-        self.num_classes=num_classes
-        self.conv1 = nn.Conv2d(num_channels, 32, kernel_size=3, padding=1)
-        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
-        self.pool = nn.MaxPool2d(kernel_size=2, stride=2, padding=0)
-        self.fc1 = nn.Linear(64 * (image_width // 4) * (image_width // 4), 512)
-        self.fc2 = nn.Linear(512, num_classes)
-
-    def forward(self, x):
-        x = self.pool(F.relu(self.conv1(x)))
-        x = self.pool(F.relu(self.conv2(x)))
-        x = x.view(-1, 64 * (self.image_width // 4) * (self.image_width // 4))
-        x = F.relu(self.fc1(x))
-        x = self.fc2(x)
-        return x
-```
-
-#### SimpleRNN Multiclass
-
-```python
-import torch.nn as nn
-import torch.nn.functional as F
-
-class SimpleRNN(nn.Module):
-    def __init__(self, vocab_size, embed_dim, hidden_dim, output_dim, pad_idx):
-        super(SimpleRNN, self).__init__()
-        self.embedding = nn.Embedding(vocab_size, embed_dim, padding_idx=pad_idx)
-        self.rnn = nn.RNN(embed_dim, hidden_dim, batch_first=True)
-        self.fc = nn.Linear(hidden_dim, output_dim)
-
-    def forward(self, text, lengths):
-        embedded = self.embedding(text)
-        packed_embedded = nn.utils.rnn.pack_padded_sequence(embedded, lengths, batch_first=True, enforce_sorted=False)
-        packed_output, hidden = self.rnn(packed_embedded)
-        hidden = hidden[-1, :, :]
-        return self.fc(hidden)
-
-    def flatten_parameters(self):
-        self.rnn.flatten_parameters()
-```
-
-### Optimizers
-
-This section describes the optimizers implemented in this repository, including both standard optimization algorithms and those incorporating the Adaptive Curvature Step Size (ACSS) method.
-
-#### Standard Optimizers
-
-1. **SimpleSGD**:
-    ```python
-    import torch
-    from torch.optim import Optimizer
-
-    class SimpleSGD(Optimizer):
-        def __init__(self, params, lr=1e-3):
-            defaults = dict(lr=lr)
-            super(SimpleSGD, self).__init__(params, defaults)
-
-        def step(self, closure=None):
-            loss = None
-            if closure is not None:
-                loss = closure()
-
-            for group in self.param_groups:
-                for p in group['params']:
-                    if p.grad is None:
-                        continue
-
-                    grad = p.grad.data
-                    step_size = group['lr']
-
-                    # Simple SGD update
-                    p.data = p.data - step_size * grad
-
-            return loss
-    ```
-
-2. **Adam**:
-    ```python
-    import torch
-    from torch.optim import Optimizer
-
-    class Adam(Optimizer):
-        def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8, weight_decay=0):
-            defaults = dict(lr=lr, betas=betas, eps=eps, weight_decay=weight_decay)
-            super(Adam, self).__init__(params, defaults)
-
-        def step(self, closure=None):
-            loss = None
-            if closure is not None:
-                loss = closure()
-
-            for group in self.param_groups:
-                for p in group['params']:
-                    if p.grad is None:
-                        continue
-
-                    grad = p.grad.data
-                    if grad.is_sparse:
-                        raise RuntimeError('Adam does not support sparse gradients, please consider SparseAdam instead')
-
-                    state = self.state[p]
-
-                    if 'step' not in state:
-                        state['step'] = 0
-                        state['exp_avg'] = torch.zeros_like(p.data)
-                        state['exp_avg_sq'] = torch.zeros_like(p.data)
-
-                    exp_avg, exp_avg_sq = state['exp_avg'], state['exp_avg_sq']
-                    beta1, beta2 = group['betas']
-
-                    state['step'] += 1
-
-                    exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
-                    exp_avg_sq.mul_(beta2).addcmul_(grad, grad, value=1 - beta2)
-
-                    denom = exp_avg_sq.sqrt().add_(group['eps'])
-
-                    step_size = group['lr'] * (1 - beta2 ** state['step']) ** 0.5 / (1 - beta1 ** state['step'])
-
-                    p.data.addcdiv_(exp_avg, denom, value=-step_size)
-
-            return loss
-    ```
-
-#### Curvature-Based Optimizers
-
-1. **SimpleSGDCurvature**:
-    ```python
-    import torch
-    from torch.optim import Optimizer
-
-    class SimpleSGDCurvature(Optimizer):
-        def __init__(self, params, lr=1e-3, epsilon=0.01, clip_radius=None):
-            defaults = dict(lr=lr, epsilon=epsilon)
-            self.clip_radius = clip_radius
-            super(SimpleSGDCurvature, self).__init__(params, defaults)
-
-        def step(self, closure=None):
-            loss = None
-            if closure is not None:
-                loss = closure()
-
-            # First loop to store the last gradient
-            for group in self.param_groups:
-                for p in group['params']:
-                    if p.grad is None:
-                        continue
-
-                    state = self.state[p]
-
-                    if 'step' not in state:
-                        state['step'] = 0
-                        state['last_grad'] = torch.zeros_like(p.data)
-
-                    state['last_grad'] = p.grad.data.clone()
-
-            if closure is not None:
-                loss = closure()
-
-            for group in self.param_groups:
-                for p in group['params']:
-                    if p.grad is None:
-                        continue
-
-                    grad = p.grad.data
-                    state = self.state[p]
-
-                    state['step'] += 1
-                    step_size = group['lr']
-                    epsilon = group['epsilon']
-
-                    last_grad = state['last_grad']
-                    current_grad = grad
-
-                    radius = torch.norm(last_grad) / torch.maximum(torch.tensor(epsilon, device=grad.device),
-                                                                   torch.norm(current_grad - last_grad))
-                    if self.clip_radius is not None:
-                        radius = torch.min(torch.tensor(self.clip_radius), radius)
-                    normed_last_grad = last_grad / torch.norm(last_grad)
-                    p.data = p.data - step_size * radius * normed_last_grad
-
-            return loss
-    ```
-
-2. **AdamCurvature**:
-    ```python
-    import torch
-    from torch.optim import Optimizer
-
-    class AdamCurvature(Optimizer):
-        def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8, weight_decay=0, epsilon=0.01, clip_radius=None):
-            defaults = dict(lr=lr, betas=betas, eps=eps, weight_decay=weight_decay, epsilon=epsilon)
-            self.clip_radius = clip_radius
-            super(AdamCurvature, self).__init__(params, defaults)
-
-        def step(self, closure=None):
-            loss = None
-            if closure is not None:
-                loss = closure()
-
-            for group in self.param_groups:
-                for p in group['params']:
-                    if p.grad is None:
-                        continue
-
-                    grad = p.grad.data
-                    if grad.is_sparse:
-                        raise RuntimeError('Adam does not support sparse gradients, please consider SparseAdam instead')
-
-                    state = self.state[p]
-
-                    if 'step' not in state:
-                        state['step'] = 0
-                        state['exp_avg'] = torch.zeros_like(p.data)
-                        state['exp_avg_sq'] = torch.zeros_like(p.data)
-                        state['last_grad'] = torch.zeros_like(p.data)
-
-                    exp_avg, exp_avg_sq, last_grad = state['exp_avg'], state['exp_avg_sq'], state['last_grad']
-                    beta1, beta2 = group['betas']
-
-                    state['step'] += 1
-
-                    exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
-                    exp_avg_sq.mul_(beta2).addcmul_(grad, grad, value=1 - beta2)
-
-                    denom = exp_avg_sq.sqrt().add_(group['eps'])
-
-                    step_size = group['lr'] * (1 - beta2 ** state['step']) ** 0.5 / (1 - beta1 ** state['step'])
-
-                    radius = torch.norm(last_grad) / torch.maximum(torch.tensor(group['epsilon'], device=grad.device),
-                                                                   torch.norm(exp_avg - last_grad))
-                    if self.clip_radius is not None:
-                        radius = torch.min(torch.tensor(self.clip_radius), radius)
-                    normed_last_grad = last_grad / torch.norm(last_grad)
-                    p.data = p.data - step_size * radius * normed_last_grad
-
-                    last_grad.copy_(exp_avg)
-
-            return loss
-    ```
-
-This repository provides a variety of optimizers, including standard implementations and curvature-based variations. The curvature-based optimizers, such as SimpleSGDCurvature and AdamCurvature, use the Adaptive Curvature Step Size (ACSS) method to dynamically adjust the step size based on the local geometry of the optimization path. This approach aims to improve optimization performance by adapting to the landscape of the optimization problem without the need for explicitly computing or storing second-order terms.
-
-These are the optimizers we include in the `optimizers/` directory:
-
-- adadelta_curvature.py
-- adadelta.py
-- adagrad_curvature.py
-- adagrad.py
-- adam_curvature.py
-- adam.py
-- adamw_curvature.py
-- adamw.py
-- amsgrad_curvature.py
-- amsgrad.py
-- heavyball_curvature.py
-- heavyball.py
-- nadam_curvature.py
-- nadam.py
-- nadamw_curvature.py
-- nadamw.py
-- nag_curvature.py
-- nag.py
-- rmsprop_curvature.py
-- rmsprop.py
-- rmsprop_with_momentum_curvature.py
-- rmsprop_with_momentum.py
-- shampoo_curvature.py
-- shampoo.py
-- simplesgd_curvature.py
-- simplesgd.py
-
-
-### Training Log Parsing
-
-We parse the training logs using `training_parsers.py`. We describe this below:
-Specifically, we describe how to parse the raw training logs generated during the experiments into a more usable format for analysis. We provide a Python script, `training_parsers.py`, which reads log files, extracts relevant information, and saves it in structured CSV files. This allows for easier analysis and visualization of training progress and performance metrics across different optimizers and datasets.
-
-#### Script Description
-
-The `training_parsers.py` script performs the following tasks:
-
-1. **Parsing Training Logs:**
-   - Reads log files and extracts optimizer names, training losses, and test set performances.
-   - Supports logs generated from various datasets and optimizers.
-
-2. **Creating DataFrames:**
-   - Stores extracted data in Pandas DataFrames for easy manipulation.
-   - Separates training and test data into different DataFrames.
-
-3. **Aggregating Results:**
-   - Groups the data by optimizer and epoch to calculate mean and standard deviation of training losses.
-   - Pivots the training DataFrame to get a more analysis-friendly format with epochs as columns.
-
-4. **Saving Results:**
-   - Saves the full logs and aggregated results into separate CSV files for each dataset.
-   - Saves the mean training losses across different epochs for easy comparison between optimizers.
-
-#### Example Usage
-
-Below is an example of how to parse training logs for different datasets and save the results:
-
-```python
-import pandas as pd
-import numpy as np
-import re
-import os
-
-def parse_training_logs(log_file_path, dataset_name):
-    optimizer_re = re.compile(rf'Running {dataset_name} training with Optimizer = (\w+)')
-    params_re = re.compile(r'params= ({.+})')
-    loop_re = re.compile(r'Running Loop: (\d+)/(\d+)')
-    epoch_re = re.compile(rf'Epoch (\d+)/(\d+) completed, Average Loss: ([\d.]+)')
-    test_re = re.compile(r'Test set: Average loss: ([\d.]+), Accuracy: (\d+)/(\d+) \(([\d.]+)%\)')
-
-    train_data = []
-    test_data = []
-
-    current_optimizer = None
-    current_loop = None
-
-    with open(log_file_path, 'r') as log_file:
-        for line in log_file:
-            optimizer_match = optimizer_re.search(line)
-            if optimizer_match:
-                current_optimizer = optimizer_match.group(1)
-                continue
-
-            loop_match = loop_re.search(line)
-            if loop_match:
-                current_loop = loop_match.group(1)
-                continue
-
-            epoch_match = epoch_re.search(line)
-            if epoch_match:
-                epoch_number = epoch_match.group(1)
-                avg_loss = epoch_match.group(3)
-                train_data.append([current_optimizer, current_loop, epoch_number, avg_loss])
-                continue
-
-            test_match = test_re.search(line)
-            if test_match:
-                avg_test_loss = test_match.group(1)
-                accuracy = test_match.group(4)
-                test_data.append([current_optimizer, current_loop, avg_test_loss, accuracy])
-                continue
-
-    train_df = pd.DataFrame(train_data, columns=[
-        'Optimizer Name', 'Running loop number', 'Epoch number', 'Average Training Loss'])
-
-    test_df = pd.DataFrame(test_data, columns=[
-        'Optimizer Name', 'Running loop number', 'Average Test set Loss', 'Average Test set accuracy'])
-
-    train_df['Average Training Loss'] = pd.to_numeric(train_df['Average Training Loss'], errors='coerce')
-    test_df['Average Test set Loss'] = pd.to_numeric(test_df['Average Test set Loss'], errors='coerce')
-    test_df['Average Test set accuracy'] = pd.to_numeric(test_df['Average Test set accuracy'], errors='coerce')
-
-    output_dir = f'outputs/{dataset_name.lower()}'
-    os.makedirs(output_dir, exist_ok=True)
-
-    train_df.to_csv(f'{output_dir}/{dataset_name.lower()}_train_full_logs.csv', index=True, sep="|")
-    test_df.to_csv(f'{output_dir}/{dataset_name.lower()}_test_full_logs.csv', index=True, sep="|")
-
-    train_grouped = train_df.groupby(['Optimizer Name', 'Epoch number']).agg(
-        Mean_Training_Loss=('Average Training Loss', 'mean'),
-        Std_Training_Loss=('Average Training Loss', 'std')
-    ).reset_index()
-
-    pivot_train_df = train_grouped.pivot(index=['Optimizer Name'], columns='Epoch number')
-    pivot_train_df.columns = [f'{stat}_epoch{int(epoch)}' for stat, epoch in pivot_train_df.columns]
-    pivot_train_df = pivot_train_df.reset_index()
-    pivot_train_df.to_csv(f'{output_dir}/{dataset_name.lower()}_train_grouped_logs.csv', index=False, sep="|")
-
-    test_grouped = test_df.groupby(['Optimizer Name']).agg(
-        Mean_Test_Set_Loss=('Average Test set Loss', 'mean'),
-        Std_Test_Set_Loss=('Average Test set Loss', 'std'),
-        Mean_Test_Set_Accuracy=('Average Test set accuracy', 'mean'),
-        Std_Test_Set_Accuracy=('Average Test set accuracy', 'std')
-    ).reset_index()
-    test_grouped.to_csv(f'{output_dir}/{dataset_name.lower()}_test_grouped_logs.csv', index=False, sep="|")
-
-# Example usage for CIFAR-10 and MNIST
-parse_training_logs('outputs/cifar10_training_run_logs.txt', 'Cifar10')
-parse_training_logs('outputs/mnist_training_run_logs.txt', 'MNIST')
-
-```
-
-### Results Logging
-
-The results of the experiments are logged in CSV files located in the `outputs` directory. Each experiment generates a separate log file with detailed performance metrics.
-
-### Directory Structure
+## Directory Structure
 
 ```
 .
@@ -1205,38 +50,39 @@ The results of the experiments are logged in CSV files located in the `outputs` 
 │   ├── bert_model.py
 │   ├── resnet.py
 │   ├── simple_cnn.py
-│   ├── simpleDQN.py
-│   ├── simpleNN.py
-│   ├── simpleRNN.py
-│   ├── simpleRNN_multiclass.py
-│   └── simpleRNN_speech.py
+│   ├── simple_rnn_multiclass.py
+│   ├── simple_rnn.py
+│   ├── simple_dqn.py
+│   ├── simple_rnn_speech.py
+│   ├── simple_cnn_template.py
+│   ├── simple_nn.py
 ├── optimizers
-│   ├── adadelta.py
 │   ├── adadelta_curvature.py
-│   ├── adagrad.py
+│   ├── adadelta.py
 │   ├── adagrad_curvature.py
-│   ├── adam.py
+│   ├── adagrad.py
 │   ├── adam_curvature.py
-│   ├── adamw.py
+│   ├── adam.py
 │   ├── adamw_curvature.py
-│   ├── amsgrad.py
+│   ├── adamw.py
 │   ├── amsgrad_curvature.py
-│   ├── heavyball.py
+│   ├── amsgrad.py
 │   ├── heavyball_curvature.py
-│   ├── nag.py
-│   ├── nag_curvature.py
-│   ├── nadam.py
+│   ├── heavyball.py
 │   ├── nadam_curvature.py
-│   ├── nadamw.py
+│   ├── nadam.py
 │   ├── nadamw_curvature.py
-│   ├── rmsprop.py
+│   ├── nadamw.py
+│   ├── nag_curvature.py
+│   ├── nag.py
 │   ├── rmsprop_curvature.py
-│   ├── rmsprop_with_momentum.py
+│   ├── rmsprop.py
 │   ├── rmsprop_with_momentum_curvature.py
-│   ├── shampoo.py
+│   ├── rmsprop_with_momentum.py
 │   ├── shampoo_curvature.py
-│   ├── simplesgd.py
+│   ├── shampoo.py
 │   ├── simplesgd_curvature.py
+│   ├── simplesgd.py
 ├── outputs
 │   ├── agnews
 │   ├── amazon-review-full
@@ -1260,19 +106,232 @@ The results of the experiments are logged in CSV files located in the `outputs` 
 │   ├── sogou-news
 │   ├── stl10
 │   ├── stl10-resnet
-│   └── yelp
+│   ├── yelp
 ├── README.md
 ├── requirements.txt
 ├── test.py
 ├── train.py
 ├── experiment_utils.py
 ├── optimizer_params.py
-├── training_parsers.py
 └── utilities.py
 ```
 
-## Conclusion
+## Setup
 
-The Adaptive Curvature Step Size (ACSS) method demonstrates significant improvements in training performance across a variety of datasets and optimizers. By dynamically adjusting the step size based on the local geometry of the optimization path, ACSS offers a more efficient and effective approach to training deep learning models.
+To set up the environment, install the required dependencies using the provided `requirements.txt` file.
 
-For more detailed results and analysis, please refer to the individual experiment logs in the `outputs` directory.
+```bash
+pip install -r requirements.txt
+```
+
+## Training and Testing
+
+### Training
+
+The `train.py` script handles the training process for various models and datasets. It includes different training functions for standard models, language models, and BERT-based models.
+
+### Testing
+
+The `test.py` script evaluates the performance of the trained models. It supports standard models, language models, and BERT-based models, providing detailed metrics such as average loss and accuracy.
+
+### Experiment Utilities
+
+The `experiment_utils.py` script facilitates running experiments with different optimizers, models, and datasets. It manages the training and testing loops and aggregates results for analysis.
+
+## Models
+
+We provide implementations for various models, including BERT classifiers, ResNet, and simple CNNs and RNNs. The models are defined in the `models` directory.
+
+## Optimizers
+
+Our implementation includes standard optimizers and their ACSS-enhanced versions. The optimizers are defined in the `optimizers` directory.
+
+### Available Optimizers
+
+- SimpleSGD
+- HeavyBall
+- NAG
+- Adadelta
+- Adagrad
+- NAdam
+- NAdamW
+- RMSProp
+- RMSPropMomentum
+- AdamW
+- Adam
+- AMSGrad
+
+## Training Log Parsing
+
+The `training_parsers.py` script processes raw training logs, extracting relevant metrics and saving them in a structured format for further analysis. It supports multiple datasets and provides functionality to aggregate results across different optimizers.
+
+### Example Usage
+
+1. **Parsing Training Logs:**
+   - Reads log files and extracts optimizer names, training losses, and test set performances.
+   - Supports logs generated from various datasets and optimizers.
+
+2. **Creating DataFrames:**
+   - Stores extracted data in Pandas DataFrames for easy manipulation.
+   - Separates training and test data into different DataFrames.
+
+3. **Aggregating Results:**
+   - Groups the data by optimizer and epoch to calculate mean and standard deviation of training losses.
+   - Pivots the training DataFrame to get a more analysis-friendly format with epochs as columns.
+
+4. **Saving Results:**
+   - Saves the full logs and aggregated results into separate CSV files for each dataset.
+   - Saves the mean training losses across different epochs for easy comparison between optimizers.
+
+## Results
+
+### Mean Improvement Over 5 Epochs for 12 Optimizers Across 20 Datasets
+
+| Optimizer       | Epoch_1    | Epoch_2    | Epoch_3    | Epoch_4    | Epoch_5    |
+|-----------------|------------|------------|------------|------------|------------|
+| SimpleSGD       | 0.539742504 | 1.252146061 | 0.750951018 | 0.821385925 | 0.908407596 |
+| HeavyBall       | 0.167656917 | 0.564890333 | 0.197533917 | 0.280896583 | 0.379726917 |
+| NAG             | 0.155248917 | 0.459523917 | 0.16732425  | 0.237815    | 0.322022583 |
+| Adagrad         | 0.024861417 | 0.046564833 | 0.049125417 | 0.049988917 | 0.056792917 |
+| Adadelta        | 0.010991917 | 0.071387333 | 0.065003    | 0.05667075  | 0.054823333 |
+| RMSProp         | -0.016485167 | 0.046684417 | 0.015839083 | 0.0243955   | 0.046374417 |
+| AMSGrad         | 0.002314167 | 0.004105417 | 0.01043375 | 0.015027333 | 0.03454925 |
+| NAdam           | 0.002429667 | -0.003835417 | 0.001610417 | 0.008449667 | 0.026809167 |
+| NAdamW          | 0.020950583 | 0.069456333 | -0.013666561 | -0.00336811 | 0.019472961 |
+| AdamW           | 0.0108145   | 0.023831917 | 0.010111583 | 0.012479333 | 0.019335167 |
+| Adam            | -0.0067625  | 0.009065833 | -0.008171083 | 0.008893333 | 0.003704917 |
+| RMSPropMomentum | 0.002767083 | 0.017398167 | -0.018411167 | -0.018351833 | -0.00997575 |
+
+### MNIST Training Losses
+
+| Optimizer Name          | Mean_Training_Loss_epoch1 | Mean_Training_Loss_epoch2 | Mean_Training_Loss_epoch3 | Mean_Training_Loss_epoch4 | Mean_Training_Loss_epoch5 | Mean_Training_Loss_epoch6 | Mean_Training_Loss_epoch7 | Mean_Training_Loss_epoch8 | Mean_Training_Loss_epoch9 | Mean_Training_Loss_epoch10 |
+|-------------------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|----------------------------|
+| SimpleSGDCurvature      | 0.39651                   | 0.17593                   | 0.13057                   | 0.10601                   | 0.09036                   | 0.07877                   | 0.06973                   | 0.06195                   | 0.05586                   | 0.05067                    |
+| HeavyBallCurvature      | 0.33452                   | 0.15764                   | 0.12197                   | 0.10183                   | 0.08857                   | 0.0792                    | 0.07067                   | 0.06429                   | 0.05887                   | 0.05326                    |
+| NAGCurvature            | 0.33464                   | 0.1574                    | 0.12209                   | 0.10172                   | 0.08846                   | 0.07916                   | 0.07075                   | 0.06407                   | 0.05865                   | 0.05351                    |
+| AMSGrad                 | 0.38229                   | 0.19564                   | 0.14119                   | 0.11287                   | 0.09475                   | 0.08296                   | 0.07267                   | 0.06531                   | 0.05876                   | 0.05411                    |
+| AMSGradCurvature        | 0.38224                   | 0.19604                   | 0.1416                    | 0.11305                   | 0.09526                   | 0.08334                   | 0.0735                    | 0.06566                   | 0.0594                    | 0.05448                    |
+| Adam                    | 0.3821                    | 0.19528                   | 0.1412                    | 0.11358                   | 0.09664                   | 0.08501                   | 0.0753                    | 0.06788                   | 0.06244                   | 0.05771                    |
+| AdamCurvature           | 0.38231                   | 0.19535                   | 0.14124                   | 0.11385                   | 0.09683                   | 0.08534                   | 0.0755                    | 0.06868                   | 0.06235                   | 0.05795                    |
+| AdamW                   | 0.38243                   | 0.19519                   | 0.1416                    | 0.11413                   | 0.09725                   | 0.08565                   | 0.07603                   | 0.0693                    | 0.06338                   | 0.0587                     |
+| AdamWCurvature          | 0.38209                   | 0.19512                   | 0.14148                   | 0.11425                   | 0.09695                   | 0.08542                   | 0.07564                   | 0.06909                   | 0.06313                   | 0.05913                    |
+| RMSPropCurvature        | 0.39926                   | 0.20883                   | 0.15436                   | 0.12608                   | 0.10902                   | 0.09647                   | 0.08718                   | 0.07955                   | 0.07338                   | 0.06823                    |
+| RMSProp                 | 0.39966                   | 0.21042                   | 0.15572                   | 0.12669                   | 0.10897                   | 0.09636                   | 0.08687                   | 0.07933                   | 0.07351                   | 0.06829                    |
+| RMSPropMomentumCurvature| 0.39423                   | 0.20636                   | 0.15312                   | 0.1259                    | 0.10941                   | 0.09735                   | 0.08818                   | 0.08072                   | 0.07464                   | 0.06955                    |
+| RMSPropMomentum         | 0.3936                    | 0.20554                   | 0.15268                   | 0.12597                   | 0.11013                   | 0.09829                   | 0.08926                   | 0.0817                    | 0.07547                   | 0.07026                    |
+| Shampoo                 | 1.51103                   | 0.3873                    | 0.28421                   | 0.23752                   | 0.20485                   | 0.18046                   | 0.16148                   | 0.14628                   | 0.13371                   | 0.12331                    |
+| NAdam                   | 0.34123                   | 0.16887                   | 0.1374                    | 0.12632                   | 0.12249                   | 0.12197                   | 0.12092                   | 0.12473                   | 0.13025                   | 0.13143                    |
+| NAdamCurvature          | 0.34136                   | 0.16884                   | 0.13723                   | 0.12647                   | 0.12195                   | 0.12215                   | 0.12292                   | 0.12607                   | 0.12846                   | 0.13282                    |
+| NAdamW                  | 0.34081                   | 0.16921                   | 0.1374                    | 0.12618                   | 0.12287                   | 0.12161                   | 0.12179                   | 0.12504                   | 0.12858                   | 0.13328                    |
+| NAdamWCurvature         | 0.34113                   | 0.16885                   | 0.13745                   | 0.12675                   | 0.12318                   | 0.12175                   | 0.12175                   | 0.12509                   | 0.12932                   | 0.13443                    |
+| HeavyBall               | 0.77726                   | 0.36868                   | 0.32254                   | 0.29565                   | 0.27446                   | 0.25613                   | 0.23913                   | 0.22388                   | 0.21011                   | 0.1978                     |
+| NAG                     | 0.77726                   | 0.36867                   | 0.32255                   | 0.29565                   | 0.27446                   | 0.25614                   | 0.23914                   | 0.22388                   | 0.21012                   | 0.19781                    |
+| AdagradCurvature        | 0.6987                    | 0.4394                    | 0.39262                   | 0.36851                   | 0.35273                   | 0.3412                    | 0.33223                   | 0.32486                   | 0.31857                   | 0.31301                    |
+| Adagrad | 0.69824 | 0.43924 | 0.39256 | 0.36847 | 0.35274 | 0.34125 | 0.33224 | 0.32488 | 0.31861 | 0.31304 |
+| Adadelta | 2.12782 | 1.78443 | 1.49008 | 1.26083 | 1.08826 | 0.95834 | 0.85957 | 0.78315 | 0.7232 | 0.67529 |
+| AdadeltaCurvature | 2.19944 | 1.99861 | 1.812 | 1.63747 | 1.48097 | 1.34431 | 1.22604 | 1.12458 | 1.03787 | 0.96392 |
+
+## Setup and Installation
+
+To set up the environment and run the experiments, follow these steps:
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone <repository_url>
+    cd <repository_directory>
+    ```
+
+2. **Install the required dependencies:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Training and Testing
+
+### Training
+
+The `train.py` script handles the training process for various models and datasets. It includes different training functions for standard models, language models, and BERT-based models.
+
+### Testing
+
+The `test.py` script evaluates the performance of the trained models. It supports standard models, language models, and BERT-based models, providing detailed metrics such as average loss and accuracy.
+
+### Experiment Utilities
+
+The `experiment_utils.py` script facilitates running experiments with different optimizers, models, and datasets. It manages the training and testing loops and aggregates results for analysis.
+
+## Models
+
+We provide implementations for various models, including BERT classifiers, ResNet, and simple CNNs and RNNs. The models are defined in the `models` directory.
+
+### Available Models
+
+- `bert_model.py`
+- `resnet.py`
+- `simple_cnn.py`
+- `simple_rnn_multiclass.py`
+- `simple_rnn.py`
+- `simple_dqn.py`
+- `simple_rnn_speech.py`
+- `simple_cnn_template.py`
+- `simple_nn.py`
+
+## Optimizers
+
+Our implementation includes standard optimizers and their ACSS-enhanced versions. The optimizers are defined in the `optimizers` directory.
+
+### Available Optimizers
+
+- `adadelta_curvature.py`
+- `adadelta.py`
+- `adagrad_curvature.py`
+- `adagrad.py`
+- `adam_curvature.py`
+- `adam.py`
+- `adamw_curvature.py`
+- `adamw.py`
+- `amsgrad_curvature.py`
+- `amsgrad.py`
+- `heavyball_curvature.py`
+- `heavyball.py`
+- `nadam_curvature.py`
+- `nadam.py`
+- `nadamw_curvature.py`
+- `nadamw.py`
+- `nag_curvature.py`
+- `nag.py`
+- `rmsprop_curvature.py`
+- `rmsprop.py`
+- `rmsprop_with_momentum_curvature.py`
+- `rmsprop_with_momentum.py`
+- `shampoo_curvature.py`
+- `shampoo.py`
+- `simplesgd_curvature.py`
+- `simplesgd.py`
+
+## Training Log Parsing
+
+The `training_parsers.py` script processes raw training logs, extracting relevant metrics and saving them in a structured format for further analysis. It supports multiple datasets and provides functionality to aggregate results across different optimizers.
+
+### Features
+
+1. **Parsing Training Logs:**
+   - Reads log files and extracts optimizer names, training losses, and test set performances.
+   - Supports logs generated from various datasets and optimizers.
+
+2. **Creating DataFrames:**
+   - Stores extracted data in Pandas DataFrames for easy manipulation.
+   - Separates training and test data into different DataFrames.
+
+3. **Aggregating Results:**
+   - Groups the data by optimizer and epoch to calculate mean and standard deviation of training losses.
+   - Pivots the training DataFrame to get a more analysis-friendly format with epochs as columns.
+
+4. **Saving Results:**
+   - Saves the full logs and aggregated results into separate CSV files for each dataset.
+   - Saves the mean training losses across different epochs for easy comparison between optimizers.
+
+---
+
