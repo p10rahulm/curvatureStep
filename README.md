@@ -91,19 +91,87 @@ The following optimizers were tested:
 
 ## Setup and Installation
 
-### Requirements
 
-The required dependencies are listed in `requirements.txt`. To install them, run:
+### How to Run the Experiments
+
+#### Prerequisites
+
+- Python 3.7 or higher
+- PyTorch
+- Torchtext
+- TQDM
+- Transformers
+- Numpy
+
+Install the required packages using `pip`:
 
 ```bash
 pip install -r requirements.txt
 ```
 
+#### Running Experiments
+
+
+To use the ACSS method with any dataset and optimizer, you can run the corresponding experiment file. Specifically, to run the experiments for different datasets and models, use the provided training scripts in the `experiments` directory. Below are examples for running experiments on various datasets:
+
+
+Below are some examples:
+
+
+
+##### CIFAR-10
+
+```bash
+python experiments/cifar10_training_runs.py
+```
+
+##### CIFAR-100
+
+```bash
+python experiments/cifar100_training_runs.py
+```
+
+##### Caltech101
+
+```bash
+python experiments/caltech101_training_runs.py
+```
+
+##### DBpedia
+
+```bash
+python experiments/dbpedia_training_runs.py
+```
+
+##### Amazon Review Polarity
+
+```bash
+python experiments/amazon_review_polarity_training_runs.py
+```
+
+##### Sogou News
+
+```bash
+python experiments/sogou_news_training_runs.py
+```
+
+##### CoLA with BERT
+
+```bash
+python experiments/cola_training_runs.py
+```
+
+By following these examples, you can create and run experiments on various datasets and models to evaluate the performance of different optimizers using the Adaptive Curvature Step Size (ACSS) method.
+
 ### Data Loaders
 
-The data loaders for various datasets are implemented in the `data_loaders` directory. Each data loader is responsible for loading the respective dataset, tokenizing the text, and creating data batches. The data loaders use the GloVe embeddings for text representation.
+The data loaders for various datasets are implemented in the `data_loaders` directory. Each data loader is responsible for loading the respective dataset.
 
-Here are examples of data loaders for the three datasets:
+Some of these datasets are created for text related benchmarks, and others for
+vision related benchmarks. In the case of text, we have to additionally tokenize
+the text, and create data batches. The data loaders use the GloVe embeddings for text representation.
+
+We provide three examples of such data loaders below:
 
 #### Amazon Review Full
 
@@ -269,27 +337,6 @@ def load_sogou_news(batch_size=16):
     return train_loader, test_loader
 ```
 
-### Usage
-
-To use the ACSS method with any dataset and optimizer, you can run the corresponding experiment file. Below are some examples:
-
-#### Running CIFAR-100 Experiment
-
-```bash
-python experiments/cifar100_training_runs.py
-```
-
-#### Running Amazon Review Polarity Experiment
-
-```bash
-python experiments/amazon_review_polarity_training_runs.py
-```
-
-#### Running Sogou News Experiment
-
-```bash
-python experiments/sogou_news_training_runs.py
-```
 
 ### Experiment Runner
 
@@ -310,6 +357,272 @@ mean_accuracy, std_accuracy = run_experiment(
     trainer_fn=trainer_function,
     tester_fn=test_function,
 )
+```
+
+### Training Functions
+
+The `train.py` file includes various training functions tailored for different models such as simple CNNs, language models, and BERT-based models.
+
+#### train
+
+The `train` function handles the training loop for simple models like CNNs or fully connected networks.
+
+```python
+import os
+import sys
+from tqdm import tqdm
+
+# Add the project root to the system path
+project_root = os.getcwd()
+sys.path.insert(0, project_root)
+
+def train(model, train_loader, criterion, optimizer, device, num_epochs=10):
+    model.train()
+    for epoch in tqdm(range(num_epochs), desc="Epochs"):
+        epoch_loss = 0.0
+        for inputs, targets in tqdm(train_loader, desc=f"Training Epoch {epoch+1}"):
+            inputs, targets = inputs.to(device), targets.to(device)
+
+            def closure():
+                optimizer.zero_grad()
+                outputs = model(inputs)
+                loss = criterion(outputs, targets)
+                loss.backward()
+                return loss
+
+            loss = optimizer.step(closure)
+            epoch_loss += loss.item()
+
+        print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {epoch_loss/len(train_loader):.4f}")
+```
+
+#### train_lm
+
+The `train_lm` function is designed for training language models, ensuring the handling of sequences and compacting RNN weights.
+
+```python
+def train_lm(model, train_loader, criterion, optimizer, device, num_epochs=10):
+    model.to(device)
+    model.train()
+    for epoch in tqdm(range(num_epochs), desc="Epochs"):
+        epoch_loss = 0
+        for text, labels, lengths in tqdm(train_loader):
+            text, labels = text.to(device), labels.to(device)
+
+            def closure():
+                optimizer.zero_grad()
+                model.flatten_parameters()  # Ensure RNN weights are compacted
+                predictions = model(text, lengths).squeeze(1)
+                loss = criterion(predictions, labels)
+                loss.backward()
+                return loss
+
+            loss = optimizer.step(closure)
+            epoch_loss += loss.item()
+        
+        print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {epoch_loss/len(train_loader):.4f}")
+```
+
+#### train_bert
+
+The `train_bert` function is used for training BERT-based models, handling input IDs and attention masks.
+
+```python
+def train_bert(model, train_loader, criterion, optimizer, device, num_epochs=10):
+    model.to(device)
+    model.train()
+    for epoch in range(num_epochs):
+        epoch_loss = 0
+        for batch in tqdm(train_loader):
+            input_ids = batch['input_ids'].to(device)
+            attention_mask = batch['attention_mask'].to(device)
+            labels = batch['label'].to(device)
+
+            optimizer.zero_grad()
+            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+            loss = criterion(outputs, labels)
+            loss.backward()
+            optimizer.step()
+            epoch_loss += loss.item()
+        
+        print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {epoch_loss/len(train_loader):.4f}")
+```
+
+### Testing Functions
+
+The `test.py` file contains functions to evaluate models after training.
+
+#### test
+
+The `test` function evaluates simple models, calculating loss and accuracy.
+
+```python
+import os
+import sys
+import torch
+from tqdm import tqdm
+
+# Add the project root to the system path
+project_root = os.getcwd()
+sys.path.insert(0, project_root)
+
+def test(model, test_loader, criterion, device):
+    model.eval()
+    test_loss = 0
+    correct = 0
+    with torch.no_grad():
+        for inputs, targets in test_loader:
+            inputs, targets = inputs.to(device), targets.to(device)
+            outputs = model(inputs)
+            test_loss += criterion(outputs, targets).item()
+            pred = outputs.argmax(dim=1, keepdim=True)
+            correct += pred.eq(targets.view_as(pred)).sum().item()
+
+    test_loss /= len(test_loader.dataset)
+    accuracy = 100. * correct / len(test_loader.dataset)
+    print(f"Test set: Average loss: {test_loss:.4f}, Accuracy: {correct}/{len(test_loader.dataset)} ({accuracy:.2f}%)")
+    return 1.0 * correct / len(test_loader.dataset)
+```
+
+#### test_lm
+
+The `test_lm` function evaluates language models on sequence data.
+
+```python
+def test_lm(model, test_loader, criterion, device):
+    model.to(device)
+    model.eval()
+    epoch_loss = 0.0
+    correct_preds = 0
+    total_preds = 0
+    with torch.no_grad():
+        for text, labels, lengths in tqdm(test_loader):
+            text, labels = text.to(device), labels.to(device)
+            predictions = model(text, lengths).squeeze(1)
+            loss = criterion(predictions, labels)
+            epoch_loss += loss.item()
+            predicted_labels = (predictions > 0.5).float()
+            correct_preds += (predicted_labels == labels).sum().item()
+            total_preds += len(labels)
+    epoch_loss /= len(test_loader.dataset)
+    accuracy = 100. * correct_preds / total_preds
+    print(f"Test set: Average loss: {epoch_loss:.4f}, Accuracy: {correct_preds}/{total_preds} ({accuracy:.2f}%)")
+    return 1.0 * correct_preds / total_preds
+```
+
+#### test_lm_multiclass
+
+The `test_lm_multiclass` function evaluates multiclass language models.
+
+```python
+def test_lm_multiclass(model, test_loader, criterion, device):
+    model.to(device)
+    model.eval()
+    epoch_loss = 0.0
+    correct_preds = 0
+    total_preds = 0
+    with torch.no_grad():
+        for text, labels, lengths in tqdm(test_loader):
+            text, labels = text.to(device), labels.to(device)
+            predictions = model(text, lengths)
+            loss = criterion(predictions, labels)
+            epoch_loss += loss.item()
+            predicted_labels = torch.argmax(predictions, dim=1)
+            correct_preds += (predicted_labels == labels).sum().item()
+            total_preds += len(labels)
+    epoch_loss /= len(test_loader.dataset)
+    accuracy = 100. * correct_preds / total_preds
+    print(f"Test set: Average loss: {epoch_loss:.4f}, Accuracy: {correct_preds}/{total_preds} ({accuracy:.2f}%)")
+    return 1.0 * correct_preds / total_preds
+```
+
+#### test_bert
+
+The `test_bert` function evaluates BERT-based models.
+
+```python
+def test_bert(model, test_loader, criterion, device):
+    model.to(device)
+    model.eval()
+    epoch_loss = 0.0
+    correct_preds = 0
+    total_preds = 0
+    with torch.no_grad():
+        for batch in tqdm(test_loader):
+            input_ids = batch['input_ids'].to(device)
+            attention_mask = batch['attention_mask'].to(device)
+            labels = batch['label'].to(device)
+            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+            loss = criterion(outputs, labels)
+            epoch_loss += loss.item()
+            predicted_labels = torch.argmax(outputs, dim=1)
+            correct_preds += (predicted_labels == labels).sum().item()
+            total_preds += len(labels)
+    epoch_loss /= len(test_loader.dataset)
+    accuracy = 100. * correct_preds / total_preds
+    print(f"Test set: Average loss: {epoch_loss:.4f}, Accuracy: {correct_preds}/{total_preds} ({accuracy:.2f}%)")
+    return 1.0 * correct_preds / total_preds
+```
+
+### Experiment Utilities
+
+The `experiment_utils.py` file includes the `run_experiment` function, which facilitates the training and testing of models across different datasets and optimizers.
+
+```python
+import os
+import sys
+import torch
+import numpy as np
+from train import train
+from test import test
+from utilities import set_seed
+from models.simpleNN import SimpleNN
+from data_loaders.mnist import load_mnist
+
+# Add the project root to the system path
+project_root = os.getcwd()
+sys.path.insert(0, project_root)
+
+def run_experiment(optimizer_class, optimizer_params, dataset_loader=None, 
+                   model_class=None, num_runs=10, num_epochs=2, debug_logs=False,
+                   device=None, model_hyperparams=None,
+                   loss_criterion=None, trainer_fn=None, tester_fn=None):
+    if device is None:
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    if dataset_loader is None:
+        dataset_loader = load_mnist
+    if model_class is None:
+        model_class = SimpleNN
+    if loss_criterion is None:
+        loss_criterion = torch.nn.CrossEntropyLoss
+    if trainer_fn is None:
+        trainer_fn = train
+    if tester_fn is None:
+        tester_fn = test
+    
+    set_seed(42)
+    print("params=", optimizer_params)
+    train_loader, test_loader = dataset_loader()
+
+    criterion = loss_criterion()
+    accuracies = []
+    for run_number in range(num_runs):
+        if debug_logs:
+            print(f"Running Loop: {run_number + 1}/{num_runs}")
+
+        if model_hyperparams is None:
+            model = model_class().to(device)
+        else:
+            model = model_class(**model_hyperparams).to(device)
+
+        optimizer = optimizer_class(model.parameters(), **optimizer_params)
+        trainer_fn(model, train_loader, criterion, optimizer, device, num_epochs=num_epochs)
+        accuracy = tester_fn(model, test_loader, criterion, device)
+        accuracies.append(accuracy)
+    mean_accuracy = np.mean(accuracies)
+    std_accuracy = np.std(accuracies)
+
+    return mean_accuracy, std_accuracy
 ```
 
 ### Results Logging
