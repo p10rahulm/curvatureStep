@@ -70,22 +70,26 @@ Z = rosenbrock(X, Y)
 num_steps = 500
 
 # List of optimizers to visualize
-
 optimizers = [
     SimpleSGD, SimpleSGDCurvature, HeavyBall, HeavyBallCurvature,
     NAG, NAGCurvature
 ]
+
+# Create a figure with subplots
+fig, axs = plt.subplots(1, 6, figsize=(30, 5))
+fig.suptitle('Optimization Paths on Rosenbrock Function', fontsize=16)
+
 # Run optimizations and plot results for each optimizer
-for optimizer_class in optimizers:
+for ax, optimizer_class in zip(axs, optimizers):
     path = run_optimization(optimizer_class, lr=2.0e-3, steps=num_steps, x0=[-1.5, 2])
 
     # Plot the Rosenbrock function and optimization path
-    plt.figure(figsize=(10, 8))
-    plt.contour(X, Y, Z, levels=np.logspace(-1, 3, 20), cmap='jet')
-    plt.colorbar(label='f(x, y)')
-    plt.plot(path[:, 0], path[:, 1], 'ro-', label=f'{optimizer_class.__name__}')
-    plt.xlabel('x')
-    plt.ylabel('y')
-    plt.title(f'Optimization Path on Rosenbrock Function ({optimizer_class.__name__})')
-    plt.legend()
-    plt.show()
+    ax.contour(X, Y, Z, levels=np.logspace(-1, 3, 20), cmap='jet')
+    ax.plot(path[:, 0], path[:, 1], 'ro-', label=f'{optimizer_class.__name__}')
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_title(f'{optimizer_class.__name__}')
+    ax.legend()
+
+plt.tight_layout(rect=[0, 0, 1, 0.95])
+plt.show()
