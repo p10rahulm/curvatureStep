@@ -64,6 +64,7 @@ fig.suptitle('Optimization Paths on Himmelblau Function', fontsize=16)
 fig.subplots_adjust(hspace=0.4, wspace=0.3)
 
 lr = 1.5e-2
+optima = [(-2.80,3.13)]
 # Run optimizations and plot results for each optimizer
 for ax, optimizer_class in zip(axs.flatten(), optimizers):
     path = run_optimization(optimizer_class, lr=lr, steps=num_steps, x0=[-4, 4])
@@ -71,6 +72,9 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
     # Plot the Himmelblau function and optimization path
     cs = ax.contour(X, Y, Z, levels=np.logspace(-1, 3, 20), cmap='jet')
     ax.plot(path[:, 0], path[:, 1], 'ro-', label=f'{optimizer_class.__name__}')
+
+    for optimum in optima:
+        ax.plot(optimum[0],optimum[1], 'x', color='lightgreen', markersize=8, label='Global Optimum')
     ax.set_xlabel('x')
     ax.set_ylabel('y')
     ax.set_title(f'{optimizer_class.__name__}')
