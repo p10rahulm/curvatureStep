@@ -815,6 +815,236 @@ class SimpleRNN(nn.Module):
         self.rnn.flatten_parameters()
 ```
 
+### Optimizers
+
+This section describes the optimizers implemented in this repository, including both standard optimization algorithms and those incorporating the Adaptive Curvature Step Size (ACSS) method.
+
+#### Standard Optimizers
+
+1. **SimpleSGD**:
+    ```python
+    import torch
+    from torch.optim import Optimizer
+
+    class SimpleSGD(Optimizer):
+        def __init__(self, params, lr=1e-3):
+            defaults = dict(lr=lr)
+            super(SimpleSGD, self).__init__(params, defaults)
+
+        def step(self, closure=None):
+            loss = None
+            if closure is not None:
+                loss = closure()
+
+            for group in self.param_groups:
+                for p in group['params']:
+                    if p.grad is None:
+                        continue
+
+                    grad = p.grad.data
+                    step_size = group['lr']
+
+                    # Simple SGD update
+                    p.data = p.data - step_size * grad
+
+            return loss
+    ```
+
+2. **Adam**:
+    ```python
+    import torch
+    from torch.optim import Optimizer
+
+    class Adam(Optimizer):
+        def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8, weight_decay=0):
+            defaults = dict(lr=lr, betas=betas, eps=eps, weight_decay=weight_decay)
+            super(Adam, self).__init__(params, defaults)
+
+        def step(self, closure=None):
+            loss = None
+            if closure is not None:
+                loss = closure()
+
+            for group in self.param_groups:
+                for p in group['params']:
+                    if p.grad is None:
+                        continue
+
+                    grad = p.grad.data
+                    if grad.is_sparse:
+                        raise RuntimeError('Adam does not support sparse gradients, please consider SparseAdam instead')
+
+                    state = self.state[p]
+
+                    if 'step' not in state:
+                        state['step'] = 0
+                        state['exp_avg'] = torch.zeros_like(p.data)
+                        state['exp_avg_sq'] = torch.zeros_like(p.data)
+
+                    exp_avg, exp_avg_sq = state['exp_avg'], state['exp_avg_sq']
+                    beta1, beta2 = group['betas']
+
+                    state['step'] += 1
+
+                    exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
+                    exp_avg_sq.mul_(beta2).addcmul_(grad, grad, value=1 - beta2)
+
+                    denom = exp_avg_sq.sqrt().add_(group['eps'])
+
+                    step_size = group['lr'] * (1 - beta2 ** state['step']) ** 0.5 / (1 - beta1 ** state['step'])
+
+                    p.data.addcdiv_(exp_avg, denom, value=-step_size)
+
+            return loss
+    ```
+
+#### Curvature-Based Optimizers
+
+1. **SimpleSGDCurvature**:
+    ```python
+    import torch
+    from torch.optim import Optimizer
+
+    class SimpleSGDCurvature(Optimizer):
+        def __init__(self, params, lr=1e-3, epsilon=0.01, clip_radius=None):
+            defaults = dict(lr=lr, epsilon=epsilon)
+            self.clip_radius = clip_radius
+            super(SimpleSGDCurvature, self).__init__(params, defaults)
+
+        def step(self, closure=None):
+            loss = None
+            if closure is not None:
+                loss = closure()
+
+            # First loop to store the last gradient
+            for group in self.param_groups:
+                for p in group['params']:
+                    if p.grad is None:
+                        continue
+
+                    state = self.state[p]
+
+                    if 'step' not in state:
+                        state['step'] = 0
+                        state['last_grad'] = torch.zeros_like(p.data)
+
+                    state['last_grad'] = p.grad.data.clone()
+
+            if closure is not None:
+                loss = closure()
+
+            for group in self.param_groups:
+                for p in group['params']:
+                    if p.grad is None:
+                        continue
+
+                    grad = p.grad.data
+                    state = self.state[p]
+
+                    state['step'] += 1
+                    step_size = group['lr']
+                    epsilon = group['epsilon']
+
+                    last_grad = state['last_grad']
+                    current_grad = grad
+
+                    radius = torch.norm(last_grad) / torch.maximum(torch.tensor(epsilon, device=grad.device),
+                                                                   torch.norm(current_grad - last_grad))
+                    if self.clip_radius is not None:
+                        radius = torch.min(torch.tensor(self.clip_radius), radius)
+                    normed_last_grad = last_grad / torch.norm(last_grad)
+                    p.data = p.data - step_size * radius * normed_last_grad
+
+            return loss
+    ```
+
+2. **AdamCurvature**:
+    ```python
+    import torch
+    from torch.optim import Optimizer
+
+    class AdamCurvature(Optimizer):
+        def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8, weight_decay=0, epsilon=0.01, clip_radius=None):
+            defaults = dict(lr=lr, betas=betas, eps=eps, weight_decay=weight_decay, epsilon=epsilon)
+            self.clip_radius = clip_radius
+            super(AdamCurvature, self).__init__(params, defaults)
+
+        def step(self, closure=None):
+            loss = None
+            if closure is not None:
+                loss = closure()
+
+            for group in self.param_groups:
+                for p in group['params']:
+                    if p.grad is None:
+                        continue
+
+                    grad = p.grad.data
+                    if grad.is_sparse:
+                        raise RuntimeError('Adam does not support sparse gradients, please consider SparseAdam instead')
+
+                    state = self.state[p]
+
+                    if 'step' not in state:
+                        state['step'] = 0
+                        state['exp_avg'] = torch.zeros_like(p.data)
+                        state['exp_avg_sq'] = torch.zeros_like(p.data)
+                        state['last_grad'] = torch.zeros_like(p.data)
+
+                    exp_avg, exp_avg_sq, last_grad = state['exp_avg'], state['exp_avg_sq'], state['last_grad']
+                    beta1, beta2 = group['betas']
+
+                    state['step'] += 1
+
+                    exp_avg.mul_(beta1).add_(grad, alpha=1 - beta1)
+                    exp_avg_sq.mul_(beta2).addcmul_(grad, grad, value=1 - beta2)
+
+                    denom = exp_avg_sq.sqrt().add_(group['eps'])
+
+                    step_size = group['lr'] * (1 - beta2 ** state['step']) ** 0.5 / (1 - beta1 ** state['step'])
+
+                    radius = torch.norm(last_grad) / torch.maximum(torch.tensor(group['epsilon'], device=grad.device),
+                                                                   torch.norm(exp_avg - last_grad))
+                    if self.clip_radius is not None:
+                        radius = torch.min(torch.tensor(self.clip_radius), radius)
+                    normed_last_grad = last_grad / torch.norm(last_grad)
+                    p.data = p.data - step_size * radius * normed_last_grad
+
+                    last_grad.copy_(exp_avg)
+
+            return loss
+    ```
+
+This repository provides a variety of optimizers, including standard implementations and curvature-based variations. The curvature-based optimizers, such as SimpleSGDCurvature and AdamCurvature, use the Adaptive Curvature Step Size (ACSS) method to dynamically adjust the step size based on the local geometry of the optimization path. This approach aims to improve optimization performance by adapting to the landscape of the optimization problem without the need for explicitly computing or storing second-order terms.
+
+These are the optimizers we include in the `optimizers/` directory:
+
+- adadelta_curvature.py
+- adadelta.py
+- adagrad_curvature.py
+- adagrad.py
+- adam_curvature.py
+- adam.py
+- adamw_curvature.py
+- adamw.py
+- amsgrad_curvature.py
+- amsgrad.py
+- heavyball_curvature.py
+- heavyball.py
+- nadam_curvature.py
+- nadam.py
+- nadamw_curvature.py
+- nadamw.py
+- nag_curvature.py
+- nag.py
+- rmsprop_curvature.py
+- rmsprop.py
+- rmsprop_with_momentum_curvature.py
+- rmsprop_with_momentum.py
+- shampoo_curvature.py
+- shampoo.py
+- simplesgd_curvature.py
+- simplesgd.py
 
 
 ### Results Logging
