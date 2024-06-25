@@ -19,17 +19,17 @@ data = {
 # Create a DataFrame
 df = pd.DataFrame(data)
 
-# Plotting
-plt.figure(figsize=(14, 8))
-for optimizer in df['Optimizer Name']:
-    losses = df[df['Optimizer Name'] == optimizer].iloc[0, 1:].values
-    plt.plot(range(1, 11), losses, label=optimizer)
+# Plotting with log scale on y-axis
+plt.figure(figsize=(12, 8))
+for optimizer in df["Optimizer"]:
+    plt.plot(df.columns[1:], df[df["Optimizer"] == optimizer].values[0][1:], marker='o', label=optimizer)
 
-plt.xlabel('Epoch')
-plt.ylabel('Mean Training Loss')
-plt.title('Mean Training Loss over Epochs for Different Optimizers')
+plt.title("Gain in Mean Training Loss by Using Curvature Step Size")
+plt.xlabel("Epochs")
+plt.ylabel("Mean Training Loss Gain (Log Scale)")
+plt.yscale('log')
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-plt.grid(True)
+plt.grid(True, which="both", ls="--")
 plt.tight_layout()
 
 # Save the plot
