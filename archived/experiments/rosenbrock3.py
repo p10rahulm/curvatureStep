@@ -77,7 +77,7 @@ optimizers = [
 
 # Create a figure with subplots
 fig, axs = plt.subplots(1, 6, figsize=(30, 5))
-fig.suptitle('Optimization Paths on Rosenbrock Function', fontsize=16)
+fig.suptitle('Optimization Paths on Rosenbrock Function', fontsize=24)
 
 # Run optimizations and plot results for each optimizer
 for ax, optimizer_class in zip(axs, optimizers):
@@ -86,9 +86,9 @@ for ax, optimizer_class in zip(axs, optimizers):
     # Plot the Rosenbrock function and optimization path
     ax.contour(X, Y, Z, levels=np.logspace(-1, 3, 20), cmap='jet')
     ax.plot(path[:, 0], path[:, 1], 'ro-', label=f'{optimizer_class.__name__}')
-    ax.set_xlabel('x')
-    ax.set_ylabel('y')
-    ax.set_title(f'{optimizer_class.__name__}')
+    ax.set_xlabel('x', fontsize=20)
+    ax.set_xlabel('y', fontsize=20)
+    ax.set_title(f'{optimizer_class.__name__.replace("Curvature","-ACSS")}', fontsize=24)
     ax.legend()
 
 plt.tight_layout(rect=[0, 0, 1, 0.95])

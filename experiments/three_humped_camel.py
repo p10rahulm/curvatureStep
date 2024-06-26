@@ -70,7 +70,7 @@ optimizers = [
 
 # Create a figure with subplots
 fig, axs = plt.subplots(2, 3, figsize=(18, 12))
-fig.suptitle('Optimization Paths on the Three Humped Camel Function', fontsize=16)
+fig.suptitle('Optimization Paths on the Three Humped Camel Function', fontsize=27)
 
 # Adjust space between plots
 fig.subplots_adjust(hspace=0.4, wspace=0.3)
@@ -93,9 +93,10 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
             optima_label = f'Global Optimum {optimum_num}'
         ax.plot(optimum[0],optimum[1], 'x', markersize=8, label=optima_label)
 
-    ax.set_xlabel('x')
-    ax.set_ylabel('y')
-    ax.set_title(f'{optimizer_class.__name__}')
+    ax.set_xlabel('x', fontsize=20)
+    ax.set_xlabel('y', fontsize=20)
+    ax.set_title(f'{optimizer_class.__name__.replace("Curvature","-ACSS")}', fontsize=24)
+    ax.tick_params(axis='both', which='major', labelsize=14)
     ax.legend()
 
 plt.tight_layout(rect=[0, 0, 1, 0.95])

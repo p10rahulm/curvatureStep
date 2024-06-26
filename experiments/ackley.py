@@ -57,7 +57,7 @@ optimizers = [
 
 # Create a figure with subplots
 fig, axs = plt.subplots(2, 3, figsize=(18, 12))
-fig.suptitle('Optimization Paths on the Ackley Function', fontsize=16)
+fig.suptitle('Optimization Paths on the Ackley Function', fontsize=27)
 
 # Adjust space between plots
 fig.subplots_adjust(hspace=0.4, wspace=0.3)
@@ -73,19 +73,20 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
 
     # Plot the Ackley function and optimization path
     ax.contour(X, Y, Z, levels=np.logspace(-1, 1, 20), cmap='jet')
-    ax.plot(path[:, 0], path[:, 1], 'ro-', label=f'{optimizer_class.__name__}')
+    ax.plot(path[:, 0], path[:, 1], 'ro-', label=f'{optimizer_class.__name__}', markersize=8)
     for optimum_num in range(len(optima)):
         optimum = optima[optimum_num]
         if len(optima) == 1:
             optima_label = 'Global Optimum'
         else:
             optima_label = f'Global Optimum {optimum_num}'
-        ax.plot(optimum[0], optimum[1], 'x', markersize=8, label=optima_label)
+        ax.plot(optimum[0], optimum[1], 'x', markersize=12, label=optima_label)
 
-    ax.set_xlabel('x')
-    ax.set_ylabel('y')
-    ax.set_title(f'{optimizer_class.__name__}')
-    ax.legend()
+    ax.set_xlabel('x', fontsize=20)
+    ax.set_ylabel('y', fontsize=20)
+    ax.set_title(f'{optimizer_class.__name__.replace("Curvature","-ACSS")}', fontsize=24)
+    ax.legend(fontsize=14)
+    ax.tick_params(axis='both', which='major', labelsize=14)
 
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 

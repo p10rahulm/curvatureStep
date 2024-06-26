@@ -44,7 +44,7 @@ x = np.linspace(-5, 5, 200)
 y = np.linspace(-5, 5, 200)
 X, Y = np.meshgrid(x, y)
 Z = himmelblau(X, Y)
-num_steps = 50
+
 
 # List of optimizers to visualize
 optimizers = [
@@ -53,12 +53,13 @@ optimizers = [
 
 # Create a figure with subplots
 fig, axs = plt.subplots(2, 3, figsize=(18, 12))
-fig.suptitle('Optimization Paths on Himmelblau Function', fontsize=16)
+fig.suptitle('Optimization Paths on Himmelblau Function', fontsize=27)
 
 # Adjust space between plots
 fig.subplots_adjust(hspace=0.4, wspace=0.3)
 
 lr = 1.5e-2
+num_steps = 50
 optima = [
     (3.0, 2.0),
     (-2.805118, 3.131312),
@@ -81,9 +82,10 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
         else:
             optima_label = f'Global Optimum {optimum_num}'
         ax.plot(optimum[0],optimum[1], 'x', markersize=8, label=optima_label)
-    ax.set_xlabel('x')
-    ax.set_ylabel('y')
-    ax.set_title(f'{optimizer_class.__name__}')
+    ax.set_xlabel('x', fontsize=20)
+    ax.set_xlabel('y', fontsize=20)
+    ax.set_title(f'{optimizer_class.__name__.replace("Curvature","-ACSS")}', fontsize=24)
+    ax.tick_params(axis='both', which='major', labelsize=14)
     ax.legend()
     ax.set_xlim(-5, 5)
     ax.set_ylim(-5, 5)

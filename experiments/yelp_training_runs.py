@@ -76,4 +76,4 @@ for optimizer_class, default_params in optimizers:
         'std_accuracy': std_accuracy
     })
 
-write_to_file('outputs/reuters_training_logs.csv', results)
+
