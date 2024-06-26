@@ -69,7 +69,7 @@ optimizers = [
 ]
 
 # Create a figure with subplots
-fig, axs = plt.subplots(2, 3, figsize=(18, 12))
+fig, axs = plt.subplots(2, 3, figsize=(18, 7))
 fig.suptitle('Optimization Paths on the Three Humped Camel Function', fontsize=27)
 
 # Adjust space between plots
@@ -102,7 +102,7 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 
 # Save the plot as an image file
-output_file = "outputs/plots/three_humped_camel.pdf"
+output_file = "outputs/plots/three_humped_camel7.pdf"
 plt.savefig(output_file)
 
 plt.show()
