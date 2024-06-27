@@ -226,3 +226,42 @@ for num_epochs in [5, 10, 50]:
     process_files(num_epochs, less_discard=True)
 
 process_files(10, less_discard=False)
+
+# ----------------------------
+# Write the final rank to file.
+# ----------------------------
+
+# Initialize a dictionary to store the ranks
+ranks = {}
+
+for file_path in file_paths:
+    df = pd.read_csv(file_path, delimiter='|')
+    dataset_name = file_path.split('/')[1]
+
+    # Get the columns for mean training loss
+    mean_loss_columns = [col for col in df.columns if col.startswith('Mean_Training_Loss_epoch')]
+    last_epoch_column = mean_loss_columns[-1]
+
+    # Rank the optimizers based on the last epoch's mean training loss
+    df['Rank'] = df[last_epoch_column].rank()
+
+    # Store the ranks in the dictionary
+    for index, row in df.iterrows():
+        optimizer_name = row['Optimizer Name']
+        rank = row['Rank']
+        if optimizer_name not in ranks:
+            ranks[optimizer_name] = {}
+        ranks[optimizer_name][dataset_name] = rank
+
+# Convert the ranks dictionary to a DataFrame
+rank_df = pd.DataFrame(ranks).transpose()
+
+# Calculate the average rank for each optimizer across all datasets
+rank_df['Average Rank'] = rank_df.mean(axis=1)
+
+# Save the resulting DataFrame to a CSV file
+output_dir = 'outputs'
+os.makedirs(output_dir, exist_ok=True)
+rank_df.to_csv(os.path.join(output_dir, 'mean_rank_optimizer_dataset.csv'), sep='|')
+
+print("Ranking saved to outputs/mean_rank_optimizer_dataset.csv")
