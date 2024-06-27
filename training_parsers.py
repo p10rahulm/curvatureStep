@@ -80,8 +80,17 @@ def parse_training_logs(log_file_path, dataset_name):
     # Flatten the multi-level column index
     pivot_train_df.columns = [f'{stat}_epoch{int(epoch)}' for stat, epoch in pivot_train_df.columns]
 
+    # Separate mean and standard deviation columns
+    mean_columns = [col for col in pivot_train_df.columns if 'Mean_Training_Loss' in col]
+    std_columns = [col for col in pivot_train_df.columns if 'Std_Training_Loss' in col]
+
     # Sort the columns to ensure epoch numbers are in order
-    ordered_columns = sorted(pivot_train_df.columns, key=lambda x: (x.split('_')[1], int(x.split('_epoch')[1])))
+    mean_columns = sorted(mean_columns, key=lambda x: int(x.split('_epoch')[1]))
+    std_columns = sorted(std_columns, key=lambda x: int(x.split('_epoch')[1]))
+
+    # Concatenate the sorted columns back together
+    ordered_columns = mean_columns + std_columns
+
     pivot_train_df = pivot_train_df[ordered_columns]
 
     # Reset index to turn multi-index into columns

@@ -2,7 +2,7 @@
 # Running 10 epochs of training - 10 runs
 # ----------------------------------------------------------------------------------------------------
 
-Running Hyperparameter grid search = SimpleSGD
+Running MNIST training with Optimizer = SimpleSGD
 params= {'lr': 0.001}
 Running Loop: 1/10
 Epoch 1/10 completed, Average Loss: 1.8941

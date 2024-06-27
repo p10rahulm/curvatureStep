@@ -1,14 +1,14 @@
 |Optimizer Name|Running loop number|Average Test set Loss|Average Test set accuracy
-0||1|0.006|89.65
-1||2|0.006|89.44
-2||3|0.006|89.59
-3||4|0.006|89.41
-4||5|0.006|89.68
-5||6|0.006|89.42
-6||7|0.0061|89.6
-7||8|0.0061|89.39
-8||9|0.006|89.36
-9||10|0.006|89.46
+0|SimpleSGD|1|0.006|89.65
+1|SimpleSGD|2|0.006|89.44
+2|SimpleSGD|3|0.006|89.59
+3|SimpleSGD|4|0.006|89.41
+4|SimpleSGD|5|0.006|89.68
+5|SimpleSGD|6|0.006|89.42
+6|SimpleSGD|7|0.0061|89.6
+7|SimpleSGD|8|0.0061|89.39
+8|SimpleSGD|9|0.006|89.36
+9|SimpleSGD|10|0.006|89.46
 10|SimpleSGDCurvature|1|0.0014|97.34
 11|SimpleSGDCurvature|2|0.001|97.86
 12|SimpleSGDCurvature|3|0.0013|97.5
