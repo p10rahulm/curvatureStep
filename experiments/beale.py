@@ -55,7 +55,8 @@ optimizers = [
 # fig, axs = plt.subplots(2, 3, figsize=(18, 12))
 # fig, axs = plt.subplots(2, 3, figsize=(18, 9))
 # fig, axs = plt.subplots(2, 3, figsize=(18, 8))
-fig, axs = plt.subplots(2, 3, figsize=(18, 7))
+# fig, axs = plt.subplots(2, 3, figsize=(18, 7))
+fig, axs = plt.subplots(2, 3, figsize=(12, 6))
 fig.suptitle('Optimization Paths on the Beale Function', fontsize=27)
 
 # Adjust space between plots
@@ -84,14 +85,14 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
     ax.set_xlabel('y', fontsize=20)
     ax.set_title(f'{optimizer_class.__name__.replace("Curvature","-ACSS")}', fontsize=24)
     ax.tick_params(axis='both', which='major', labelsize=14)
-    ax.legend()
+    ax.legend(fontsize=10)
 
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 
 # Save the plot as an image file
 # output_file = "outputs/plots/beale2.pdf"
 # output_file = "outputs/plots/beale8.pdf"
-output_file = "outputs/plots/beale7.pdf"
+output_file = "outputs/plots/beale126.pdf"
 plt.savefig(output_file)
 
 plt.show()

@@ -53,7 +53,7 @@ optimizers = [
 ]
 
 # Create a figure with subplots
-fig, axs = plt.subplots(2, 3, figsize=(18, 7))
+fig, axs = plt.subplots(2, 3, figsize=(12, 8))
 fig.suptitle('Optimization Paths on the Easom Function', fontsize=27)
 
 # Adjust space between plots
@@ -83,12 +83,12 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
     ax.set_xlabel('y', fontsize=20)
     ax.set_title(f'{optimizer_class.__name__.replace("Curvature","-ACSS")}', fontsize=24)
     ax.tick_params(axis='both', which='major', labelsize=14)
-    ax.legend()
+    ax.legend(fontsize =14)
 
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 
 # Save the plot as an image file
-output_file = "outputs/plots/easom7.pdf"
+output_file = "outputs/plots/easom128.pdf"
 plt.savefig(output_file)
 
 plt.show()

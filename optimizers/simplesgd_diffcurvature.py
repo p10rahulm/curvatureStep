@@ -2,11 +2,11 @@ import torch
 from torch.optim import Optimizer
 
 
-class SimpleSGDCurvature(Optimizer):
+class SimpleSGDCurvatureDiff(Optimizer):
     def __init__(self, params, lr=1e-3, epsilon=0.01, clip_radius=None):
         defaults = dict(lr=lr, epsilon=epsilon)
         self.clip_radius = clip_radius
-        super(SimpleSGDCurvature, self).__init__(params, defaults)
+        super(SimpleSGDCurvatureDiff, self).__init__(params, defaults)
 
     def step(self, closure=None):
         loss = None

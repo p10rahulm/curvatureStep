@@ -52,7 +52,7 @@ optimizers = [
 ]
 
 # Create a figure with subplots
-fig, axs = plt.subplots(2, 3, figsize=(18, 7))
+fig, axs = plt.subplots(2, 3, figsize=(12, 8))
 fig.suptitle('Optimization Paths on Himmelblau Function', fontsize=27)
 
 # Adjust space between plots
@@ -81,19 +81,23 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
             optima_label='Global Optimum'
         else:
             optima_label = f'Global Optimum {optimum_num}'
-        ax.plot(optimum[0],optimum[1], 'x', markersize=8, label=optima_label)
+            optima_label = f'Global Optima'
+        if optimum_num==0:
+            ax.plot(optimum[0],optimum[1], 'x', markersize=8, label=optima_label)
+        else:
+            ax.plot(optimum[0], optimum[1], 'x', markersize=8)
     ax.set_xlabel('x', fontsize=20)
     ax.set_xlabel('y', fontsize=20)
     ax.set_title(f'{optimizer_class.__name__.replace("Curvature","-ACSS")}', fontsize=24)
     ax.tick_params(axis='both', which='major', labelsize=14)
-    ax.legend()
+    ax.legend(fontsize=14)
     ax.set_xlim(-5, 5)
     ax.set_ylim(-5, 5)
 
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 
 # Save the plot as an image file
-output_file = "outputs/plots/himmelblau7.pdf"
+output_file = "outputs/plots/himmelblau128.pdf"
 plt.savefig(output_file)
 
 plt.show()
