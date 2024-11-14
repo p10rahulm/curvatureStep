@@ -48,7 +48,7 @@ def rosenbrock_grad(x, y):
 def run_optimization(optimizer_class, lr, steps, x0):
     x = torch.tensor(x0, requires_grad=True, dtype=torch.float32)
     if str(optimizer_class.__name__) in ['SimpleSGDCurvature','HeavyBallCurvature','NAGCurvature']:
-        optimizer = optimizer_class([x], lr=lr, clip_radius=10)
+        optimizer = optimizer_class([x], lr=lr, r_max=10)
     else:
         optimizer = optimizer_class([x], lr=lr)
     path = []

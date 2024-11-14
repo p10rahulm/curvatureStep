@@ -3,7 +3,7 @@
 # ----------------------------------------------------------------------------------------------------
 
 Running amazon-review-polarity training with Optimizer = SimpleSGDCurvature
-params= {'lr': 0.001, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/10 completed, Average Loss: 0.6330
 Epoch 2/10 completed, Average Loss: 0.5589
@@ -30,7 +30,7 @@ Epoch 10/10 completed, Average Loss: 0.3946
 Test set: Average loss: 0.0002, Accuracy: 328227/400000 (82.06%)
 
 Running amazon-review-polarity training with Optimizer = HeavyBallCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/10 completed, Average Loss: 0.5957
 Epoch 2/10 completed, Average Loss: 0.4951
@@ -57,7 +57,7 @@ Epoch 10/10 completed, Average Loss: 0.2931
 Test set: Average loss: 0.0001, Accuracy: 354082/400000 (88.52%)
 
 Running amazon-review-polarity training with Optimizer = NAGCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/10 completed, Average Loss: 0.5936
 Epoch 2/10 completed, Average Loss: 0.4999

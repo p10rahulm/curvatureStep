@@ -42,7 +42,7 @@ def three_hump_camel(x, y):
 def run_optimization(optimizer_class, lr, steps, x0):
     x = torch.tensor(x0, requires_grad=True, dtype=torch.float32)
     if str(optimizer_class.__name__) in ['SimpleSGDCurvature','HeavyBallCurvature','NAGCurvature']:
-        optimizer = optimizer_class([x], lr=lr, clip_radius=10)
+        optimizer = optimizer_class([x], lr=lr, r_max=10)
     else:
         optimizer = optimizer_class([x], lr=lr)
     path = []
@@ -102,7 +102,7 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 
 # Save the plot as an image file
-output_file = "outputs/plots/three_humped_camel128.pdf"
+output_file = "outputs/plots/three_humped_camel129.pdf"
 plt.savefig(output_file)
 
 plt.show()

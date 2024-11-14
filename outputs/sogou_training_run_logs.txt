@@ -30,7 +30,7 @@ Epoch 10/10 completed, Average Loss: 1.2400
 Test set: Average loss: 0.0108, Accuracy: 12938/60000 (21.56%)
 
 Running sogou-news training with Optimizer = SimpleSGDCurvature
-params= {'lr': 0.001, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/10 completed, Average Loss: 1.2762
 Epoch 2/10 completed, Average Loss: 1.2636
@@ -138,7 +138,7 @@ Epoch 10/10 completed, Average Loss: 1.1775
 Test set: Average loss: 0.0120, Accuracy: 13087/60000 (21.81%)
 
 Running sogou-news training with Optimizer = HeavyBallCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/10 completed, Average Loss: 1.2460
 Epoch 2/10 completed, Average Loss: 1.2044
@@ -192,7 +192,7 @@ Epoch 10/10 completed, Average Loss: 1.1775
 Test set: Average loss: 0.0120, Accuracy: 13087/60000 (21.81%)
 
 Running sogou-news training with Optimizer = NAGCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/10 completed, Average Loss: 1.2479
 Epoch 2/10 completed, Average Loss: 1.2057

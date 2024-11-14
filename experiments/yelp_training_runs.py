@@ -36,7 +36,7 @@ for optimizer_class, default_params in optimizers:
 
     if str(optimizer_class.__name__)=="SimpleSGDCurvature" or \
         str(optimizer_class.__name__)=="HeavyBallCurvature":
-        params['clip_radius'] = 10
+        params['r_max'] = 10
 
     # Set device to GPU
     device = torch.device('cuda:2' if torch.cuda.is_available() else 'cpu')

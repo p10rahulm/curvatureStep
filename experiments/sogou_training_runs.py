@@ -35,7 +35,7 @@ for optimizer_class, default_params in optimizers:
     params = default_params.copy()
     
     if str(optimizer_class.__name__) in ["SimpleSGDCurvature", "HeavyBallCurvature", "NAGCurvature"]:
-        params['clip_radius'] = 10
+        params['r_max'] = 10
     
 
     # Set device to GPU

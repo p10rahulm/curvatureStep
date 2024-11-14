@@ -54,7 +54,7 @@ Epoch 5/5 completed, Average Loss: 2.1039
 Test set: Average loss: 0.0340, Accuracy: 1061/2245 (47.26%)
 
 Running reuters training with Optimizer = HeavyBallCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/5 completed, Average Loss: 2.4771
 Epoch 2/5 completed, Average Loss: 2.1401
@@ -88,7 +88,7 @@ Epoch 5/5 completed, Average Loss: 2.1337
 Test set: Average loss: 0.0341, Accuracy: 1061/2245 (47.26%)
 
 Running reuters training with Optimizer = NAGCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/5 completed, Average Loss: 2.4771
 Epoch 2/5 completed, Average Loss: 2.1399

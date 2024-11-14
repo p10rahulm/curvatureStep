@@ -3,7 +3,7 @@
 # ----------------------------------------------------------------------------------------------------
 
 Running dbpedia training with Optimizer = NAGCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/5 completed, Average Loss: 2.2786
 Epoch 2/5 completed, Average Loss: 2.2855

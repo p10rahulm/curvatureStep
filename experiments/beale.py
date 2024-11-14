@@ -21,20 +21,24 @@ def beale(x, y):
     return (1.5 - x + x*y)**2 + (2.25 - x + x*y**2)**2 + (2.625 - x + x*y**3)**2
 
 
+
 # Function to run optimization
 def run_optimization(optimizer_class, lr, steps, x0):
     x = torch.tensor(x0, requires_grad=True, dtype=torch.float32)
     if str(optimizer_class.__name__) in ['SimpleSGDCurvature','HeavyBallCurvature','NAGCurvature']:
-        optimizer = optimizer_class([x], lr=lr, clip_radius=10)
+        optimizer = optimizer_class([x], lr=lr, r_max=10)
     else:
         optimizer = optimizer_class([x], lr=lr)
     path = []
 
     for _ in range(steps):
-        optimizer.zero_grad()
-        loss = (1.5 - x[0] + x[0]*x[1])**2 + (2.25 - x[0] + x[0]*x[1]**2)**2 + (2.625 - x[0] + x[0]*x[1]**3)**2
-        loss.backward()
-        optimizer.step()
+        def closure():
+            optimizer.zero_grad()
+            loss = beale(x[0], x[1])  # Using the defined beale function
+            loss.backward()
+            return loss
+        
+        loss = optimizer.step(closure)
         path.append(x.detach().numpy().copy())
 
     return np.array(path)
@@ -92,7 +96,7 @@ plt.tight_layout(rect=[0, 0, 1, 0.95])
 # Save the plot as an image file
 # output_file = "outputs/plots/beale2.pdf"
 # output_file = "outputs/plots/beale8.pdf"
-output_file = "outputs/plots/beale126.pdf"
+output_file = "outputs/plots/beale129.pdf"
 plt.savefig(output_file)
 
 plt.show()

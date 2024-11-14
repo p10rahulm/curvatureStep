@@ -278,7 +278,7 @@ Epoch 50/50 completed, Average Loss: 2.3007
 Test set: Average loss: 0.0021, Accuracy: 846/2245 (37.68%)
 
 Running reuters-large-batch training with Optimizer = HeavyBallCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/1
 Epoch 1/50 completed, Average Loss: 3.5219
 Epoch 2/50 completed, Average Loss: 2.7497
@@ -388,7 +388,7 @@ Epoch 50/50 completed, Average Loss: 2.3007
 Test set: Average loss: 0.0021, Accuracy: 846/2245 (37.68%)
 
 Running reuters-large-batch training with Optimizer = NAGCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/1
 Epoch 1/50 completed, Average Loss: 3.5219
 Epoch 2/50 completed, Average Loss: 2.7497

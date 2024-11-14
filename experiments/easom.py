@@ -26,16 +26,19 @@ def easom(x, y):
 def run_optimization(optimizer_class, lr, steps, x0):
     x = torch.tensor(x0, requires_grad=True, dtype=torch.float32)
     if str(optimizer_class.__name__) in ['SimpleSGDCurvature', 'HeavyBallCurvature', 'NAGCurvature']:
-        optimizer = optimizer_class([x], lr=lr, clip_radius=10)
+        optimizer = optimizer_class([x], lr=lr, r_max=10)
     else:
         optimizer = optimizer_class([x], lr=lr)
     path = []
 
     for _ in range(steps):
-        optimizer.zero_grad()
-        loss = easom(x[0], x[1])
-        loss.backward()
-        optimizer.step()
+        def closure():
+            optimizer.zero_grad()
+            loss = easom(x[0], x[1])
+            loss.backward()
+            return loss
+        
+        loss = optimizer.step(closure)
         path.append(x.detach().numpy().copy())
 
     return np.array(path)
@@ -80,7 +83,7 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
         ax.plot(optimum[0], optimum[1], 'x', markersize=8, label=optima_label)
 
     ax.set_xlabel('x', fontsize=20)
-    ax.set_xlabel('y', fontsize=20)
+    ax.set_ylabel('y', fontsize=20)
     ax.set_title(f'{optimizer_class.__name__.replace("Curvature","-ACSS")}', fontsize=24)
     ax.tick_params(axis='both', which='major', labelsize=14)
     ax.legend(fontsize =14)
@@ -88,7 +91,7 @@ for ax, optimizer_class in zip(axs.flatten(), optimizers):
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 
 # Save the plot as an image file
-output_file = "outputs/plots/easom128.pdf"
+output_file = "outputs/plots/easom129.pdf"
 plt.savefig(output_file)
 
 plt.show()

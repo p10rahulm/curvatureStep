@@ -34,7 +34,7 @@ for optimizer_class, default_params in optimizers:
     print(f"\nRunning reuters training with Optimizer = {str(optimizer_class.__name__)}")
     params = default_params.copy()
     if optimizer_class.__name__ in ("HeavyBallCurvature", "NAGCurvature"):
-        params['clip_radius'] = 10
+        params['r_max'] = 10
 
     
     # Set device to GPU

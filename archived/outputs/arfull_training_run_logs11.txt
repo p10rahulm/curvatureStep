@@ -3,7 +3,7 @@
 # ----------------------------------------------------------------------------------------------------
 
 Running amazon-review-full training with Optimizer = SimpleSGDCurvature
-params= {'lr': 0.001, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/10 completed, Average Loss: 1.5212
 Epoch 2/10 completed, Average Loss: 1.4577
@@ -30,7 +30,7 @@ Epoch 10/10 completed, Average Loss: 1.2879
 Test set: Average loss: 0.0006, Accuracy: 292597/650000 (45.01%)
 
 Running amazon-review-full training with Optimizer = HeavyBallCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/10 completed, Average Loss: 1.4861
 Epoch 2/10 completed, Average Loss: 1.3962
@@ -57,7 +57,7 @@ Epoch 10/10 completed, Average Loss: 1.2130
 Test set: Average loss: 0.0006, Accuracy: 320110/650000 (49.25%)
 
 Running amazon-review-full training with Optimizer = NAGCurvature
-params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'clip_radius': 10}
+params= {'lr': 0.001, 'momentum': 0.55, 'epsilon': 0.01, 'r_max': 10}
 Running Loop: 1/2
 Epoch 1/10 completed, Average Loss: 1.4849
 Epoch 2/10 completed, Average Loss: 1.3955

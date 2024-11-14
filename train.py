@@ -60,11 +60,14 @@ def train_bert(model, train_loader, criterion, optimizer, device, num_epochs=10)
             attention_mask = batch['attention_mask'].to(device)
             labels = batch['label'].to(device)
 
-            optimizer.zero_grad()
-            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
-            loss = criterion(outputs, labels)
-            loss.backward()
-            optimizer.step()
+            def closure():
+                optimizer.zero_grad()
+                outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+                loss = criterion(outputs, labels)
+                loss.backward()
+                return loss
+
+            loss = optimizer.step(closure)
             epoch_loss += loss.item()
         
         print(f"Epoch {epoch+1}/{num_epochs} completed, Average Loss: {epoch_loss/len(train_loader):.4f}")
