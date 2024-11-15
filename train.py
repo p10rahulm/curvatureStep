@@ -17,7 +17,7 @@ def train(model, train_loader, criterion, optimizer, device, num_epochs=10):
         epoch_loss = 0.0
         batch_count = 0
         
-        for inputs, targets in tqdm(train_loader, desc=f"Training Epoch {epoch+1}"):
+        for inputs, targets in tqdm(train_loader, desc=f"Training Epoch {epoch+1}", mininterval=10.0, maxinterval=10.0):
             inputs, targets = inputs.to(device), targets.to(device)
             
             def closure():
@@ -48,7 +48,7 @@ def train_lm(model, train_loader, criterion, optimizer, device, num_epochs=10):
         epoch_loss = 0.0
         batch_count = 0
         
-        for text, labels, lengths in tqdm(train_loader):
+        for text, labels, lengths in tqdm(train_loader, mininterval=10.0, maxinterval=10.0):
             text, labels = text.to(device), labels.to(device)
             
             def closure():
@@ -80,7 +80,7 @@ def train_bert(model, train_loader, criterion, optimizer, device, num_epochs=10)
         epoch_loss = 0.0
         batch_count = 0
         
-        for batch in tqdm(train_loader):
+        for batch in tqdm(train_loader, mininterval=10.0, maxinterval=10.0):
             input_ids = batch['input_ids'].to(device)
             attention_mask = batch['attention_mask'].to(device)
             labels = batch['label'].to(device)

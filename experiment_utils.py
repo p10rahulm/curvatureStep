@@ -16,6 +16,10 @@ from data_loaders.mnist import load_mnist
 import pandas as pd
 from tqdm import tqdm
 
+import psutil
+from collections import defaultdict
+
+
 def process_train_logs(train_df, num_epochs):
     """Process training logs to get mean and std per epoch for each optimizer"""
     # Group by optimizer and epoch
@@ -119,8 +123,8 @@ def run_experiment_with_logging(
     device=None,
     model_hyperparams=None, 
     loss_criterion=None,
-    previous_train_logs=None,  # Add parameter for previous logs
-    previous_test_logs=None    # Add parameter for previous logs
+    previous_train_logs=None,
+    previous_test_logs=None
 ):
     # Setup defaults
     if device is None:
@@ -135,12 +139,28 @@ def run_experiment_with_logging(
     # Initialize logging lists
     train_logs = [] if previous_train_logs is None else previous_train_logs
     test_logs = [] if previous_test_logs is None else previous_test_logs
+    memory_logs = []
     
     # Load data
     train_loader, test_loader = dataset_loader()
     criterion = loss_criterion()
     
-    # Run experiments
+    # Function to get current memory usage
+    def get_memory_usage():
+        memory_stats = {}
+        
+        # CPU Memory
+        process = psutil.Process(os.getpid())
+        memory_stats['cpu_memory_mb'] = process.memory_info().rss / (1024 * 1024)
+        
+        # GPU Memory if available
+        if torch.cuda.is_available():
+            memory_stats['gpu_allocated_mb'] = torch.cuda.memory_allocated(device) / (1024 * 1024)
+            memory_stats['gpu_reserved_mb'] = torch.cuda.memory_reserved(device) / (1024 * 1024)
+            
+        return memory_stats
+    
+    # Track peak memory per run
     for run_number in range(num_runs):
         print(f"Running {optimizer_class.__name__} - Run {run_number + 1}/{num_runs}")
         
@@ -153,8 +173,33 @@ def run_experiment_with_logging(
         # Initialize optimizer
         optimizer = optimizer_class(model.parameters(), **optimizer_params)
         
+        # Get initial memory state
+        initial_memory = get_memory_usage()
+        
         # Train and log results
         train_losses = train_fn(model, train_loader, criterion, optimizer, device, num_epochs)
+        
+        # Get peak memory after training
+        peak_memory = get_memory_usage()
+        
+        # Log memory usage
+        memory_log = {
+            'Optimizer Name': optimizer_class.__name__,
+            'Running loop number': run_number + 1,
+            'Initial CPU Memory (MB)': initial_memory.get('cpu_memory_mb', 0),
+            'Peak CPU Memory (MB)': peak_memory.get('cpu_memory_mb', 0),
+            'Initial GPU Memory Allocated (MB)': initial_memory.get('gpu_allocated_mb', 0),
+            'Peak GPU Memory Allocated (MB)': peak_memory.get('gpu_allocated_mb', 0),
+            'Initial GPU Memory Reserved (MB)': initial_memory.get('gpu_reserved_mb', 0),
+            'Peak GPU Memory Reserved (MB)': peak_memory.get('gpu_reserved_mb', 0)
+        }
+        memory_logs.append(memory_log)
+        
+        # Save memory logs after each run
+        pd.DataFrame(memory_logs).to_csv(
+            os.path.join(output_dir, f'{dataset_name}_memory_logs.csv'), 
+            index=False
+        )
         
         # Log training results
         for epoch, loss in enumerate(train_losses, 1):
@@ -183,10 +228,27 @@ def run_experiment_with_logging(
             os.path.join(output_dir, f'{dataset_name}_test_full_logs.csv'), 
             index=True
         )
+        
+        # Clear memory after each run
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
     
     # Convert to DataFrames for return
     train_df = pd.DataFrame(train_logs)
     test_df = pd.DataFrame(test_logs)
+    memory_df = pd.DataFrame(memory_logs)
+    
+    # Process and save memory statistics
+    memory_stats = memory_df.groupby('Optimizer Name').agg({
+        'Peak CPU Memory (MB)': ['mean', 'std'],
+        'Peak GPU Memory Allocated (MB)': ['mean', 'std'],
+        'Peak GPU Memory Reserved (MB)': ['mean', 'std']
+    }).round(2)
+    
+    memory_stats.to_csv(
+        os.path.join(output_dir, f'{dataset_name}_memory_stats.csv'),
+        sep='|'
+    )
     
     return train_df, test_df
 
@@ -207,6 +269,7 @@ def run_all_experiments(
     """
     Runs experiments for all optimizers and saves results frequently
     """
+    print(f"Process ID: {os.getpid()}\nRunning Dataset: {dataset_name}")  # Print PID
     output_dir = os.path.join('outputs', dataset_name)
     os.makedirs(output_dir, exist_ok=True)
     

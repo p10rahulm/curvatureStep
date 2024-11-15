@@ -17,7 +17,7 @@ def test(model, test_loader, criterion, device):
     batch_count = 0
     
     with torch.no_grad():
-        for inputs, targets in test_loader:
+        for inputs, targets in tqdm(test_loader, mininterval=10.0, maxinterval=10.0):
             inputs, targets = inputs.to(device), targets.to(device)
             outputs = model(inputs)
             test_loss += criterion(outputs, targets).item()
@@ -43,7 +43,7 @@ def test_lm(model, test_loader, criterion, device):
     batch_count = 0
     
     with torch.no_grad():
-        for text, labels, lengths in tqdm(test_loader):
+        for text, labels, lengths in tqdm(test_loader, mininterval=10.0, maxinterval=10.0):
             text, labels = text.to(device), labels.to(device)
             predictions = model(text, lengths).squeeze(1)
             loss = criterion(predictions, labels)
@@ -71,7 +71,7 @@ def test_lm_multiclass(model, test_loader, criterion, device):
     batch_count = 0
     
     with torch.no_grad():
-        for text, labels, lengths in tqdm(test_loader):
+        for text, labels, lengths in tqdm(test_loader, mininterval=10.0, maxinterval=10.0):
             text, labels = text.to(device), labels.to(device)
             predictions = model(text, lengths)
             loss = criterion(predictions, labels)
@@ -99,7 +99,7 @@ def test_bert(model, test_loader, criterion, device):
     batch_count = 0
     
     with torch.no_grad():
-        for batch in tqdm(test_loader):
+        for batch in tqdm(test_loader, mininterval=10.0, maxinterval=10.0):
             input_ids = batch['input_ids'].to(device)
             attention_mask = batch['attention_mask'].to(device)
             labels = batch['label'].to(device)
