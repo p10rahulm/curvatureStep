@@ -71,25 +71,10 @@ def run_experiment_with_logging(
     num_epochs=2, 
     device=None,
     model_hyperparams=None, 
-    loss_criterion=None
+    loss_criterion=None,
+    previous_train_logs=None,  # Add parameter for previous logs
+    previous_test_logs=None    # Add parameter for previous logs
 ):
-    """
-    Runs experiments with specified training and testing functions, logging results
-    
-    Args:
-        optimizer_class: The optimizer class to use
-        optimizer_params: Parameters for the optimizer
-        dataset_name: Name of the dataset (for logging)
-        train_fn: Training function to use (must return list of epoch losses)
-        test_fn: Testing function to use (must return tuple of (loss, accuracy))
-        dataset_loader: Function to load the dataset
-        model_class: Model class to use
-        num_runs: Number of runs to perform
-        num_epochs: Number of epochs per run
-        device: Device to run on
-        model_hyperparams: Hyperparameters for the model
-        loss_criterion: Loss function to use
-    """
     # Setup defaults
     if device is None:
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -100,9 +85,9 @@ def run_experiment_with_logging(
     output_dir = os.path.join('outputs', dataset_name)
     os.makedirs(output_dir, exist_ok=True)
     
-    # Initialize logging DataFrames
-    train_logs = []
-    test_logs = []
+    # Initialize logging lists
+    train_logs = [] if previous_train_logs is None else previous_train_logs
+    test_logs = [] if previous_test_logs is None else previous_test_logs
     
     # Load data
     train_loader, test_loader = dataset_loader()
@@ -139,14 +124,25 @@ def run_experiment_with_logging(
             'Optimizer Name': optimizer_class.__name__,
             'Running loop number': run_number + 1,
             'Average Test set Loss': test_loss,
-            'Average Test set accuracy': test_accuracy * 100  # Convert to percentage
+            'Average Test set accuracy': test_accuracy * 100
         })
+        
+        # Save intermediate results after each run
+        pd.DataFrame(train_logs).to_csv(
+            os.path.join(output_dir, f'{dataset_name}_train_full_logs.csv'), 
+            index=True
+        )
+        pd.DataFrame(test_logs).to_csv(
+            os.path.join(output_dir, f'{dataset_name}_test_full_logs.csv'), 
+            index=True
+        )
     
-    # Convert to DataFrames
+    # Convert to DataFrames for return
     train_df = pd.DataFrame(train_logs)
     test_df = pd.DataFrame(test_logs)
     
     return train_df, test_df
+
 
 def run_all_experiments(
     optimizers, 
@@ -158,27 +154,40 @@ def run_all_experiments(
     num_runs=2, 
     num_epochs=5,
     model_hyperparams=None,
-    loss_criterion=None
+    loss_criterion=None,
+    resume_from_checkpoint=False  # Add option to resume from existing logs
 ):
     """
-    Runs experiments for all optimizers and saves results
-    
-    Args:
-        optimizers: List of (optimizer_class, params) tuples
-        dataset_name: Name of the dataset
-        train_fn: Training function to use
-        test_fn: Testing function to use
-        dataset_loader: Function to load the dataset
-        model_class: Model class to use
-        num_runs: Number of runs per optimizer
-        num_epochs: Number of epochs per run
-        model_hyperparams: Hyperparameters for the model
-        loss_criterion: Loss function to use
+    Runs experiments for all optimizers and saves results frequently
     """
+    output_dir = os.path.join('outputs', dataset_name)
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Initialize or load existing logs
     all_train_logs = []
     all_test_logs = []
     
+    if resume_from_checkpoint:
+        try:
+            train_path = os.path.join(output_dir, f'{dataset_name}_train_full_logs.csv')
+            test_path = os.path.join(output_dir, f'{dataset_name}_test_full_logs.csv')
+            if os.path.exists(train_path) and os.path.exists(test_path):
+                existing_train_df = pd.read_csv(train_path)
+                existing_test_df = pd.read_csv(test_path)
+                all_train_logs = existing_train_df.to_dict('records')
+                all_test_logs = existing_test_df.to_dict('records')
+                print(f"Resumed from existing logs in {output_dir}")
+        except Exception as e:
+            print(f"Could not load existing logs: {e}")
+            all_train_logs = []
+            all_test_logs = []
+    
     for optimizer_class, default_params in optimizers:
+        # Skip if this optimizer has already been completed
+        if all_train_logs and optimizer_class.__name__ in [log['Optimizer Name'] for log in all_train_logs]:
+            print(f"Skipping {optimizer_class.__name__} - already completed")
+            continue
+            
         print(f"\nRunning {dataset_name} training with Optimizer = {optimizer_class.__name__}")
         params = default_params.copy()
         
@@ -193,20 +202,15 @@ def run_all_experiments(
             num_runs=num_runs,
             num_epochs=num_epochs,
             model_hyperparams=model_hyperparams,
-            loss_criterion=loss_criterion
+            loss_criterion=loss_criterion,
+            previous_train_logs=all_train_logs,
+            previous_test_logs=all_test_logs
         )
         
-        all_train_logs.append(train_df)
-        all_test_logs.append(test_df)
+        # Results are already saved in run_experiment_with_logging
     
-    # Combine all results
-    final_train_df = pd.concat(all_train_logs, ignore_index=True)
-    final_test_df = pd.concat(all_test_logs, ignore_index=True)
-    
-    # Save combined results
-    output_dir = os.path.join('outputs', dataset_name)
-    os.makedirs(output_dir, exist_ok=True)
-    final_train_df.to_csv(os.path.join(output_dir, f'{dataset_name}_train_full_logs.csv'), index=True)
-    final_test_df.to_csv(os.path.join(output_dir, f'{dataset_name}_test_full_logs.csv'), index=True)
+    # Load final results
+    final_train_df = pd.read_csv(os.path.join(output_dir, f'{dataset_name}_train_full_logs.csv'))
+    final_test_df = pd.read_csv(os.path.join(output_dir, f'{dataset_name}_test_full_logs.csv'))
     
     return final_train_df, final_test_df
