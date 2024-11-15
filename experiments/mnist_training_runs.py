@@ -6,8 +6,8 @@ project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
 # Set CUDA visible devices
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # Use first GPU
-# You can also use multiple GPUs like "0,1,2,3" or other GPUs like "1" or "2"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"  # Use GPU: 1
+
 
 from experiment_utils import run_all_experiments
 from optimizer_params import optimizers
@@ -29,7 +29,7 @@ def main():
         'dataset_loader': load_mnist,
         'model_class': SimpleNN,
         'num_runs': 2,            # You can adjust these parameters
-        'num_epochs': 5,         # You can adjust these parameters
+        'num_epochs': 10,         # You can adjust these parameters
         'model_hyperparams': None,  # Add if your SimpleNN needs specific params
         'loss_criterion': None    # Will use default CrossEntropyLoss
     }
