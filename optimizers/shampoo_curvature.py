@@ -11,91 +11,131 @@ def _matrix_power(matrix: torch.Tensor, power: float) -> torch.Tensor:
 class ShampooCurvature(Optimizer):
     """
     Implements Shampoo algorithm with curvature step.
-    It has been proposed in https://arxiv.org/pdf/2002.09018
-    Inspired by https://github.com/jettify/pytorch-optimizer/blob/master/torch_optimizer/shampoo.py
     """
-    def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8, weight_decay=0, momentum=0.1, rho=0.9, update_freq=1, epsilon=0.01):
-        defaults = dict(lr=lr, betas=betas, eps=eps, weight_decay=weight_decay, momentum=momentum, rho=rho, update_freq=update_freq, epsilon=epsilon)
+    def __init__(self, params, lr=1e-3, betas=(0.9, 0.999), eps=1e-8, 
+                 weight_decay=0, momentum=0.1, rho=0.9, update_freq=1, 
+                 epsilon=1e-8, r_max=10.0):
+        defaults = dict(lr=lr, betas=betas, eps=eps, weight_decay=weight_decay, 
+                       momentum=momentum, rho=rho, update_freq=update_freq, epsilon=epsilon)
+        self.r_max = r_max
         super(ShampooCurvature, self).__init__(params, defaults)
 
     def step(self, closure=None):
         loss = None
         if closure is not None:
             loss = closure()
-
-        # First loop to store the last gradient
+            
+        # Store initial parameters and states
+        saved_states = []
         for group in self.param_groups:
             for p in group['params']:
                 if p.grad is None:
                     continue
-
+                
                 state = self.state[p]
-
+                
                 # State initialization
-                if 'step' not in state:
+                if len(state) == 0:
                     state['step'] = 0
-                    state['last_grad'] = torch.zeros_like(p.data)
                     state['momentum_buffer'] = torch.zeros_like(p.data)
-                    state['preconds'] = [group['eps'] * torch.eye(dim, device=p.data.device) for dim in p.data.size()]
-                    state['inv_preconds'] = [torch.zeros(dim, dim, device=p.data.device) for dim in p.data.size()]
-
-                state['last_grad'] = p.grad.data.clone()
-
-        # Closure call to get the new gradient
-        if closure is not None:
-            loss = closure()
-
-        # Second loop to update the parameters
+                    state['preconds'] = [group['eps'] * torch.eye(dim, device=p.data.device) 
+                                       for dim in p.data.size()]
+                    state['inv_preconds'] = [torch.zeros(dim, dim, device=p.data.device) 
+                                           for dim in p.data.size()]
+                
+                saved_states.append({
+                    'data': p.data.clone(),
+                    'grad': p.grad.data.clone(),
+                    'momentum_buffer': state['momentum_buffer'].clone(),
+                    'preconds': [precond.clone() for precond in state['preconds']],
+                    'inv_preconds': [inv_precond.clone() for inv_precond in state['inv_preconds']],
+                    'step': state['step']
+                })
+                
+        # Move to tentative point w_t - ηg_t
         for group in self.param_groups:
             for p in group['params']:
                 if p.grad is None:
                     continue
-
-                grad = p.grad.data
+                p.data = p.data - group['lr'] * p.grad.data
+                
+        # Get gradient at tentative point
+        if closure is not None:
+            closure()
+            
+        # Update with curvature and Shampoo
+        param_idx = 0
+        for group in self.param_groups:
+            for p in group['params']:
+                if p.grad is None:
+                    continue
+                    
                 state = self.state[p]
-
-                state['step'] += 1
-                step_size = group['lr']
-                rho = group['rho']
-                eps = group['eps']
-                update_freq = group['update_freq']
-                momentum = group['momentum']
-                epsilon = group['epsilon']
-
-                last_grad = state['last_grad']
-                current_grad = grad
-
-                radius = torch.norm(last_grad) / torch.maximum(torch.tensor(epsilon, device=grad.device),
-                                                               torch.norm(current_grad - last_grad))
-                normed_last_grad = last_grad / torch.norm(last_grad)
-                grad = radius * normed_last_grad
-
-                if momentum > 0:
-                    grad.mul_(1 - momentum).add_(state["momentum_buffer"], alpha=momentum)
-
+                saved = saved_states[param_idx]
+                
+                # Get saved states
+                orig_data = saved['data']
+                orig_grad = saved['grad']
+                tentative_grad = p.grad.data
+                
+                # Restore states
+                state['momentum_buffer'].copy_(saved['momentum_buffer'])
+                for i, (precond, inv_precond) in enumerate(zip(saved['preconds'], saved['inv_preconds'])):
+                    state['preconds'][i].copy_(precond)
+                    state['inv_preconds'][i].copy_(inv_precond)
+                state['step'] = saved['step'] + 1
+                
+                # Compute radius of curvature
+                grad_norm = torch.norm(orig_grad)
+                grad_diff_norm = torch.norm(orig_grad - tentative_grad)
+                r_t = grad_norm / (grad_diff_norm + group['epsilon'])
+                r_t = torch.minimum(torch.tensor(self.r_max), r_t)
+                
+                # Compute curvature-adjusted gradient
+                normed_grad = orig_grad / grad_norm
+                grad_with_curvature = r_t * normed_grad
+                
+                # Apply momentum if specified
+                if group['momentum'] > 0:
+                    grad_with_curvature.mul_(1 - group['momentum']).add_(
+                        state['momentum_buffer'], 
+                        alpha=group['momentum']
+                    )
+                
+                # Apply weight decay if specified
                 if group['weight_decay'] > 0:
-                    grad.add_(p.data, alpha=group['weight_decay'])
-
+                    grad_with_curvature.add_(orig_data, alpha=group['weight_decay'])
+                
                 # Compute preconditioners
-                for dim_id, dim in enumerate(grad.size()):
+                for dim_id, dim in enumerate(grad_with_curvature.size()):
                     precond = state['preconds'][dim_id]
                     inv_precond = state['inv_preconds'][dim_id]
-
-                    grad_reshaped = grad.transpose(0, dim_id).contiguous().view(dim, -1)
+                    
+                    grad_reshaped = grad_with_curvature.transpose(0, dim_id).contiguous().view(dim, -1)
                     grad_gram = grad_reshaped @ grad_reshaped.t()
-                    precond.mul_(rho).add_(grad_gram, alpha=1 - rho)
-
-                    if state["step"] % update_freq == 0:
-                        inv_precond.copy_(_matrix_power(precond, -1 / grad.ndimension()))
-
-                    if dim_id == grad.ndimension() - 1:
-                        grad = grad_reshaped.t() @ inv_precond
-                        grad = grad.view_as(p.data)
+                    precond.mul_(group['rho']).add_(grad_gram, alpha=1 - group['rho'])
+                    
+                    if state['step'] % group['update_freq'] == 0:
+                        inv_precond.copy_(_matrix_power(precond, -1 / grad_with_curvature.ndimension()))
+                    
+                    if dim_id == grad_with_curvature.ndimension() - 1:
+                        grad_with_curvature = grad_reshaped.t() @ inv_precond
+                        grad_with_curvature = grad_with_curvature.view_as(p.data)
                     else:
-                        grad = inv_precond @ grad_reshaped
-                        grad = grad.view_as(p.data.transpose(0, dim_id)).transpose(0, dim_id)
-
-                state['momentum_buffer'] = grad
-                p.data.add_(grad, alpha=-step_size)
-
+                        grad_with_curvature = inv_precond @ grad_reshaped
+                        grad_with_curvature = grad_with_curvature.view_as(
+                            p.data.transpose(0, dim_id)
+                        ).transpose(0, dim_id)
+                
+                # Store momentum state
+                state['momentum_buffer'] = grad_with_curvature
+                
+                # Apply update
+                p.data = orig_data
+                p.data.add_(grad_with_curvature, alpha=-group['lr'])
+                
+                # Restore original gradient
+                p.grad.data = orig_grad
+                param_idx += 1
+                
         return loss
