@@ -38,7 +38,7 @@ def main():
 
     # Dataset-specific configuration
     dataset_config = {
-        'dataset_name': 'stl10',
+        'dataset_name': 'stl10_cnn',
         'train_fn': train,
         'test_fn': test,
         'dataset_loader': load_stl10,

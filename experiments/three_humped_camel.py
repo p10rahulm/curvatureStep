@@ -45,13 +45,17 @@ def run_optimization(optimizer_class, lr, steps, x0):
         optimizer = optimizer_class([x], lr=lr, r_max=10)
     else:
         optimizer = optimizer_class([x], lr=lr)
+        
     path = []
 
     for _ in range(steps):
-        optimizer.zero_grad()
-        loss = 2*x[0]**2 - 1.05*x[0]**4 + x[0]**6/6 + x[0]*x[1] + x[1]**2
-        loss.backward()
-        optimizer.step()
+        def closure():
+            optimizer.zero_grad()
+            loss = three_hump_camel(x[0], x[1])  # Using the defined three_hump_camel function
+            loss.backward()
+            return loss
+        
+        loss = optimizer.step(closure)
         path.append(x.detach().numpy().copy())
 
     return np.array(path)

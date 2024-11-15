@@ -6,13 +6,13 @@ project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
 # Set CUDA visible devices
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"  # Use GPU 1
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"  # Use GPU 3
 
 import torch
 import torch.nn as nn
 from experiment_utils import run_all_experiments
 from optimizer_params import optimizers
-from models.simpleNN import SimpleNN  # Changed to SimpleNN
+from models.resnet import SimpleResNet 
 from data_loaders.stl10 import load_stl10
 from train import train
 from test import test
@@ -29,20 +29,18 @@ def main():
     print("# Running STL10 Neural Network Training Experiment")
     print("#", "-"*100)
 
-    # Model hyperparameters
+    # Hyperparameters
     model_hyperparams = {
-        'input_size': 96 * 96 * 3,  # STL10 images are 96x96x3
-        'hidden_size': 512,         # Larger hidden layer for complex images
-        'num_classes': 10           # STL10 has 10 classes
+        'num_classes': 10  # STL-10 has 10 classes
     }
 
     # Dataset-specific configuration
     dataset_config = {
-        'dataset_name': 'stl10_nn',  # Different name to distinguish from ResNet version
+        'dataset_name': 'stl10_resnet',  # ResNet version
         'train_fn': train,
         'test_fn': test,
         'dataset_loader': load_stl10,
-        'model_class': SimpleNN,
+        'model_class': SimpleResNet,
         'num_runs': 3,           # 3 runs as per your original script
         'num_epochs': 10,        # 10 epochs as per your original script
         'model_hyperparams': model_hyperparams,
