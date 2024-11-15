@@ -6,7 +6,7 @@ project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
 # Set CUDA visible devices
-os.environ["CUDA_VISIBLE_DEVICES"] = "3"  # Use GPU 3
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"  # Use GPU 3
 
 import torch
 import torch.nn as nn
@@ -43,7 +43,7 @@ def main():
         'test_fn': test,
         'dataset_loader': load_caltech101,
         'model_class': SimpleCNN,
-        'num_runs': 4,           # 4 runs as per your original script
+        'num_runs': 3,           # 4 runs as per your original script
         'num_epochs': 10,        # 10 epochs as per your original script
         'model_hyperparams': model_hyperparams,
         'loss_criterion': nn.CrossEntropyLoss

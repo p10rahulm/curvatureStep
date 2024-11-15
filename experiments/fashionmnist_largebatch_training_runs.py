@@ -6,7 +6,7 @@ project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
 # Set CUDA visible devices
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"  # Use GPU 1
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # Use GPU 0
 
 import torch
 import torch.nn as nn

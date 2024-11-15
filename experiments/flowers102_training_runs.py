@@ -6,7 +6,7 @@ project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
 # Set CUDA visible devices
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"  # Use GPU 1
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"  # Use GPU 2
 
 import torch
 import torch.nn as nn
@@ -41,7 +41,7 @@ def main():
         'test_fn': test,
         'dataset_loader': load_flowers102,
         'model_class': SimpleResNet,
-        'num_runs': 4,           # 4 runs as per your original script
+        'num_runs': 3,           # 3 runs as per your original script
         'num_epochs': 10,        # 10 epochs as per your original script
         'model_hyperparams': model_hyperparams,
         'loss_criterion': nn.CrossEntropyLoss

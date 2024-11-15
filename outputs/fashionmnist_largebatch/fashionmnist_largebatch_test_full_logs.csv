@@ -1,0 +1,2 @@
+,Optimizer Name,Running loop number,Average Test set Loss,Average Test set accuracy
+0,SimpleSGD,1,0.6064804285764694,78.02

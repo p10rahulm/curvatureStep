@@ -32,7 +32,7 @@ def main():
     # Model hyperparameters
     model_hyperparams = {
         'num_classes': 100,      # CIFAR100 has 100 classes
-        'image_width': 32,       # CIFAR100 images are 32x32
+        'image_width': 96,       # CIFAR100 images are 32x32
         'num_channels': 3        # RGB images
     }
 
