@@ -119,7 +119,6 @@ class AMSGradCurvature(Optimizer):
                 denom = max_exp_avg_sq.sqrt().add_(group['eps'])
                 
                 # Apply update
-                p.data = orig_data
                 p.data.addcdiv_(exp_avg, denom, value=-step_size)
                 
                 # Restore original gradient

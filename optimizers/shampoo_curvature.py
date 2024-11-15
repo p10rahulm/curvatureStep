@@ -131,7 +131,6 @@ class ShampooCurvature(Optimizer):
                 state['momentum_buffer'] = grad_with_curvature
                 
                 # Apply update
-                p.data = orig_data
                 p.data.add_(grad_with_curvature, alpha=-group['lr'])
                 
                 # Restore original gradient

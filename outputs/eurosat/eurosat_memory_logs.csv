@@ -1,0 +1,3 @@
+Optimizer Name,Running loop number,Initial CPU Memory (MB),Peak CPU Memory (MB),Initial GPU Memory Allocated (MB),Peak GPU Memory Allocated (MB),Initial GPU Memory Reserved (MB),Peak GPU Memory Reserved (MB)
+SimpleSGD,1,1753.7421875,3243.41796875,42.70654296875,103.2548828125,64.0,2156.0
+SimpleSGD,2,3244.83203125,3270.63671875,60.14404296875,103.4267578125,538.0,2226.0

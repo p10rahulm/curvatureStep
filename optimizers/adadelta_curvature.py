@@ -92,7 +92,6 @@ class AdadeltaCurvature(Optimizer):
                 delta.div_(std).mul_(grad_with_curvature)
                 
                 # Apply update
-                p.data = orig_data
                 p.data.add_(delta, alpha=-group['lr'])
                 
                 # Update running average of squared updates

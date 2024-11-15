@@ -105,7 +105,6 @@ class AdamWCurvature(Optimizer):
                 denom = exp_avg_sq.sqrt().add_(group['eps'])
                 
                 # Apply update
-                p.data = orig_data
                 p.data.addcdiv_(exp_avg, denom, value=-step_size)
                 
                 # Apply decoupled weight decay

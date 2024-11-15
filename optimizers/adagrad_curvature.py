@@ -85,7 +85,6 @@ class AdagradCurvature(Optimizer):
                 std = sum_.sqrt().add_(eps)
                 
                 # Apply update
-                p.data = orig_data
                 p.data.addcdiv_(grad_with_curvature, std, value=-group['lr'])
                 
                 # Restore original gradient

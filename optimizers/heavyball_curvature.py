@@ -74,8 +74,8 @@ class HeavyBallCurvature(Optimizer):
                 # Heavy Ball update with curvature
                 buf.mul_(group['momentum']).add_(grad_with_curvature)
                 
-                # Restore data and apply Heavy Ball update
-                p.data = orig_data - group['lr'] * buf
+                # Apply Heavy Ball update
+                p.data = p.data - group['lr'] * buf
                 
                 # Restore original gradient
                 p.grad.data = orig_grad

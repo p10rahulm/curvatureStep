@@ -48,7 +48,7 @@ class SimpleSGDCurvature(Optimizer):
                 r_t = torch.minimum(torch.tensor(self.r_max), r_t)
                 
                 # SGD update with curvature
-                p.data = orig_data - group['lr'] * r_t * (orig_grad / grad_norm)
+                p.data = p.data - group['lr'] * r_t * (orig_grad / grad_norm)
                 p.grad.data = orig_grad  # Restore original gradient
                 param_idx += 1
                 

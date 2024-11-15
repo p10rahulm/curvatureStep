@@ -76,7 +76,6 @@ class NAGCurvature(Optimizer):
                 buf.mul_(group['momentum']).add_(grad_with_curvature)
                 
                 # Restore data and apply NAG update
-                p.data = orig_data
                 p.data.add_(grad_with_curvature, alpha=-group['lr'])
                 p.data.add_(prev_buf, alpha=-group['lr'] * group['momentum'])
                 

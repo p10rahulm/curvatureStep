@@ -86,7 +86,6 @@ class RMSPropCurvature(Optimizer):
                 avg = square_avg.sqrt().add_(group['eps'])
                 
                 # Apply update
-                p.data = orig_data
                 p.data.addcdiv_(grad_with_curvature, avg, value=-group['lr'])
                 
                 # Restore original gradient

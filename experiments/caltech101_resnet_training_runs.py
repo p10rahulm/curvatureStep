@@ -36,7 +36,7 @@ def main():
 
     # Dataset-specific configuration
     dataset_config = {
-        'dataset_name': 'caltech101',
+        'dataset_name': 'caltech101_resnet',
         'train_fn': train,
         'test_fn': test,
         'dataset_loader': load_caltech101,

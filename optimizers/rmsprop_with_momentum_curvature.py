@@ -93,13 +93,10 @@ class RMSPropMomentumCurvature(Optimizer):
                 # Apply momentum update
                 if group['momentum'] > 0:
                     momentum_buffer.mul_(group['momentum']).addcdiv_(grad_with_curvature, avg)
-                    
                     # Apply update with momentum
-                    p.data = orig_data
                     p.data.add_(momentum_buffer, alpha=-group['lr'])
                 else:
                     # Apply regular RMSProp update if momentum is 0
-                    p.data = orig_data
                     p.data.addcdiv_(grad_with_curvature, avg, value=-group['lr'])
                 
                 # Restore original gradient

@@ -139,8 +139,13 @@ def run_experiment_with_logging(
     # Initialize logging lists
     train_logs = [] if previous_train_logs is None else previous_train_logs
     test_logs = [] if previous_test_logs is None else previous_test_logs
-    memory_logs = []
     
+    # Load existing memory logs if they exist
+    memory_logs_path = os.path.join(output_dir, f'{dataset_name}_memory_logs.csv')
+    memory_logs = []
+    if os.path.exists(memory_logs_path):
+        memory_logs = pd.read_csv(memory_logs_path).to_dict('records')
+        
     # Load data
     train_loader, test_loader = dataset_loader()
     criterion = loss_criterion()
