@@ -1,28 +1,45 @@
-# Define the relative path to the project root from the current script
+# experiments/mnist_training_runs.py
+
 import os
 import sys
-# Add the project root to the system path
-project_root =os.getcwd()
+project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
-from experiment_utils import run_experiment
-from utilities import write_to_file
+from experiment_utils import run_all_experiments
 from optimizer_params import optimizers
+from models.simpleNN import SimpleNN
+from data_loaders.mnist import load_mnist
+from train import train
+from test import test
 
-results = []
+def main():
+    print("#", "-"*100)
+    print("# Running MNIST Training Experiment")
+    print("#", "-"*100)
 
-print("#","-"*100)
-print("# Running 10 epochs of training - 10 runs")
-print("#","-"*100)
+    # Dataset-specific configuration
+    dataset_config = {
+        'dataset_name': 'mnist',
+        'train_fn': train,
+        'test_fn': test,
+        'dataset_loader': load_mnist,
+        'model_class': SimpleNN,
+        'num_runs': 2,            # You can adjust these parameters
+        'num_epochs': 5,         # You can adjust these parameters
+        'model_hyperparams': None,  # Add if your SimpleNN needs specific params
+        'loss_criterion': None    # Will use default CrossEntropyLoss
+    }
 
-for optimizer_class, default_params in optimizers:
-    print(f"\nRunning MNIST training with Optimizer = {str(optimizer_class.__name__)}")
-    params = default_params.copy()
-    mean_accuracy, std_accuracy = run_experiment(optimizer_class, params, num_runs=10, num_epochs=10, debug_logs=True)
-    results.append({
-        'optimizer': optimizer_class.__name__,
-        'mean_accuracy': mean_accuracy,
-        'std_accuracy': std_accuracy
-    })
+    # Run experiments for all optimizers
+    train_df, test_df = run_all_experiments(
+        optimizers=optimizers,
+        **dataset_config
+    )
 
-write_to_file('../outputs/mnist_training_logs.csv', results)
+    print("\nExperiment completed!")
+    print(f"Results saved in outputs/{dataset_config['dataset_name']}/")
+    print(f"- {dataset_config['dataset_name']}_train_full_logs.csv")
+    print(f"- {dataset_config['dataset_name']}_test_full_logs.csv")
+
+if __name__ == "__main__":
+    main()

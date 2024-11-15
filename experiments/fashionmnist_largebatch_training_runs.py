@@ -73,4 +73,4 @@ for optimizer_class, default_params in optimizers:
         'std_accuracy': std_accuracy
     })
 
-# write_to_file('outputs/fashionmnist_training_logs.csv', results)
+write_to_file('outputs/fashionmnist_training_logs.csv', results)

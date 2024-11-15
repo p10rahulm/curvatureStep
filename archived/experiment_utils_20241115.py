@@ -59,44 +59,23 @@ def run_experiment_old(optimizer_class, optimizer_params, dataset_loader=None,
     return mean_accuracy, std_accuracy
 
 
-def run_experiment_with_logging(
-    optimizer_class, 
-    optimizer_params, 
-    dataset_name,
-    train_fn,
-    test_fn,
-    dataset_loader=None, 
-    model_class=None, 
-    num_runs=10, 
-    num_epochs=2, 
-    device=None,
-    model_hyperparams=None, 
-    loss_criterion=None
-):
-    """
-    Runs experiments with specified training and testing functions, logging results
-    
-    Args:
-        optimizer_class: The optimizer class to use
-        optimizer_params: Parameters for the optimizer
-        dataset_name: Name of the dataset (for logging)
-        train_fn: Training function to use (must return list of epoch losses)
-        test_fn: Testing function to use (must return tuple of (loss, accuracy))
-        dataset_loader: Function to load the dataset
-        model_class: Model class to use
-        num_runs: Number of runs to perform
-        num_epochs: Number of epochs per run
-        device: Device to run on
-        model_hyperparams: Hyperparameters for the model
-        loss_criterion: Loss function to use
-    """
+
+def run_experiment_with_logging(optimizer_class, optimizer_params, dataset_name="mnist", dataset_loader=None, 
+                              model_class=None, num_runs=10, num_epochs=2, device=None,
+                              model_hyperparams=None, loss_criterion=None):
     # Setup defaults
     if device is None:
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    if dataset_loader is None:
+        from data_loaders.mnist import load_mnist
+        dataset_loader = load_mnist
+    if model_class is None:
+        from models.simpleNN import SimpleNN
+        model_class = SimpleNN
     if loss_criterion is None:
         loss_criterion = torch.nn.CrossEntropyLoss
     
-    # Create output directory
+    # Create output directory if it doesn't exist
     output_dir = os.path.join('outputs', dataset_name)
     os.makedirs(output_dir, exist_ok=True)
     
@@ -122,7 +101,7 @@ def run_experiment_with_logging(
         optimizer = optimizer_class(model.parameters(), **optimizer_params)
         
         # Train and log results
-        train_losses = train_fn(model, train_loader, criterion, optimizer, device, num_epochs)
+        train_losses = train_with_logging(model, train_loader, criterion, optimizer, device, num_epochs)
         
         # Log training results
         for epoch, loss in enumerate(train_losses, 1):
@@ -134,7 +113,7 @@ def run_experiment_with_logging(
             })
         
         # Test and log results
-        test_loss, test_accuracy = test_fn(model, test_loader, criterion, device)
+        test_loss, test_accuracy = test_with_logging(model, test_loader, criterion, device)
         test_logs.append({
             'Optimizer Name': optimizer_class.__name__,
             'Running loop number': run_number + 1,
@@ -142,39 +121,18 @@ def run_experiment_with_logging(
             'Average Test set accuracy': test_accuracy * 100  # Convert to percentage
         })
     
-    # Convert to DataFrames
+    # Save logs to CSV
     train_df = pd.DataFrame(train_logs)
     test_df = pd.DataFrame(test_logs)
     
+    train_df.to_csv(os.path.join(output_dir, f'{dataset_name}_train_full_logs.csv'), index=True)
+    test_df.to_csv(os.path.join(output_dir, f'{dataset_name}_test_full_logs.csv'), index=True)
+    
     return train_df, test_df
 
-def run_all_experiments(
-    optimizers, 
-    dataset_name, 
-    train_fn, 
-    test_fn, 
-    dataset_loader, 
-    model_class,
-    num_runs=2, 
-    num_epochs=5,
-    model_hyperparams=None,
-    loss_criterion=None
-):
-    """
-    Runs experiments for all optimizers and saves results
-    
-    Args:
-        optimizers: List of (optimizer_class, params) tuples
-        dataset_name: Name of the dataset
-        train_fn: Training function to use
-        test_fn: Testing function to use
-        dataset_loader: Function to load the dataset
-        model_class: Model class to use
-        num_runs: Number of runs per optimizer
-        num_epochs: Number of epochs per run
-        model_hyperparams: Hyperparameters for the model
-        loss_criterion: Loss function to use
-    """
+
+# Modified main experiment script
+def run_all_experiments(optimizers, dataset_name="mnist", num_runs=2, num_epochs=5):
     all_train_logs = []
     all_test_logs = []
     
@@ -183,17 +141,11 @@ def run_all_experiments(
         params = default_params.copy()
         
         train_df, test_df = run_experiment_with_logging(
-            optimizer_class=optimizer_class,
-            optimizer_params=params,
+            optimizer_class,
+            params,
             dataset_name=dataset_name,
-            train_fn=train_fn,
-            test_fn=test_fn,
-            dataset_loader=dataset_loader,
-            model_class=model_class,
             num_runs=num_runs,
-            num_epochs=num_epochs,
-            model_hyperparams=model_hyperparams,
-            loss_criterion=loss_criterion
+            num_epochs=num_epochs
         )
         
         all_train_logs.append(train_df)
@@ -205,8 +157,5 @@ def run_all_experiments(
     
     # Save combined results
     output_dir = os.path.join('outputs', dataset_name)
-    os.makedirs(output_dir, exist_ok=True)
     final_train_df.to_csv(os.path.join(output_dir, f'{dataset_name}_train_full_logs.csv'), index=True)
     final_test_df.to_csv(os.path.join(output_dir, f'{dataset_name}_test_full_logs.csv'), index=True)
-    
-    return final_train_df, final_test_df
