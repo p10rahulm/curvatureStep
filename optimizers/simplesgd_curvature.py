@@ -1,7 +1,6 @@
 import torch
 from torch.optim import Optimizer
 
-
 class SimpleSGDCurvature(Optimizer):
     def __init__(self, params, lr=1e-3, epsilon=1e-8, r_max=10.0):
         defaults = dict(lr=lr, epsilon=epsilon)
