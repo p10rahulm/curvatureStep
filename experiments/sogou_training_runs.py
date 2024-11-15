@@ -6,7 +6,7 @@ project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
 # Set CUDA visible devices
-os.environ["CUDA_VISIBLE_DEVICES"] = "2"  # Use GPU 2
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # Use GPU 2
 
 import torch
 import torch.nn as nn
@@ -19,18 +19,6 @@ from models.simpleRNN_multiclass import SimpleRNN
 from data_loaders.sogou_news import load_dataset, vocab_size, pad_idx
 from train import train_lm
 from test import test_lm_multiclass
-
-def modify_optimizer_params(optimizers):
-    """Modify optimizer parameters for specific optimizers"""
-    modified_optimizers = []
-    curvature_optimizers = ["SimpleSGDCurvature", "HeavyBallCurvature", "NAGCurvature"]
-    
-    for optimizer_class, params in optimizers:
-        new_params = params.copy()
-        if optimizer_class.__name__ in curvature_optimizers:
-            new_params['r_max'] = 10
-        modified_optimizers.append((optimizer_class, new_params))
-    return modified_optimizers
 
 def main():
     # Print GPU information
@@ -66,12 +54,9 @@ def main():
         'loss_criterion': nn.CrossEntropyLoss
     }
 
-    # Modify optimizer parameters for specific optimizers
-    modified_optimizers = modify_optimizer_params(optimizers)
-
     # Run experiments for all optimizers
     train_df, test_df = run_all_experiments(
-        optimizers=modified_optimizers,
+        optimizers=optimizers,
         **dataset_config
     )
 

@@ -43,7 +43,7 @@ def main():
         'test_fn': test,
         'dataset_loader': load_cifar10,
         'model_class': SimpleCNN,
-        'num_runs': 10,          # 10 runs as per your original script
+        'num_runs': 3,          # 10 runs as per your original script
         'num_epochs': 10,        # 10 epochs as per your original script
         'model_hyperparams': model_hyperparams,
         'loss_criterion': nn.CrossEntropyLoss
