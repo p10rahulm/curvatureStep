@@ -5,6 +5,10 @@ import sys
 project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
+# Set CUDA visible devices
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # Use first GPU
+# You can also use multiple GPUs like "0,1,2,3" or other GPUs like "1" or "2"
+
 from experiment_utils import run_all_experiments
 from optimizer_params import optimizers
 from models.simpleNN import SimpleNN

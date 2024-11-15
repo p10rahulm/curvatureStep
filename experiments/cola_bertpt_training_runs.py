@@ -1,76 +1,85 @@
-# experiments/cola_training_runs.py
+# experiments/cola_bert_pretrained_training_runs.py
 
-# Define the relative path to the project root from the current script
 import os
 import sys
-
-# Add the project root to the system path
 project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
-from experiment_utils import run_experiment
-from utilities import write_to_file
+# Set CUDA visible devices
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"  # Use GPU 3
+
+import torch
+import torch.nn as nn
+from experiment_utils import run_all_experiments
 from optimizer_params import optimizers
 from models.bert_model import PretrainedBERTClassifier
 from data_loaders.cola_bert import load_cola
-import torch
-import torch.nn as nn
 from train import train_bert
 from test import test_bert
 
-results = []
+def modify_optimizer_params(optimizers):
+    """Modify optimizer parameters for all optimizers with specific settings for BERT"""
+    modified_optimizers = []
+    for optimizer_class, params in optimizers:
+        new_params = params.copy()
+        # Set learning rate for all optimizers
+        new_params['lr'] = 1e-3
+        
+        # Set specific parameters if they exist
+        if 'eps' in new_params:
+            new_params['eps'] = 1e-6
+        if 'epsilon' in new_params:
+            new_params['epsilon'] = 1e-2
+        if 'weight_decay' in new_params:
+            new_params['weight_decay'] = 1e-2
+            
+        modified_optimizers.append((optimizer_class, new_params))
+    return modified_optimizers
 
-total_epochs = 4
-total_runs = 2
+def main():
+    # Print GPU information
+    if torch.cuda.is_available():
+        print(f"Using GPU: {torch.cuda.get_device_name(0)}")
+        print(f"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB")
+    else:
+        print("No GPU available, using CPU")
 
-print("#", "-" * 100)
-print(f"# Running {total_epochs} epochs of training - {total_runs} runs")
-print("#", "-" * 100)
+    print("#", "-"*100)
+    print("# Running CoLA BERT Pretrained Training Experiment")
+    print("#", "-"*100)
 
-for optimizer_class, default_params in optimizers:
-    print(f"\nRunning CoLA training with Optimizer = {str(optimizer_class.__name__)}")
-    params = default_params.copy()
-    params['lr'] = 1e-3
-    if 'eps' in params.keys():
-        params['eps'] = 1e-6
-    if 'epsilon' in params.keys():
-        params['epsilon'] = 1e-2
-    if 'weight_decay' in params.keys():
-        params['weight_decay'] = 1e-2
-    
-    # Set device to GPU
-    device = torch.device('cuda:3' if torch.cuda.is_available() else 'cpu')
-
-    dataset_loader = load_cola
-
-    # Hyperparameters
+    # Model hyperparameters
     model_hyperparams = {
-        'num_classes': 2,
-        'freeze_bert': True  # Freeze BERT layers
+        'num_classes': 2,        # Binary classification
+        'freeze_bert': True      # Freeze BERT layers
     }
-    model = PretrainedBERTClassifier
-    trainer_function = train_bert
-    test_function = test_bert
-    loss_criterion = nn.CrossEntropyLoss
-    mean_accuracy, std_accuracy = run_experiment(
-        optimizer_class,
-        params,
-        dataset_loader=dataset_loader,
-        model_class=model,
-        num_runs=total_runs,
-        num_epochs=total_epochs,
-        debug_logs=True,
-        model_hyperparams=model_hyperparams,
-        loss_criterion=loss_criterion,
-        device=device,
-        trainer_fn=trainer_function,
-        tester_fn=test_function,
+
+    # Dataset-specific configuration
+    dataset_config = {
+        'dataset_name': 'colabertpt',  # Name for pretrained BERT on CoLA
+        'train_fn': train_bert,
+        'test_fn': test_bert,
+        'dataset_loader': load_cola,
+        'model_class': PretrainedBERTClassifier,
+        'num_runs': 2,           # 2 runs as per your original script
+        'num_epochs': 4,         # 4 epochs as per your original script
+        'model_hyperparams': model_hyperparams,
+        'loss_criterion': nn.CrossEntropyLoss
+    }
+
+    # Modify optimizer parameters
+    modified_optimizers = modify_optimizer_params(optimizers)
+
+    # Run experiments for all optimizers
+    train_df, test_df = run_all_experiments(
+        optimizers=modified_optimizers,
+        **dataset_config
     )
-    results.append({
-        'optimizer': optimizer_class.__name__,
-        'mean_accuracy': mean_accuracy,
-        'std_accuracy': std_accuracy
-    })
 
-write_to_file('outputs/cola_training_logs.csv', results)
+    print("\nExperiment completed!")
+    print(f"Results saved in outputs/{dataset_config['dataset_name']}/")
+    print(f"- {dataset_config['dataset_name']}_train_full_logs.csv")
+    print(f"- {dataset_config['dataset_name']}_test_full_logs.csv")
 
+if __name__ == "__main__":
+    main()

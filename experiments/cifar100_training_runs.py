@@ -1,71 +1,64 @@
 # experiments/cifar100_training_runs.py
 
-# Define the relative path to the project root from the current script
 import os
 import sys
-
-# Add the project root to the system path
 project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
-from experiment_utils import run_experiment
-from utilities import write_to_file
+# Set CUDA visible devices
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"  # Use GPU 3
+
+import torch
+import torch.nn as nn
+from experiment_utils import run_all_experiments
 from optimizer_params import optimizers
 from models.simpleCNN_template import SimpleCNN
 from data_loaders.cifar100 import load_cifar100
-import torch
-import torch.nn as nn
 from train import train
 from test import test
 
-results = []
+def main():
+    # Print GPU information
+    if torch.cuda.is_available():
+        print(f"Using GPU: {torch.cuda.get_device_name(0)}")
+        print(f"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB")
+    else:
+        print("No GPU available, using CPU")
 
-total_epochs = 10
-total_runs = 2
+    print("#", "-"*100)
+    print("# Running CIFAR100 Training Experiment")
+    print("#", "-"*100)
 
-print("#", "-" * 100)
-print(f"# Running {total_epochs} epochs of training - {total_runs} runs")
-print("#", "-" * 100)
-
-
-for optimizer_class, default_params in optimizers:
-    print(f"\nRunning CIFAR-100 training with Optimizer = {str(optimizer_class.__name__)}")
-    params = default_params.copy()
-
-    # Set device to GPU
-    device = torch.device('cuda:3' if torch.cuda.is_available() else 'cpu')
-
-    dataset_loader = load_cifar100
-    model_class = SimpleCNN
-
-    # Hyperparameters
+    # Model hyperparameters
     model_hyperparams = {
-        'num_classes': 100,
-        'image_width': 96, 
-        'num_channels': 3
+        'num_classes': 100,      # CIFAR100 has 100 classes
+        'image_width': 32,       # CIFAR100 images are 32x32
+        'num_channels': 3        # RGB images
     }
 
-    loss_criterion = nn.CrossEntropyLoss
-    trainer_function = train
-    test_function = test
-    mean_accuracy, std_accuracy = run_experiment(
-        optimizer_class,
-        params,
-        dataset_loader=dataset_loader,
-        model_class=model_class,
-        num_runs=total_runs,
-        num_epochs=total_epochs,
-        debug_logs=True,
-        model_hyperparams=model_hyperparams,
-        loss_criterion=loss_criterion,
-        device=device,
-        trainer_fn=trainer_function,
-        tester_fn=test_function,
-    )
-    results.append({
-        'optimizer': optimizer_class.__name__,
-        'mean_accuracy': mean_accuracy,
-        'std_accuracy': std_accuracy
-    })
+    # Dataset-specific configuration
+    dataset_config = {
+        'dataset_name': 'cifar100',
+        'train_fn': train,
+        'test_fn': test,
+        'dataset_loader': load_cifar100,
+        'model_class': SimpleCNN,
+        'num_runs': 2,           # 2 runs as per your original script
+        'num_epochs': 10,        # 10 epochs as per your original script
+        'model_hyperparams': model_hyperparams,
+        'loss_criterion': nn.CrossEntropyLoss
+    }
 
-write_to_file('outputs/cifar100_training_logs.csv', results)
+    # Run experiments for all optimizers
+    train_df, test_df = run_all_experiments(
+        optimizers=optimizers,
+        **dataset_config
+    )
+
+    print("\nExperiment completed!")
+    print(f"Results saved in outputs/{dataset_config['dataset_name']}/")
+    print(f"- {dataset_config['dataset_name']}_train_full_logs.csv")
+    print(f"- {dataset_config['dataset_name']}_test_full_logs.csv")
+
+if __name__ == "__main__":
+    main()

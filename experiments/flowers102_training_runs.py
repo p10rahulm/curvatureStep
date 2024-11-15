@@ -1,68 +1,62 @@
 # experiments/flowers102_training_runs.py
 
-# Define the relative path to the project root from the current script
 import os
 import sys
-
-# Add the project root to the system path
 project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
-from experiment_utils import run_experiment
-from utilities import write_to_file
-from optimizer_params import optimizers
-from models.resnet import SimpleResNet  # Change to the ResNet model
-from data_loaders.flowers102 import load_flowers102
+# Set CUDA visible devices
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"  # Use GPU 1
+
 import torch
 import torch.nn as nn
+from experiment_utils import run_all_experiments
+from optimizer_params import optimizers
+from models.resnet import SimpleResNet
+from data_loaders.flowers102 import load_flowers102
 from train import train
 from test import test
 
-results = []
+def main():
+    # Print GPU information
+    if torch.cuda.is_available():
+        print(f"Using GPU: {torch.cuda.get_device_name(0)}")
+        print(f"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB")
+    else:
+        print("No GPU available, using CPU")
 
-total_epochs = 10
-total_runs = 4
+    print("#", "-"*100)
+    print("# Running Flowers102 Training Experiment")
+    print("#", "-"*100)
 
-print("#", "-" * 100)
-print(f"# Running {total_epochs} epochs of training - {total_runs} runs")
-print("#", "-" * 100)
-
-for optimizer_class, default_params in optimizers:
-    print(f"\nRunning Flowers102 training with Optimizer = {str(optimizer_class.__name__)}")
-    params = default_params.copy()
-
-    # Set device to GPU
-    device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
-
-    dataset_loader = load_flowers102
-    model_class = SimpleResNet
-
-    # Hyperparameters
+    # Model hyperparameters
     model_hyperparams = {
-        'num_classes': 102
+        'num_classes': 102  # Flowers102 has 102 classes
     }
-    loss_criterion = nn.CrossEntropyLoss
-    trainer_function = train
-    test_function = test
-    mean_accuracy, std_accuracy = run_experiment(
-        optimizer_class,
-        params,
-        dataset_loader=dataset_loader,
-        model_class=model_class,
-        num_runs=total_runs,
-        num_epochs=total_epochs,
-        debug_logs=True,
-        model_hyperparams=model_hyperparams,
-        loss_criterion=loss_criterion,
-        device=device,
-        trainer_fn=trainer_function,
-        tester_fn=test_function,
+
+    # Dataset-specific configuration
+    dataset_config = {
+        'dataset_name': 'flowers102',
+        'train_fn': train,
+        'test_fn': test,
+        'dataset_loader': load_flowers102,
+        'model_class': SimpleResNet,
+        'num_runs': 4,           # 4 runs as per your original script
+        'num_epochs': 10,        # 10 epochs as per your original script
+        'model_hyperparams': model_hyperparams,
+        'loss_criterion': nn.CrossEntropyLoss
+    }
+
+    # Run experiments for all optimizers
+    train_df, test_df = run_all_experiments(
+        optimizers=optimizers,
+        **dataset_config
     )
-    results.append({
-        'optimizer': optimizer_class.__name__,
-        'mean_accuracy': mean_accuracy,
-        'std_accuracy': std_accuracy
-    })
 
-write_to_file('outputs/flowers102_training_logs.csv', results)
+    print("\nExperiment completed!")
+    print(f"Results saved in outputs/{dataset_config['dataset_name']}/")
+    print(f"- {dataset_config['dataset_name']}_train_full_logs.csv")
+    print(f"- {dataset_config['dataset_name']}_test_full_logs.csv")
 
+if __name__ == "__main__":
+    main()
