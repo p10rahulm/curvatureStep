@@ -16,6 +16,53 @@ from data_loaders.mnist import load_mnist
 import pandas as pd
 from tqdm import tqdm
 
+def process_train_logs(train_df, num_epochs):
+    """Process training logs to get mean and std per epoch for each optimizer"""
+    # Group by optimizer and epoch
+    grouped = train_df.groupby(['Optimizer Name', 'Epoch number'])['Average Training Loss'].agg(['mean', 'std']).reset_index()
+    
+    # Prepare the new dataframe structure
+    mean_cols = [f'Mean_Training_Loss_epoch{i}' for i in range(1, num_epochs + 1)]
+    std_cols = [f'Std_Training_Loss_epoch{i}' for i in range(1, num_epochs + 1)]
+    
+    # Initialize the result dataframe
+    result = pd.DataFrame(columns=['Optimizer Name'] + mean_cols + std_cols)
+    
+    # Fill in the data
+    for optimizer in train_df['Optimizer Name'].unique():
+        row = {'Optimizer Name': optimizer}
+        
+        # Get data for this optimizer
+        opt_data = grouped[grouped['Optimizer Name'] == optimizer]
+        
+        # Fill means
+        for epoch in range(1, num_epochs + 1):
+            epoch_data = opt_data[opt_data['Epoch number'] == epoch]
+            if not epoch_data.empty:
+                row[f'Mean_Training_Loss_epoch{epoch}'] = epoch_data['mean'].iloc[0]
+                row[f'Std_Training_Loss_epoch{epoch}'] = epoch_data['std'].iloc[0]
+            else:
+                row[f'Mean_Training_Loss_epoch{epoch}'] = None
+                row[f'Std_Training_Loss_epoch{epoch}'] = None
+        
+        result = pd.concat([result, pd.DataFrame([row])], ignore_index=True)
+    
+    return result
+
+def process_test_logs(test_df):
+    """Process test logs to get mean and std of accuracy and loss for each optimizer"""
+    # Group by optimizer
+    grouped = test_df.groupby('Optimizer Name').agg({
+        'Average Test set Loss': ['mean', 'std'],
+        'Average Test set accuracy': ['mean', 'std']
+    }).reset_index()
+    
+    # Flatten column names
+    grouped.columns = ['Optimizer Name', 
+                      'Mean_Test_Loss', 'Std_Test_Loss',
+                      'Mean_Test_Accuracy', 'Std_Test_Accuracy']
+    
+    return grouped
 
 def run_experiment_old(optimizer_class, optimizer_params, dataset_loader=None, 
                    model_class=None, num_runs=10, num_epochs=2, debug_logs=False,
@@ -212,5 +259,21 @@ def run_all_experiments(
     # Load final results
     final_train_df = pd.read_csv(os.path.join(output_dir, f'{dataset_name}_train_full_logs.csv'))
     final_test_df = pd.read_csv(os.path.join(output_dir, f'{dataset_name}_test_full_logs.csv'))
+    
+    # Process and save grouped results
+    grouped_train_df = process_train_logs(final_train_df, num_epochs)
+    grouped_test_df = process_test_logs(final_test_df)
+
+    # Save grouped results
+    grouped_train_df.to_csv(
+        os.path.join(output_dir, f'{dataset_name}_grouped_train.csv'),
+        index=False,
+        sep='|'
+    )
+    grouped_test_df.to_csv(
+        os.path.join(output_dir, f'{dataset_name}_grouped_test.csv'),
+        index=False,
+        sep='|'
+    )
     
     return final_train_df, final_test_df
