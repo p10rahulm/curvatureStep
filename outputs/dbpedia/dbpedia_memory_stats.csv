@@ -1,0 +1,24 @@
+|Peak CPU Memory (MB)|Peak CPU Memory (MB)|Peak GPU Memory Allocated (MB)|Peak GPU Memory Allocated (MB)|Peak GPU Memory Reserved (MB)|Peak GPU Memory Reserved (MB)
+|mean|std|mean|std|mean|std
+Optimizer Name||||||
+Adadelta|3202.13|0.02|628.06|0.0|5794.0|144.25
+AdadeltaCurvature|3202.15|0.02|628.06|0.0|6806.0|19.8
+Adagrad|3202.04|0.02|475.1|0.0|5605.0|26.87
+AdagradCurvature|3202.07|0.02|475.1|0.0|6523.0|69.3
+Adam|3201.66|0.5|628.06|0.0|5816.0|62.23
+AdamCurvature|3202.01|0.02|628.06|0.0|6729.0|89.1
+AdamW|3202.7|0.01|628.06|0.0|5816.0|62.23
+AdamWCurvature|3202.7|0.01|628.06|0.0|6729.0|89.1
+HeavyBall|3202.03|0.02|475.1|0.0|5624.0|0.0
+HeavyBallCurvature|3202.02|0.02|475.1|0.0|6600.0|39.6
+NAG|3202.04|0.03|475.1|0.0|5605.0|26.87
+NAGCurvature|3202.03|0.02|475.1|0.0|6523.0|69.3
+NAdam|3202.7|0.02|628.06|0.0|5816.0|62.23
+NAdamCurvature|3202.71|0.03|628.06|0.0|6729.0|89.1
+NAdamW|3202.7|0.04|628.06|0.0|5816.0|62.23
+RMSProp|3202.15|0.02|475.1|0.0|5671.0|26.87
+RMSPropCurvature|3202.14|0.02|475.1|0.0|6358.0|0.0
+RMSPropMomentum|3202.16|0.04|628.06|0.0|5816.0|62.23
+RMSPropMomentumCurvature|3202.69|0.02|628.06|0.0|6729.0|89.1
+SimpleSGD|3197.34|0.92|322.15|0.0|5694.0|98.99
+SimpleSGDCurvature|3200.26|0.48|322.15|0.0|6075.0|89.1

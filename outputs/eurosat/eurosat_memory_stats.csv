@@ -1,6 +1,8 @@
 |Peak CPU Memory (MB)|Peak CPU Memory (MB)|Peak GPU Memory Allocated (MB)|Peak GPU Memory Allocated (MB)|Peak GPU Memory Reserved (MB)|Peak GPU Memory Reserved (MB)
 |mean|std|mean|std|mean|std
 Optimizer Name||||||
+Adadelta|3274.85|0.08|190.45|0.89|2202.0|33.94
+AdadeltaCurvature|3275.01|0.01|187.86|0.45|2283.0|134.35
 Adagrad|3274.76|0.14|147.36|0.08|2181.0|35.36
 AdagradCurvature|3274.89|0.09|146.71|0.0|2224.0|2.83
 Adam|3274.47|0.06|190.23|2.11|2199.0|63.64
@@ -9,5 +11,9 @@ HeavyBall|3274.75|0.12|148.57|0.64|2193.0|46.67
 HeavyBallCurvature|3274.93|0.08|147.71|1.47|2178.0|28.28
 NAG|3274.92|0.3|148.81|0.6|2178.0|31.11
 NAGCurvature|3274.92|0.14|147.41|0.51|2187.0|9.9
+RMSProp|3274.95|0.08|147.3|0.84|2209.0|21.21
+RMSPropCurvature|3274.96|0.2|147.3|1.1|2198.0|39.6
+RMSPropMomentum|3275.09|0.17|190.42|0.1|2186.0|33.94
+RMSPropMomentumCurvature|3274.87|0.19|190.89|0.65|2220.0|16.97
 SimpleSGD|3257.03|19.25|103.34|0.12|2191.0|49.5
 SimpleSGDCurvature|3273.49|0.16|102.65|0.49|2183.0|18.38

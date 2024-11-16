@@ -1,0 +1,27 @@
+|Peak CPU Memory (MB)|Peak CPU Memory (MB)|Peak GPU Memory Allocated (MB)|Peak GPU Memory Allocated (MB)|Peak GPU Memory Reserved (MB)|Peak GPU Memory Reserved (MB)
+|mean|std|mean|std|mean|std
+Optimizer Name||||||
+AMSGrad|2902.73||2321.8||16004.0|
+AMSGradCurvature|2902.92||2321.8||21280.0|
+Adadelta|2902.6||1861.59||16004.0|
+AdadeltaCurvature|2902.72||1860.89||16008.0|
+Adagrad|2902.59||1399.98||16002.0|
+AdagradCurvature|2902.59||1399.98||16006.0|
+Adam|2902.13||1861.59||16004.0|
+AdamCurvature|2902.57||1860.89||16008.0|
+AdamW|2902.73||1861.59||16004.0|
+AdamWCurvature|2902.73||1860.89||16008.0|
+HeavyBall|2902.57||1399.98||16002.0|
+HeavyBallCurvature|2902.58||1399.98||16006.0|
+NAG|2902.58||1399.98||16002.0|
+NAGCurvature|2902.59||1399.98||16006.0|
+NAdam|2902.73||1861.59||16004.0|
+NAdamCurvature|2902.73||1860.89||16008.0|
+NAdamW|2902.73||1861.59||16004.0|
+NAdamWCurvature|2902.73||1860.89||16008.0|
+RMSProp|2902.72||1399.98||16002.0|
+RMSPropCurvature|2902.73||1399.98||16006.0|
+RMSPropMomentum|2902.73||1861.59||16004.0|
+RMSPropMomentumCurvature|2902.73||1860.89||16008.0|
+SimpleSGD|2897.53||938.98||17030.0|
+SimpleSGDCurvature|2900.98||938.33||16462.0|
