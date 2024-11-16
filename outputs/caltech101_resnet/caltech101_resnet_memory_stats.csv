@@ -1,6 +1,4 @@
 |Peak CPU Memory (MB)|Peak CPU Memory (MB)|Peak GPU Memory Allocated (MB)|Peak GPU Memory Allocated (MB)|Peak GPU Memory Reserved (MB)|Peak GPU Memory Reserved (MB)
 |mean|std|mean|std|mean|std
 Optimizer Name||||||
-Adam|3579.16|0.09|189.57|0.33|2218.0|22.27
-SimpleSGD|3574.42|1.84|103.4|0.42|2169.33|4.62
-SimpleSGDCurvature|3577.77|0.18|103.2|1.3|2219.33|24.03
+SimpleSGD|3298.35|17.88|103.4|0.97|2180.0|36.33

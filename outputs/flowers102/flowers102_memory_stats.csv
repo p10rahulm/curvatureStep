@@ -1,0 +1,11 @@
+|Peak CPU Memory (MB)|Peak CPU Memory (MB)|Peak GPU Memory Allocated (MB)|Peak GPU Memory Allocated (MB)|Peak GPU Memory Reserved (MB)|Peak GPU Memory Reserved (MB)
+|mean|std|mean|std|mean|std
+Optimizer Name||||||
+Adam|3282.18|0.24|191.12|0.78|2196.0|37.36
+AdamCurvature|3282.21|0.03|189.83|0.07|2222.0|20.88
+HeavyBall|3283.53|1.07|147.19|0.82|2220.0|24.58
+HeavyBallCurvature|3284.03|0.13|145.96|0.99|2338.0|108.57
+NAG|3288.52|0.16|147.9|1.46|2201.33|22.03
+NAGCurvature|3289.7|1.53|145.69|0.57|2194.0|20.3
+SimpleSGD|3272.24|4.78|105.23|0.58|2180.67|41.0
+SimpleSGDCurvature|3279.79|0.55|102.92|0.21|2193.33|47.34
