@@ -6,16 +6,16 @@ project_root = os.getcwd()
 sys.path.insert(0, project_root)
 
 # Set CUDA visible devices
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"  # Use GPU 0
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"  # Use GPU 0
 
 import torch
 import torch.nn as nn
 from experiment_utils import run_all_experiments
 from optimizer_params import optimizers
-from models.bert_model import TinyBERTClassifier  # Using TinyBERT as per your script
-from data_loaders.ag_news_bert import load_ag_news
-from train import train_bert
-from test import test_bert
+from models.simpleRNN_multiclass import SimpleRNN
+from data_loaders.ag_news import load_ag_news, vocab  # Import vocab directly from the module
+from train import train_lm
+from test import test_lm_multiclass
 
 def main():
     # Print GPU information
@@ -28,20 +28,27 @@ def main():
     print("#", "-"*100)
     print("# Running AG News Training Experiment")
     print("#", "-"*100)
-
+    
+    # Get vocabulary information from the imported vocab object
+    vocab_size = len(vocab)
+    pad_idx = vocab["<pad>"]
+    
     # Model hyperparameters
     model_hyperparams = {
-        'num_classes': 4,
-        'freeze_bert': False
+        'vocab_size': vocab_size,
+        'embed_dim': 100,      # Embedding dimension
+        'hidden_dim': 256,     # RNN hidden dimension
+        'output_dim': 4,       # AG News has 4 classes
+        'pad_idx': pad_idx,    # Padding token index
     }
 
     # Dataset-specific configuration
     dataset_config = {
         'dataset_name': 'agnews',
-        'train_fn': train_bert,
-        'test_fn': test_bert,
+        'train_fn': train_lm,
+        'test_fn': test_lm_multiclass,
         'dataset_loader': load_ag_news,
-        'model_class': TinyBERTClassifier,  # Using TinyBERT for efficiency
+        'model_class': SimpleRNN,
         'num_runs': 2,          # 2 runs as per your original script
         'num_epochs': 5,        # 5 epochs as per your original script
         'model_hyperparams': model_hyperparams,
