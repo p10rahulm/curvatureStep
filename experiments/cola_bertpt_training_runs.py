@@ -61,8 +61,8 @@ def main():
         'test_fn': test_bert,
         'dataset_loader': load_cola,
         'model_class': PretrainedBERTClassifier,
-        'num_runs': 2,           # 2 runs as per your original script
-        'num_epochs': 4,         # 4 epochs as per your original script
+        'num_runs': 2,           # 2 runs
+        'num_epochs': 4,         # 4 epochs
         'model_hyperparams': model_hyperparams,
         'loss_criterion': nn.CrossEntropyLoss
     }

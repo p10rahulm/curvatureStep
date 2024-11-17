@@ -41,8 +41,8 @@ def main():
         'test_fn': test,
         'dataset_loader': load_eurosat,
         'model_class': SimpleResNet,
-        'num_runs': 2,           # 2 runs as per your original script
-        'num_epochs': 1,         # 1 epoch as per your original script
+        'num_runs': 2,           # 2 runs
+        'num_epochs': 1,         # 1 epoch
         'model_hyperparams': model_hyperparams,
         'loss_criterion': nn.CrossEntropyLoss
     }

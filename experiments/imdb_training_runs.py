@@ -45,8 +45,8 @@ def main():
         'test_fn': test_lm,
         'dataset_loader': load_imdb_reviews,
         'model_class': SimpleRNN,
-        'num_runs': 3,          # 10 runs as per your original script
-        'num_epochs': 2,         # 2 epochs as per your original script
+        'num_runs': 3,          # 10 runs
+        'num_epochs': 2,         # 2 epochs
         'model_hyperparams': model_hyperparams,
         'loss_criterion': nn.BCELoss  # Binary Cross Entropy Loss for binary classification
     }

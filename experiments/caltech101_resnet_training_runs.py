@@ -41,8 +41,8 @@ def main():
         'test_fn': test,
         'dataset_loader': load_caltech101,
         'model_class': SimpleResNet,
-        'num_runs': 4,           # 4 runs as per your original script
-        'num_epochs': 10,        # 10 epochs as per your original script
+        'num_runs': 4,           # 4 runs
+        'num_epochs': 10,        # 10 epochs
         'model_hyperparams': model_hyperparams,
         'loss_criterion': nn.CrossEntropyLoss
     }

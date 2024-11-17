@@ -47,8 +47,8 @@ def main():
         'test_fn': test,
         'dataset_loader': load_fmnist_large_batch,  # Using the wrapper function
         'model_class': SimpleCNN,
-        'num_runs': 2,           # 2 runs as per your original script
-        'num_epochs': 50,        # 50 epochs as per your original script
+        'num_runs': 2,           # 2 runs
+        'num_epochs': 50,        # 50 epochs
         'model_hyperparams': model_hyperparams,
         'loss_criterion': nn.CrossEntropyLoss
     }

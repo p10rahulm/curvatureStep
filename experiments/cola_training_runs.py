@@ -48,8 +48,8 @@ def main():
         'test_fn': test_lm_multiclass,
         'dataset_loader': load_cola,
         'model_class': SimpleRNN,
-        'num_runs': 10,         # 10 runs as per your original script
-        'num_epochs': 10,       # 10 epochs as per your original script
+        'num_runs': 10,         # 10 runs
+        'num_epochs': 10,       # 10 epochs
         'model_hyperparams': model_hyperparams,
         'loss_criterion': nn.CrossEntropyLoss
     }
