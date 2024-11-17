@@ -5,6 +5,7 @@ class SimpleSGDCurvature(Optimizer):
     def __init__(self, params, lr=1e-3, epsilon=1e-8, r_max=10.0):
         defaults = dict(lr=lr, epsilon=epsilon)
         self.r_max = r_max
+        self.step_num = 0
         super(SimpleSGDCurvature, self).__init__(params, defaults)
 
     def step(self, closure=None):
@@ -46,7 +47,9 @@ class SimpleSGDCurvature(Optimizer):
                 grad_diff_norm = torch.norm(orig_grad - tentative_grad)
                 r_t = grad_norm / (grad_diff_norm + group['epsilon'])
                 r_t = torch.minimum(torch.tensor(self.r_max), r_t)
-                
+                tentative_grad_norm=torch.norm(tentative_grad)
+                print(f"{grad_norm=}", f"{grad_diff_norm=}", f"{tentative_grad_norm=}", f"{(tentative_grad_norm+grad_norm)=}", f"{self.step_num=}")
+                self.step_num+=1
                 # SGD update with curvature
                 p.data = p.data - group['lr'] * r_t * (orig_grad / grad_norm)
                 p.grad.data = orig_grad  # Restore original gradient
